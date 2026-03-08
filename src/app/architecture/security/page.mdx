@@ -1,0 +1,82 @@
+# Security & Governance
+
+Production agent deployments require careful attention to access control, tool permissions, and data isolation. This page covers the key security practices for OpenClaw multi-agent systems.
+
+## Per-Agent Tool Policies
+
+The **deny list always wins** over the allow list. Follow minimal privilege:
+
+| Agent | Allowed | Denied |
+|-------|---------|--------|
+| Coordinator | All core tools + `sessions_spawn` | — |
+| Engineering | `read`, `write`, `exec`, `process`, `git` | `sessions_spawn`, `gateway`, `cron` |
+| Product | `read`, `write`, `web_search` | `exec`, `process`, `git`, `gateway` |
+| Risk / Analytics | `read`, `write`, `web_search` | `exec`, `gateway`, `sessions_spawn` |
+
+<Callout type="tip" title="Principle of Least Privilege">
+Each agent should only have access to the tools it needs for its specific role. When in doubt, deny a tool and add it later if needed.
+</Callout>
+
+## Sandboxing
+
+Agents that execute code (e.g., engineering agents) should run inside a Docker sandbox:
+
+```json
+{
+  "id": "dev-agent",
+  "sandbox": { "enabled": true }
+}
+```
+
+This isolates code execution from the host system, preventing accidental or malicious modifications to the server.
+
+## Database Access
+
+<Callout type="danger" title="Read-Only Only">
+No agent should have write access to production databases. All agents should query from reporting or data warehouse replicas, never from the core database.
+</Callout>
+
+For analytics agents that need database access:
+1. Create a **read-only database user** with access only to reporting tables
+2. Wrap SQL execution in a **custom skill** that uses the read-only connection string
+3. **Deny** the `exec` tool to prevent agents from running arbitrary commands
+
+## Auth Profile Isolation
+
+Each agent has its own `auth-profiles.json` in its `agentDir`:
+
+```
+~/.openclaw/agents/<agentId>/agent/auth-profiles.json
+```
+
+<Callout type="warning">
+Never copy `auth-profiles.json` between agents unless you explicitly intend to share credentials. Each agent should have independent auth profiles.
+</Callout>
+
+## Channel Security
+
+- **Allowlists on all channels** — Only known team members should be able to message agents
+- Use `groupPolicy: "allowlist"` and configure which channels/users each agent accepts messages from
+- Use `requireMention: true` for channels where the agent should only respond when explicitly mentioned
+
+## Workspace Security
+
+1. **Git-backed workspaces** — Version control all workspace files in private repos
+2. **No secrets in files** — Keep API keys, tokens, and connection strings in environment variables
+3. **Memory isolation** — Keep workspaces fully isolated between agents
+
+<Callout type="warning" title="Memory Bleed">
+If agents share context or workspace files, you'll get unexpected crossovers in behavior. Keep workspaces fully isolated — each agent should have its own directory with its own `SOUL.md`, `MEMORY.md`, etc.
+</Callout>
+
+## Security Checklist
+
+- [ ] Each agent has its own workspace directory
+- [ ] Each agent has its own `agentDir` (no shared auth profiles)
+- [ ] Code-executing agents run in Docker sandbox
+- [ ] Database access is read-only via custom skills
+- [ ] No production write access for any agent
+- [ ] Channel allowlists configured
+- [ ] Secrets stored in environment variables, not workspace files
+- [ ] Workspaces backed up in private Git repos
+- [ ] Tool deny lists configured per agent

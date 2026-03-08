@@ -1,0 +1,128 @@
+# Agent Roles
+
+A well-designed multi-agent system assigns each agent a clear purpose, model, and tool set. Below are example agent roles that cover common organizational functions.
+
+## Coordinator Agent
+
+**Purpose:** The primary command-center agent. Morning briefs, KPI tracking, cross-functional summaries, strategic analysis.
+
+**Recommended model:** `anthropic/claude-opus-4-6` (complex reasoning, synthesis across domains)
+
+**Channel bindings:**
+- DMs from the primary administrator
+- Catch-all default for unmatched messages
+
+**Tool access:**
+- `read`, `write`, `exec`, `web_search`, `memory_search`
+- `sessions_spawn` (to delegate tasks to sub-agents)
+- `sessions_list`, `sessions_send` (to query other agents' outputs)
+
+**Workspace files:**
+- `SOUL.md` — Strategic advisor persona with deep knowledge of your business
+- `USER.md` — Admin preferences, communication style, timezone
+- `AGENTS.md` — Morning brief protocol, KPI thresholds, alert rules
+- `HEARTBEAT.md` — Periodic checks (e.g., every 30 min: check dashboards, flag anomalies)
+
+**Key behavior:** This agent can spawn sub-agents on cheaper models for parallel research (e.g., "analyze last week's churn data" + "summarize competitor news" simultaneously).
+
+---
+
+## Engineering Agent
+
+**Purpose:** Code reviews, PR checks, documentation, GitHub issue management, CI/CD monitoring, technical troubleshooting.
+
+**Recommended model:** `anthropic/claude-sonnet-4-6` (fast, good at code, cost-effective for high-volume tasks)
+
+**Channel bindings:**
+- `#engineering` channel
+- `#devops` channel
+- GitHub webhooks (PR notifications, CI failures)
+
+**Tool access:**
+- `read`, `write`, `exec`, `process`, `git`
+- `web_search` (for documentation lookup)
+- **Deny:** `sessions_spawn`, `gateway`, `cron` (no spawning, no gateway control)
+
+**Sandbox:** Run in Docker sandbox — this agent executes code and should be isolated from the host.
+
+**Workspace files:**
+- `SOUL.md` — Senior developer persona, knows your tech stack
+- `AGENTS.md` — PR review standards, coding conventions, commit message format
+- `TOOLS.md` — References to repositories, CI pipeline URLs, database schema catalog
+
+---
+
+## Product Agent
+
+**Purpose:** Write specs, user stories, documentation, competitive analysis, translate product requirements between business and engineering.
+
+**Recommended model:** `anthropic/claude-sonnet-4-6`
+
+**Channel bindings:**
+- `#product` channel
+- `#general` (with mention pattern `@product-agent`)
+
+**Tool access:**
+- `read`, `write`, `web_search`, `memory_search`
+- **Deny:** `exec`, `process`, `git`, `gateway` (no code execution needed)
+
+**Workspace files:**
+- `SOUL.md` — Product manager persona with domain expertise
+- `AGENTS.md` — Feature spec templates, user story format, prioritization framework
+- `TOOLS.md` — Documentation platform API access, project management references
+
+---
+
+## Risk / Analytics Agent
+
+**Purpose:** Data analysis, financial modeling, portfolio monitoring, regulatory reporting support.
+
+**Recommended model:** `anthropic/claude-opus-4-6` (needs strong reasoning for analysis)
+
+**Channel bindings:**
+- `#analytics` or `#risk` channel
+- DMs from analytics team members only (via peer allowlist)
+
+**Tool access:**
+- `read`, `write`, `web_search`
+- **READ-ONLY database access** — this agent queries but never writes to production
+- **Deny:** `exec` (use a custom skill wrapper for SQL queries with read-only connection)
+
+<Callout type="danger" title="Read-Only Enforcement">
+Always wrap database access for analytics agents in a custom skill with a read-only connection string. Never give direct write access to production databases.
+</Callout>
+
+**Workspace files:**
+- `SOUL.md` — Analyst persona with domain-specific regulatory knowledge
+- `AGENTS.md` — Assessment protocols, scoring model parameters, alert thresholds
+- `TOOLS.md` — Database connection details (read-only), API endpoints
+
+---
+
+## Sales Agent (Phase 2)
+
+**Purpose:** Answer sales questions, generate client reports, track pipeline, analyze customer relationships.
+
+**Recommended model:** `anthropic/claude-sonnet-4-6`
+
+**Channel bindings:**
+- `#sales` channel
+
+**Tool access:**
+- `read`, `write`, `web_search`, `memory_search`
+- **Deny:** `exec`, `process`, `gateway`
+
+<Callout type="tip">
+Deploy this agent after your first three or four agents are stable. Adding agents incrementally reduces coordination complexity.
+</Callout>
+
+## Model Selection Guidelines
+
+| Agent Type | Recommended Model | Rationale |
+|-----------|-------------------|-----------|
+| Coordinator / Executive | Opus | Complex reasoning, cross-domain synthesis |
+| Engineering | Sonnet | Fast, strong at code, cost-effective for volume |
+| Product / Documentation | Sonnet | Good writing quality at lower cost |
+| Risk / Analytics | Opus | Financial reasoning, regulatory analysis |
+| Sales / Support | Sonnet | Conversational, good enough for Q&A |
+| Sub-agents (spawned) | Sonnet | Cost control — the parent agent does synthesis |

@@ -1,0 +1,126 @@
+# Deployment
+
+This guide covers deploying OpenClaw on your own infrastructure, running it as a system daemon, and planning for growth.
+
+## Recommended Topology
+
+The simplest production deployment is a single server running the OpenClaw Gateway with all agents:
+
+```
+Your Server (Ubuntu / Linux)
+├── OpenClaw Gateway (:18789)
+│   ├── coordinator agent
+│   ├── dev-agent (Docker sandboxed)
+│   ├── product-agent
+│   └── risk-agent
+├── Tailscale / SSH tunnel → remote access
+├── Database (read-only replica) → for agent queries
+└── systemd service → auto-restart, logging
+```
+
+## Installation
+
+Install OpenClaw as a systemd daemon:
+
+```bash
+openclaw onboard --install-daemon
+```
+
+This sets up:
+- Auto-restart on failure
+- System logging via journald
+- Automatic startup on boot
+
+## Starting the Gateway
+
+```bash
+openclaw gateway --port 18789
+```
+
+Or, if installed as a daemon:
+
+```bash
+systemctl start openclaw
+systemctl status openclaw
+```
+
+## Remote Access
+
+If your server is in a local datacenter or behind a firewall, use **Tailscale Serve** or an **SSH tunnel** with token auth for remote access.
+
+<Callout type="tip">
+Tailscale provides zero-config VPN access with built-in auth. It's the simplest way to securely access your OpenClaw gateway from anywhere.
+</Callout>
+
+## Health Checks
+
+```bash
+# Full system health check
+openclaw doctor
+
+# Check all channel connections
+openclaw channels status --probe
+
+# Verify agent routing
+openclaw agents list --bindings
+```
+
+## Scaling Considerations
+
+### When to Stay on a Single Server
+
+A single server handles most use cases well:
+- Up to 5–10 agents
+- Moderate message volume
+- Team of 10–50 users
+
+### When to Consider Scaling
+
+- Token costs exceeding your budget on the current setup
+- Uptime requirements beyond what a single server provides
+- Need for geographic distribution
+
+### Scaling Options
+
+1. **Dedicated VPS** — Some cloud providers offer one-click OpenClaw deploys for straightforward scaling
+2. **Load-balanced gateways** — Multiple gateway instances behind a load balancer (advanced)
+3. **Separate gateways per team** — If teams are fully independent, separate installations may be simpler
+
+## Phased Rollout
+
+<Callout type="warning" title="Start Small">
+Start with one agent, add incrementally. Coordination complexity is the primary challenge in multi-agent deployments.
+</Callout>
+
+### Phase 1: Foundation (Weeks 1–2)
+1. Install OpenClaw on your server
+2. Set up a single coordinator agent
+3. Connect to one messaging platform
+4. Write `SOUL.md`, `AGENTS.md`, `USER.md`
+5. Build a simple periodic workflow with `HEARTBEAT.md`
+6. Validate memory, sessions, and heartbeat behavior
+
+### Phase 2: Second Agent (Weeks 3–4)
+1. Add a specialist agent (e.g., engineering)
+2. Create its workspace with role-specific persona files
+3. Bind to the appropriate channel
+4. Enable Docker sandbox for code-executing agents
+5. Test workflows specific to that role
+
+### Phase 3: Full Team (Weeks 5–6)
+1. Add remaining specialist agents
+2. Create their workspaces and channel bindings
+3. Build custom skills (SQL runner, documentation writer, etc.)
+4. Test cross-agent data sharing via files
+
+### Phase 4: Orchestration (Weeks 7–8)
+1. Enable `sessions_spawn` for the coordinator agent
+2. Build sub-agent workflows (weekly brief, analysis, monitoring)
+3. Set up cron jobs for automated reports
+4. Add additional agents if the team is ready
+
+### Phase 5: Ongoing Optimization
+1. Monitor token costs per agent
+2. Tune `HEARTBEAT.md` intervals
+3. Iterate on workspace files based on real usage
+4. Expand skills from the ClawHub registry as needed
