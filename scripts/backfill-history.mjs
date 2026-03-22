@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Backfills historical star data by using the GitHub Stargazers API.
+ * Backfills historical star data using the GitHub Stargazers API.
  *
- * The Stargazers API with `application/vnd.github.star+json` returns
- * a `starred_at` timestamp for each star. By paginating from the last page
- * backward, we can count how many stars a repo had at any past date.
- *
- * This generates synthetic snapshot files for key dates so the trend
- * calculator can compute accurate deltas.
+ * Strategy:
+ * - For repos with ≤40k stars: use binary search on stargazer pages
+ *   (the API returns starred_at timestamps, capped at 400 pages / 40k stars)
+ * - For repos with >40k stars: sample the last 40k stargazers to measure
+ *   recent velocity, then extrapolate backward for earlier dates
  *
  * Usage: GITHUB_TOKEN=ghp_xxx node scripts/backfill-history.mjs
  */
@@ -27,90 +26,150 @@ const DATA_DIR = join(process.cwd(), 'src/data/trends');
 const SNAPSHOTS_DIR = join(DATA_DIR, 'snapshots');
 const TRENDS_FILE = join(DATA_DIR, 'computed/trends.json');
 
+const API_STAR_CAP = 40000; // GitHub API limit
+
 const headers = {
   Accept: 'application/vnd.github.star+json',
   Authorization: `Bearer ${TOKEN}`,
   'X-GitHub-Api-Version': '2022-11-28',
 };
 
-/**
- * Get total stargazer count for a repo.
- */
+const defaultHeaders = {
+  Accept: 'application/vnd.github+json',
+  Authorization: `Bearer ${TOKEN}`,
+  'X-GitHub-Api-Version': '2022-11-28',
+};
+
 async function getStarCount(fullName) {
-  const res = await fetch(`https://api.github.com/repos/${fullName}`, {
-    headers: {
-      Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${TOKEN}`,
-    },
-  });
+  const res = await fetch(`https://api.github.com/repos/${fullName}`, { headers: defaultHeaders });
   if (!res.ok) return null;
   const data = await res.json();
   return data.stargazers_count;
 }
 
-/**
- * Get stargazers page (with timestamps).
- * Returns array of { starred_at: "2026-01-15T..." }
- */
 async function getStargazersPage(fullName, page, perPage = 100) {
   const url = `https://api.github.com/repos/${fullName}/stargazers?per_page=${perPage}&page=${page}`;
   const res = await fetch(url, { headers });
   if (!res.ok) return { items: [], lastPage: 1 };
-
   const items = await res.json();
-
-  // Parse Link header for last page
   const link = res.headers.get('link') || '';
   const lastMatch = link.match(/page=(\d+)>; rel="last"/);
   const lastPage = lastMatch ? parseInt(lastMatch[1]) : page;
-
   return { items, lastPage };
 }
 
 /**
- * Find how many stars a repo had at a given cutoff date.
- * Uses binary search on stargazer pages to find the cutoff efficiently.
+ * For small repos (≤40k stars): binary search for exact star count at cutoff.
  */
-async function starsAtDate(fullName, totalStars, cutoffDate) {
+async function starsAtDateExact(fullName, totalStars, cutoffDate) {
   const perPage = 100;
   const totalPages = Math.ceil(totalStars / perPage);
-
   if (totalPages === 0) return 0;
 
-  // Binary search: find the page where starred_at crosses the cutoff
   let low = 1;
   let high = totalPages;
 
   while (low < high) {
     const mid = Math.floor((low + high) / 2);
     const { items } = await getStargazersPage(fullName, mid, perPage);
-
-    if (items.length === 0) {
-      high = mid;
-      continue;
-    }
-
+    if (items.length === 0) { high = mid; continue; }
     const firstDate = new Date(items[0].starred_at);
-
     if (firstDate < cutoffDate) {
       low = mid + 1;
     } else {
       high = mid;
     }
-
-    await new Promise(r => setTimeout(r, 100));
+    await new Promise(r => setTimeout(r, 80));
   }
 
-  // Refine by scanning the boundary page
   const { items } = await getStargazersPage(fullName, low, perPage);
   let countOnPage = 0;
   for (const item of items) {
-    if (new Date(item.starred_at) < cutoffDate) {
-      countOnPage++;
-    }
+    if (new Date(item.starred_at) < cutoffDate) countOnPage++;
+  }
+  return (low - 1) * perPage + countOnPage;
+}
+
+/**
+ * For large repos (>40k stars): sample recent stargazers to measure velocity.
+ *
+ * We can only access the last 40k stargazers. So we:
+ * 1. Find the date of stargazer #1 (page 1) — the oldest accessible
+ * 2. Find the date of the last stargazer (last page) — most recent
+ * 3. This gives us the rate over the accessible window
+ * 4. For dates within that window, binary search works
+ * 5. For dates before the window, extrapolate using the measured rate
+ */
+async function starsAtDateEstimated(fullName, totalStars, cutoffDate) {
+  const perPage = 100;
+
+  // Get the first page (oldest accessible stargazer)
+  const { items: firstItems, lastPage } = await getStargazersPage(fullName, 1, perPage);
+  if (firstItems.length === 0) return totalStars;
+
+  const oldestAccessibleDate = new Date(firstItems[0].starred_at);
+  const accessibleStars = lastPage * perPage;
+  const baseStars = totalStars - accessibleStars; // stars we can't see (before the window)
+
+  // If cutoff is before the accessible window, we need to estimate
+  if (cutoffDate < oldestAccessibleDate) {
+    // Get repo creation date for better extrapolation
+    const repoRes = await fetch(`https://api.github.com/repos/${fullName}`, { headers: defaultHeaders });
+    const repoData = await repoRes.json();
+    const createdAt = new Date(repoData.created_at);
+
+    // Calculate rate in the accessible window
+    const now = new Date();
+    const accessibleDays = (now - oldestAccessibleDate) / (1000 * 60 * 60 * 24);
+    const ratePerDay = accessibleStars / accessibleDays;
+
+    // For the pre-window period, use a lower rate (growth typically accelerates)
+    // Use 60% of recent rate as a conservative estimate for older periods
+    const daysSinceCutoff = (now - cutoffDate) / (1000 * 60 * 60 * 24);
+    const daysInPreWindow = (oldestAccessibleDate - cutoffDate) / (1000 * 60 * 60 * 24);
+
+    if (cutoffDate < createdAt) return 0;
+
+    // Stars gained between cutoff and oldest accessible = estimated
+    const estimatedPreWindowGain = Math.round(daysInPreWindow * ratePerDay * 0.6);
+    const starsAtCutoff = Math.max(0, baseStars - estimatedPreWindowGain);
+    return starsAtCutoff;
   }
 
-  return (low - 1) * perPage + countOnPage;
+  // Cutoff is within the accessible window — binary search
+  let low = 1;
+  let high = lastPage;
+
+  while (low < high) {
+    const mid = Math.floor((low + high) / 2);
+    const { items } = await getStargazersPage(fullName, mid, perPage);
+    if (items.length === 0) { high = mid; continue; }
+    const firstDate = new Date(items[0].starred_at);
+    if (firstDate < cutoffDate) {
+      low = mid + 1;
+    } else {
+      high = mid;
+    }
+    await new Promise(r => setTimeout(r, 80));
+  }
+
+  const { items } = await getStargazersPage(fullName, low, perPage);
+  let countOnPage = 0;
+  for (const item of items) {
+    if (new Date(item.starred_at) < cutoffDate) countOnPage++;
+  }
+
+  return baseStars + (low - 1) * perPage + countOnPage;
+}
+
+/**
+ * Route to the right strategy based on repo size.
+ */
+async function starsAtDate(fullName, totalStars, cutoffDate) {
+  if (totalStars <= API_STAR_CAP) {
+    return starsAtDateExact(fullName, totalStars, cutoffDate);
+  }
+  return starsAtDateEstimated(fullName, totalStars, cutoffDate);
 }
 
 function fmt(date) {
@@ -118,10 +177,12 @@ function fmt(date) {
 }
 
 function saveSnapshot(dateStr, data) {
-  const file = join(SNAPSHOTS_DIR, `${dateStr}.json`);
   mkdirSync(SNAPSHOTS_DIR, { recursive: true });
-  writeFileSync(file, JSON.stringify({ date: dateStr, data }, null, 2) + '\n');
-  console.log(`  Saved snapshot: ${dateStr}.json`);
+  writeFileSync(
+    join(SNAPSHOTS_DIR, `${dateStr}.json`),
+    JSON.stringify({ date: dateStr, data }, null, 2) + '\n'
+  );
+  console.log(`  Saved snapshot: ${dateStr}.json (${Object.keys(data).length} repos)`);
 }
 
 async function main() {
@@ -133,10 +194,7 @@ async function main() {
     process.exit(1);
   }
 
-  // Check rate limit
-  const rlRes = await fetch('https://api.github.com/rate_limit', {
-    headers: { Authorization: `Bearer ${TOKEN}` },
-  });
+  const rlRes = await fetch('https://api.github.com/rate_limit', { headers: defaultHeaders });
   const rl = await rlRes.json();
   console.log(`Rate limit: ${rl.rate.remaining}/${rl.rate.limit}`);
 
@@ -145,7 +203,6 @@ async function main() {
     process.exit(1);
   }
 
-  // Target dates for backfill
   const now = new Date();
   const targets = [
     { label: '1 day ago', date: new Date(now - 1 * 24 * 60 * 60 * 1000) },
@@ -156,22 +213,9 @@ async function main() {
     { label: '365 days ago', date: new Date(now - 365 * 24 * 60 * 60 * 1000) },
   ];
 
-  // Skip dates that already have snapshots
-  const activeDates = targets.filter(t => {
-    const file = join(SNAPSHOTS_DIR, `${fmt(t.date)}.json`);
-    if (existsSync(file)) {
-      console.log(`Skipping ${t.label} (${fmt(t.date)}) — snapshot exists`);
-      return false;
-    }
-    return true;
-  });
+  // Remove existing snapshots for these dates so we regenerate them
+  const activeDates = targets;
 
-  if (activeDates.length === 0) {
-    console.log('All target dates already have snapshots.');
-    return;
-  }
-
-  // Process top repos (limit to avoid API exhaustion)
   const maxRepos = Math.min(repos.length, 25);
   console.log(`\nBackfilling ${activeDates.length} dates for top ${maxRepos} repos...\n`);
 
@@ -182,32 +226,28 @@ async function main() {
 
   for (let i = 0; i < maxRepos; i++) {
     const repo = repos[i];
-    console.log(`[${i + 1}/${maxRepos}] ${repo.full_name} (${repo.stars} stars)`);
-
     const totalStars = await getStarCount(repo.full_name);
     if (!totalStars) {
-      console.log(`  Skipped (couldn't fetch)`);
+      console.log(`[${i + 1}/${maxRepos}] ${repo.full_name} — skipped (couldn't fetch)`);
       continue;
     }
+
+    const method = totalStars > API_STAR_CAP ? 'estimated' : 'exact';
+    console.log(`[${i + 1}/${maxRepos}] ${repo.full_name} (${totalStars} stars, ${method})`);
 
     for (const t of activeDates) {
       try {
         const starsAtCutoff = await starsAtDate(repo.full_name, totalStars, t.date);
-        snapshots[fmt(t.date)][repo.full_name] = {
-          stars: starsAtCutoff,
-          forks: 0,
-        };
-        console.log(`  ${t.label}: ${starsAtCutoff} stars (delta: +${totalStars - starsAtCutoff})`);
+        const delta = totalStars - starsAtCutoff;
+        snapshots[fmt(t.date)][repo.full_name] = { stars: starsAtCutoff, forks: 0 };
+        console.log(`  ${t.label}: ${starsAtCutoff} stars (Δ +${delta})`);
       } catch (err) {
         console.error(`  Error for ${t.label}: ${err.message}`);
       }
     }
 
-    // Check rate limit periodically
     if (i % 5 === 4) {
-      const checkRl = await fetch('https://api.github.com/rate_limit', {
-        headers: { Authorization: `Bearer ${TOKEN}` },
-      });
+      const checkRl = await fetch('https://api.github.com/rate_limit', { headers: defaultHeaders });
       const checkData = await checkRl.json();
       console.log(`  Rate limit remaining: ${checkData.rate.remaining}`);
       if (checkData.rate.remaining < 100) {
@@ -217,21 +257,19 @@ async function main() {
     }
   }
 
-  // Save all snapshots
   for (const [dateStr, data] of Object.entries(snapshots)) {
     if (Object.keys(data).length > 0) {
       saveSnapshot(dateStr, data);
     }
   }
 
-  // Recompute trends.json with new snapshots
   console.log('\nRecomputing deltas with historical data...');
   execFileSync('node', ['scripts/fetch-trends.mjs'], {
     stdio: 'inherit',
     env: process.env,
   });
 
-  console.log('\nDone! Historical data backfilled.');
+  console.log('\nDone!');
 }
 
 main().catch(err => {
