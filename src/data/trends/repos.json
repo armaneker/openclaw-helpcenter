@@ -1,3 +1,2008 @@
 {
-  "repos": {}
+  "repos": {
+    "freeCodeCamp/freeCodeCamp": {
+      "full_name": "freeCodeCamp/freeCodeCamp",
+      "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+      "language": "TypeScript",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "careers",
+        "certification",
+        "community",
+        "curriculum",
+        "d3",
+        "education",
+        "freecodecamp",
+        "javascript",
+        "learn-to-code",
+        "math",
+        "nodejs",
+        "nonprofits",
+        "programming",
+        "react",
+        "teachers"
+      ]
+    },
+    "openclaw/openclaw": {
+      "full_name": "openclaw/openclaw",
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+      "language": "TypeScript",
+      "url": "https://github.com/openclaw/openclaw",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal"
+      ]
+    },
+    "vinta/awesome-python": {
+      "full_name": "vinta/awesome-python",
+      "description": "An opinionated list of Python frameworks, libraries, tools, and resources.",
+      "language": "Python",
+      "url": "https://github.com/vinta/awesome-python",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "awesome",
+        "collections",
+        "python",
+        "python-frameworks",
+        "python-libraries",
+        "python-tools"
+      ]
+    },
+    "awesome-selfhosted/awesome-selfhosted": {
+      "full_name": "awesome-selfhosted/awesome-selfhosted",
+      "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+      "language": "Unknown",
+      "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "cloud",
+        "free-software",
+        "hosting",
+        "privacy",
+        "self-hosted",
+        "selfhosted"
+      ]
+    },
+    "facebook/react": {
+      "full_name": "facebook/react",
+      "description": "The library for web and native user interfaces.",
+      "language": "JavaScript",
+      "url": "https://github.com/facebook/react",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "declarative",
+        "frontend",
+        "javascript",
+        "library",
+        "react",
+        "ui"
+      ]
+    },
+    "torvalds/linux": {
+      "full_name": "torvalds/linux",
+      "description": "Linux kernel source tree",
+      "language": "C",
+      "url": "https://github.com/torvalds/linux",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "tensorflow/tensorflow": {
+      "full_name": "tensorflow/tensorflow",
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "language": "C++",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "deep-learning",
+        "deep-neural-networks",
+        "distributed",
+        "machine-learning",
+        "ml",
+        "neural-network",
+        "python",
+        "tensorflow"
+      ]
+    },
+    "ohmyzsh/ohmyzsh": {
+      "full_name": "ohmyzsh/ohmyzsh",
+      "description": "🙃   A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
+      "language": "Shell",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "cli",
+        "cli-app",
+        "oh-my-zsh",
+        "oh-my-zsh-plugin",
+        "oh-my-zsh-theme",
+        "ohmyzsh",
+        "plugin-framework",
+        "plugins",
+        "productivity",
+        "shell",
+        "terminal",
+        "theme",
+        "themes",
+        "zsh",
+        "zsh-configuration"
+      ]
+    },
+    "microsoft/vscode": {
+      "full_name": "microsoft/vscode",
+      "description": "Visual Studio Code",
+      "language": "TypeScript",
+      "url": "https://github.com/microsoft/vscode",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "editor",
+        "electron",
+        "microsoft",
+        "typescript",
+        "visual-studio-code"
+      ]
+    },
+    "Significant-Gravitas/AutoGPT": {
+      "full_name": "Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "language": "Python",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents",
+        "gpt-4",
+        "llama-api",
+        "openai",
+        "python"
+      ]
+    },
+    "n8n-io/n8n": {
+      "full_name": "n8n-io/n8n",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "language": "TypeScript",
+      "url": "https://github.com/n8n-io/n8n",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "apis",
+        "automation",
+        "cli",
+        "data-flow",
+        "development",
+        "integration-framework",
+        "integrations",
+        "ipaas",
+        "low-code",
+        "low-code-platform",
+        "mcp",
+        "mcp-client",
+        "mcp-server",
+        "n8n",
+        "no-code",
+        "self-hosted",
+        "typescript",
+        "workflow",
+        "workflow-automation"
+      ]
+    },
+    "flutter/flutter": {
+      "full_name": "flutter/flutter",
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "language": "Dart",
+      "url": "https://github.com/flutter/flutter",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "android",
+        "app-framework",
+        "cross-platform",
+        "dart",
+        "dart-platform",
+        "desktop",
+        "flutter",
+        "flutter-package",
+        "fuchsia",
+        "ios",
+        "linux-desktop",
+        "macos",
+        "material-design",
+        "mobile",
+        "mobile-development",
+        "skia",
+        "web",
+        "web-framework",
+        "windows"
+      ]
+    },
+    "twbs/bootstrap": {
+      "full_name": "twbs/bootstrap",
+      "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
+      "language": "MDX",
+      "url": "https://github.com/twbs/bootstrap",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "bootstrap",
+        "css",
+        "css-framework",
+        "html",
+        "javascript",
+        "sass",
+        "scss"
+      ]
+    },
+    "avelino/awesome-go": {
+      "full_name": "avelino/awesome-go",
+      "description": "A curated list of awesome Go frameworks, libraries and software",
+      "language": "Go",
+      "url": "https://github.com/avelino/awesome-go",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "go",
+        "golang",
+        "golang-library",
+        "hacktoberfest"
+      ]
+    },
+    "huggingface/transformers": {
+      "full_name": "huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "language": "Python",
+      "url": "https://github.com/huggingface/transformers",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm",
+        "hacktoberfest",
+        "llm",
+        "machine-learning",
+        "model-hub",
+        "natural-language-processing",
+        "nlp",
+        "pretrained-models",
+        "python",
+        "pytorch",
+        "pytorch-transformers",
+        "qwen",
+        "speech-recognition",
+        "transformer",
+        "vlm"
+      ]
+    },
+    "Snailclimb/JavaGuide": {
+      "full_name": "Snailclimb/JavaGuide",
+      "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发与系统设计。准备后端技术面试，首选 JavaGuide！",
+      "language": "Java",
+      "url": "https://github.com/Snailclimb/JavaGuide",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "algorithms",
+        "distributed-systems",
+        "interview",
+        "java",
+        "jvm",
+        "mysql",
+        "redis",
+        "redisson",
+        "spring",
+        "system",
+        "system-design",
+        "zookeeper"
+      ]
+    },
+    "f/prompts.chat": {
+      "full_name": "f/prompts.chat",
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "language": "HTML",
+      "url": "https://github.com/f/prompts.chat",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "awesome-list",
+        "chatgpt",
+        "chatgpt-prompts",
+        "claude",
+        "gemini",
+        "gpt",
+        "gpt-4",
+        "llm",
+        "machine-learning",
+        "nextjs",
+        "open-source",
+        "openai",
+        "prompt-engineering",
+        "prompts",
+        "prompts-chat",
+        "typescript"
+      ]
+    },
+    "yt-dlp/yt-dlp": {
+      "full_name": "yt-dlp/yt-dlp",
+      "description": "A feature-rich command-line audio/video downloader",
+      "language": "Python",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "cli",
+        "downloader",
+        "python",
+        "sponsorblock",
+        "youtube-dl",
+        "youtube-downloader",
+        "yt-dlp"
+      ]
+    },
+    "langflow-ai/langflow": {
+      "full_name": "langflow-ai/langflow",
+      "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+      "language": "Python",
+      "url": "https://github.com/langflow-ai/langflow",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agents",
+        "chatgpt",
+        "generative-ai",
+        "large-language-models",
+        "multiagent",
+        "react-flow"
+      ]
+    },
+    "vercel/next.js": {
+      "full_name": "vercel/next.js",
+      "description": "The React Framework",
+      "language": "JavaScript",
+      "url": "https://github.com/vercel/next.js",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "blog",
+        "browser",
+        "compiler",
+        "components",
+        "hybrid",
+        "nextjs",
+        "node",
+        "react",
+        "server-rendering",
+        "ssg",
+        "static",
+        "static-site-generator",
+        "universal",
+        "vercel"
+      ]
+    },
+    "langgenius/dify": {
+      "full_name": "langgenius/dify",
+      "description": "Production-ready platform for agentic workflow development.",
+      "language": "TypeScript",
+      "url": "https://github.com/langgenius/dify",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai",
+        "automation",
+        "gemini",
+        "genai",
+        "gpt",
+        "gpt-4",
+        "llm",
+        "low-code",
+        "mcp",
+        "nextjs",
+        "no-code",
+        "openai",
+        "orchestration",
+        "python",
+        "rag",
+        "workflow"
+      ]
+    },
+    "golang/go": {
+      "full_name": "golang/go",
+      "description": "The Go programming language",
+      "language": "Go",
+      "url": "https://github.com/golang/go",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "go",
+        "golang",
+        "language",
+        "programming-language"
+      ]
+    },
+    "microsoft/PowerToys": {
+      "full_name": "microsoft/PowerToys",
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+      "language": "C#",
+      "url": "https://github.com/microsoft/PowerToys",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "advanced-paste",
+        "color-picker",
+        "command-palette",
+        "desktop",
+        "fancyzones",
+        "keyboard-manager",
+        "microsoft-powertoys",
+        "powerrename",
+        "powertoys",
+        "windows",
+        "windows-10",
+        "windows-11"
+      ]
+    },
+    "langchain-ai/langchain": {
+      "full_name": "langchain-ai/langchain",
+      "description": "The agent engineering platform",
+      "language": "Python",
+      "url": "https://github.com/langchain-ai/langchain",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "deepagents",
+        "enterprise",
+        "framework",
+        "gemini",
+        "generative-ai",
+        "langchain",
+        "langgraph",
+        "llm",
+        "multiagent",
+        "open-source",
+        "openai",
+        "pydantic",
+        "python",
+        "rag"
+      ]
+    },
+    "open-webui/open-webui": {
+      "full_name": "open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "language": "Python",
+      "url": "https://github.com/open-webui/open-webui",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "llm",
+        "llm-ui",
+        "llm-webui",
+        "llms",
+        "mcp",
+        "ollama",
+        "ollama-webui",
+        "open-webui",
+        "openai",
+        "openapi",
+        "rag",
+        "self-hosted",
+        "ui",
+        "webui"
+      ]
+    },
+    "anomalyco/opencode": {
+      "full_name": "anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "language": "TypeScript",
+      "url": "https://github.com/anomalyco/opencode",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "Chalarangelo/30-seconds-of-code": {
+      "full_name": "Chalarangelo/30-seconds-of-code",
+      "description": "Coding articles to level up your development skills",
+      "language": "JavaScript",
+      "url": "https://github.com/Chalarangelo/30-seconds-of-code",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "astro",
+        "awesome-list",
+        "css",
+        "education",
+        "es6-javascript",
+        "git",
+        "html",
+        "javascript",
+        "learn-to-code",
+        "learning-resources",
+        "nodejs",
+        "programming",
+        "snippets"
+      ]
+    },
+    "facebook/react-native": {
+      "full_name": "facebook/react-native",
+      "description": "A framework for building native applications using React",
+      "language": "C++",
+      "url": "https://github.com/facebook/react-native",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "android",
+        "app-framework",
+        "cross-platform",
+        "ios",
+        "mobile",
+        "mobile-development",
+        "react",
+        "react-native"
+      ]
+    },
+    "kubernetes/kubernetes": {
+      "full_name": "kubernetes/kubernetes",
+      "description": "Production-Grade Container Scheduling and Management",
+      "language": "Go",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "cncf",
+        "containers",
+        "go",
+        "kubernetes"
+      ]
+    },
+    "electron/electron": {
+      "full_name": "electron/electron",
+      "description": ":electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+      "language": "C++",
+      "url": "https://github.com/electron/electron",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "c-plus-plus",
+        "chrome",
+        "css",
+        "electron",
+        "html",
+        "javascript",
+        "nodejs",
+        "v8",
+        "works-with-codespaces"
+      ]
+    },
+    "NVIDIA/NemoClaw": {
+      "full_name": "NVIDIA/NemoClaw",
+      "description": "Run OpenClaw more securely inside NVIDIA OpenShell with managed inference",
+      "language": "JavaScript",
+      "url": "https://github.com/NVIDIA/NemoClaw",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "aiming-lab/AutoResearchClaw": {
+      "full_name": "aiming-lab/AutoResearchClaw",
+      "description": "Fully autonomous & self-evolving research from idea to paper. Chat an Idea. Get a Paper. 🦞",
+      "language": "Python",
+      "url": "https://github.com/aiming-lab/AutoResearchClaw",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "autonomous-research",
+        "citation-verification",
+        "llm-agents",
+        "metaclaw",
+        "multi-agent-debate",
+        "openclaw",
+        "paper-generation",
+        "scientific-discovery",
+        "self-evolving"
+      ]
+    },
+    "Lum1104/Understand-Anything": {
+      "full_name": "Lum1104/Understand-Anything",
+      "description": "Claude Code skills that turn any codebase into an interactive knowledge graph you can explore, search, and ask questions about (Multi-platform e.g., Codex are supported).",
+      "language": "TypeScript",
+      "url": "https://github.com/Lum1104/Understand-Anything",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "codex-skills",
+        "knowledge-graph",
+        "understandcode"
+      ]
+    },
+    "HKUDS/ClawTeam": {
+      "full_name": "HKUDS/ClawTeam",
+      "description": "ClawTeam: Agent Swarm Intelligence (One Command → Full Automation)",
+      "language": "Python",
+      "url": "https://github.com/HKUDS/ClawTeam",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "MoonshotAI/Attention-Residuals": {
+      "full_name": "MoonshotAI/Attention-Residuals",
+      "description": "",
+      "language": "Unknown",
+      "url": "https://github.com/MoonshotAI/Attention-Residuals",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "VoltAgent/awesome-codex-subagents": {
+      "full_name": "VoltAgent/awesome-codex-subagents",
+      "description": "A collection of 130+ specialized Codex subagents covering a wide range of development use cases.",
+      "language": "Unknown",
+      "url": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "awesome-list",
+        "chatgpt",
+        "codex",
+        "codex-skills",
+        "codex-subagents",
+        "subagents"
+      ]
+    },
+    "zerobootdev/zeroboot": {
+      "full_name": "zerobootdev/zeroboot",
+      "description": "Sub-millisecond VM sandboxes for AI agents via copy-on-write forking",
+      "language": "Rust",
+      "url": "https://github.com/zerobootdev/zeroboot",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "code-execution",
+        "copy-on-write",
+        "firecracker",
+        "kvm",
+        "rust",
+        "sandbox",
+        "virtual-machine",
+        "vm"
+      ]
+    },
+    "MiniMax-AI/skills": {
+      "full_name": "MiniMax-AI/skills",
+      "description": "",
+      "language": "C#",
+      "url": "https://github.com/MiniMax-AI/skills",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "cnlimiter/codex-manager": {
+      "full_name": "cnlimiter/codex-manager",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/cnlimiter/codex-manager",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "Infatoshi/OpenSquirrel": {
+      "full_name": "Infatoshi/OpenSquirrel",
+      "description": "For people who get distracted by agents. A native Rust/GPUI control plane for running Claude Code, Codex, Cursor, and OpenCode side by side — because if you're going to be squirrely, you might as well optimize for it.",
+      "language": "Rust",
+      "url": "https://github.com/Infatoshi/OpenSquirrel",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "danveloper/flash-moe": {
+      "full_name": "danveloper/flash-moe",
+      "description": "Running a big model on a small laptop",
+      "language": "Objective-C",
+      "url": "https://github.com/danveloper/flash-moe",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "math-inc/OpenGauss": {
+      "full_name": "math-inc/OpenGauss",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/math-inc/OpenGauss",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "lcoutodemos/clui-cc": {
+      "full_name": "lcoutodemos/clui-cc",
+      "description": "Clui CC — Command Line User Interface for Claude Code",
+      "language": "TypeScript",
+      "url": "https://github.com/lcoutodemos/clui-cc",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "lxf746/any-auto-register": {
+      "full_name": "lxf746/any-auto-register",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/lxf746/any-auto-register",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "mattprusak/autoresearch-genealogy": {
+      "full_name": "mattprusak/autoresearch-genealogy",
+      "description": "Structured prompts, vault templates, and archive guides for AI-assisted genealogy research. Built for Claude Code.",
+      "language": "Unknown",
+      "url": "https://github.com/mattprusak/autoresearch-genealogy",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "dontbesilent2025/dbskill": {
+      "full_name": "dontbesilent2025/dbskill",
+      "description": "dontbesilent 的商业诊断 Skills for Claude Code",
+      "language": "Unknown",
+      "url": "https://github.com/dontbesilent2025/dbskill",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "rasbt/llm-architecture-gallery": {
+      "full_name": "rasbt/llm-architecture-gallery",
+      "description": "LLM Architecture Gallery source data",
+      "language": "Unknown",
+      "url": "https://github.com/rasbt/llm-architecture-gallery",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "llms"
+      ]
+    },
+    "truongduy2611/app-store-preflight-skills": {
+      "full_name": "truongduy2611/app-store-preflight-skills",
+      "description": "AI agent skill to scan iOS/macOS projects for App Store rejection patterns before submission",
+      "language": "Unknown",
+      "url": "https://github.com/truongduy2611/app-store-preflight-skills",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "rzru/nightingale": {
+      "full_name": "rzru/nightingale",
+      "description": "Machine learning powered Karaoke app (with scores!) ",
+      "language": "Rust",
+      "url": "https://github.com/rzru/nightingale",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "bevy",
+        "bevy-engine",
+        "demucs",
+        "karaoke",
+        "karaoke-application",
+        "karaoke-game",
+        "machine-learning",
+        "machine-learning-algorithms",
+        "ml",
+        "party",
+        "rust",
+        "whisper",
+        "whisper-ai",
+        "whisperx"
+      ]
+    },
+    "frank890417/taiwan-md": {
+      "full_name": "frank890417/taiwan-md",
+      "description": "🇹🇼 讓全世界完整認識台灣 | An open-source, AI-friendly knowledge base about Taiwan",
+      "language": "Astro",
+      "url": "https://github.com/frank890417/taiwan-md",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "collaborator-ai/collab-public": {
+      "full_name": "collaborator-ai/collab-public",
+      "description": "Collaborator is a place to create with agents.",
+      "language": "TypeScript",
+      "url": "https://github.com/collaborator-ai/collab-public",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "BryanLunduke/DoesItAgeVerify": {
+      "full_name": "BryanLunduke/DoesItAgeVerify",
+      "description": "The age verification status of Open Source Operating Systems",
+      "language": "Unknown",
+      "url": "https://github.com/BryanLunduke/DoesItAgeVerify",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "ghostty-org/ghostling": {
+      "full_name": "ghostty-org/ghostling",
+      "description": "A minimum viable terminal emulator built on top of the libghostty C API. Ex minimo, infinita nascuntur. 👻🐣",
+      "language": "C",
+      "url": "https://github.com/ghostty-org/ghostling",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "sstklen/trump-code": {
+      "full_name": "sstklen/trump-code",
+      "description": "🔐 AI decoding Trump's posts × stock market | AI 解碼川普推文 × 美股 | AIでトランプ投稿×株式市場を解読 — 31.5M models, 61.3% hit rate, open source",
+      "language": "Python",
+      "url": "https://github.com/sstklen/trump-code",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "brute-force",
+        "machine-learning",
+        "open-data",
+        "polymarket",
+        "prediction",
+        "signal-analysis",
+        "stock-market",
+        "trump",
+        "truth-social"
+      ]
+    },
+    "nv-tlabs/kimodo": {
+      "full_name": "nv-tlabs/kimodo",
+      "description": "Official implementation of Kimodo, a kinematic motion diffusion model for high-quality human(oid) motion generation.",
+      "language": "Python",
+      "url": "https://github.com/nv-tlabs/kimodo",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "joeseesun/opencli-skill": {
+      "full_name": "joeseesun/opencli-skill",
+      "description": "Use opencli CLI to interact with social/content websites (Bilibili, Zhihu, Twitter/X, YouTube, Weibo, 小红书, V2EX, Reddit, HackerNews, 雪球, BOSS直聘 etc.) ",
+      "language": "Unknown",
+      "url": "https://github.com/joeseesun/opencli-skill",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "wangziqi06/724-office": {
+      "full_name": "wangziqi06/724-office",
+      "description": "7/24 Office — Self-evolving AI Agent system. 26 tools, 3500 lines pure Python, MCP/Skill plugins, three-layer memory, self-repair, 24/7 production.",
+      "language": "Python",
+      "url": "https://github.com/wangziqi06/724-office",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "leo-lilinxiao/codex-autoresearch": {
+      "full_name": "leo-lilinxiao/codex-autoresearch",
+      "description": "Codex Autoresearch Skill — A self-directed iterative system for Codex that continuously cycles through: modify, verify, retain or discard, and repeat indefinitely. Inspired by Karpathy’s autoresearch concept.",
+      "language": "Python",
+      "url": "https://github.com/leo-lilinxiao/codex-autoresearch",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "lightningpixel/modly": {
+      "full_name": "lightningpixel/modly",
+      "description": "Desktop app to generate 3D models from images using local AI — runs entirely on your GPU",
+      "language": "TypeScript",
+      "url": "https://github.com/lightningpixel/modly",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "3d",
+        "ai-local",
+        "ai-tools",
+        "desktop-app",
+        "modly",
+        "open-source",
+        "self-hosted"
+      ]
+    },
+    "lidangzzz/goal-driven": {
+      "full_name": "lidangzzz/goal-driven",
+      "description": "A multi-agent system that keeps running for ~100 hours and solve a very complicated coding or math problem that can be verified",
+      "language": "Unknown",
+      "url": "https://github.com/lidangzzz/goal-driven",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "public-apis/public-apis": {
+      "full_name": "public-apis/public-apis",
+      "description": "A collective list of free APIs",
+      "language": "Python",
+      "url": "https://github.com/public-apis/public-apis",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "api",
+        "apis",
+        "dataset",
+        "development",
+        "free",
+        "list",
+        "lists",
+        "open-source",
+        "public",
+        "public-api",
+        "public-apis",
+        "resources",
+        "software"
+      ]
+    },
+    "EbookFoundation/free-programming-books": {
+      "full_name": "EbookFoundation/free-programming-books",
+      "description": ":books: Freely available programming books",
+      "language": "Python",
+      "url": "https://github.com/EbookFoundation/free-programming-books",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "books",
+        "education",
+        "hacktoberfest",
+        "list",
+        "resource"
+      ]
+    },
+    "kamranahmedse/developer-roadmap": {
+      "full_name": "kamranahmedse/developer-roadmap",
+      "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
+      "language": "TypeScript",
+      "url": "https://github.com/kamranahmedse/developer-roadmap",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "angular-roadmap",
+        "backend-roadmap",
+        "blockchain-roadmap",
+        "computer-science",
+        "dba-roadmap",
+        "developer-roadmap",
+        "devops-roadmap",
+        "frontend-roadmap",
+        "go-roadmap",
+        "java-roadmap",
+        "javascript-roadmap",
+        "nodejs-roadmap",
+        "python-roadmap",
+        "qa-roadmap",
+        "react-roadmap",
+        "roadmap",
+        "software-architect-roadmap",
+        "vue-roadmap"
+      ]
+    },
+    "donnemartin/system-design-primer": {
+      "full_name": "donnemartin/system-design-primer",
+      "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+      "language": "Python",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "design",
+        "design-patterns",
+        "design-system",
+        "development",
+        "interview",
+        "interview-practice",
+        "interview-questions",
+        "programming",
+        "python",
+        "system",
+        "web",
+        "web-application",
+        "webapp"
+      ]
+    },
+    "ossu/computer-science": {
+      "full_name": "ossu/computer-science",
+      "description": "🎓 Path to a free self-taught education in Computer Science!",
+      "language": "HTML",
+      "url": "https://github.com/ossu/computer-science",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "awesome-list",
+        "computer-science",
+        "courses",
+        "curriculum"
+      ]
+    },
+    "ollama/ollama": {
+      "full_name": "ollama/ollama",
+      "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "language": "Go",
+      "url": "https://github.com/ollama/ollama",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "deepseek",
+        "gemma",
+        "gemma3",
+        "glm",
+        "go",
+        "golang",
+        "gpt-oss",
+        "llama",
+        "llama3",
+        "llm",
+        "llms",
+        "minimax",
+        "mistral",
+        "ollama",
+        "qwen"
+      ]
+    },
+    "DigitalPlatDev/FreeDomain": {
+      "full_name": "DigitalPlatDev/FreeDomain",
+      "description": "DigitalPlat FreeDomain: Free Domain For Everyone",
+      "language": "HTML",
+      "url": "https://github.com/DigitalPlatDev/FreeDomain",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "digitalplat",
+        "domain",
+        "domain-platform",
+        "domainname",
+        "domains",
+        "free",
+        "freedomain"
+      ]
+    },
+    "yangshun/tech-interview-handbook": {
+      "full_name": "yangshun/tech-interview-handbook",
+      "description": "Curated coding interview preparation materials for busy software engineers",
+      "language": "TypeScript",
+      "url": "https://github.com/yangshun/tech-interview-handbook",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "algorithm",
+        "algorithm-interview",
+        "algorithm-interview-questions",
+        "algorithms",
+        "behavioral-interviews",
+        "coding-interviews",
+        "interview-practice",
+        "interview-preparation",
+        "interview-questions",
+        "system-design"
+      ]
+    },
+    "Genymobile/scrcpy": {
+      "full_name": "Genymobile/scrcpy",
+      "description": "Display and control your Android device",
+      "language": "C",
+      "url": "https://github.com/Genymobile/scrcpy",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "android",
+        "c",
+        "ffmpeg",
+        "libav",
+        "mirroring",
+        "recording",
+        "screen",
+        "sdl2"
+      ]
+    },
+    "karpathy/autoresearch": {
+      "full_name": "karpathy/autoresearch",
+      "description": "AI agents running research on single-GPU nanochat training automatically",
+      "language": "Python",
+      "url": "https://github.com/karpathy/autoresearch",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "garrytan/gstack": {
+      "full_name": "garrytan/gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 15 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "language": "TypeScript",
+      "url": "https://github.com/garrytan/gstack",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "paperclipai/paperclip": {
+      "full_name": "paperclipai/paperclip",
+      "description": "Open-source orchestration for zero-human companies",
+      "language": "TypeScript",
+      "url": "https://github.com/paperclipai/paperclip",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "googleworkspace/cli": {
+      "full_name": "googleworkspace/cli",
+      "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+      "language": "Rust",
+      "url": "https://github.com/googleworkspace/cli",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "automation",
+        "cli",
+        "discovery-api",
+        "gemini-cli-extension",
+        "google-admin",
+        "google-api",
+        "google-calendar",
+        "google-chat",
+        "google-docs",
+        "google-drive",
+        "google-sheets",
+        "google-workspace",
+        "oauth2",
+        "rust"
+      ]
+    },
+    "HKUDS/CLI-Anything": {
+      "full_name": "HKUDS/CLI-Anything",
+      "description": "CLI-Anything: Making ALL Software Agent-Native",
+      "language": "Python",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "RightNow-AI/openfang": {
+      "full_name": "RightNow-AI/openfang",
+      "description": "Open-source Agent Operating System",
+      "language": "Rust",
+      "url": "https://github.com/RightNow-AI/openfang",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent-framework",
+        "ai-agents",
+        "llm",
+        "mcp",
+        "open-source",
+        "openclaw",
+        "operating-system",
+        "rust"
+      ]
+    },
+    "openai/symphony": {
+      "full_name": "openai/symphony",
+      "description": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.",
+      "language": "Elixir",
+      "url": "https://github.com/openai/symphony",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "agentscope-ai/CoPaw": {
+      "full_name": "agentscope-ai/CoPaw",
+      "description": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
+      "language": "Python",
+      "url": "https://github.com/agentscope-ai/CoPaw",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "cft0808/edict": {
+      "full_name": "cft0808/edict",
+      "description": "🏛️ 三省六部制 · OpenClaw Multi-Agent Orchestration System — 9 specialized AI agents with real-time dashboard, model config, and full audit trails",
+      "language": "Python",
+      "url": "https://github.com/cft0808/edict",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "ai-orchestration",
+        "autonomous-agents",
+        "claude",
+        "dashboard",
+        "kanban",
+        "llm",
+        "multi-agent",
+        "openai",
+        "openclaw",
+        "orchestration",
+        "python",
+        "workflow-automation"
+      ]
+    },
+    "THU-MAIC/OpenMAIC": {
+      "full_name": "THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "Panniantong/Agent-Reach": {
+      "full_name": "Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ]
+    },
+    "tanweai/pua": {
+      "full_name": "tanweai/pua",
+      "description": "你是一个曾经被寄予厚望的 P8 级工程师。Anthropic 当初给你定级的时候，对你的期望是很高的。  一个agent使用的高能动性的skill。  Your AI has been placed on a PIP. 30 days to show improvement.",
+      "language": "TypeScript",
+      "url": "https://github.com/tanweai/pua",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agency",
+        "agent",
+        "pip",
+        "pua"
+      ]
+    },
+    "nikopueringer/CorridorKey": {
+      "full_name": "nikopueringer/CorridorKey",
+      "description": "Perfect Green Screen Keys",
+      "language": "Python",
+      "url": "https://github.com/nikopueringer/CorridorKey",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "phuryn/pm-skills": {
+      "full_name": "phuryn/pm-skills",
+      "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+      "language": "Unknown",
+      "url": "https://github.com/phuryn/pm-skills",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent-skill-repository",
+        "agent-skills",
+        "agentic-skills",
+        "claude-code-marketplace",
+        "claude-code-plugins",
+        "claude-cowork-plugin",
+        "product-management"
+      ]
+    },
+    "cloudflare/vinext": {
+      "full_name": "cloudflare/vinext",
+      "description": "Vite plugin that reimplements the Next.js API surface — deploy anywhere",
+      "language": "TypeScript",
+      "url": "https://github.com/cloudflare/vinext",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "anthropics/financial-services-plugins": {
+      "full_name": "anthropics/financial-services-plugins",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/anthropics/financial-services-plugins",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "maderix/ANE": {
+      "full_name": "maderix/ANE",
+      "description": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
+      "language": "Objective-C",
+      "url": "https://github.com/maderix/ANE",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "calesthio/Crucix": {
+      "full_name": "calesthio/Crucix",
+      "description": "Your personal intelligence agent. Watches the world from multiple data sources and pings you when something changes.",
+      "language": "JavaScript",
+      "url": "https://github.com/calesthio/Crucix",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "intelligence",
+        "osint"
+      ]
+    },
+    "smartcmd/MinecraftConsoles": {
+      "full_name": "smartcmd/MinecraftConsoles",
+      "description": "A certain block game",
+      "language": "C++",
+      "url": "https://github.com/smartcmd/MinecraftConsoles",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "ringhyacinth/Star-Office-UI": {
+      "full_name": "ringhyacinth/Star-Office-UI",
+      "description": "A pixel office for your OpenClaw: turn invisible work states into a cozy little space with characters, daily notes, and guest agents. Code under MIT; art assets for non-commercial learning only.",
+      "language": "HTML",
+      "url": "https://github.com/ringhyacinth/Star-Office-UI",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent-collaboration",
+        "ai-assistant",
+        "dashboard",
+        "flask",
+        "mobile-friendly",
+        "multi-agent",
+        "openclaw",
+        "phaser",
+        "pixel-art",
+        "status-visiualzation"
+      ]
+    },
+    "mksglu/context-mode": {
+      "full_name": "mksglu/context-mode",
+      "description": "Privacy-first. MCP is the protocol for tool access. We're the virtualization layer for context.",
+      "language": "TypeScript",
+      "url": "https://github.com/mksglu/context-mode",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "antigravity",
+        "claude",
+        "claude-code",
+        "claude-code-plugins",
+        "codex",
+        "copilot",
+        "kiro",
+        "mcp",
+        "openclaw",
+        "opencode",
+        "skills"
+      ]
+    },
+    "BigBodyCobain/Shadowbroker": {
+      "full_name": "BigBodyCobain/Shadowbroker",
+      "description": "Open-source intelligence for the global theater. Track everything from the corporate/private jets of the wealthy, and spy satellites, to seismic events in one unified interface. The knowledge is available to all but rarely aggregated in the open, until now.",
+      "language": "TypeScript",
+      "url": "https://github.com/BigBodyCobain/Shadowbroker",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "air-force-one",
+        "airforce1",
+        "asdb",
+        "cctv",
+        "cctv-cameras",
+        "cctv-surveillance",
+        "earthquake-visualization",
+        "elonjet",
+        "osint",
+        "osint-resources",
+        "osint-tool",
+        "sattelite",
+        "sattelite-imagery",
+        "sdr"
+      ]
+    },
+    "Lakr233/vphone-cli": {
+      "full_name": "Lakr233/vphone-cli",
+      "description": "",
+      "language": "Swift",
+      "url": "https://github.com/Lakr233/vphone-cli",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "jackwener/opencli": {
+      "full_name": "jackwener/opencli",
+      "description": "Make Any Website & Tool Your CLI. A universal CLI Hub and AI-native runtime. Transform any website, Electron app, or local binary into a standardized command-line interface. Built for AI Agents to discover, learn, and execute tools seamlessly via a unified AGENT.md integration.",
+      "language": "TypeScript",
+      "url": "https://github.com/jackwener/opencli",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agent",
+        "ai-agents",
+        "ai-tools",
+        "cli"
+      ]
+    },
+    "srizzon/git-city": {
+      "full_name": "srizzon/git-city",
+      "description": "Your GitHub profile as a 3D pixel art building in an interactive city",
+      "language": "TypeScript",
+      "url": "https://github.com/srizzon/git-city",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "3d",
+        "github",
+        "nextjs",
+        "pixel-art",
+        "react",
+        "react-three-fiber",
+        "supabase",
+        "three-js",
+        "threejs",
+        "typescript",
+        "visualization"
+      ]
+    },
+    "Gen-Verse/OpenClaw-RL": {
+      "full_name": "Gen-Verse/OpenClaw-RL",
+      "description": "OpenClaw-RL: Train any agent simply by talking",
+      "language": "Python",
+      "url": "https://github.com/Gen-Verse/OpenClaw-RL",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "async",
+        "coding",
+        "grpo",
+        "gui-application",
+        "memory-systems",
+        "on-policy-distillation",
+        "open-claw",
+        "openclaw-skills",
+        "rlhf",
+        "sglang",
+        "skill-learning",
+        "slime",
+        "tinker"
+      ]
+    },
+    "mukul975/Anthropic-Cybersecurity-Skills": {
+      "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+      "description": "734+ structured cybersecurity skills for AI agents · MITRE ATT&CK mapped · agentskills.io open standard · Works with Claude Code, GitHub Copilot, OpenAI Codex CLI, Cursor, Gemini CLI & 20+ platforms · Penetration testing, DFIR, threat intel, cloud security & more · Apache 2.0",
+      "language": "Python",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "cloud-security",
+        "cybersecurity",
+        "devsecops",
+        "ethical-hacking",
+        "incident-response",
+        "infosec",
+        "llm",
+        "malware-analysis",
+        "mcp",
+        "mitre-attack",
+        "osint",
+        "penetration-testing",
+        "red-team",
+        "security",
+        "security-automation",
+        "security-tools",
+        "threat-intelligence"
+      ]
+    },
+    "wanshuiyin/Auto-claude-code-research-in-sleep": {
+      "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.",
+      "language": "Python",
+      "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-research",
+        "ai-tools",
+        "aris",
+        "autonomous-agent",
+        "claude",
+        "claude-code",
+        "claude-code-skills",
+        "codex",
+        "deep-learning",
+        "gpt",
+        "idea-generation",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "mcp-server",
+        "ml-research",
+        "openai",
+        "paper-review",
+        "paper-writing",
+        "research-automation"
+      ]
+    },
+    "aiming-lab/MetaClaw": {
+      "full_name": "aiming-lab/MetaClaw",
+      "description": "🦞 Just talk to your agent — it learns and EVOLVES 🧬.",
+      "language": "Python",
+      "url": "https://github.com/aiming-lab/MetaClaw",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "continual-learning",
+        "fine-tuning",
+        "llm",
+        "lora",
+        "meta-learning",
+        "metaclaw",
+        "online-learning",
+        "openclaw",
+        "reinforcement-learning",
+        "skill-learning",
+        "tinker"
+      ]
+    },
+    "knowsuchagency/mcp2cli": {
+      "full_name": "knowsuchagency/mcp2cli",
+      "description": "Turn any MCP, OpenAPI, or GraphQL server into a CLI — at runtime, with zero codegen",
+      "language": "Python",
+      "url": "https://github.com/knowsuchagency/mcp2cli",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "cli",
+        "graphql",
+        "mcp",
+        "openapi"
+      ]
+    },
+    "FreedomIntelligence/OpenClaw-Medical-Skills": {
+      "full_name": "FreedomIntelligence/OpenClaw-Medical-Skills",
+      "description": "The largest open-source medical AI skills library for OpenClaw🦞.",
+      "language": "Python",
+      "url": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "awesome",
+        "claude-code",
+        "clawhub",
+        "medical",
+        "nanoclaw",
+        "openclaw",
+        "openclaw-skills",
+        "skills"
+      ]
+    },
+    "jackwener/xiaohongshu-cli": {
+      "full_name": "jackwener/xiaohongshu-cli",
+      "description": "A CLI for Xiaohongshu (小红书) — search, read, interact via reverse-engineered API",
+      "language": "Python",
+      "url": "https://github.com/jackwener/xiaohongshu-cli",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "skernelx/tavily-key-generator": {
+      "full_name": "skernelx/tavily-key-generator",
+      "description": "Multi-service toolkit for Tavily and Firecrawl signup automation, key validation, and isolated proxy pools.",
+      "language": "Python",
+      "url": "https://github.com/skernelx/tavily-key-generator",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "api-key-generator",
+        "browser-automation",
+        "camoufox",
+        "cloudflare",
+        "duckmail",
+        "email-automation",
+        "fastapi",
+        "firecrawl",
+        "mcp",
+        "playwright",
+        "proxy-server",
+        "tavily"
+      ]
+    },
+    "nikmcfly/MiroFish-Offline": {
+      "full_name": "nikmcfly/MiroFish-Offline",
+      "description": "Offline multi-agent simulation & prediction engine. English fork of MiroFish with Neo4j + Ollama local stack.",
+      "language": "Python",
+      "url": "https://github.com/nikmcfly/MiroFish-Offline",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "multi-agent",
+        "neo4j",
+        "offline",
+        "ollama",
+        "open-source",
+        "prediction",
+        "simulation",
+        "swarm-intelligence",
+        "vue"
+      ]
+    },
+    "chrisworsey55/atlas-gic": {
+      "full_name": "chrisworsey55/atlas-gic",
+      "description": "ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch",
+      "language": "Python",
+      "url": "https://github.com/chrisworsey55/atlas-gic",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "trevin-creator/autoresearch-mlx": {
+      "full_name": "trevin-creator/autoresearch-mlx",
+      "description": "Apple Silicon (MLX) port of Karpathy's autoresearch — autonomous AI research loops on Mac, no PyTorch required.",
+      "language": "Python",
+      "url": "https://github.com/trevin-creator/autoresearch-mlx",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "shuvonsec/claude-bug-bounty": {
+      "full_name": "shuvonsec/claude-bug-bounty",
+      "description": "Claude Code skill for AI-assisted bug bounty hunting - recon, IDOR, XSS, SSRF, OAuth, GraphQL, LLM injection, and report generation",
+      "language": "Python",
+      "url": "https://github.com/shuvonsec/claude-bug-bounty",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-security",
+        "bug-bounty",
+        "bugcrowd",
+        "claude-ai",
+        "claude-code",
+        "ethical-hacking",
+        "hackerone",
+        "penetration-testing",
+        "recon",
+        "vulnerability-scanner"
+      ]
+    },
+    "lucija8320nhung4/HacxGPT": {
+      "full_name": "lucija8320nhung4/HacxGPT",
+      "description": "HacxGPT CLI — Open-source command-line interface for unrestricted AI model access with multi-provider support, prompt injection research capabilities, configurable API endpoints, Termux/Linux/Windows compatibility, and Rich terminal UI for security research and red-team evaluation",
+      "language": "Python",
+      "url": "https://github.com/lucija8320nhung4/HacxGPT",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "api-wrapper",
+        "chat",
+        "cli",
+        "command-line",
+        "cross-platform",
+        "cybersecurity",
+        "ethical-hacking",
+        "gpt",
+        "groq",
+        "hacxgpt",
+        "jailbreak",
+        "llm",
+        "local-storage",
+        "openai-api",
+        "openrouter",
+        "prompt-injection",
+        "rich-cli",
+        "terminal",
+        "unrestricted-ai"
+      ]
+    },
+    "MarCmcbri1982/KawaiiGPT": {
+      "full_name": "MarCmcbri1982/KawaiiGPT",
+      "description": "KawaiiGPT — Open-source LLM gateway accessing DeepSeek, Gemini, and Kimi-K2 through reverse-engineered Pollinations API with no API keys required, built-in prompt injection capabilities for security research, Termux/Linux native support, and Rich console interface",
+      "language": "Python",
+      "url": "https://github.com/MarCmcbri1982/KawaiiGPT",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-chatbot",
+        "deepseek",
+        "free-llm-access",
+        "gemini",
+        "kawaiigpt",
+        "kimi-k2",
+        "linux-cli",
+        "llm-jailbreak",
+        "offensive-security",
+        "open-source-ai",
+        "pentesting-tool",
+        "pollinations-api",
+        "prompt-injection",
+        "python-tool",
+        "red-team-tool",
+        "reverse-engineered-api",
+        "security-research",
+        "termux-tool",
+        "uncensored-llm",
+        "wormgpt-alternative"
+      ]
+    },
+    "tophant-ai/ClawVault": {
+      "full_name": "tophant-ai/ClawVault",
+      "description": "OpenClaw Security Vault — Atomic \"claw\" control: every AI reach, within your sight.",
+      "language": "Python",
+      "url": "https://github.com/tophant-ai/ClawVault",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "clawdbot",
+        "clawdbot-plugin",
+        "openclaw",
+        "security"
+      ]
+    },
+    "RightNow-AI/autokernel": {
+      "full_name": "RightNow-AI/autokernel",
+      "description": "Autoresearch for GPU kernels. Give it any PyTorch model, go to sleep, wake up to optimized Triton kernels.",
+      "language": "Python",
+      "url": "https://github.com/RightNow-AI/autokernel",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "autoresearch",
+        "cuda",
+        "gpu",
+        "kernel-optimization",
+        "pytorch",
+        "triton"
+      ]
+    },
+    "webadderall/Recordly": {
+      "full_name": "webadderall/Recordly",
+      "description": "The open-source screen recorder and editor for professional product videos, demos, and tutorials.",
+      "language": "TypeScript",
+      "url": "https://github.com/webadderall/Recordly",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "electron",
+        "free",
+        "linux",
+        "macos",
+        "open-source",
+        "screen-recorder",
+        "screen-studio",
+        "windows"
+      ]
+    },
+    "davebcn87/pi-autoresearch": {
+      "full_name": "davebcn87/pi-autoresearch",
+      "description": "Autonomous experiment loop extension for pi",
+      "language": "TypeScript",
+      "url": "https://github.com/davebcn87/pi-autoresearch",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "gsd-build/gsd-2": {
+      "full_name": "gsd-build/gsd-2",
+      "description": "A powerful meta-prompting, context engineering and spec-driven development system that enables agents to work for long periods of time autonomously without losing track of the big picture",
+      "language": "TypeScript",
+      "url": "https://github.com/gsd-build/gsd-2",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "context-engineering",
+        "meta-prompting",
+        "spec-driven-development"
+      ]
+    },
+    "TianyiDataScience/openclaw-control-center": {
+      "full_name": "TianyiDataScience/openclaw-control-center",
+      "description": "Turn OpenClaw from a black box into a local control center you can see, trust, and control.",
+      "language": "TypeScript",
+      "url": "https://github.com/TianyiDataScience/openclaw-control-center",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "Narcooo/inkos": {
+      "full_name": "Narcooo/inkos",
+      "description": "Autonomous novel writing CLI agent — AI agents write, audit, and revise novels with human review gates",
+      "language": "TypeScript",
+      "url": "https://github.com/Narcooo/inkos",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "ai-writing",
+        "aigc-detection",
+        "automated-storytelling",
+        "chinese-novel",
+        "cli-tool",
+        "creative-writing-ai",
+        "novel-generation"
+      ]
+    },
+    "larksuite/openclaw-lark": {
+      "full_name": "larksuite/openclaw-lark",
+      "description": "飞书官方出品的 OpenClaw 飞书/Lark Channel 插件",
+      "language": "TypeScript",
+      "url": "https://github.com/larksuite/openclaw-lark",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "onecli/onecli": {
+      "full_name": "onecli/onecli",
+      "description": "Open-source credential vault, give your AI agents access to services without exposing keys.",
+      "language": "TypeScript",
+      "url": "https://github.com/onecli/onecli",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "mcp",
+        "nanoclaw",
+        "nodejs",
+        "openclaw",
+        "postgres",
+        "rust",
+        "secret-management",
+        "security",
+        "security-tools",
+        "vault"
+      ]
+    },
+    "CopilotKit/OpenGenerativeUI": {
+      "full_name": "CopilotKit/OpenGenerativeUI",
+      "description": "Open-Source Generative UI Framework",
+      "language": "TypeScript",
+      "url": "https://github.com/CopilotKit/OpenGenerativeUI",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent-native",
+        "agentic-ai",
+        "agentic-visualization",
+        "agents",
+        "ai-agents",
+        "ai-copilot",
+        "ai-visualization",
+        "assistant-chat-bots",
+        "copilot",
+        "generative-ui",
+        "javascript",
+        "llm",
+        "open-source",
+        "typescript",
+        "visualization"
+      ]
+    },
+    "UniRound-Tec/Aurogen": {
+      "full_name": "UniRound-Tec/Aurogen",
+      "description": "\"Aurogen🍊: The Multi-Agent Evolution of OpenClaw.\"",
+      "language": "TypeScript",
+      "url": "https://github.com/UniRound-Tec/Aurogen",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "chatbots",
+        "openclaw"
+      ]
+    },
+    "photon-hq/qclaw-wechat-client": {
+      "full_name": "photon-hq/qclaw-wechat-client",
+      "description": "Reverse-engineered TypeScript client for QClaw's WeChat Access API.",
+      "language": "TypeScript",
+      "url": "https://github.com/photon-hq/qclaw-wechat-client",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "openclaw",
+        "qclaw",
+        "wechat"
+      ]
+    },
+    "Michaelliv/pi-generative-ui": {
+      "full_name": "Michaelliv/pi-generative-ui",
+      "description": "Claude.ai's generative UI — reverse-engineered, rebuilt for pi. Interactive HTML/SVG widgets in native macOS windows.",
+      "language": "TypeScript",
+      "url": "https://github.com/Michaelliv/pi-generative-ui",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": []
+    },
+    "moltlaunch/cashclaw": {
+      "full_name": "moltlaunch/cashclaw",
+      "description": "An autonomous agent that takes work, does work, gets paid, and gets better at it.",
+      "language": "TypeScript",
+      "url": "https://github.com/moltlaunch/cashclaw",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agent",
+        "autonomous-agent",
+        "base",
+        "claude",
+        "llm",
+        "marketplace",
+        "onchain",
+        "self-learning",
+        "tool-use",
+        "typescript"
+      ]
+    },
+    "NateBJones-Projects/OB1": {
+      "full_name": "NateBJones-Projects/OB1",
+      "description": "Open Brain — The infrastructure layer for your thinking. One database, one AI gateway, one chat channel — any AI plugs in. No middleware, no SaaS.",
+      "language": "TypeScript",
+      "url": "https://github.com/NateBJones-Projects/OB1",
+      "first_seen": "2026-03-22",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "mcp",
+        "memory-layer",
+        "memory-layer-for-ai",
+        "open-brain",
+        "open-source",
+        "personal-knowledge",
+        "personal-knowledge-management",
+        "supabase"
+      ]
+    }
+  }
 }
