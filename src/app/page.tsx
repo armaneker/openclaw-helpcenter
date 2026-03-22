@@ -173,10 +173,6 @@ export default function HomePage() {
         </p>
         <p className="text-sm text-gray-500">
           Built by{' '}
-          <a href="https://x.com/araborz" className="text-gray-400 hover:text-gray-200 transition-colors" target="_blank" rel="noopener noreferrer">
-            @araborz
-          </a>
-          {' '}&middot;{' '}
           <a href="https://github.com/armaneker/agentic-playbook" className="text-gray-400 hover:text-gray-200 transition-colors" target="_blank" rel="noopener noreferrer">
             Contribute on GitHub
           </a>

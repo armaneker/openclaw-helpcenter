@@ -12,15 +12,6 @@ export default function Footer() {
         >
           GitHub
         </a>
-        <span className="text-gray-700 mx-1">&middot;</span>
-        <a
-          href="https://x.com/araborz"
-          className="text-gray-400 hover:text-gray-200 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X (@araborz)
-        </a>
       </p>
     </footer>
   );

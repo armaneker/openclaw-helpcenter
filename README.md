@@ -31,4 +31,4 @@ See our [Contributing Guide](https://armaneker.github.io/agentic-playbook/about/
 
 ## Author
 
-Built by [Arman Eker](https://x.com/araborz) — also building [Figopara](https://figopara.com).
+Built by Arman Eker.
