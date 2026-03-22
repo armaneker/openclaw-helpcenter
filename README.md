@@ -1,12 +1,12 @@
 # Agentic Playbook
 
-Tested, hands-on guides for agentic workflows — OpenClaw, Paperclip, LangSmith Fleet, and beyond.
+Tested guides for setting up and running AI agent systems in production.
 
-**[Read the guides](https://armaneker.github.io/agentic-playbook/)**
+**[Read the guides →](https://armaneker.github.io/agentic-playbook/)**
 
 ## What This Is
 
-Agentic Playbook is a collection of production-grade, tested guides for setting up and running AI agent systems. Every guide is tested end-to-end before publishing. No marketing fluff.
+Agentic Playbook is a collection of tested guides for setting up and running AI agent systems in production.
 
 ## Guides Available
 

@@ -85,7 +85,7 @@ export default function HomePage() {
           Tested guides for agentic workflows
         </p>
         <p className="text-base text-gray-500 max-w-2xl mb-6">
-          Hands-on, production-grade guides for OpenClaw, Paperclip, LangSmith, and the tools shaping the agent era.
+          Tested guides for setting up and running AI agent systems in production.
         </p>
         <div className="flex gap-3">
           <Link
@@ -169,7 +169,7 @@ export default function HomePage() {
           About This Project
         </h2>
         <p className="text-sm text-gray-400 mb-3">
-          Every guide here is tested end-to-end before publishing. No marketing fluff, no theory — just real commands, real configs, and real troubleshooting for real problems.
+          Agentic Playbook is a collection of tested guides for setting up and running AI agent systems in production.
         </p>
         <p className="text-sm text-gray-500">
           Built by{' '}

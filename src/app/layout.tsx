@@ -18,9 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Agentic Playbook</title>
-        <meta name="description" content="Agentic Playbook — hands-on, tested guides for setting up and running AI agent systems. Covers OpenClaw, Paperclip, LangSmith Fleet, Skills, Plugins, security, and more." />
+        <meta name="description" content="Agentic Playbook — tested guides for setting up and running AI agent systems. Covers OpenClaw, Paperclip, LangSmith Fleet, and more." />
         <meta property="og:title" content="Agentic Playbook" />
-        <meta property="og:description" content="Tested guides and best practices for agentic workflows — OpenClaw, Paperclip, LangSmith, and beyond." />
+        <meta property="og:description" content="Tested guides for setting up and running AI agent systems in production." />
         <meta property="og:type" content="website" />
       </head>
       <body>

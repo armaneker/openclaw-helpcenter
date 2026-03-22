@@ -36,10 +36,13 @@ The user wants to add a new page to Agentic Playbook.
    - Commit all changes with a descriptive message
    - Push to `main` so GitHub Actions deploys automatically
 
-## Content Style Guide
-- Use second person ("you") when addressing the reader
-- Keep paragraphs short (2-3 sentences)
-- Use code blocks with language tags for commands and config
-- Use Callout components for important notes, warnings, and tips
-- Structure with h2 (`##`) for main sections and h3 (`###`) for subsections
+## Content Style
+
+**Read `.claude/style-guide.md` before writing any content.** It has the full list of banned phrases and writing rules.
+
+Key points:
+- Write like a senior engineer talking to a peer. No filler.
+- Never use phrases like "hands-on", "production-grade", "dive deep", "let's get started"
+- First paragraph: one sentence saying what this page helps you do
+- Use bullet lists, not tables, for simple name + description lists
 - Include a Troubleshooting section for step-by-step guides

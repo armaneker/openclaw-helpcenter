@@ -66,9 +66,15 @@ Push to `main` triggers automatic deployment via `.github/workflows/deploy.yml`.
 - `mdx-components.tsx` — MDX component registration (Callout, GuideHeader, Link override)
 - `src/app/page.tsx` — Homepage with tool cards and latest guides
 
+## Writing Style
+
+**Read `.claude/style-guide.md` before writing any content.** It defines the voice, banned phrases, and structure rules for all pages.
+
+Short version: write like a senior engineer explaining something to a peer. No filler, no AI crutch phrases, no selling. Just clear instructions.
+
 ## Design Principles
 
 - Every guide must be tested end-to-end
-- Include real commands, real configs, real troubleshooting
+- Include working commands, configs, and troubleshooting sections
 - Show "Coming soon" sections — don't hide planned categories
 - Keep it minimal — no animations, no heavy JS, fast page loads
