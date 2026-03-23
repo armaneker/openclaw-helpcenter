@@ -2,7 +2,7 @@
  * Compute star deltas by comparing today's snapshot against previous snapshots.
  */
 
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 
 const SNAPSHOTS_DIR = join(process.cwd(), 'src/data/trends/snapshots');
@@ -26,16 +26,30 @@ function fmt(date) {
 }
 
 /**
- * Find the closest available snapshot to a target date (searching backwards up to 7 days).
+ * Find the closest available snapshot to a target date (searching backwards).
+ * @param {Date} targetDate
+ * @param {number} maxSearchDays - how many days to search backward (default 7)
  */
-function findClosestSnapshot(targetDate) {
-  for (let i = 0; i < 7; i++) {
+function findClosestSnapshot(targetDate, maxSearchDays = 7) {
+  for (let i = 0; i < maxSearchDays; i++) {
     const d = new Date(targetDate);
     d.setDate(d.getDate() - i);
     const snap = loadSnapshot(fmt(d));
     if (snap) return snap;
   }
   return null;
+}
+
+/**
+ * Find the oldest available snapshot in the snapshots directory.
+ */
+function findOldestSnapshot() {
+  if (!existsSync(SNAPSHOTS_DIR)) return null;
+  const files = readdirSync(SNAPSHOTS_DIR)
+    .filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .sort();
+  if (files.length === 0) return null;
+  return loadSnapshot(files[0].replace('.json', ''));
 }
 
 /**
@@ -58,8 +72,9 @@ export function computeDeltas(todayData) {
 
   const snapDay = findClosestSnapshot(dayAgo);
   const snapWeek = findClosestSnapshot(weekAgo);
-  const snapMonth = findClosestSnapshot(monthAgo);
-  const snapYear = findClosestSnapshot(yearAgo);
+  const snapMonth = findClosestSnapshot(monthAgo, 14);
+  // For yearly: search 14 days around the target, and fall back to oldest snapshot
+  const snapYear = findClosestSnapshot(yearAgo, 14) || findOldestSnapshot();
 
   const deltas = {};
 
