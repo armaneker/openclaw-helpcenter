@@ -16,9 +16,12 @@ jobs:
         with:
           node-version: 20
 
+      - run: npm install
+
       - name: Backfill historical star data
         run: node scripts/backfill-history.mjs
         env:
+          GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit historical snapshots
