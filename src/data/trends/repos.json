@@ -23,7 +23,8 @@
         "programming",
         "react",
         "teachers"
-      ]
+      ],
+      "category": "Web Framework"
     },
     "openclaw/openclaw": {
       "full_name": "openclaw/openclaw",
@@ -40,7 +41,9 @@
         "openclaw",
         "own-your-data",
         "personal"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v2026.3.13-1"
     },
     "vinta/awesome-python": {
       "full_name": "vinta/awesome-python",
@@ -56,7 +59,8 @@
         "python-frameworks",
         "python-libraries",
         "python-tools"
-      ]
+      ],
+      "category": "Other"
     },
     "awesome-selfhosted/awesome-selfhosted": {
       "full_name": "awesome-selfhosted/awesome-selfhosted",
@@ -74,7 +78,9 @@
         "privacy",
         "self-hosted",
         "selfhosted"
-      ]
+      ],
+      "category": "Infra",
+      "version": "1.0.0"
     },
     "facebook/react": {
       "full_name": "facebook/react",
@@ -90,7 +96,9 @@
         "library",
         "react",
         "ui"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "v19.2.4"
     },
     "torvalds/linux": {
       "full_name": "torvalds/linux",
@@ -99,7 +107,8 @@
       "url": "https://github.com/torvalds/linux",
       "first_seen": "2026-03-22",
       "has_summary": true,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "tensorflow/tensorflow": {
       "full_name": "tensorflow/tensorflow",
@@ -117,7 +126,9 @@
         "neural-network",
         "python",
         "tensorflow"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v2.21.0"
     },
     "ohmyzsh/ohmyzsh": {
       "full_name": "ohmyzsh/ohmyzsh",
@@ -142,7 +153,8 @@
         "themes",
         "zsh",
         "zsh-configuration"
-      ]
+      ],
+      "category": "Web Framework"
     },
     "microsoft/vscode": {
       "full_name": "microsoft/vscode",
@@ -157,7 +169,9 @@
         "microsoft",
         "typescript",
         "visual-studio-code"
-      ]
+      ],
+      "category": "DevTools",
+      "version": "1.112.0"
     },
     "Significant-Gravitas/AutoGPT": {
       "full_name": "Significant-Gravitas/AutoGPT",
@@ -174,7 +188,9 @@
         "llama-api",
         "openai",
         "python"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "autogpt-platform-beta-v0.6.52"
     },
     "n8n-io/n8n": {
       "full_name": "n8n-io/n8n",
@@ -204,7 +220,9 @@
         "typescript",
         "workflow",
         "workflow-automation"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "stable"
     },
     "flutter/flutter": {
       "full_name": "flutter/flutter",
@@ -233,7 +251,9 @@
         "web",
         "web-framework",
         "windows"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "3.19.0-0.1.pre"
     },
     "twbs/bootstrap": {
       "full_name": "twbs/bootstrap",
@@ -250,7 +270,9 @@
         "javascript",
         "sass",
         "scss"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "v5.3.8"
     },
     "avelino/awesome-go": {
       "full_name": "avelino/awesome-go",
@@ -266,7 +288,8 @@
         "golang",
         "golang-library",
         "hacktoberfest"
-      ]
+      ],
+      "category": "Other"
     },
     "huggingface/transformers": {
       "full_name": "huggingface/transformers",
@@ -295,7 +318,9 @@
         "speech-recognition",
         "transformer",
         "vlm"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v5.3.0"
     },
     "Snailclimb/JavaGuide": {
       "full_name": "Snailclimb/JavaGuide",
@@ -317,7 +342,8 @@
         "system",
         "system-design",
         "zookeeper"
-      ]
+      ],
+      "category": "Database"
     },
     "f/prompts.chat": {
       "full_name": "f/prompts.chat",
@@ -345,7 +371,8 @@
         "prompts",
         "prompts-chat",
         "typescript"
-      ]
+      ],
+      "category": "AI / ML"
     },
     "yt-dlp/yt-dlp": {
       "full_name": "yt-dlp/yt-dlp",
@@ -362,7 +389,9 @@
         "youtube-dl",
         "youtube-downloader",
         "yt-dlp"
-      ]
+      ],
+      "category": "DevTools",
+      "version": "2026.03.17"
     },
     "langflow-ai/langflow": {
       "full_name": "langflow-ai/langflow",
@@ -378,7 +407,9 @@
         "large-language-models",
         "multiagent",
         "react-flow"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "1.8.2"
     },
     "vercel/next.js": {
       "full_name": "vercel/next.js",
@@ -402,7 +433,9 @@
         "static-site-generator",
         "universal",
         "vercel"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "v16.2.1"
     },
     "langgenius/dify": {
       "full_name": "langgenius/dify",
@@ -432,7 +465,9 @@
         "python",
         "rag",
         "workflow"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "1.13.2"
     },
     "golang/go": {
       "full_name": "golang/go",
@@ -446,7 +481,8 @@
         "golang",
         "language",
         "programming-language"
-      ]
+      ],
+      "category": "Language"
     },
     "microsoft/PowerToys": {
       "full_name": "microsoft/PowerToys",
@@ -468,7 +504,9 @@
         "windows",
         "windows-10",
         "windows-11"
-      ]
+      ],
+      "category": "Other",
+      "version": "v0.98.0"
     },
     "langchain-ai/langchain": {
       "full_name": "langchain-ai/langchain",
@@ -497,7 +535,9 @@
         "pydantic",
         "python",
         "rag"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "langchain-core==1.2.20"
     },
     "open-webui/open-webui": {
       "full_name": "open-webui/open-webui",
@@ -522,7 +562,9 @@
         "self-hosted",
         "ui",
         "webui"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v0.8.10"
     },
     "anomalyco/opencode": {
       "full_name": "anomalyco/opencode",
@@ -531,7 +573,9 @@
       "url": "https://github.com/anomalyco/opencode",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic",
+      "version": "v1.3.0"
     },
     "Chalarangelo/30-seconds-of-code": {
       "full_name": "Chalarangelo/30-seconds-of-code",
@@ -554,7 +598,9 @@
         "nodejs",
         "programming",
         "snippets"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "v14.0.0"
     },
     "facebook/react-native": {
       "full_name": "facebook/react-native",
@@ -572,7 +618,9 @@
         "mobile-development",
         "react",
         "react-native"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "v0.84.1"
     },
     "kubernetes/kubernetes": {
       "full_name": "kubernetes/kubernetes",
@@ -586,7 +634,9 @@
         "containers",
         "go",
         "kubernetes"
-      ]
+      ],
+      "category": "DevTools",
+      "version": "v1.35.3"
     },
     "electron/electron": {
       "full_name": "electron/electron",
@@ -605,7 +655,9 @@
         "nodejs",
         "v8",
         "works-with-codespaces"
-      ]
+      ],
+      "category": "Web Framework",
+      "version": "v41.0.3"
     },
     "NVIDIA/NemoClaw": {
       "full_name": "NVIDIA/NemoClaw",
@@ -614,7 +666,8 @@
       "url": "https://github.com/NVIDIA/NemoClaw",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "aiming-lab/AutoResearchClaw": {
       "full_name": "aiming-lab/AutoResearchClaw",
@@ -633,7 +686,9 @@
         "paper-generation",
         "scientific-discovery",
         "self-evolving"
-      ]
+      ],
+      "category": "Other",
+      "version": "v0.3.2"
     },
     "Lum1104/Understand-Anything": {
       "full_name": "Lum1104/Understand-Anything",
@@ -649,7 +704,8 @@
         "codex-skills",
         "knowledge-graph",
         "understandcode"
-      ]
+      ],
+      "category": "Other"
     },
     "HKUDS/ClawTeam": {
       "full_name": "HKUDS/ClawTeam",
@@ -658,7 +714,9 @@
       "url": "https://github.com/HKUDS/ClawTeam",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic",
+      "version": "v0.1.2"
     },
     "MoonshotAI/Attention-Residuals": {
       "full_name": "MoonshotAI/Attention-Residuals",
@@ -684,7 +742,8 @@
         "codex-skills",
         "codex-subagents",
         "subagents"
-      ]
+      ],
+      "category": "Agentic"
     },
     "zerobootdev/zeroboot": {
       "full_name": "zerobootdev/zeroboot",
@@ -712,7 +771,8 @@
       "url": "https://github.com/MiniMax-AI/skills",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "AI / ML"
     },
     "cnlimiter/codex-manager": {
       "full_name": "cnlimiter/codex-manager",
@@ -721,7 +781,9 @@
       "url": "https://github.com/cnlimiter/codex-manager",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other",
+      "version": "v1.1.1"
     },
     "Infatoshi/OpenSquirrel": {
       "full_name": "Infatoshi/OpenSquirrel",
@@ -739,7 +801,8 @@
       "url": "https://github.com/danveloper/flash-moe",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "math-inc/OpenGauss": {
       "full_name": "math-inc/OpenGauss",
@@ -748,7 +811,8 @@
       "url": "https://github.com/math-inc/OpenGauss",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "lcoutodemos/clui-cc": {
       "full_name": "lcoutodemos/clui-cc",
@@ -757,7 +821,8 @@
       "url": "https://github.com/lcoutodemos/clui-cc",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "lxf746/any-auto-register": {
       "full_name": "lxf746/any-auto-register",
@@ -766,7 +831,9 @@
       "url": "https://github.com/lxf746/any-auto-register",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other",
+      "version": "v1.0.3"
     },
     "mattprusak/autoresearch-genealogy": {
       "full_name": "mattprusak/autoresearch-genealogy",
@@ -775,7 +842,8 @@
       "url": "https://github.com/mattprusak/autoresearch-genealogy",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "AI / ML"
     },
     "dontbesilent2025/dbskill": {
       "full_name": "dontbesilent2025/dbskill",
@@ -784,7 +852,8 @@
       "url": "https://github.com/dontbesilent2025/dbskill",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "rasbt/llm-architecture-gallery": {
       "full_name": "rasbt/llm-architecture-gallery",
@@ -805,7 +874,8 @@
       "url": "https://github.com/truongduy2611/app-store-preflight-skills",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "rzru/nightingale": {
       "full_name": "rzru/nightingale",
@@ -839,7 +909,9 @@
       "url": "https://github.com/frank890417/taiwan-md",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "AI / ML",
+      "version": "v0.5.0"
     },
     "collaborator-ai/collab-public": {
       "full_name": "collaborator-ai/collab-public",
@@ -848,7 +920,9 @@
       "url": "https://github.com/collaborator-ai/collab-public",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic",
+      "version": "v0.3.1"
     },
     "BryanLunduke/DoesItAgeVerify": {
       "full_name": "BryanLunduke/DoesItAgeVerify",
@@ -857,7 +931,8 @@
       "url": "https://github.com/BryanLunduke/DoesItAgeVerify",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "ghostty-org/ghostling": {
       "full_name": "ghostty-org/ghostling",
@@ -866,7 +941,8 @@
       "url": "https://github.com/ghostty-org/ghostling",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "sstklen/trump-code": {
       "full_name": "sstklen/trump-code",
@@ -886,7 +962,9 @@
         "stock-market",
         "trump",
         "truth-social"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v2.8.0"
     },
     "nv-tlabs/kimodo": {
       "full_name": "nv-tlabs/kimodo",
@@ -895,7 +973,8 @@
       "url": "https://github.com/nv-tlabs/kimodo",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "AI / ML"
     },
     "joeseesun/opencli-skill": {
       "full_name": "joeseesun/opencli-skill",
@@ -904,7 +983,8 @@
       "url": "https://github.com/joeseesun/opencli-skill",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "DevTools"
     },
     "wangziqi06/724-office": {
       "full_name": "wangziqi06/724-office",
@@ -913,7 +993,8 @@
       "url": "https://github.com/wangziqi06/724-office",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "leo-lilinxiao/codex-autoresearch": {
       "full_name": "leo-lilinxiao/codex-autoresearch",
@@ -922,7 +1003,9 @@
       "url": "https://github.com/leo-lilinxiao/codex-autoresearch",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other",
+      "version": "v0.1.0"
     },
     "lightningpixel/modly": {
       "full_name": "lightningpixel/modly",
@@ -939,7 +1022,9 @@
         "modly",
         "open-source",
         "self-hosted"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v0.2.0"
     },
     "lidangzzz/goal-driven": {
       "full_name": "lidangzzz/goal-driven",
@@ -948,7 +1033,8 @@
       "url": "https://github.com/lidangzzz/goal-driven",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "public-apis/public-apis": {
       "full_name": "public-apis/public-apis",
@@ -971,7 +1057,8 @@
         "public-apis",
         "resources",
         "software"
-      ]
+      ],
+      "category": "Other"
     },
     "EbookFoundation/free-programming-books": {
       "full_name": "EbookFoundation/free-programming-books",
@@ -986,7 +1073,8 @@
         "hacktoberfest",
         "list",
         "resource"
-      ]
+      ],
+      "category": "Other"
     },
     "kamranahmedse/developer-roadmap": {
       "full_name": "kamranahmedse/developer-roadmap",
@@ -1014,7 +1102,9 @@
         "roadmap",
         "software-architect-roadmap",
         "vue-roadmap"
-      ]
+      ],
+      "category": "Other",
+      "version": "4.0"
     },
     "donnemartin/system-design-primer": {
       "full_name": "donnemartin/system-design-primer",
@@ -1037,7 +1127,8 @@
         "web",
         "web-application",
         "webapp"
-      ]
+      ],
+      "category": "Web Framework"
     },
     "ossu/computer-science": {
       "full_name": "ossu/computer-science",
@@ -1051,7 +1142,8 @@
         "computer-science",
         "courses",
         "curriculum"
-      ]
+      ],
+      "category": "Other"
     },
     "ollama/ollama": {
       "full_name": "ollama/ollama",
@@ -1076,7 +1168,9 @@
         "mistral",
         "ollama",
         "qwen"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v0.18.2"
     },
     "DigitalPlatDev/FreeDomain": {
       "full_name": "DigitalPlatDev/FreeDomain",
@@ -1093,7 +1187,8 @@
         "domains",
         "free",
         "freedomain"
-      ]
+      ],
+      "category": "Other"
     },
     "yangshun/tech-interview-handbook": {
       "full_name": "yangshun/tech-interview-handbook",
@@ -1113,7 +1208,8 @@
         "interview-preparation",
         "interview-questions",
         "system-design"
-      ]
+      ],
+      "category": "Other"
     },
     "Genymobile/scrcpy": {
       "full_name": "Genymobile/scrcpy",
@@ -1131,7 +1227,9 @@
         "recording",
         "screen",
         "sdl2"
-      ]
+      ],
+      "category": "Mobile",
+      "version": "v3.3.4"
     },
     "karpathy/autoresearch": {
       "full_name": "karpathy/autoresearch",
@@ -1140,7 +1238,8 @@
       "url": "https://github.com/karpathy/autoresearch",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "garrytan/gstack": {
       "full_name": "garrytan/gstack",
@@ -1149,7 +1248,8 @@
       "url": "https://github.com/garrytan/gstack",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "paperclipai/paperclip": {
       "full_name": "paperclipai/paperclip",
@@ -1158,7 +1258,9 @@
       "url": "https://github.com/paperclipai/paperclip",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other",
+      "version": "v2026.318.0"
     },
     "googleworkspace/cli": {
       "full_name": "googleworkspace/cli",
@@ -1184,7 +1286,9 @@
         "google-workspace",
         "oauth2",
         "rust"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v0.18.1"
     },
     "HKUDS/CLI-Anything": {
       "full_name": "HKUDS/CLI-Anything",
@@ -1193,7 +1297,8 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "RightNow-AI/openfang": {
       "full_name": "RightNow-AI/openfang",
@@ -1211,7 +1316,9 @@
         "openclaw",
         "operating-system",
         "rust"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v0.5.1"
     },
     "openai/symphony": {
       "full_name": "openai/symphony",
@@ -1220,7 +1327,8 @@
       "url": "https://github.com/openai/symphony",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "agentscope-ai/CoPaw": {
       "full_name": "agentscope-ai/CoPaw",
@@ -1229,7 +1337,9 @@
       "url": "https://github.com/agentscope-ai/CoPaw",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic",
+      "version": "v0.1.0.post1"
     },
     "cft0808/edict": {
       "full_name": "cft0808/edict",
@@ -1252,7 +1362,8 @@
         "orchestration",
         "python",
         "workflow-automation"
-      ]
+      ],
+      "category": "Agentic"
     },
     "THU-MAIC/OpenMAIC": {
       "full_name": "THU-MAIC/OpenMAIC",
@@ -1261,7 +1372,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "Panniantong/Agent-Reach": {
       "full_name": "Panniantong/Agent-Reach",
@@ -1288,7 +1400,9 @@
         "web-scraper",
         "xiaohongshu",
         "youtube-transcript"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v1.3.0"
     },
     "tanweai/pua": {
       "full_name": "tanweai/pua",
@@ -1302,7 +1416,9 @@
         "agent",
         "pip",
         "pua"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v1.2.0"
     },
     "nikopueringer/CorridorKey": {
       "full_name": "nikopueringer/CorridorKey",
@@ -1311,7 +1427,8 @@
       "url": "https://github.com/nikopueringer/CorridorKey",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "phuryn/pm-skills": {
       "full_name": "phuryn/pm-skills",
@@ -1328,7 +1445,8 @@
         "claude-code-plugins",
         "claude-cowork-plugin",
         "product-management"
-      ]
+      ],
+      "category": "Agentic"
     },
     "cloudflare/vinext": {
       "full_name": "cloudflare/vinext",
@@ -1337,7 +1455,9 @@
       "url": "https://github.com/cloudflare/vinext",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Web Framework",
+      "version": "v0.0.34"
     },
     "anthropics/financial-services-plugins": {
       "full_name": "anthropics/financial-services-plugins",
@@ -1346,7 +1466,8 @@
       "url": "https://github.com/anthropics/financial-services-plugins",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "maderix/ANE": {
       "full_name": "maderix/ANE",
@@ -1355,7 +1476,8 @@
       "url": "https://github.com/maderix/ANE",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "AI / ML"
     },
     "calesthio/Crucix": {
       "full_name": "calesthio/Crucix",
@@ -1368,7 +1490,8 @@
         "ai",
         "intelligence",
         "osint"
-      ]
+      ],
+      "category": "Agentic"
     },
     "smartcmd/MinecraftConsoles": {
       "full_name": "smartcmd/MinecraftConsoles",
@@ -1377,7 +1500,8 @@
       "url": "https://github.com/smartcmd/MinecraftConsoles",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "ringhyacinth/Star-Office-UI": {
       "full_name": "ringhyacinth/Star-Office-UI",
@@ -1397,7 +1521,9 @@
         "phaser",
         "pixel-art",
         "status-visiualzation"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v1.0.0"
     },
     "mksglu/context-mode": {
       "full_name": "mksglu/context-mode",
@@ -1418,7 +1544,9 @@
         "openclaw",
         "opencode",
         "skills"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v1.0.49"
     },
     "BigBodyCobain/Shadowbroker": {
       "full_name": "BigBodyCobain/Shadowbroker",
@@ -1442,7 +1570,9 @@
         "sattelite",
         "sattelite-imagery",
         "sdr"
-      ]
+      ],
+      "category": "Other",
+      "version": "v0.9.5"
     },
     "Lakr233/vphone-cli": {
       "full_name": "Lakr233/vphone-cli",
@@ -1451,7 +1581,9 @@
       "url": "https://github.com/Lakr233/vphone-cli",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "DevTools",
+      "version": "0.1.4"
     },
     "jackwener/opencli": {
       "full_name": "jackwener/opencli",
@@ -1465,7 +1597,9 @@
         "ai-agents",
         "ai-tools",
         "cli"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v1.3.1"
     },
     "srizzon/git-city": {
       "full_name": "srizzon/git-city",
@@ -1509,7 +1643,8 @@
         "skill-learning",
         "slime",
         "tinker"
-      ]
+      ],
+      "category": "Agentic"
     },
     "mukul975/Anthropic-Cybersecurity-Skills": {
       "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
@@ -1539,7 +1674,9 @@
         "security-automation",
         "security-tools",
         "threat-intelligence"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v1.1.0"
     },
     "wanshuiyin/Auto-claude-code-research-in-sleep": {
       "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -1569,7 +1706,8 @@
         "paper-review",
         "paper-writing",
         "research-automation"
-      ]
+      ],
+      "category": "Agentic"
     },
     "aiming-lab/MetaClaw": {
       "full_name": "aiming-lab/MetaClaw",
@@ -1592,7 +1730,9 @@
         "reinforcement-learning",
         "skill-learning",
         "tinker"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v0.3.2"
     },
     "knowsuchagency/mcp2cli": {
       "full_name": "knowsuchagency/mcp2cli",
@@ -1607,7 +1747,8 @@
         "graphql",
         "mcp",
         "openapi"
-      ]
+      ],
+      "category": "Agentic"
     },
     "FreedomIntelligence/OpenClaw-Medical-Skills": {
       "full_name": "FreedomIntelligence/OpenClaw-Medical-Skills",
@@ -1656,7 +1797,8 @@
         "playwright",
         "proxy-server",
         "tavily"
-      ]
+      ],
+      "category": "Agentic"
     },
     "nikmcfly/MiroFish-Offline": {
       "full_name": "nikmcfly/MiroFish-Offline",
@@ -1676,7 +1818,8 @@
         "simulation",
         "swarm-intelligence",
         "vue"
-      ]
+      ],
+      "category": "Agentic"
     },
     "chrisworsey55/atlas-gic": {
       "full_name": "chrisworsey55/atlas-gic",
@@ -1685,7 +1828,8 @@
       "url": "https://github.com/chrisworsey55/atlas-gic",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "trevin-creator/autoresearch-mlx": {
       "full_name": "trevin-creator/autoresearch-mlx",
@@ -1744,7 +1888,9 @@
         "rich-cli",
         "terminal",
         "unrestricted-ai"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "HacxGPT"
     },
     "MarCmcbri1982/KawaiiGPT": {
       "full_name": "MarCmcbri1982/KawaiiGPT",
@@ -1774,7 +1920,9 @@
         "termux-tool",
         "uncensored-llm",
         "wormgpt-alternative"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "KawaiiGPT"
     },
     "tophant-ai/ClawVault": {
       "full_name": "tophant-ai/ClawVault",
@@ -1804,7 +1952,8 @@
         "kernel-optimization",
         "pytorch",
         "triton"
-      ]
+      ],
+      "category": "AI / ML"
     },
     "webadderall/Recordly": {
       "full_name": "webadderall/Recordly",
@@ -1822,7 +1971,9 @@
         "screen-recorder",
         "screen-studio",
         "windows"
-      ]
+      ],
+      "category": "Other",
+      "version": "v1.1.4"
     },
     "davebcn87/pi-autoresearch": {
       "full_name": "davebcn87/pi-autoresearch",
@@ -1831,7 +1982,8 @@
       "url": "https://github.com/davebcn87/pi-autoresearch",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "gsd-build/gsd-2": {
       "full_name": "gsd-build/gsd-2",
@@ -1844,7 +1996,9 @@
         "context-engineering",
         "meta-prompting",
         "spec-driven-development"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v2.42.0"
     },
     "TianyiDataScience/openclaw-control-center": {
       "full_name": "TianyiDataScience/openclaw-control-center",
@@ -1853,7 +2007,8 @@
       "url": "https://github.com/TianyiDataScience/openclaw-control-center",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "Narcooo/inkos": {
       "full_name": "Narcooo/inkos",
@@ -1871,7 +2026,9 @@
         "cli-tool",
         "creative-writing-ai",
         "novel-generation"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v0.5.1"
     },
     "larksuite/openclaw-lark": {
       "full_name": "larksuite/openclaw-lark",
@@ -1880,7 +2037,8 @@
       "url": "https://github.com/larksuite/openclaw-lark",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "onecli/onecli": {
       "full_name": "onecli/onecli",
@@ -1927,7 +2085,8 @@
         "open-source",
         "typescript",
         "visualization"
-      ]
+      ],
+      "category": "Agentic"
     },
     "UniRound-Tec/Aurogen": {
       "full_name": "UniRound-Tec/Aurogen",
@@ -1940,7 +2099,9 @@
         "agent",
         "chatbots",
         "openclaw"
-      ]
+      ],
+      "category": "Agentic",
+      "version": "v0.2.0post2"
     },
     "photon-hq/qclaw-wechat-client": {
       "full_name": "photon-hq/qclaw-wechat-client",
@@ -1954,7 +2115,8 @@
         "openclaw",
         "qclaw",
         "wechat"
-      ]
+      ],
+      "category": "Agentic"
     },
     "Michaelliv/pi-generative-ui": {
       "full_name": "Michaelliv/pi-generative-ui",
@@ -1963,7 +2125,9 @@
       "url": "https://github.com/Michaelliv/pi-generative-ui",
       "first_seen": "2026-03-22",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "AI / ML",
+      "version": "v0.2.1"
     },
     "moltlaunch/cashclaw": {
       "full_name": "moltlaunch/cashclaw",
@@ -1983,7 +2147,8 @@
         "self-learning",
         "tool-use",
         "typescript"
-      ]
+      ],
+      "category": "Agentic"
     },
     "NateBJones-Projects/OB1": {
       "full_name": "NateBJones-Projects/OB1",
@@ -2002,7 +2167,8 @@
         "personal-knowledge",
         "personal-knowledge-management",
         "supabase"
-      ]
+      ],
+      "category": "Agentic"
     },
     "excalidraw/excalidraw": {
       "full_name": "excalidraw/excalidraw",
@@ -2097,7 +2263,8 @@
       "url": "https://github.com/louislva/claude-peers-mcp",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "dou-jiang/codex-console": {
       "full_name": "dou-jiang/codex-console",
@@ -2106,7 +2273,9 @@
       "url": "https://github.com/dou-jiang/codex-console",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other",
+      "version": "v1.0.0"
     },
     "inspatio/inspatio-world": {
       "full_name": "inspatio/inspatio-world",
@@ -2115,7 +2284,8 @@
       "url": "https://github.com/inspatio/inspatio-world",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "win4r/ClawTeam-OpenClaw": {
       "full_name": "win4r/ClawTeam-OpenClaw",
@@ -2134,7 +2304,8 @@
         "swarm",
         "swarm-intelligence",
         "swarms"
-      ]
+      ],
+      "category": "Agentic"
     },
     "sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation": {
       "full_name": "sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
@@ -2143,7 +2314,8 @@
       "url": "https://github.com/sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Data"
     },
     "olelehmann100kMRR/autoresearch-skill": {
       "full_name": "olelehmann100kMRR/autoresearch-skill",
@@ -2152,7 +2324,8 @@
       "url": "https://github.com/olelehmann100kMRR/autoresearch-skill",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "naver-ai/seoul-world-model": {
       "full_name": "naver-ai/seoul-world-model",
@@ -2170,7 +2343,8 @@
       "url": "https://github.com/wong2/weixin-agent-sdk",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Agentic"
     },
     "Krypto-Hashers-Community/polymarket-trading-bot": {
       "full_name": "Krypto-Hashers-Community/polymarket-trading-bot",
@@ -2201,7 +2375,8 @@
       "url": "https://github.com/m1heng/claude-plugin-weixin",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "romhans59/bunkr-downloader-2026": {
       "full_name": "romhans59/bunkr-downloader-2026",
@@ -2225,7 +2400,8 @@
       "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "Nunchi-trade/auto-researchtrading": {
       "full_name": "Nunchi-trade/auto-researchtrading",
@@ -2234,7 +2410,8 @@
       "url": "https://github.com/Nunchi-trade/auto-researchtrading",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "Kaleighc793/freqtrade-bot": {
       "full_name": "Kaleighc793/freqtrade-bot",
@@ -2311,7 +2488,9 @@
         "warp",
         "wireguard",
         "zero-trust"
-      ]
+      ],
+      "category": "DevTools",
+      "version": "v0.1.0"
     },
     "Shpigford/chops": {
       "full_name": "Shpigford/chops",
@@ -2334,7 +2513,8 @@
       "url": "https://github.com/eze-is/web-access",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "deathlessburton88/tiktok-views-likes-followers-shares-bot-2026": {
       "full_name": "deathlessburton88/tiktok-views-likes-followers-shares-bot-2026",
@@ -2347,7 +2527,8 @@
         "tiktok",
         "tiktok-api",
         "zefoy"
-      ]
+      ],
+      "category": "Other"
     }
   }
 }
