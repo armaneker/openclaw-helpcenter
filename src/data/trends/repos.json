@@ -303,7 +303,7 @@
       "language": "Java",
       "url": "https://github.com/Snailclimb/JavaGuide",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "algorithms",
         "distributed-systems",
@@ -325,7 +325,7 @@
       "language": "HTML",
       "url": "https://github.com/f/prompts.chat",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "ai",
         "artificial-intelligence",
@@ -353,7 +353,7 @@
       "language": "Python",
       "url": "https://github.com/yt-dlp/yt-dlp",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "cli",
         "downloader",
@@ -370,7 +370,7 @@
       "language": "Python",
       "url": "https://github.com/langflow-ai/langflow",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agents",
         "chatgpt",
@@ -386,7 +386,7 @@
       "language": "JavaScript",
       "url": "https://github.com/vercel/next.js",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "blog",
         "browser",

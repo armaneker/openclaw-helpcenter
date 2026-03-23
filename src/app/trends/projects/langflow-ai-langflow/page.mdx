@@ -1,0 +1,69 @@
+<GuideHeader tool="langflow" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Langflow
+
+Langflow is a visual platform for building and deploying AI-powered agents and workflows. It provides both a drag-and-drop interface and programmatic access, turning every workflow into an API or MCP server that integrates with any application stack.
+
+## Key Features
+
+- Visual workflow builder with drag-and-drop components
+- Multi-agent orchestration with conversation management
+- Support for all major LLMs and vector databases
+- Interactive playground for testing flows step-by-step
+- Export workflows as APIs or JSON for Python applications
+- Deploy workflows as MCP servers for tool integration
+- Built-in observability with LangSmith and LangFuse
+- Source code access for Python customization
+
+## Installation
+
+<Callout type="info">
+Requires Python 3.10–3.13. Using [uv](https://docs.astral.sh/uv/) as package manager is recommended.
+</Callout>
+
+Install via pip:
+
+```bash
+pip install langflow -U
+```
+
+Or with uv:
+
+```bash
+uv pip install langflow -U
+```
+
+For containerized deployment:
+
+```bash
+docker run -p 7860:7860 langflowai/langflow:latest
+```
+
+## Basic Usage
+
+Start the Langflow server:
+
+```bash
+langflow run
+```
+
+Access the visual interface at `http://127.0.0.1:7860`. Build workflows by dragging components, configure LLM connections, and test your agents in the interactive playground.
+
+Export your workflow as an API endpoint or integrate it programmatically:
+
+```python
+from langflow.load import run_flow_from_json
+
+result = run_flow_from_json(flow="path/to/flow.json", input_value="Hello, world!")
+```
+
+<Callout type="warning">
+Update to Langflow >= 1.7.1 to protect against recent CVEs. Version 1.7.0 was yanked due to critical state persistence bugs.
+</Callout>
+
+## Project Details
+
+- **License**: MIT
+- **Language**: Python  
+- **Community**: 146k+ GitHub stars, active Discord server
+- **Deployment**: Supports all major cloud platforms with official guides

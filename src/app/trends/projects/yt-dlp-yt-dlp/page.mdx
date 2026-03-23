@@ -1,0 +1,66 @@
+<GuideHeader tool="yt-dlp" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# yt-dlp
+
+yt-dlp is a feature-rich command-line audio/video downloader supporting thousands of sites. It's a fork of youtube-dl with enhanced features and active maintenance.
+
+## Key Features
+
+- Download videos and audio from 1000+ sites including YouTube, Vimeo, TikTok
+- Format selection and quality control
+- SponsorBlock integration to skip sponsored segments
+- Playlist and channel downloading
+- Subtitle extraction and embedding
+- Post-processing with FFmpeg integration
+- Extensive output templating and metadata handling
+- Plugin system for extensibility
+
+## Installation
+
+**Using pip:**
+```bash
+pip install yt-dlp
+```
+
+**Pre-built binaries:**
+- Windows: Download `yt-dlp.exe` from [releases](https://github.com/yt-dlp/yt-dlp/releases)
+- Linux/BSD: Download `yt-dlp` binary
+- macOS: Download `yt-dlp_macos`
+
+<Callout type="info">
+The platform-independent zipimport binary requires Python but works across all systems.
+</Callout>
+
+## Basic Usage
+
+Download a video:
+```bash
+yt-dlp "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+```
+
+Extract audio only:
+```bash
+yt-dlp -x --audio-format mp3 "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+```
+
+Download best quality under 720p:
+```bash
+yt-dlp -f "best[height<=720]" "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+```
+
+Download entire playlist:
+```bash
+yt-dlp "https://www.youtube.com/playlist?list=PLxxxxxx"
+```
+
+## Notable Details
+
+- **License:** Unlicense (public domain)
+- **Language:** Python
+- **Community:** 152k+ GitHub stars, active Discord server
+- **Maintenance:** Actively developed with frequent releases
+- **Dependencies:** Optional FFmpeg for post-processing
+
+<Callout type="tip">
+Use `yt-dlp --update` to keep the tool current with site changes and new features.
+</Callout>

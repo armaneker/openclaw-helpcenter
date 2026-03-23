@@ -1,0 +1,68 @@
+<GuideHeader tool="next.js" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Next.js
+
+Next.js is a React framework that enables full-stack web application development with built-in optimizations and server-side capabilities. It extends React with powerful features like server-side rendering, static site generation, and automatic code splitting.
+
+## Key Features
+
+- **Server-side rendering (SSR)** and **static site generation (SSG)** out of the box
+- **File-based routing** with automatic route creation
+- **API routes** for building backend endpoints within your React app
+- **Automatic code splitting** and performance optimizations
+- **Built-in CSS and Sass support** with CSS-in-JS compatibility
+- **Image optimization** and **font optimization** automatically applied
+- **TypeScript support** with zero configuration
+- **Fast refresh** for instant feedback during development
+
+## Installation
+
+Create a new Next.js project:
+
+```bash
+npx create-next-app@latest my-app
+cd my-app
+npm run dev
+```
+
+Or add to existing project:
+
+```bash
+npm install next react react-dom
+```
+
+## Basic Usage
+
+Create a simple page in `pages/index.js`:
+
+```javascript
+export default function Home() {
+  return (
+    <div>
+      <h1>Welcome to Next.js</h1>
+      <p>This page is server-side rendered by default</p>
+    </div>
+  )
+}
+
+// Optional: fetch data at build time
+export async function getStaticProps() {
+  return {
+    props: {
+      message: "Hello from the server!"
+    }
+  }
+}
+```
+
+<Callout type="tip">
+Next.js automatically creates routes based on your file structure in the `pages` directory. No router configuration needed.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: JavaScript with TypeScript support
+- **Community**: 138k+ GitHub stars, active Discord and GitHub Discussions
+- **Maintenance**: Actively developed by Vercel with frequent releases
+- **Production ready**: Used by major companies worldwide

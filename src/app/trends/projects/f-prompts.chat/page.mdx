@@ -1,0 +1,60 @@
+<GuideHeader tool="prompts.chat" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# prompts.chat
+
+prompts.chat is the world's largest open-source prompt library for AI models. Originally known as Awesome ChatGPT Prompts, it provides curated prompt examples that work across modern AI assistants including ChatGPT, Claude, Gemini, and others.
+
+## Key Features
+
+- **Massive prompt collection** with 150k+ GitHub stars and community contributions
+- **Cross-platform compatibility** with ChatGPT, Claude, Gemini, Llama, and Mistral
+- **Self-hosting capabilities** with custom branding, themes, and authentication
+- **Multiple access methods** including web interface, CLI, MCP server, and Claude plugin
+- **Educational resources** including interactive prompting guide and kids' learning platform
+- **Data export options** in CSV, Markdown, and Hugging Face dataset formats
+
+## Installation
+
+### Self-hosted deployment (quick start)
+```bash
+npx prompts.chat new my-prompt-library
+cd my-prompt-library
+```
+
+### Manual setup
+```bash
+git clone https://github.com/f/prompts.chat.git
+cd prompts.chat
+npm install && npm run setup
+```
+
+### CLI access
+```bash
+npx prompts.chat
+```
+
+## Basic Usage
+
+Browse prompts directly at [prompts.chat/prompts](https://prompts.chat/prompts) or contribute new prompts at [prompts.chat/prompts/new](https://prompts.chat/prompts/new). For programmatic access, configure as an MCP server:
+
+```json
+{
+  "mcpServers": {
+    "prompts.chat": {
+      "url": "https://prompts.chat/api/mcp"
+    }
+  }
+}
+```
+
+<Callout type="tip">
+The setup wizard automatically configures branding, authentication providers (GitHub/Google/Azure AD), and feature preferences for self-hosted instances.
+</Callout>
+
+## Notable Details
+
+- **License**: CC0-1.0 (public domain)
+- **Language**: TypeScript/Next.js (despite GitHub showing HTML)
+- **Community**: 153k+ stars, featured in Forbes, referenced by Harvard and Columbia
+- **Academic impact**: 40+ scholarly citations, most-liked dataset on Hugging Face
+- **Recognition**: GitHub Staff Pick, endorsed by OpenAI and Hugging Face founders

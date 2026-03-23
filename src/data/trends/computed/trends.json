@@ -335,7 +335,7 @@
       "delta_week": 270,
       "delta_month": 1114,
       "delta_year": 0,
-      "has_summary": false
+      "has_summary": true
     },
     {
       "full_name": "awesome-selfhosted/awesome-selfhosted",
@@ -383,7 +383,7 @@
       "delta_week": 247,
       "delta_month": 1796,
       "delta_year": 0,
-      "has_summary": false
+      "has_summary": true
     },
     {
       "full_name": "googleworkspace/cli",
@@ -1019,7 +1019,7 @@
       "delta_week": 95,
       "delta_month": 290,
       "delta_year": 0,
-      "has_summary": false
+      "has_summary": true
     },
     {
       "full_name": "CopilotKit/OpenGenerativeUI",
@@ -1307,7 +1307,7 @@
       "delta_week": 37,
       "delta_month": 179,
       "delta_year": 0,
-      "has_summary": false
+      "has_summary": true
     },
     {
       "full_name": "vercel/next.js",
@@ -1319,7 +1319,7 @@
       "delta_week": 37,
       "delta_month": 190,
       "delta_year": 0,
-      "has_summary": false
+      "has_summary": true
     },
     {
       "full_name": "chrisworsey55/atlas-gic",
