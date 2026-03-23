@@ -104,7 +104,7 @@
       "has_summary": true,
       "category": "Other",
       "version": "v1.3.0",
-      "blurb": null
+      "blurb": "OpenCode is an open source AI coding agent written in TypeScript that helps developers write, modify, and manage code through natural language interactions. It provides both command-line and desktop interfaces for automated code generation, refactoring, and project assistance across multiple programming languages. The project has gained significant traction with over 128k GitHub stars and offers extensive installation options across all major platforms and package managers."
     },
     {
       "full_name": "HKUDS/CLI-Anything",
@@ -161,10 +161,10 @@
       "delta_week": 980,
       "delta_month": 980,
       "delta_year": 980,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "MiniMax Skills is a collection of development skills/prompts designed to integrate with AI coding agents like Claude, Cursor, and Codex. It provides structured, production-quality guidance across multiple domains including frontend/fullstack development, mobile apps, shader programming, and document generation workflows. The skills leverage MiniMax's AI APIs for media generation and include specialized tools for creating PDFs, presentations, and Office documents."
     },
     {
       "full_name": "jackwener/opencli",
@@ -269,7 +269,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Flash-MoE is a pure C/Metal inference engine that runs a 397 billion parameter Mixture-of-Experts model (Qwen3.5-397B-A17B) on a MacBook Pro with 48GB RAM. It achieves 4.4+ tokens/second by streaming the 209GB model from SSD through custom Metal compute shaders and on-demand expert loading, enabling production-quality inference of massive models on consumer hardware. The implementation uses hand-tuned Metal kernels and relies on OS page caching rather than custom caching mechanisms, proving more efficient than framework-based approaches."
     },
     {
       "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -311,10 +311,10 @@
       "delta_week": 367,
       "delta_month": 367,
       "delta_year": 367,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "A curated collection of 136+ specialized Codex subagents organized into 10 categories for different development tasks. Developers can copy these .toml configuration files to integrate task-specific AI assistants into their Codex workflow for backend development, security audits, code reviews, and other specialized use cases. Each subagent includes smart model routing to automatically select the appropriate AI model based on task complexity and cost considerations."
     },
     {
       "full_name": "torvalds/linux",
@@ -434,7 +434,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "OpenGauss is a workflow orchestrator that provides a multi-agent frontend for Lean 4 theorem proving and formalization tasks. It wraps the lean4-skills toolkit with project management, backend session handling, and a CLI that spawns managed agents for proving, drafting, and formalizing mathematical content. The system uses a project-scoped model where each command spawns a child agent that runs the corresponding lean4-skills workflow in the active Lean project."
     },
     {
       "full_name": "n8n-io/n8n",
@@ -479,7 +479,7 @@
       "has_summary": true,
       "category": "Agentic",
       "version": "1.13.2",
-      "blurb": null
+      "blurb": "Dify is a production-ready platform for building and deploying AI agent workflows with visual low-code/no-code tooling. It provides orchestration capabilities for complex AI workflows including RAG, multi-agent systems, and integration with various LLM providers like OpenAI, GPT-4, and Gemini. The platform offers both cloud-hosted and self-hosted deployment options."
     },
     {
       "full_name": "f/prompts.chat",
@@ -554,7 +554,7 @@
       "has_summary": true,
       "category": "Agentic",
       "version": "langchain-core==1.2.20",
-      "blurb": null
+      "blurb": "LangChain is a Python framework for building AI agents and LLM-powered applications through composable, interoperable components. It provides standardized interfaces for models, vector stores, and third-party integrations to enable rapid prototyping while maintaining flexibility to swap models and data sources as requirements evolve. The framework is part of a broader ecosystem including LangGraph for agent orchestration and LangSmith for debugging and deployment."
     },
     {
       "full_name": "gsd-build/gsd-2",
@@ -614,7 +614,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.0.3",
-      "blurb": null
+      "blurb": "Any Auto Register is a multi-platform account automation system that automatically registers accounts across services like ChatGPT, Cursor, and others using a plugin-based architecture with a web UI. It handles the complete registration workflow including temporary email generation, CAPTCHA solving, proxy rotation, and concurrent account creation to streamline bulk account provisioning. The system supports multiple execution modes (API-only, headless browser, headed browser) and includes built-in services for email management and CAPTCHA solving."
     },
     {
       "full_name": "ghostty-org/ghostling",
@@ -704,7 +704,7 @@
       "has_summary": true,
       "category": "Agentic",
       "version": "v0.8.10",
-      "blurb": null
+      "blurb": "Open WebUI is a self-hosted web interface for interacting with large language models that supports multiple backends including Ollama and OpenAI-compatible APIs. It provides a complete AI platform with features like RAG, user management, voice/video calls, and offline operation for organizations wanting to deploy LLMs locally. The project includes a built-in Python function calling system and model builder for creating custom AI agents."
     },
     {
       "full_name": "ringhyacinth/Star-Office-UI",
@@ -974,7 +974,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Clui CC is a lightweight desktop overlay for macOS that provides a graphical interface for Anthropic's Claude Code CLI tool. It adds a floating pill interface with multi-tab sessions, permission approval UI for tool calls, voice input, and conversation history while maintaining the underlying CLI's power and local-first approach. The overlay stays on top of other applications and can be toggled with a keyboard shortcut for seamless integration into development workflows."
     },
     {
       "full_name": "mattprusak/autoresearch-genealogy",
@@ -989,7 +989,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a comprehensive toolkit that provides structured prompts, templates, and workflows for using AI (particularly Claude Code) to conduct genealogy research. It enables researchers to systematically build family trees, verify sources, and resolve research questions through 12 autonomous research prompts that can search the web and update documentation automatically. The project includes ready-to-use Obsidian vault templates, country-specific archive guides, and methodology documents based on real research that produced 105 files spanning 9 generations."
     },
     {
       "full_name": "m1heng/claude-plugin-weixin",
@@ -1181,10 +1181,10 @@
       "delta_week": 115,
       "delta_month": 115,
       "delta_year": 115,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v1.1.1",
-      "blurb": null
+      "blurb": "This is a web-based management system for OpenAI accounts that supports automated registration, account management, and proxy handling through a Python Flask interface. It provides batch registration capabilities with multiple email service integrations (Outlook, temporary email services), concurrent processing controls, and features for account token refresh, subscription management, and export to various formats. The project appears to be discontinued as indicated by the Chinese notice stating \"官方拉闸了\" (official service shut down) with users advised to research alternatives independently."
     },
     {
       "full_name": "lidangzzz/goal-driven",
@@ -1514,7 +1514,7 @@
       "has_summary": true,
       "category": "Other",
       "version": "v0.98.0",
-      "blurb": null
+      "blurb": "PowerToys is a Microsoft-maintained collection of over 25 Windows utilities that add missing system functionality and productivity features. It provides tools like window management (FancyZones), bulk file renaming (PowerRename), application launcher (PowerToys Run), and various system tweaks that Windows lacks natively. The project has significant community adoption with over 130k GitHub stars and active development from Microsoft."
     },
     {
       "full_name": "maderix/ANE",
@@ -1634,7 +1634,7 @@
       "has_summary": true,
       "category": "Language",
       "version": null,
-      "blurb": null
+      "blurb": "This is the official repository for the Go programming language implementation and standard library. Go is designed for building simple, reliable, and efficient software with fast compilation and built-in concurrency primitives. The repository contains the complete language toolchain including compiler, runtime, and standard library used by millions of developers."
     },
     {
       "full_name": "chrisworsey55/atlas-gic",
@@ -1709,7 +1709,7 @@
       "has_summary": true,
       "category": "Web Framework",
       "version": "v14.0.0",
-      "blurb": null
+      "blurb": "30-seconds-of-code is a curated collection of coding articles and snippets covering JavaScript, CSS, HTML, Git, and Node.js fundamentals. It provides quick reference materials and explanations for common programming patterns that developers can learn and apply in under 30 seconds. The project has accumulated over 127k stars and focuses on educational content rather than accepting new community contributions."
     },
     {
       "full_name": "electron/electron",
@@ -1724,7 +1724,7 @@
       "has_summary": true,
       "category": "Other",
       "version": "v41.0.3",
-      "blurb": null
+      "blurb": "Electron is a framework that enables building cross-platform desktop applications using web technologies (JavaScript, HTML, and CSS) by combining Node.js and Chromium. It allows web developers to create native desktop apps without learning platform-specific languages, powering applications like Visual Studio Code. The framework provides prebuilt binaries for macOS, Windows, and Linux across multiple architectures."
     },
     {
       "full_name": "Michaelliv/pi-generative-ui",
@@ -1754,7 +1754,7 @@
       "has_summary": true,
       "category": "Mobile",
       "version": "v0.84.1",
-      "blurb": null
+      "blurb": "React Native is a cross-platform mobile development framework that allows developers to build native iOS and Android applications using React and JavaScript. It provides access to native UI controls and platform APIs while enabling code reuse across platforms, making it faster to develop mobile apps compared to writing separate native codebases. The framework uses a bridge architecture written in C++ to communicate between JavaScript and native platform code."
     },
     {
       "full_name": "RightNow-AI/autokernel",
@@ -1829,7 +1829,7 @@
       "has_summary": true,
       "category": "DevTools",
       "version": "v1.35.3",
-      "blurb": null
+      "blurb": "Kubernetes is an open-source container orchestration system that manages containerized applications across multiple hosts. It provides deployment, maintenance, and scaling mechanisms for production workloads, built on Google's decade-plus experience running containers at scale with their internal Borg system. The project is hosted by the CNCF and has become the de facto standard for container orchestration."
     },
     {
       "full_name": "eze-is/web-access",

@@ -1,0 +1,63 @@
+<GuideHeader tool="OpenSquirrel" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenSquirrel
+
+OpenSquirrel is a native Rust/GPUI control plane for running multiple AI coding agents simultaneously. It provides a GPU-rendered interface for managing Claude Code, Codex, Cursor, and OpenCode agents side by side with automatic delegation and persistent sessions.
+
+## Key Features
+
+- **Multi-agent grid layout** — Run multiple agents simultaneously with automatic tiling (1=full, 2=split, 4=2×2)
+- **Coordinator/worker delegation** — Primary agent can spawn sub-agents for focused tasks
+- **Remote machine targeting** — Execute on local or remote machines via SSH + tmux
+- **MCP server integration** — Direct wiring of MCP servers (Playwright, browser-use) to agent CLI args
+- **Persistent sessions** — Agent state, transcripts, and scroll positions survive app restarts
+- **Structured output parsing** — Custom markdown rendering with code blocks, diffs, and syntax highlighting
+
+## Installation
+
+<Callout type="warning">
+Currently supports macOS only (requires Metal GPU)
+</Callout>
+
+```bash
+cargo build --release
+./target/release/opensquirrel
+```
+
+For a proper macOS app bundle:
+
+```bash
+# Build
+cargo build --release
+
+# Create .app bundle
+mkdir -p dist/OpenSquirrel.app/Contents/{MacOS,Resources}
+cp target/release/opensquirrel dist/OpenSquirrel.app/Contents/MacOS/OpenSquirrel
+cp assets/OpenSquirrel.icns dist/OpenSquirrel.app/Contents/Resources/
+
+# Launch
+open dist/OpenSquirrel.app
+```
+
+## Basic Usage
+
+Launch OpenSquirrel and use `Cmd-N` to create a new agent. The setup wizard guides you through selecting runtime, model, target machine, and MCP servers.
+
+Key shortcuts:
+- `Enter` — Send prompt
+- `Cmd-K` — Command palette
+- `Cmd-F` — Search transcripts
+- `Cmd-]` / `Cmd-[` — Switch between panes
+
+Configuration lives at `~/.osq/config.toml`, state persists in `~/.osq/state.json`.
+
+## Notable Details
+
+**License:** MIT  
+**Language:** Rust (~7,200 lines across 3 files)  
+**Community:** 1,275 GitHub stars  
+**Architecture:** Built on GPUI (Zed's UI framework) with Metal GPU rendering
+
+<Callout type="tip">
+macOS app bundles don't inherit shell PATH. If agents aren't found, run the binary directly instead of via the `.app` bundle.
+</Callout>

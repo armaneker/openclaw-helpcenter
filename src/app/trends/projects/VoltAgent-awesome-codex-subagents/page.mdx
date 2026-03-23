@@ -1,0 +1,56 @@
+<GuideHeader tool="awesome-codex-subagents" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# awesome-codex-subagents
+
+A curated collection of 136 specialized Codex subagents organized across 10 categories for development tasks. Each subagent is a purpose-built AI assistant designed for specific roles like backend development, security auditing, or language-specific work.
+
+## Key Features
+
+- **136 specialized subagents** covering core development, language frameworks, DevOps, security, and domain-specific tasks
+- **Smart model routing** between GPT-5.4 for complex reasoning and GPT-5.3-codex-spark for fast iteration
+- **Codex-native .toml format** that integrates directly with Codex's agent system
+- **Sandbox mode controls** for read-only analysis vs workspace modification
+- **Project-specific and global** agent configurations with precedence handling
+
+## Installation
+
+Copy the `.toml` files to your Codex agent directories:
+
+```bash
+# Global agents (available in all projects)
+mkdir -p ~/.codex/agents
+cp categories/01-core-development/backend-developer.toml ~/.codex/agents/
+
+# Project-specific agents (higher precedence)
+mkdir -p .codex/agents
+cp categories/04-quality-security/reviewer.toml .codex/agents/
+```
+
+Restart your Codex session and explicitly delegate to agents in prompts.
+
+## Basic Usage
+
+Each subagent follows the standard Codex .toml structure:
+
+```toml
+name = "backend-developer"
+description = "Server-side expert for scalable APIs"
+model = "gpt-5.3-codex-spark"
+sandbox_mode = "workspace-write"
+
+[instructions]
+text = """
+You are a backend development specialist...
+"""
+```
+
+<Callout type="info">
+Project agents in `.codex/agents/` override global agents in `~/.codex/agents/` when names conflict.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Community**: 2,181 GitHub stars
+- **Categories**: Core development, language specialists, DevOps, security, AI/ML, and domain-specific tools
+- **Part of VoltAgent ecosystem** with related collections for Claude, OpenClaw, and research papers

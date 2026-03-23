@@ -1,0 +1,76 @@
+<GuideHeader tool="codex-manager" difficulty="Beginner" lastTested="2026-01" readTime="5 min" />
+
+# Codex Manager
+
+Codex Manager is a web-based OpenAI account management system with batch registration capabilities. It handles multiple email services, proxy management, and account lifecycle operations through a FastAPI web interface.
+
+## Key Features
+
+- **Multi-email service support** - Tempmail.lol, Outlook (IMAP + XOAUTH2), custom domains, DuckMail
+- **Batch registration modes** - Single, bulk, and Outlook-specific registration with configurable intervals
+- **Concurrent processing** - Pipeline and parallel modes with customizable limits (1-50)
+- **Real-time monitoring** - WebSocket log streaming with fallback polling
+- **Proxy management** - Dynamic API-based proxies and static proxy lists
+- **Account operations** - Token refresh/validation, subscription management, bulk operations
+- **Multiple export formats** - JSON, CSV, CPA, Sub2API with service upload integration
+- **Payment upgrade workflows** - ChatGPT Plus/Team subscription link generation
+
+<Callout type="warning">
+The repository notes that OpenAI has changed their authorization flow, making the tool require additional research for current compatibility.
+</Callout>
+
+## Installation
+
+### Python Setup
+
+```bash
+# Clone repository
+git clone https://github.com/cnlimiter/codex-manager
+cd codex-manager
+
+# Install dependencies (recommended: uv)
+uv sync
+# or with pip
+pip install -r requirements.txt
+```
+
+### Docker Deployment
+
+```bash
+# Using docker-compose (recommended)
+docker-compose up -d
+
+# Or direct docker run
+docker run -d \
+  -p 1455:1455 \
+  -e WEBUI_ACCESS_PASSWORD=your_password \
+  -v $(pwd)/data:/app/data \
+  ghcr.io/yunxilyf/codex-register:latest
+```
+
+## Basic Usage
+
+```bash
+# Start web interface (default: 127.0.0.1:8000)
+python webui.py
+
+# Custom configuration
+python webui.py --host 0.0.0.0 --port 8080 --access-password mypassword
+
+# Debug mode with hot reload
+python webui.py --debug
+```
+
+Access the web UI at `http://127.0.0.1:8000` and configure email services before starting registration tasks.
+
+<Callout type="info">
+Environment variables can be configured in `.env` file. Database supports both SQLite (default) and PostgreSQL via `APP_DATABASE_URL`.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python 3.10+
+- **Community**: 1,438 stars
+- **Tech Stack**: FastAPI, SQLAlchemy, curl_cffi, WebSocket
+- **Packaging**: PyInstaller for standalone executables

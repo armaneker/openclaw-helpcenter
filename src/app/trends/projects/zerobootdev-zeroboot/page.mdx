@@ -1,0 +1,66 @@
+<GuideHeader tool="zeroboot" difficulty="Beginner" lastTested="2026-01" readTime="4 min" />
+
+# Zeroboot
+
+Zeroboot creates sub-millisecond VM sandboxes for AI agents using copy-on-write forking of Firecracker snapshots. Each sandbox is a real KVM virtual machine with hardware-enforced memory isolation.
+
+## Key Features
+
+- **Sub-millisecond spawning**: 0.79ms p50 latency for new VM instances
+- **Memory efficient**: ~265KB per sandbox vs ~50-128MB for alternatives
+- **True isolation**: Hardware-enforced memory isolation via KVM
+- **Copy-on-write forking**: Template VMs are snapshotted and forked instantly
+- **Multiple runtimes**: Python and Node.js SDKs available
+- **Real VMs**: Each sandbox runs in its own Firecracker VM
+
+## Installation
+
+Self-host on any Linux box with KVM support, or use the managed API:
+
+```bash
+curl -X POST https://api.zeroboot.dev/v1/exec \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer zb_demo_hn2026' \
+  -d '{"code":"import numpy as np; print(np.random.rand(3))"}'
+```
+
+For SDK usage:
+
+```bash
+pip install zeroboot
+# or
+npm install @zeroboot/sdk
+```
+
+## Basic Usage
+
+**Python SDK:**
+
+```python
+from zeroboot import Sandbox
+sb = Sandbox("zb_live_your_key")
+result = sb.run("print(1 + 1)")
+```
+
+**TypeScript SDK:**
+
+```typescript
+import { Sandbox } from "@zeroboot/sdk";
+const result = await new Sandbox("zb_live_your_key").run("console.log(1+1)");
+```
+
+<Callout type="warning">
+Forks share CSPRNG state from snapshots. Userspace PRNGs (numpy, OpenSSL) need explicit reseeding per fork for cryptographic safety.
+</Callout>
+
+<Callout type="info">
+Current limitations include single vCPU per fork, no networking inside forks (serial I/O only), and ~15s template update times.
+</Callout>
+
+## Notable Details
+
+- **Language**: Rust
+- **License**: Apache-2.0
+- **Community**: 1,788 GitHub stars
+- **Status**: Working prototype, not production-hardened yet
+- **Architecture**: Firecracker + KVM with memory-mapped copy-on-write forking
