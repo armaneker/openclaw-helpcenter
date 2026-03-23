@@ -218,6 +218,7 @@ async function main() {
         has_summary: idx.has_summary || false,
         category: idx.category || 'Other',
         version: idx.version || null,
+        blurb: idx.blurb || null,
       };
     })
     .sort((a, b) => b.delta_week - a.delta_week)

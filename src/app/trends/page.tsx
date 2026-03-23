@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import TrendFilters, { type TimeRange } from '@/components/TrendFilters';
 import TrendCard, { type TrendRepo } from '@/components/TrendCard';
+import RepoPopup from '@/components/RepoPopup';
 import trendsData from '@/data/trends/computed/trends.json';
 
 const deltaKey: Record<TimeRange, keyof TrendRepo> = {
@@ -17,6 +18,7 @@ const ALL_CATEGORIES = 'All';
 export default function TrendsPage() {
   const [range, setRange] = useState<TimeRange>('week');
   const [category, setCategory] = useState(ALL_CATEGORIES);
+  const [selectedRepo, setSelectedRepo] = useState<TrendRepo | null>(null);
 
   // Collect unique categories from the data
   const categories = useMemo(() => {
@@ -80,7 +82,13 @@ export default function TrendsPage() {
       {/* List */}
       <div className="space-y-2">
         {sorted.map((repo, i) => (
-          <TrendCard key={repo.full_name} repo={repo} range={range} rank={i + 1} />
+          <TrendCard
+            key={repo.full_name}
+            repo={repo}
+            range={range}
+            rank={i + 1}
+            onClick={() => setSelectedRepo(repo)}
+          />
         ))}
       </div>
 
@@ -94,6 +102,11 @@ export default function TrendsPage() {
       <p className="text-xs text-gray-600 mt-6">
         Star data collected from the GitHub Search API every 6 hours. New projects are analyzed automatically.
       </p>
+
+      {/* Popup */}
+      {selectedRepo && (
+        <RepoPopup repo={selectedRepo} onClose={() => setSelectedRepo(null)} />
+      )}
     </div>
   );
 }

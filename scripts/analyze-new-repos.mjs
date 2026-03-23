@@ -36,6 +36,50 @@ function saveJSON(file, data) {
 }
 
 /**
+ * Generate a short 2-3 sentence blurb for the popup.
+ */
+async function generateBlurb(repoData, readme) {
+  const readmeSnippet = readme ? readme.slice(0, 4000) : 'No README available.';
+
+  const prompt = `Write a 2-3 sentence summary of this GitHub project. First sentence: what it is. Second sentence: what it does / why someone would use it. Third (optional): a notable detail.
+
+Write like a senior engineer. No filler, no hype. Just facts.
+
+Repository: ${repoData.full_name}
+Description: ${repoData.description || 'No description'}
+Language: ${repoData.language || 'Unknown'}
+Stars: ${repoData.stargazers_count || 'Unknown'}
+Topics: ${(repoData.topics || []).join(', ') || 'None'}
+
+README (first 4000 chars):
+${readmeSnippet}
+
+Output ONLY the 2-3 sentences, nothing else.`;
+
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': ANTHROPIC_API_KEY,
+      'anthropic-version': '2023-06-01',
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 300,
+      messages: [{ role: 'user', content: prompt }],
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Anthropic API ${res.status}: ${body}`);
+  }
+
+  const data = await res.json();
+  return data.content[0]?.text?.trim() || null;
+}
+
+/**
  * Call the Anthropic Messages API to generate a summary.
  */
 async function generateSummary(repoData, readme) {
@@ -110,16 +154,38 @@ async function main() {
   console.log('Analyzing new repos...');
 
   const reposIndex = loadJSON(REPOS_FILE);
+
+  // Phase 1: Generate blurbs for repos that don't have one
+  const needsBlurb = Object.entries(reposIndex.repos)
+    .filter(([, repo]) => !repo.blurb)
+    .slice(0, 20); // More blurbs per run since they're cheap
+
+  if (needsBlurb.length > 0) {
+    console.log(`Generating blurbs for ${needsBlurb.length} repos...`);
+    for (const [name] of needsBlurb) {
+      try {
+        const repoData = await getRepo(name);
+        const readme = await getReadme(name);
+        const blurb = await generateBlurb(repoData, readme);
+        if (blurb) {
+          reposIndex.repos[name].blurb = blurb;
+          console.log(`  Blurb: ${name}`);
+        }
+        await new Promise(r => setTimeout(r, 500));
+      } catch (err) {
+        console.error(`  Blurb error for ${name}: ${err.message}`);
+      }
+    }
+  }
+
+  // Phase 2: Generate full MDX summaries for repos without one
   const needsSummary = Object.entries(reposIndex.repos)
     .filter(([, repo]) => !repo.has_summary)
     .slice(0, MAX_PER_RUN);
 
-  if (needsSummary.length === 0) {
-    console.log('No new repos to analyze.');
-    return;
+  if (needsSummary.length > 0) {
+    console.log(`Generating full summaries for ${needsSummary.length} repos...`);
   }
-
-  console.log(`Found ${needsSummary.length} repos needing summaries.`);
 
   let generated = 0;
 
@@ -150,6 +216,12 @@ async function main() {
       reposIndex.repos[name].has_summary = true;
       generated++;
 
+      // Also generate blurb if we don't have one yet
+      if (!reposIndex.repos[name].blurb) {
+        const blurb = await generateBlurb(repoData, readme);
+        if (blurb) reposIndex.repos[name].blurb = blurb;
+      }
+
       // Small delay between API calls
       await new Promise(r => setTimeout(r, 1000));
     } catch (err) {
@@ -160,18 +232,20 @@ async function main() {
   // Update repos.json
   saveJSON(REPOS_FILE, reposIndex);
 
-  // Update has_summary flags in trends.json too
+  // Update has_summary and blurb flags in trends.json too
   if (existsSync(TRENDS_FILE)) {
     const trends = loadJSON(TRENDS_FILE);
     for (const repo of trends.repos) {
-      if (reposIndex.repos[repo.full_name]?.has_summary) {
-        repo.has_summary = true;
+      const idx = reposIndex.repos[repo.full_name];
+      if (idx) {
+        repo.has_summary = idx.has_summary || false;
+        repo.blurb = idx.blurb || null;
       }
     }
     saveJSON(TRENDS_FILE, trends);
   }
 
-  console.log(`Done. Generated ${generated} summaries.`);
+  console.log(`Done. Generated ${generated} summaries, ${needsBlurb.length} blurbs.`);
 }
 
 main().catch(err => {

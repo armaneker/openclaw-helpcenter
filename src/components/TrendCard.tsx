@@ -14,6 +14,7 @@ export interface TrendRepo {
   has_summary: boolean;
   category: string;
   version: string | null;
+  blurb: string | null;
 }
 
 function formatNumber(n: number): string {
@@ -65,10 +66,12 @@ export default function TrendCard({
   repo,
   range,
   rank,
+  onClick,
 }: {
   repo: TrendRepo;
   range: TimeRange;
   rank: number;
+  onClick?: () => void;
 }) {
   const delta = getDelta(repo, range);
   const [owner, name] = repo.full_name.split('/');
@@ -80,7 +83,10 @@ export default function TrendCard({
   const catColor = categoryColors[repo.category] || categoryColors['Other'];
 
   return (
-    <div className="group rounded-lg border border-gray-800 bg-gray-900/50 p-4 transition-colors hover:border-gray-700">
+    <div
+      onClick={onClick}
+      className="group rounded-lg border border-gray-800 bg-gray-900/50 p-4 transition-colors hover:border-gray-700 cursor-pointer"
+    >
       <div className="flex items-start justify-between gap-4">
         {/* Left: rank + info */}
         <div className="flex items-start gap-3 min-w-0">
@@ -93,6 +99,7 @@ export default function TrendCard({
                 href={repo.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="text-sm font-semibold text-gray-100 hover:text-brand-300 transition-colors truncate"
               >
                 <span className="text-gray-500 font-normal">{owner}/</span>{name}
@@ -123,6 +130,7 @@ export default function TrendCard({
               {repo.has_summary && (
                 <a
                   href={summaryHref}
+                  onClick={(e) => e.stopPropagation()}
                   className="text-xs text-brand-400 hover:text-brand-300 transition-colors"
                 >
                   Summary
