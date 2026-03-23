@@ -2291,6 +2291,41 @@
       "first_seen": "2026-03-23",
       "has_summary": false,
       "topics": []
+    },
+    "ccbkkb/MicroWARP": {
+      "full_name": "ccbkkb/MicroWARP",
+      "description": "🚀 An 800KB RAM ultra-lightweight Cloudflare WARP SOCKS5 proxy in Docker. 仅需 800KB 内存的纯内核态 Cloudflare WARP 代理 - Docker",
+      "language": "Shell",
+      "url": "https://github.com/ccbkkb/MicroWARP",
+      "first_seen": "2026-03-23",
+      "has_summary": false,
+      "topics": [
+        "alpine",
+        "bypass-dpi",
+        "cloudflare",
+        "cloudflare-warp",
+        "docker",
+        "lightweight",
+        "proxy",
+        "socks5",
+        "warp",
+        "wireguard",
+        "zero-trust"
+      ]
+    },
+    "Shpigford/chops": {
+      "full_name": "Shpigford/chops",
+      "description": "Your AI agent skills, finally organized. A macOS app to browse, edit, and manage skills across Claude Code, Cursor, Codex, Windsurf, and Amp.",
+      "language": "Swift",
+      "url": "https://github.com/Shpigford/chops",
+      "first_seen": "2026-03-23",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "macos",
+        "skills",
+        "swiftui"
+      ]
     }
   }
 }
