@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-03-23T10:03:59.632Z",
+  "updated_at": "2026-03-23T10:10:10.408Z",
   "repos": [
     {
       "full_name": "garrytan/gstack",
       "description": "Use Garry Tan's exact Claude Code setup: 15 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
       "language": "TypeScript",
       "url": "https://github.com/garrytan/gstack",
-      "stars": 40137,
-      "delta_day": 2592,
-      "delta_week": 4982,
-      "delta_month": 8546,
-      "delta_year": 40137,
+      "stars": 40153,
+      "delta_day": 2608,
+      "delta_week": 4998,
+      "delta_month": 8562,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -18,11 +18,11 @@
       "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
       "language": "TypeScript",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": 331206,
-      "delta_day": 1142,
-      "delta_week": 3137,
-      "delta_month": 27206,
-      "delta_year": 331206,
+      "stars": 331213,
+      "delta_day": 1149,
+      "delta_week": 3144,
+      "delta_month": 27213,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -30,11 +30,11 @@
       "description": "AI agents running research on single-GPU nanochat training automatically",
       "language": "Python",
       "url": "https://github.com/karpathy/autoresearch",
-      "stars": 50987,
-      "delta_day": 1246,
-      "delta_week": 2760,
-      "delta_month": 11046,
-      "delta_year": 50987,
+      "stars": 50991,
+      "delta_day": 1250,
+      "delta_week": 2764,
+      "delta_month": 11050,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -42,11 +42,11 @@
       "description": "Run OpenClaw more securely inside NVIDIA OpenShell with managed inference",
       "language": "JavaScript",
       "url": "https://github.com/NVIDIA/NemoClaw",
-      "stars": 15526,
-      "delta_day": 278,
-      "delta_week": 2345,
-      "delta_month": 2432,
-      "delta_year": 15526,
+      "stars": 15530,
+      "delta_day": 282,
+      "delta_week": 2349,
+      "delta_month": 2436,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -54,11 +54,11 @@
       "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
       "language": "TypeScript",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": 11473,
-      "delta_day": 336,
-      "delta_week": 1731,
-      "delta_month": 2040,
-      "delta_year": 11473,
+      "stars": 11476,
+      "delta_day": 339,
+      "delta_week": 1734,
+      "delta_month": 2043,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -66,11 +66,11 @@
       "description": "Claude Code skills that turn any codebase into an interactive knowledge graph you can explore, search, and ask questions about (Multi-platform e.g., Codex are supported).",
       "language": "TypeScript",
       "url": "https://github.com/Lum1104/Understand-Anything",
-      "stars": 5143,
-      "delta_day": 1287,
-      "delta_week": 1376,
-      "delta_month": 1455,
-      "delta_year": 5143,
+      "stars": 5156,
+      "delta_day": 1300,
+      "delta_week": 1389,
+      "delta_month": 1468,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -78,11 +78,11 @@
       "description": "The open source coding agent.",
       "language": "TypeScript",
       "url": "https://github.com/anomalyco/opencode",
-      "stars": 128443,
-      "delta_day": 465,
-      "delta_week": 1135,
-      "delta_month": 4584,
-      "delta_year": 128443,
+      "stars": 128444,
+      "delta_day": 466,
+      "delta_week": 1136,
+      "delta_month": 4585,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -90,11 +90,11 @@
       "description": "CLI-Anything: Making ALL Software Agent-Native",
       "language": "Python",
       "url": "https://github.com/HKUDS/CLI-Anything",
-      "stars": 21600,
-      "delta_day": 478,
-      "delta_week": 1084,
-      "delta_month": 4409,
-      "delta_year": 21600,
+      "stars": 21602,
+      "delta_day": 480,
+      "delta_week": 1086,
+      "delta_month": 4411,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -102,11 +102,11 @@
       "description": "Fully autonomous & self-evolving research from idea to paper. Chat an Idea. Get a Paper. 🦞",
       "language": "Python",
       "url": "https://github.com/aiming-lab/AutoResearchClaw",
-      "stars": 7795,
-      "delta_day": 166,
-      "delta_week": 1083,
-      "delta_month": 1274,
-      "delta_year": 7795,
+      "stars": 7798,
+      "delta_day": 169,
+      "delta_week": 1086,
+      "delta_month": 1277,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -114,11 +114,11 @@
       "description": "Open-source orchestration for zero-human companies",
       "language": "TypeScript",
       "url": "https://github.com/paperclipai/paperclip",
-      "stars": 31868,
-      "delta_day": 321,
-      "delta_week": 1017,
-      "delta_month": 6938,
-      "delta_year": 31868,
+      "stars": 31870,
+      "delta_day": 323,
+      "delta_week": 1019,
+      "delta_month": 6940,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -126,11 +126,11 @@
       "description": "Make Any Website & Tool Your CLI. A universal CLI Hub and AI-native runtime. Transform any website, Electron app, or local binary into a standardized command-line interface. Built for AI Agents to discover, learn, and execute tools seamlessly via a unified AGENT.md integration.",
       "language": "TypeScript",
       "url": "https://github.com/jackwener/opencli",
-      "stars": 4919,
-      "delta_day": 611,
-      "delta_week": 918,
-      "delta_month": 1114,
-      "delta_year": 4919,
+      "stars": 4921,
+      "delta_day": 613,
+      "delta_week": 920,
+      "delta_month": 1116,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -138,11 +138,11 @@
       "description": "A collective list of free APIs",
       "language": "Python",
       "url": "https://github.com/public-apis/public-apis",
-      "stars": 414780,
-      "delta_day": 561,
-      "delta_week": 860,
-      "delta_month": 3629,
-      "delta_year": 414780,
+      "stars": 414782,
+      "delta_day": 563,
+      "delta_week": 862,
+      "delta_month": 3631,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -150,11 +150,11 @@
       "description": "",
       "language": "C#",
       "url": "https://github.com/MiniMax-AI/skills",
-      "stars": 2675,
-      "delta_day": 1120,
-      "delta_week": 848,
-      "delta_month": 848,
-      "delta_year": 2675,
+      "stars": 2682,
+      "delta_day": 1127,
+      "delta_week": 855,
+      "delta_month": 855,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -166,7 +166,7 @@
       "delta_day": 104,
       "delta_week": 802,
       "delta_month": 1059,
-      "delta_year": 6300,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -174,11 +174,11 @@
       "description": "你是一个曾经被寄予厚望的 P8 级工程师。Anthropic 当初给你定级的时候，对你的期望是很高的。  一个agent使用的高能动性的skill。  Your AI has been placed on a PIP. 30 days to show improvement.",
       "language": "TypeScript",
       "url": "https://github.com/tanweai/pua",
-      "stars": 10407,
-      "delta_day": 377,
-      "delta_week": 633,
-      "delta_month": 2202,
-      "delta_year": 10407,
+      "stars": 10413,
+      "delta_day": 383,
+      "delta_week": 639,
+      "delta_month": 2208,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -186,35 +186,11 @@
       "description": "ClawTeam: Agent Swarm Intelligence (One Command → Full Automation)",
       "language": "Python",
       "url": "https://github.com/HKUDS/ClawTeam",
-      "stars": 3005,
-      "delta_day": 267,
-      "delta_week": 601,
-      "delta_month": 601,
-      "delta_year": 3005,
-      "has_summary": false
-    },
-    {
-      "full_name": "eze-is/web-access",
-      "description": "给 Claude Code 装上完整联网能力的 skill：三层通道调度 + 浏览器 CDP + 并行分治",
-      "language": "JavaScript",
-      "url": "https://github.com/eze-is/web-access",
-      "stars": 490,
-      "delta_day": 490,
-      "delta_week": 490,
-      "delta_month": 490,
-      "delta_year": 490,
-      "has_summary": false
-    },
-    {
-      "full_name": "deathlessburton88/tiktok-views-likes-followers-shares-bot-2026",
-      "description": "Boost your TikTok presence with this Windows-compatible GitHub bot! Automate views, likes, shares, and followers. The tool supports CAPTCHA solving and proxy rotation for undetectable operation . Ideal for content creators looking to enhance engagement. Use responsibly—educational purposes only . Download now to streamline your TikTok growth! ",
-      "language": "Unknown",
-      "url": "https://github.com/deathlessburton88/tiktok-views-likes-followers-shares-bot-2026",
-      "stars": 451,
-      "delta_day": 451,
-      "delta_week": 451,
-      "delta_month": 451,
-      "delta_year": 451,
+      "stars": 3007,
+      "delta_day": 269,
+      "delta_week": 603,
+      "delta_month": 603,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -226,7 +202,7 @@
       "delta_day": 154,
       "delta_week": 445,
       "delta_month": 2694,
-      "delta_year": 12178,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -234,11 +210,11 @@
       "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.",
       "language": "Python",
       "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
-      "stars": 3311,
-      "delta_day": 159,
-      "delta_week": 376,
-      "delta_month": 717,
-      "delta_year": 3311,
+      "stars": 3312,
+      "delta_day": 160,
+      "delta_week": 377,
+      "delta_month": 718,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -246,11 +222,23 @@
       "description": "dontbesilent 的商业诊断 Skills for Claude Code",
       "language": "Unknown",
       "url": "https://github.com/dontbesilent2025/dbskill",
-      "stars": 1134,
-      "delta_day": 268,
-      "delta_week": 355,
-      "delta_month": 355,
-      "delta_year": 1134,
+      "stars": 1136,
+      "delta_day": 270,
+      "delta_week": 357,
+      "delta_month": 357,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "danveloper/flash-moe",
+      "description": "Running a big model on a small laptop",
+      "language": "Objective-C",
+      "url": "https://github.com/danveloper/flash-moe",
+      "stars": 1432,
+      "delta_day": 378,
+      "delta_week": 353,
+      "delta_month": 353,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -262,19 +250,7 @@
       "delta_day": 112,
       "delta_week": 350,
       "delta_month": 350,
-      "delta_year": 2164,
-      "has_summary": false
-    },
-    {
-      "full_name": "danveloper/flash-moe",
-      "description": "Running a big model on a small laptop",
-      "language": "Objective-C",
-      "url": "https://github.com/danveloper/flash-moe",
-      "stars": 1429,
-      "delta_day": 375,
-      "delta_week": 350,
-      "delta_month": 350,
-      "delta_year": 1429,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -286,7 +262,7 @@
       "delta_day": 20,
       "delta_week": 330,
       "delta_month": 643,
-      "delta_year": 3637,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -294,11 +270,11 @@
       "description": "Linux kernel source tree",
       "language": "C",
       "url": "https://github.com/torvalds/linux",
-      "stars": 224670,
-      "delta_day": 83,
-      "delta_week": 318,
-      "delta_month": 1462,
-      "delta_year": 224670,
+      "stars": 224672,
+      "delta_day": 85,
+      "delta_week": 320,
+      "delta_month": 1464,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -310,7 +286,7 @@
       "delta_day": 163,
       "delta_week": 316,
       "delta_month": 954,
-      "delta_year": 4823,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -322,7 +298,7 @@
       "delta_day": 83,
       "delta_week": 301,
       "delta_month": 1417,
-      "delta_year": 153841,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -334,7 +310,7 @@
       "delta_day": 29,
       "delta_week": 283,
       "delta_month": 283,
-      "delta_year": 1039,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -342,11 +318,11 @@
       "description": "An opinionated list of Python frameworks, libraries, tools, and resources.",
       "language": "Python",
       "url": "https://github.com/vinta/awesome-python",
-      "stars": 288594,
-      "delta_day": 88,
-      "delta_week": 273,
-      "delta_month": 1192,
-      "delta_year": 288594,
+      "stars": 288595,
+      "delta_day": 89,
+      "delta_week": 274,
+      "delta_month": 1193,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -354,11 +330,11 @@
       "description": "A feature-rich command-line audio/video downloader",
       "language": "Python",
       "url": "https://github.com/yt-dlp/yt-dlp",
-      "stars": 152722,
-      "delta_day": 103,
-      "delta_week": 268,
-      "delta_month": 1112,
-      "delta_year": 152722,
+      "stars": 152724,
+      "delta_day": 105,
+      "delta_week": 270,
+      "delta_month": 1114,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -370,8 +346,20 @@
       "delta_day": 124,
       "delta_week": 267,
       "delta_month": 1721,
-      "delta_year": 281611,
+      "delta_year": 0,
       "has_summary": true
+    },
+    {
+      "full_name": "langgenius/dify",
+      "description": "Production-ready platform for agentic workflow development.",
+      "language": "TypeScript",
+      "url": "https://github.com/langgenius/dify",
+      "stars": 134079,
+      "delta_day": 126,
+      "delta_week": 255,
+      "delta_month": 1000,
+      "delta_year": 0,
+      "has_summary": false
     },
     {
       "full_name": "n8n-io/n8n",
@@ -382,31 +370,19 @@
       "delta_day": 102,
       "delta_week": 254,
       "delta_month": 1190,
-      "delta_year": 180617,
+      "delta_year": 0,
       "has_summary": true
-    },
-    {
-      "full_name": "langgenius/dify",
-      "description": "Production-ready platform for agentic workflow development.",
-      "language": "TypeScript",
-      "url": "https://github.com/langgenius/dify",
-      "stars": 134078,
-      "delta_day": 125,
-      "delta_week": 254,
-      "delta_month": 999,
-      "delta_year": 134078,
-      "has_summary": false
     },
     {
       "full_name": "f/prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "language": "HTML",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 153940,
-      "delta_day": 115,
-      "delta_week": 246,
-      "delta_month": 1795,
-      "delta_year": 153940,
+      "stars": 153941,
+      "delta_day": 116,
+      "delta_week": 247,
+      "delta_month": 1796,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -418,7 +394,7 @@
       "delta_day": 88,
       "delta_week": 241,
       "delta_month": 4824,
-      "delta_year": 22146,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -427,10 +403,10 @@
       "language": "TypeScript",
       "url": "https://github.com/wong2/weixin-agent-sdk",
       "stars": 660,
-      "delta_day": 660,
+      "delta_day": 0,
       "delta_week": 237,
       "delta_month": 237,
-      "delta_year": 660,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -438,11 +414,11 @@
       "description": "Collaborator is a place to create with agents.",
       "language": "TypeScript",
       "url": "https://github.com/collaborator-ai/collab-public",
-      "stars": 1123,
-      "delta_day": 425,
-      "delta_week": 227,
-      "delta_month": 279,
-      "delta_year": 1123,
+      "stars": 1125,
+      "delta_day": 427,
+      "delta_week": 229,
+      "delta_month": 281,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -450,11 +426,11 @@
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
       "language": "Python",
       "url": "https://github.com/Panniantong/Agent-Reach",
-      "stars": 10445,
-      "delta_day": 115,
-      "delta_week": 226,
-      "delta_month": 2531,
-      "delta_year": 10445,
+      "stars": 10447,
+      "delta_day": 117,
+      "delta_week": 228,
+      "delta_month": 2533,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -462,11 +438,23 @@
       "description": "The agent engineering platform",
       "language": "Python",
       "url": "https://github.com/langchain-ai/langchain",
-      "stars": 130704,
-      "delta_day": 108,
-      "delta_week": 224,
-      "delta_month": 866,
-      "delta_year": 130704,
+      "stars": 130705,
+      "delta_day": 109,
+      "delta_week": 225,
+      "delta_month": 867,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "Narcooo/inkos",
+      "description": "Autonomous novel writing CLI agent — AI agents write, audit, and revise novels with human review gates",
+      "language": "TypeScript",
+      "url": "https://github.com/Narcooo/inkos",
+      "stars": 2167,
+      "delta_day": 91,
+      "delta_week": 223,
+      "delta_month": 479,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -478,19 +466,7 @@
       "delta_day": 70,
       "delta_week": 221,
       "delta_month": 447,
-      "delta_year": 2745,
-      "has_summary": false
-    },
-    {
-      "full_name": "Narcooo/inkos",
-      "description": "Autonomous novel writing CLI agent — AI agents write, audit, and revise novels with human review gates",
-      "language": "TypeScript",
-      "url": "https://github.com/Narcooo/inkos",
-      "stars": 2165,
-      "delta_day": 89,
-      "delta_week": 221,
-      "delta_month": 477,
-      "delta_year": 2165,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -502,7 +478,7 @@
       "delta_day": 42,
       "delta_week": 212,
       "delta_month": 212,
-      "delta_year": 1011,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -510,11 +486,11 @@
       "description": "A minimum viable terminal emulator built on top of the libghostty C API. Ex minimo, infinita nascuntur. 👻🐣",
       "language": "C",
       "url": "https://github.com/ghostty-org/ghostling",
-      "stars": 732,
-      "delta_day": 43,
-      "delta_week": 203,
-      "delta_month": 203,
-      "delta_year": 732,
+      "stars": 733,
+      "delta_day": 44,
+      "delta_week": 204,
+      "delta_month": 204,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -526,7 +502,7 @@
       "delta_day": 1,
       "delta_week": 198,
       "delta_month": 198,
-      "delta_year": 908,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -534,11 +510,11 @@
       "description": "Allow all your Claude Codes to message each other ad-hoc!",
       "language": "TypeScript",
       "url": "https://github.com/louislva/claude-peers-mcp",
-      "stars": 723,
-      "delta_day": 723,
-      "delta_week": 194,
-      "delta_month": 194,
-      "delta_year": 723,
+      "stars": 725,
+      "delta_day": 0,
+      "delta_week": 196,
+      "delta_month": 196,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -546,11 +522,11 @@
       "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
       "language": "Python",
       "url": "https://github.com/donnemartin/system-design-primer",
-      "stars": 339913,
-      "delta_day": 60,
-      "delta_week": 191,
-      "delta_month": 936,
-      "delta_year": 339913,
+      "stars": 339914,
+      "delta_day": 61,
+      "delta_week": 192,
+      "delta_month": 937,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -562,7 +538,7 @@
       "delta_day": 69,
       "delta_week": 189,
       "delta_month": 482,
-      "delta_year": 2479,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -574,7 +550,7 @@
       "delta_day": 69,
       "delta_week": 186,
       "delta_month": 3459,
-      "delta_year": 13029,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -586,7 +562,7 @@
       "delta_day": 67,
       "delta_week": 185,
       "delta_month": 1300,
-      "delta_year": 5870,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -598,7 +574,7 @@
       "delta_day": 79,
       "delta_week": 184,
       "delta_month": 868,
-      "delta_year": 128343,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -610,7 +586,7 @@
       "delta_day": 59,
       "delta_week": 168,
       "delta_month": 168,
-      "delta_year": 879,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -622,7 +598,7 @@
       "delta_day": 40,
       "delta_week": 165,
       "delta_month": 563,
-      "delta_year": 2768,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -630,11 +606,11 @@
       "description": "Perfect Green Screen Keys",
       "language": "Python",
       "url": "https://github.com/nikopueringer/CorridorKey",
-      "stars": 8859,
-      "delta_day": 36,
-      "delta_week": 161,
-      "delta_month": 1727,
-      "delta_year": 8859,
+      "stars": 8860,
+      "delta_day": 37,
+      "delta_week": 162,
+      "delta_month": 1728,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -643,10 +619,22 @@
       "language": "Python",
       "url": "https://github.com/dou-jiang/codex-console",
       "stars": 626,
-      "delta_day": 626,
+      "delta_day": 0,
       "delta_week": 160,
       "delta_month": 160,
-      "delta_year": 626,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "Gen-Verse/OpenClaw-RL",
+      "description": "OpenClaw-RL: Train any agent simply by talking",
+      "language": "Python",
+      "url": "https://github.com/Gen-Verse/OpenClaw-RL",
+      "stars": 4036,
+      "delta_day": 56,
+      "delta_week": 160,
+      "delta_month": 904,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -658,7 +646,7 @@
       "delta_day": 35,
       "delta_week": 160,
       "delta_month": 209,
-      "delta_year": 1173,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -670,19 +658,7 @@
       "delta_day": 71,
       "delta_week": 159,
       "delta_month": 3038,
-      "delta_year": 13840,
-      "has_summary": false
-    },
-    {
-      "full_name": "Gen-Verse/OpenClaw-RL",
-      "description": "OpenClaw-RL: Train any agent simply by talking",
-      "language": "Python",
-      "url": "https://github.com/Gen-Verse/OpenClaw-RL",
-      "stars": 4035,
-      "delta_day": 55,
-      "delta_week": 159,
-      "delta_month": 903,
-      "delta_year": 4035,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -690,11 +666,11 @@
       "description": "Privacy-first. MCP is the protocol for tool access. We're the virtualization layer for context.",
       "language": "TypeScript",
       "url": "https://github.com/mksglu/context-mode",
-      "stars": 5696,
-      "delta_day": 57,
-      "delta_week": 158,
-      "delta_month": 654,
-      "delta_year": 5696,
+      "stars": 5697,
+      "delta_day": 58,
+      "delta_week": 159,
+      "delta_month": 655,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -702,11 +678,11 @@
       "description": "The open-source screen recorder and editor for professional product videos, demos, and tutorials.",
       "language": "TypeScript",
       "url": "https://github.com/webadderall/Recordly",
-      "stars": 2935,
-      "delta_day": 38,
-      "delta_week": 158,
-      "delta_month": 595,
-      "delta_year": 2935,
+      "stars": 2936,
+      "delta_day": 39,
+      "delta_week": 159,
+      "delta_month": 596,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -718,7 +694,7 @@
       "delta_day": 25,
       "delta_week": 157,
       "delta_month": 157,
-      "delta_year": 715,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -726,11 +702,11 @@
       "description": "7/24 Office — Self-evolving AI Agent system. 26 tools, 3500 lines pure Python, MCP/Skill plugins, three-layer memory, self-repair, 24/7 production.",
       "language": "Python",
       "url": "https://github.com/wangziqi06/724-office",
-      "stars": 640,
-      "delta_day": 46,
-      "delta_week": 153,
-      "delta_month": 153,
-      "delta_year": 640,
+      "stars": 641,
+      "delta_day": 47,
+      "delta_week": 154,
+      "delta_month": 154,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -742,7 +718,7 @@
       "delta_day": 60,
       "delta_week": 153,
       "delta_month": 4120,
-      "delta_year": 15303,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -754,7 +730,7 @@
       "delta_day": 25,
       "delta_week": 148,
       "delta_month": 152,
-      "delta_year": 1027,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -766,7 +742,7 @@
       "delta_day": 11,
       "delta_week": 147,
       "delta_month": 147,
-      "delta_year": 885,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -778,8 +754,20 @@
       "delta_day": 50,
       "delta_week": 144,
       "delta_month": 647,
-      "delta_year": 168033,
+      "delta_year": 0,
       "has_summary": true
+    },
+    {
+      "full_name": "ollama/ollama",
+      "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "language": "Go",
+      "url": "https://github.com/ollama/ollama",
+      "stars": 165923,
+      "delta_day": 49,
+      "delta_week": 142,
+      "delta_month": 675,
+      "delta_year": 0,
+      "has_summary": false
     },
     {
       "full_name": "Nunchi-trade/auto-researchtrading",
@@ -787,22 +775,10 @@
       "language": "Python",
       "url": "https://github.com/Nunchi-trade/auto-researchtrading",
       "stars": 591,
-      "delta_day": 591,
+      "delta_day": 0,
       "delta_week": 142,
       "delta_month": 142,
-      "delta_year": 591,
-      "has_summary": false
-    },
-    {
-      "full_name": "ollama/ollama",
-      "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-      "language": "Go",
-      "url": "https://github.com/ollama/ollama",
-      "stars": 165922,
-      "delta_day": 48,
-      "delta_week": 141,
-      "delta_month": 674,
-      "delta_year": 165922,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -810,11 +786,11 @@
       "description": "",
       "language": "TypeScript",
       "url": "https://github.com/m1heng/claude-plugin-weixin",
-      "stars": 484,
-      "delta_day": 484,
-      "delta_week": 139,
-      "delta_month": 139,
-      "delta_year": 484,
+      "stars": 485,
+      "delta_day": 0,
+      "delta_week": 140,
+      "delta_month": 140,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -823,10 +799,10 @@
       "language": "Shell",
       "url": "https://github.com/ccbkkb/MicroWARP",
       "stars": 545,
-      "delta_day": 545,
+      "delta_day": 0,
       "delta_week": 138,
       "delta_month": 138,
-      "delta_year": 545,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -838,7 +814,7 @@
       "delta_day": 33,
       "delta_week": 136,
       "delta_month": 556,
-      "delta_year": 351507,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -847,10 +823,10 @@
       "language": "TypeScript",
       "url": "https://github.com/excalidraw/excalidraw",
       "stars": 119405,
-      "delta_day": 119405,
+      "delta_day": 0,
       "delta_week": 132,
       "delta_month": 542,
-      "delta_year": 119405,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -859,10 +835,10 @@
       "language": "Python",
       "url": "https://github.com/win4r/ClawTeam-OpenClaw",
       "stars": 558,
-      "delta_day": 558,
+      "delta_day": 0,
       "delta_week": 123,
       "delta_month": 123,
-      "delta_year": 558,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -874,7 +850,7 @@
       "delta_day": 19,
       "delta_week": 120,
       "delta_month": 420,
-      "delta_year": 438749,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -886,7 +862,7 @@
       "delta_day": 47,
       "delta_week": 120,
       "delta_month": 120,
-      "delta_year": 600,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -898,7 +874,7 @@
       "delta_day": 0,
       "delta_week": 120,
       "delta_month": 120,
-      "delta_year": 817,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -906,11 +882,11 @@
       "description": "Turn OpenClaw from a black box into a local control center you can see, trust, and control.",
       "language": "TypeScript",
       "url": "https://github.com/TianyiDataScience/openclaw-control-center",
-      "stars": 2509,
-      "delta_day": 45,
-      "delta_week": 118,
-      "delta_month": 485,
-      "delta_year": 2509,
+      "stars": 2510,
+      "delta_day": 46,
+      "delta_week": 119,
+      "delta_month": 486,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -922,7 +898,19 @@
       "delta_day": 80,
       "delta_week": 116,
       "delta_month": 1684,
-      "delta_year": 6708,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "EbookFoundation/free-programming-books",
+      "description": ":books: Freely available programming books",
+      "language": "Python",
+      "url": "https://github.com/EbookFoundation/free-programming-books",
+      "stars": 384469,
+      "delta_day": 37,
+      "delta_week": 115,
+      "delta_month": 530,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -931,22 +919,10 @@
       "language": "Python",
       "url": "https://github.com/inspatio/inspatio-world",
       "stars": 552,
-      "delta_day": 552,
+      "delta_day": 0,
       "delta_week": 114,
       "delta_month": 114,
-      "delta_year": 552,
-      "has_summary": false
-    },
-    {
-      "full_name": "EbookFoundation/free-programming-books",
-      "description": ":books: Freely available programming books",
-      "language": "Python",
-      "url": "https://github.com/EbookFoundation/free-programming-books",
-      "stars": 384468,
-      "delta_day": 36,
-      "delta_week": 114,
-      "delta_month": 529,
-      "delta_year": 384468,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -958,7 +934,31 @@
       "delta_day": 14,
       "delta_week": 111,
       "delta_month": 111,
-      "delta_year": 553,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "phuryn/pm-skills",
+      "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+      "language": "Unknown",
+      "url": "https://github.com/phuryn/pm-skills",
+      "stars": 7989,
+      "delta_day": 48,
+      "delta_week": 111,
+      "delta_month": 2024,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "cnlimiter/codex-manager",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/cnlimiter/codex-manager",
+      "stars": 1432,
+      "delta_day": 42,
+      "delta_week": 110,
+      "delta_month": 110,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -970,19 +970,7 @@
       "delta_day": 66,
       "delta_week": 109,
       "delta_month": 109,
-      "delta_year": 644,
-      "has_summary": false
-    },
-    {
-      "full_name": "cnlimiter/codex-manager",
-      "description": "",
-      "language": "Python",
-      "url": "https://github.com/cnlimiter/codex-manager",
-      "stars": 1431,
-      "delta_day": 41,
-      "delta_week": 109,
-      "delta_month": 109,
-      "delta_year": 1431,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -994,19 +982,7 @@
       "delta_day": 18,
       "delta_week": 108,
       "delta_month": 108,
-      "delta_year": 624,
-      "has_summary": false
-    },
-    {
-      "full_name": "phuryn/pm-skills",
-      "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
-      "language": "Unknown",
-      "url": "https://github.com/phuryn/pm-skills",
-      "stars": 7986,
-      "delta_day": 45,
-      "delta_week": 108,
-      "delta_month": 2021,
-      "delta_year": 7986,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1018,7 +994,19 @@
       "delta_day": 26,
       "delta_week": 100,
       "delta_month": 1092,
-      "delta_year": 4393,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "frank890417/taiwan-md",
+      "description": "🇹🇼 讓全世界完整認識台灣 | An open-source, AI-friendly knowledge base about Taiwan",
+      "language": "Astro",
+      "url": "https://github.com/frank890417/taiwan-md",
+      "stars": 735,
+      "delta_day": 11,
+      "delta_week": 96,
+      "delta_month": 96,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1030,19 +1018,7 @@
       "delta_day": 41,
       "delta_week": 95,
       "delta_month": 290,
-      "delta_year": 146095,
-      "has_summary": false
-    },
-    {
-      "full_name": "frank890417/taiwan-md",
-      "description": "🇹🇼 讓全世界完整認識台灣 | An open-source, AI-friendly knowledge base about Taiwan",
-      "language": "Astro",
-      "url": "https://github.com/frank890417/taiwan-md",
-      "stars": 734,
-      "delta_day": 10,
-      "delta_week": 95,
-      "delta_month": 95,
-      "delta_year": 734,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1054,7 +1030,7 @@
       "delta_day": 11,
       "delta_week": 94,
       "delta_month": 194,
-      "delta_year": 940,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1066,7 +1042,7 @@
       "delta_day": 11,
       "delta_week": 91,
       "delta_month": 103,
-      "delta_year": 606,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1075,10 +1051,10 @@
       "language": "Unknown",
       "url": "https://github.com/olelehmann100kMRR/autoresearch-skill",
       "stars": 479,
-      "delta_day": 479,
+      "delta_day": 0,
       "delta_week": 82,
       "delta_month": 82,
-      "delta_year": 479,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1090,7 +1066,7 @@
       "delta_day": 24,
       "delta_week": 79,
       "delta_month": 352,
-      "delta_year": 137402,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1102,7 +1078,7 @@
       "delta_day": 22,
       "delta_week": 78,
       "delta_month": 344,
-      "delta_year": 182989,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1110,11 +1086,11 @@
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "language": "Python",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 158286,
-      "delta_day": 30,
-      "delta_week": 76,
-      "delta_month": 373,
-      "delta_year": 158286,
+      "stars": 158287,
+      "delta_day": 31,
+      "delta_week": 77,
+      "delta_month": 374,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1126,7 +1102,7 @@
       "delta_day": 27,
       "delta_week": 74,
       "delta_month": 127,
-      "delta_year": 681,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1134,11 +1110,11 @@
       "description": "Turn any MCP, OpenAPI, or GraphQL server into a CLI — at runtime, with zero codegen",
       "language": "Python",
       "url": "https://github.com/knowsuchagency/mcp2cli",
-      "stars": 1626,
-      "delta_day": 13,
-      "delta_week": 72,
-      "delta_month": 279,
-      "delta_year": 1626,
+      "stars": 1627,
+      "delta_day": 14,
+      "delta_week": 73,
+      "delta_month": 280,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1150,7 +1126,7 @@
       "delta_day": 11,
       "delta_week": 67,
       "delta_month": 399,
-      "delta_year": 202698,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1162,7 +1138,7 @@
       "delta_day": 30,
       "delta_week": 67,
       "delta_month": 175,
-      "delta_year": 917,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1174,7 +1150,7 @@
       "delta_day": 24,
       "delta_week": 65,
       "delta_month": 249,
-      "delta_year": 1429,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1186,7 +1162,7 @@
       "delta_day": 33,
       "delta_week": 64,
       "delta_month": 271,
-      "delta_year": 182740,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1195,10 +1171,10 @@
       "language": "Verilog",
       "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
       "stars": 3517,
-      "delta_day": 3517,
+      "delta_day": 0,
       "delta_week": 64,
       "delta_month": 730,
-      "delta_year": 3517,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1207,10 +1183,10 @@
       "language": "Python",
       "url": "https://github.com/sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
       "stars": 498,
-      "delta_day": 498,
+      "delta_day": 0,
       "delta_week": 61,
       "delta_month": 65,
-      "delta_year": 498,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1222,7 +1198,7 @@
       "delta_day": 18,
       "delta_week": 58,
       "delta_month": 189,
-      "delta_year": 194334,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1234,8 +1210,20 @@
       "delta_day": 16,
       "delta_week": 57,
       "delta_month": 304,
-      "delta_year": 244150,
+      "delta_year": 0,
       "has_summary": true
+    },
+    {
+      "full_name": "microsoft/PowerToys",
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+      "language": "C#",
+      "url": "https://github.com/microsoft/PowerToys",
+      "stars": 130839,
+      "delta_day": 23,
+      "delta_week": 56,
+      "delta_month": 215,
+      "delta_year": 0,
+      "has_summary": false
     },
     {
       "full_name": "maderix/ANE",
@@ -1246,19 +1234,7 @@
       "delta_day": 18,
       "delta_week": 56,
       "delta_month": 1417,
-      "delta_year": 6442,
-      "has_summary": false
-    },
-    {
-      "full_name": "microsoft/PowerToys",
-      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
-      "language": "C#",
-      "url": "https://github.com/microsoft/PowerToys",
-      "stars": 130837,
-      "delta_day": 21,
-      "delta_week": 54,
-      "delta_month": 213,
-      "delta_year": 130837,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1270,7 +1246,7 @@
       "delta_day": 19,
       "delta_week": 50,
       "delta_month": 1711,
-      "delta_year": 7066,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1282,7 +1258,7 @@
       "delta_day": 8,
       "delta_week": 49,
       "delta_month": 1373,
-      "delta_year": 5811,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1294,7 +1270,7 @@
       "delta_day": 21,
       "delta_week": 48,
       "delta_month": 201,
-      "delta_year": 185599,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1306,7 +1282,7 @@
       "delta_day": 3,
       "delta_week": 47,
       "delta_month": 112,
-      "delta_year": 628,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1318,7 +1294,7 @@
       "delta_day": 17,
       "delta_week": 38,
       "delta_month": 164,
-      "delta_year": 133160,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1330,7 +1306,7 @@
       "delta_day": 12,
       "delta_week": 37,
       "delta_month": 179,
-      "delta_year": 154398,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1342,7 +1318,7 @@
       "delta_day": 15,
       "delta_week": 37,
       "delta_month": 190,
-      "delta_year": 138454,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1354,7 +1330,7 @@
       "delta_day": 8,
       "delta_week": 37,
       "delta_month": 200,
-      "delta_year": 983,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1366,7 +1342,7 @@
       "delta_day": 0,
       "delta_week": 31,
       "delta_month": 308,
-      "delta_year": 1357,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1378,7 +1354,7 @@
       "delta_day": 10,
       "delta_week": 30,
       "delta_month": 130,
-      "delta_year": 175657,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1390,7 +1366,7 @@
       "delta_day": 7,
       "delta_week": 28,
       "delta_month": 116,
-      "delta_year": 127194,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1402,7 +1378,7 @@
       "delta_day": 22,
       "delta_week": 27,
       "delta_month": 165,
-      "delta_year": 798,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1414,7 +1390,7 @@
       "delta_day": 9,
       "delta_week": 26,
       "delta_month": 139,
-      "delta_year": 138317,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1426,7 +1402,7 @@
       "delta_day": 6,
       "delta_week": 25,
       "delta_month": 106,
-      "delta_year": 120595,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1438,7 +1414,7 @@
       "delta_day": 16,
       "delta_week": 24,
       "delta_month": 135,
-      "delta_year": 773,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1450,7 +1426,7 @@
       "delta_day": 4,
       "delta_week": 23,
       "delta_month": 79,
-      "delta_year": 174112,
+      "delta_year": 0,
       "has_summary": true
     },
     {
@@ -1462,7 +1438,7 @@
       "delta_day": 7,
       "delta_week": 23,
       "delta_month": 93,
-      "delta_year": 125633,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1474,7 +1450,7 @@
       "delta_day": 2,
       "delta_week": 14,
       "delta_month": 150,
-      "delta_year": 787,
+      "delta_year": 0,
       "has_summary": false
     },
     {
@@ -1482,11 +1458,35 @@
       "description": "An autonomous agent that takes work, does work, gets paid, and gets better at it.",
       "language": "TypeScript",
       "url": "https://github.com/moltlaunch/cashclaw",
-      "stars": 753,
-      "delta_day": 5,
-      "delta_week": 13,
-      "delta_month": 188,
-      "delta_year": 753,
+      "stars": 754,
+      "delta_day": 6,
+      "delta_week": 14,
+      "delta_month": 189,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "eze-is/web-access",
+      "description": "给 Claude Code 装上完整联网能力的 skill：三层通道调度 + 浏览器 CDP + 并行分治",
+      "language": "JavaScript",
+      "url": "https://github.com/eze-is/web-access",
+      "stars": 493,
+      "delta_day": 0,
+      "delta_week": 0,
+      "delta_month": 0,
+      "delta_year": 0,
+      "has_summary": false
+    },
+    {
+      "full_name": "deathlessburton88/tiktok-views-likes-followers-shares-bot-2026",
+      "description": "Boost your TikTok presence with this Windows-compatible GitHub bot! Automate views, likes, shares, and followers. The tool supports CAPTCHA solving and proxy rotation for undetectable operation . Ideal for content creators looking to enhance engagement. Use responsibly—educational purposes only . Download now to streamline your TikTok growth! ",
+      "language": "Unknown",
+      "url": "https://github.com/deathlessburton88/tiktok-views-likes-followers-shares-bot-2026",
+      "stars": 451,
+      "delta_day": 0,
+      "delta_week": 0,
+      "delta_month": 0,
+      "delta_year": 0,
       "has_summary": false
     }
   ]
