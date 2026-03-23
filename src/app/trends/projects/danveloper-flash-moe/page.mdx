@@ -1,0 +1,55 @@
+<GuideHeader tool="flash-moe" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Flash-MoE
+
+Flash-MoE is a pure C/Metal inference engine that runs massive Mixture-of-Experts models on consumer hardware. It runs Qwen3.5-397B (397 billion parameters) on a MacBook Pro with 48GB RAM at 4.4+ tokens/second.
+
+## Key Features
+
+- **SSD streaming architecture** — Streams 209GB of expert weights from NVMe storage on-demand
+- **Hand-tuned Metal shaders** — Custom GPU kernels for 4-bit/2-bit quantized matrix operations
+- **No framework dependencies** — Pure C, Objective-C, and Metal without Python or ML frameworks
+- **Production-quality output** — Maintains tool calling and JSON reliability with 4-bit quantization
+- **Memory efficient** — Uses only ~6GB RAM total, trusting OS page cache for expert caching
+
+## Installation
+
+```bash
+git clone https://github.com/danveloper/flash-moe.git
+cd flash-moe/metal_infer
+make
+```
+
+<Callout type="info">
+Requires macOS with Metal support. The model weights need to be extracted from safetensors using the included Python scripts.
+</Callout>
+
+## Basic Usage
+
+```bash
+# Run inference with 4-bit quantization
+./infer --prompt "Explain quantum computing" --tokens 100
+
+# Interactive chat with tool calling
+./chat
+
+# 2-bit mode (faster but breaks JSON output)
+./infer --prompt "Hello world" --tokens 50 --2bit
+
+# Performance analysis
+./infer --prompt "Test" --tokens 20 --timing
+```
+
+<Callout type="warning">
+2-bit quantization breaks JSON formatting, making tool calling unreliable. Use 4-bit for production applications.
+</Callout>
+
+The engine achieves its performance through expert streaming (loading only 4 out of 512 experts per layer), FMA-optimized dequantization kernels, and careful GPU/SSD pipeline orchestration. It demonstrates that massive MoE models can run locally without specialized hardware.
+
+## Notable Details
+
+- **Language**: Objective-C with Metal shaders
+- **License**: Unknown
+- **Community**: 1,585 GitHub stars
+- **Hardware tested**: MacBook Pro M3 Max with 48GB unified memory
+- **Research**: Includes detailed paper with 90+ experiments

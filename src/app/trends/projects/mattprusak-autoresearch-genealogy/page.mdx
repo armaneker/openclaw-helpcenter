@@ -1,0 +1,55 @@
+<GuideHeader tool="autoresearch-genealogy" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Autoresearch Genealogy
+
+A collection of structured prompts, vault templates, and workflows for AI-assisted genealogy research. Built for Claude Code but adaptable to any AI tool or manual research workflow.
+
+## Key Features
+
+- 12 autonomous research prompts for web-based genealogy investigation
+- Complete Obsidian vault template with 19 starter files and YAML frontmatter
+- Archive guides covering 24 countries and regions
+- Structured workflows for document processing, source verification, and DNA analysis
+- Methodology based on measurable metrics and confidence tiers rather than AI guessing
+- Real-world tested approach that produced 105 files across 9 generations
+
+## Installation
+
+```bash
+git clone https://github.com/mattprusak/autoresearch-genealogy.git
+cd autoresearch-genealogy
+```
+
+Copy the `vault-template/` folder into your Obsidian vault or any markdown editor.
+
+## Basic Usage
+
+1. Fill in `Family_Tree.md` with known information, starting from yourself
+2. Scan physical documents (certificates, photos, letters) 
+3. Run the first prompt in Claude Code:
+
+```markdown
+# From prompts/01-tree-expansion.md
+Goal: Push every branch as far back as possible using web research
+Metric: Count of sourced ancestors
+Direction: Maximize ancestor count with 2+ independent sources per person
+Verify: Cross-reference new findings against existing vault data
+```
+
+4. Follow up with `02-cross-reference-audit.md` to verify and resolve discrepancies
+
+<Callout type="tip">
+The system logs negative results—what you searched for and didn't find is as important as what you discovered.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Community**: 894 GitHub stars
+- **Language**: Documentation and templates (language-agnostic)
+- **Approach**: Structured autonomous research with mechanical verification over AI speculation
+- **Output**: Produces genealogy research with confidence tiers (Strong/Moderate/Speculative signals)
+
+<Callout type="info">
+Includes 24 country-specific archive guides and anonymized examples showing the autoresearch approach in practice.
+</Callout>

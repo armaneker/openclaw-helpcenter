@@ -1,0 +1,66 @@
+<GuideHeader tool="any-auto-register" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Any Auto Register
+
+A multi-platform automated account registration and management system with plugin architecture and web UI. Supports multiple email services, captcha solvers, and proxy management for various platforms including Trae.ai, Tavily, Cursor, and ChatGPT.
+
+## Key Features
+
+- **Multi-platform support** with plugin-based extensions for Trae.ai, Tavily, Cursor, Kiro, ChatGPT, OpenBlockLabs
+- **Multiple email services** including MoeMail, Laoudo, DuckMail, and Cloudflare Worker self-hosted
+- **Multiple execution modes** - API protocol (browserless), headless browser, and headed browser
+- **Captcha solving** via YesCaptcha, 2Captcha, and local Camoufox solver
+- **Proxy pool management** with automatic rotation and success rate tracking
+- **Concurrent registration** with configurable worker limits
+- **Real-time logging** via SSE to web frontend
+
+## Installation
+
+Clone the repository and set up the environment:
+
+```bash
+git clone https://github.com/lxf746/any-auto-register.git
+cd account_manager
+
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Build frontend
+cd frontend
+npm install
+npm run build
+cd ..
+```
+
+Optional browser installation for headless/headed modes:
+
+```bash
+python3 -m playwright install chromium
+python3 -m camoufox fetch
+```
+
+## Basic Usage
+
+Start the FastAPI server:
+
+```bash
+python3 -m uvicorn main:app --port 8000
+```
+
+Access the web UI at `http://localhost:5173`. Configure email services (MoeMail recommended for simplicity) and captcha solvers, then create registration tasks through the interface.
+
+<Callout type="warning">
+This project is intended for educational and research purposes only. Commercial use is prohibited.
+</Callout>
+
+## Notable Details
+
+**Language:** Python with React/TypeScript frontend  
+**License:** MIT (educational use only)  
+**Community:** 1,027 GitHub stars  
+**Architecture:** FastAPI + SQLite backend, React frontend, plugin-based platform support

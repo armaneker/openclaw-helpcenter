@@ -1,0 +1,71 @@
+<GuideHeader tool="OpenGauss" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenGauss
+
+OpenGauss is a multi-agent workflow orchestrator for Lean theorem proving and formalization. It provides a project-scoped frontend for `lean4-skills` workflows while managing backend sessions, project state, and agent swarms.
+
+## Key Features
+
+- **Multi-agent workflows**: `/prove`, `/draft`, `/autoprove`, `/formalize`, `/autoformalize` commands
+- **Project-scoped orchestration**: Automatic project detection and managed backend setup  
+- **Swarm management**: Track, attach to, and cancel running workflow agents
+- **Backend flexibility**: Supports Claude Code, Codex, and local vLLM models
+- **Lean toolchain integration**: Handles MCP/LSP wiring and session state
+
+## Installation
+
+Clone and run the installer:
+
+```bash
+git clone https://github.com/math-inc/OpenGauss.git
+cd OpenGauss
+./scripts/install.sh
+```
+
+The installer sets up dependencies, Python virtualenv, and the `gauss` command. After installation:
+
+```bash
+source ~/.zshrc  # Reload shell
+gauss           # Launch CLI
+```
+
+<Callout type="tip">
+Use `--with-workspace` flag to download a prewarmed Lean+Mathlib workspace (~2GB).
+</Callout>
+
+## Basic Usage
+
+```bash
+# Launch CLI and create project
+gauss
+/project create ~/my-project
+
+# Start proving workflows
+/prove 1+1=2        # Guided proving
+/autoprove          # Autonomous proving
+/formalize          # Interactive formalization
+
+# Manage agent swarm
+/swarm              # List running agents
+/swarm attach <id>  # Reattach to agent
+```
+
+For existing Lean projects:
+
+```bash
+cd ~/my-lean-project
+gauss
+/project init       # Register as Gauss project
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python  
+- **Community**: 1,050+ GitHub stars
+- **Prerequisites**: Requires `uv`, `ripgrep`, and authenticated Claude/Codex backend
+- **Local models**: Supports vLLM for cost-effective local inference
+
+<Callout type="info">
+OpenGauss forwards workflow commands to `cameronfreer/lean4-skills` while providing project management and multi-agent orchestration on top.
+</Callout>

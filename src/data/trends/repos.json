@@ -840,7 +840,7 @@
       "language": "Objective-C",
       "url": "https://github.com/danveloper/flash-moe",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "Flash-MoE is a pure C/Metal inference engine that runs a 397 billion parameter Mixture-of-Experts model (Qwen3.5-397B-A17B) on a MacBook Pro with 48GB RAM. It achieves 4.4+ tokens/second by streaming the 209GB model from SSD through custom Metal compute shaders and on-demand expert loading, enabling production-quality inference of massive models on consumer hardware. The implementation uses hand-tuned Metal kernels and relies on OS page caching rather than custom caching mechanisms, proving more efficient than framework-based approaches."
@@ -851,7 +851,7 @@
       "language": "Python",
       "url": "https://github.com/math-inc/OpenGauss",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "OpenGauss is a workflow orchestrator that provides a multi-agent frontend for Lean 4 theorem proving and formalization tasks. It wraps the lean4-skills toolkit with project management, backend session handling, and a CLI that spawns managed agents for proving, drafting, and formalizing mathematical content. The system uses a project-scoped model where each command spawns a child agent that runs the corresponding lean4-skills workflow in the active Lean project."
@@ -862,7 +862,7 @@
       "language": "TypeScript",
       "url": "https://github.com/lcoutodemos/clui-cc",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "Clui CC is a lightweight desktop overlay for macOS that provides a graphical interface for Anthropic's Claude Code CLI tool. It adds a floating pill interface with multi-tab sessions, permission approval UI for tool calls, voice input, and conversation history while maintaining the underlying CLI's power and local-first approach. The overlay stays on top of other applications and can be toggled with a keyboard shortcut for seamless integration into development workflows."
@@ -873,7 +873,7 @@
       "language": "Python",
       "url": "https://github.com/lxf746/any-auto-register",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v1.0.3",
@@ -885,7 +885,7 @@
       "language": "Unknown",
       "url": "https://github.com/mattprusak/autoresearch-genealogy",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "This is a comprehensive toolkit that provides structured prompts, templates, and workflows for using AI (particularly Claude Code) to conduct genealogy research. It enables researchers to systematically build family trees, verify sources, and resolve research questions through 12 autonomous research prompts that can search the web and update documentation automatically. The project includes ready-to-use Obsidian vault templates, country-specific archive guides, and methodology documents based on real research that produced 105 files spanning 9 generations."
@@ -898,7 +898,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "dbskill is a business diagnostic toolkit that distills methodologies from 12,307 tweets into Claude Code skills for commercial analysis and decision-making. It provides modular diagnostic tools for business model validation, competitive benchmarking, content creation analysis, and execution troubleshooting through structured workflows. The project includes a fully open knowledge base with 4,176 structured knowledge atoms that can be used independently without installing the full skill suite."
     },
     "rasbt/llm-architecture-gallery": {
       "full_name": "rasbt/llm-architecture-gallery",
@@ -910,7 +911,8 @@
       "topics": [
         "ai",
         "llms"
-      ]
+      ],
+      "blurb": "This repository contains the source metadata for Sebastian Raschka's LLM Architecture Gallery, a curated collection of large language model architectures. It provides structured data (models.yml) with model specifications, architecture diagrams, and related links that developers and researchers can use to compare and understand different LLM designs. The repository serves as a lightweight data export rather than the full website implementation."
     },
     "truongduy2611/app-store-preflight-skills": {
       "full_name": "truongduy2611/app-store-preflight-skills",
@@ -920,7 +922,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "This project is an AI agent skill that scans iOS/macOS projects for potential App Store rejection issues before submission. It analyzes Xcode projects, source code, metadata, and configuration files against Apple's review guidelines to catch common violations that lead to rejections. The tool includes comprehensive rule sets organized by app type (games, health apps, AI apps, etc.) and integrates with App Store Connect CLI for metadata inspection."
     },
     "rzru/nightingale": {
       "full_name": "rzru/nightingale",
@@ -945,7 +948,8 @@
         "whisper",
         "whisper-ai",
         "whisperx"
-      ]
+      ],
+      "blurb": "Nightingale is a self-contained Rust application that converts any song in your music library into karaoke by using machine learning to separate vocals from instrumentals and generate synchronized lyrics. It automatically handles the entire pipeline from audio processing (using UVR Karaoke model or Demucs for stem separation) to lyric transcription (via WhisperX) and includes real-time pitch scoring, player profiles, and multiple background themes. The application ships as a single binary with all dependencies (Python, PyTorch, ML models) automatically downloaded and bootstrapped on first launch."
     },
     "frank890417/taiwan-md": {
       "full_name": "frank890417/taiwan-md",
@@ -956,7 +960,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.5.0"
+      "version": "v0.5.0",
+      "blurb": "Taiwan.md is an open-source, AI-native knowledge base containing 660+ curated articles about Taiwan in Traditional Chinese and English. It serves as a comprehensive resource for understanding Taiwan beyond surface-level topics, structured specifically for AI consumption with proper metadata and citations. The project emphasizes Taiwan's cultural significance as the primary home of Traditional Chinese writing and covers 12 categories from technology and history to food and nature."
     },
     "collaborator-ai/collab-public": {
       "full_name": "collaborator-ai/collab-public",
@@ -967,7 +972,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.3.1"
+      "version": "v0.3.1",
+      "blurb": "Collaborator is a native macOS desktop app that provides an infinite canvas workspace for building with AI agents. It allows developers to arrange terminals, code files, and agent interactions on a visual canvas without context switching between different tools or tabs. The app stores all data locally and operates without requiring accounts or cloud services."
     },
     "BryanLunduke/DoesItAgeVerify": {
       "full_name": "BryanLunduke/DoesItAgeVerify",
@@ -977,7 +983,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "DoesItAgeVerify is a tracking repository that monitors which open source operating systems implement age verification requirements mandated by laws in Brazil and California. It serves as a reference for developers and users to understand compliance status across different Linux distributions and BSD variants as these legal requirements expand. Currently, no open source OS has fully implemented the required age verification, with most either refusing compliance or still in planning phases."
     },
     "ghostty-org/ghostling": {
       "full_name": "ghostty-org/ghostling",
@@ -987,7 +994,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "Ghostling is a minimal terminal emulator demo built as a single C file using the libghostty C API and Raylib for rendering. It demonstrates how to embed Ghostty's proven terminal emulation core (used by millions of users) into custom applications while providing full VT sequence parsing, Unicode support, and modern terminal features. The project uses a 2D renderer instead of GPU acceleration to showcase libghostty's flexibility across different rendering contexts."
     },
     "sstklen/trump-code": {
       "full_name": "sstklen/trump-code",
@@ -1009,7 +1017,8 @@
         "truth-social"
       ],
       "category": "AI / ML",
-      "version": "v2.8.0"
+      "version": "v2.8.0",
+      "blurb": "This project uses AI to analyze Donald Trump's social media posts and predict their impact on stock market movements. It applies brute-force computation to test millions of model combinations, achieving a 61.3% prediction accuracy rate across 566 verified predictions. The system has tested 31.5 million models and identified 551 statistically significant rules linking Trump's posting patterns to market behavior."
     },
     "nv-tlabs/kimodo": {
       "full_name": "nv-tlabs/kimodo",
@@ -1019,7 +1028,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "Kimodo is a kinematic motion diffusion model that generates high-quality 3D human and robot motions from text prompts and kinematic constraints. It's trained on 700 hours of motion capture data and supports various control inputs including pose keyframes, end-effector positions, and 2D paths for precise motion authoring. The project provides multiple pre-trained models for different skeleton types (SOMA, Unitree G1, SMPL-X) and includes an interactive demo with timeline-based motion editing."
     },
     "joeseesun/opencli-skill": {
       "full_name": "joeseesun/opencli-skill",
@@ -1029,7 +1039,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "opencli-skill is a Claude Code skill that enables natural language control of 16 social and content platforms including Bilibili, Twitter/X, YouTube, Reddit, and HackerNews. It leverages the opencli CLI tool to reuse existing Chrome login sessions, eliminating the need for API keys or re-authentication. The skill supports read, search, and write operations across platforms through browser automation via a Chrome extension bridge."
     },
     "wangziqi06/724-office": {
       "full_name": "wangziqi06/724-office",
@@ -1039,7 +1050,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "A self-evolving AI agent system built in 3,500 lines of pure Python with zero framework dependencies, featuring 26 built-in tools and designed for 24/7 production operation. It provides automated tool creation, self-repair capabilities, three-layer memory architecture, and multi-tenant containerized deployment with messaging platform integration. The system uses MCP (Model Context Protocol) for plugin extensibility and maintains persistent scheduling across restarts."
     },
     "leo-lilinxiao/codex-autoresearch": {
       "full_name": "leo-lilinxiao/codex-autoresearch",
@@ -1050,7 +1062,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.1.0"
+      "version": "v0.1.0",
+      "blurb": "This is a Codex skill that implements an autonomous modify-verify-iterate loop for code improvement tasks. It continuously makes atomic changes to your codebase, tests them against measurable metrics (like type errors, test coverage, or performance), and keeps improvements while auto-reverting failures. The system can run unattended for hours or overnight, accumulating progress through git commits while targeting any goal with a quantifiable metric."
     },
     "lightningpixel/modly": {
       "full_name": "lightningpixel/modly",
@@ -1069,7 +1082,8 @@
         "self-hosted"
       ],
       "category": "Other",
-      "version": "v0.2.0"
+      "version": "v0.2.0",
+      "blurb": "Modly is a desktop application that generates 3D meshes from images using AI models running locally on your GPU. It eliminates the need for cloud services by processing everything on-device, and supports extensible AI models through a plugin system that can install models from GitHub repositories."
     },
     "lidangzzz/goal-driven": {
       "full_name": "lidangzzz/goal-driven",
@@ -1079,7 +1093,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "Goal-Driven is a multi-agent framework that orchestrates AI agents to work continuously on complex problems for hundreds of hours until completion. It uses a master agent to manage subagents and evaluate progress against strict criteria, automatically restarting work when goals aren't met. The system has successfully built large projects like a TypeScript compiler in C++ over ~100 hours of autonomous development."
     },
     "public-apis/public-apis": {
       "full_name": "public-apis/public-apis",
@@ -1103,7 +1118,8 @@
         "resources",
         "software"
       ],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "A community-curated catalog of free public APIs organized by category and domain. Developers use it to discover APIs for prototyping, building applications, or integrating external data sources without having to research individual providers. With over 415k stars, it's become the de facto reference for finding publicly available APIs."
     },
     "EbookFoundation/free-programming-books": {
       "full_name": "EbookFoundation/free-programming-books",
@@ -1119,7 +1135,8 @@
         "list",
         "resource"
       ],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "This is a curated list of freely available programming books and learning resources organized by language and topic. Developers use it to find quality educational materials without cost, covering everything from beginner tutorials to advanced technical references. With over 384k stars, it's one of GitHub's most popular repositories and includes a searchable web interface."
     },
     "kamranahmedse/developer-roadmap": {
       "full_name": "kamranahmedse/developer-roadmap",
@@ -1149,7 +1166,8 @@
         "vue-roadmap"
       ],
       "category": "Other",
-      "version": "4.0"
+      "version": "4.0",
+      "blurb": "Developer Roadmap is a community-driven collection of interactive learning paths and guides for software engineers across different technologies and career tracks. It provides structured curricula covering everything from frontend/backend development to DevOps, data science, and engineering management to help developers plan their skill development. The roadmaps feature interactive nodes that can be clicked for detailed explanations of each topic."
     },
     "donnemartin/system-design-primer": {
       "full_name": "donnemartin/system-design-primer",
@@ -1173,7 +1191,8 @@
         "web-application",
         "webapp"
       ],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "The System Design Primer is a comprehensive educational repository that teaches large-scale system design principles and concepts. It serves as both a learning resource for engineers wanting to understand distributed systems architecture and a structured preparation guide for technical interviews at major tech companies. The repository includes Anki flashcard decks for spaced repetition learning and has been translated into over 15 languages."
     },
     "ossu/computer-science": {
       "full_name": "ossu/computer-science",
@@ -1188,7 +1207,8 @@
         "courses",
         "curriculum"
       ],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "OSSU Computer Science is a curated curriculum that provides a complete undergraduate-level computer science education using free online courses from top universities like MIT, Harvard, and Princeton. It offers a structured, self-paced learning path for individuals seeking comprehensive CS fundamentals without enrolling in a formal degree program. The curriculum is organized into intro, core, advanced, and final project sections, designed to be completable in about 2 years with 20 hours of weekly study."
     },
     "ollama/ollama": {
       "full_name": "ollama/ollama",

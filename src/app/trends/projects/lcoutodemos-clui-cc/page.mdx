@@ -1,0 +1,59 @@
+<GuideHeader tool="clui-cc" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Clui CC
+
+Clui CC is a lightweight, transparent desktop overlay for Claude Code on macOS. It wraps the Claude Code CLI in a floating pill interface with multi-tab sessions and permission approval UI.
+
+## Key Features
+
+- **Floating overlay** — transparent, click-through window with `⌥ + Space` toggle
+- **Multi-tab sessions** — independent `claude -p` processes per tab
+- **Permission approval UI** — review and approve/deny tool calls from the interface
+- **Conversation history** — browse and resume past Claude Code sessions
+- **Skills marketplace** — install plugins from Anthropic's GitHub repos
+- **Voice input** — local speech-to-text via Whisper
+- **File & screenshot attachments** — drag-drop images and files
+
+## Installation
+
+<Callout type="info">
+Requires macOS 13+, Node.js 18+, and an authenticated Claude Code CLI installation.
+</Callout>
+
+Clone the repository and run the installer:
+
+```bash
+git clone https://github.com/lcoutodemos/clui-cc.git
+cd clui-cc
+```
+
+Double-click `install-app.command` in Finder, or use terminal commands:
+
+```bash
+./commands/setup.command
+./commands/start.command
+```
+
+## Basic Usage
+
+After installation, press `⌥ + Space` to show/hide the overlay. Each tab spawns an independent Claude session:
+
+```
+UI prompt → claude -p subprocess → NDJSON stream → live render
+                                 → tool call → permission UI → approve/deny
+```
+
+Sessions are automatically saved and can be resumed later. Tool calls require explicit approval through the permission interface.
+
+<Callout type="warning">
+First launch may be blocked by macOS Gatekeeper. Go to System Settings → Privacy & Security → Open Anyway.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: TypeScript
+- **Community**: 1,040 GitHub stars
+- **Architecture**: Electron-based with React frontend
+- **Network**: Local-first, no telemetry or cloud dependencies
+- **Limitations**: macOS only, requires existing Claude Code CLI subscription
