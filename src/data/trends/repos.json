@@ -2549,7 +2549,9 @@
         "macos",
         "skills",
         "swiftui"
-      ]
+      ],
+      "category": "AI / ML",
+      "version": "v1.6.0"
     },
     "eze-is/web-access": {
       "full_name": "eze-is/web-access",
