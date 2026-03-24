@@ -142,6 +142,21 @@ Output ONLY the MDX content. Start with the GuideHeader component like this:
 }
 
 /**
+ * Sanitize MDX — escape bare < characters that MDX would parse as JSX tags.
+ * Allows known components: Callout, GuideHeader, a, code, br, img, etc.
+ */
+function sanitizeMDX(content) {
+  const allowedTags = /^<\/?(Callout|GuideHeader|a|code|br|img|hr|sup|sub|em|strong|details|summary)\b/;
+  // Replace bare < that aren't part of allowed JSX tags or HTML entities
+  return content.replace(/<(?![/!])/g, (match, offset) => {
+    const rest = content.slice(offset);
+    if (allowedTags.test(rest)) return '<';
+    // Also allow code blocks (```) — MDX won't parse < inside them, but be safe
+    return '&lt;';
+  });
+}
+
+/**
  * Validate MDX output — basic checks to avoid broken pages.
  */
 function validateMDX(content) {
@@ -209,7 +224,7 @@ async function main() {
       const slug = name.replace('/', '-');
       const pageDir = join(PROJECTS_DIR, slug);
       mkdirSync(pageDir, { recursive: true });
-      writeFileSync(join(pageDir, 'page.mdx'), mdxContent);
+      writeFileSync(join(pageDir, 'page.mdx'), sanitizeMDX(mdxContent));
       console.log(`  Written: src/app/trends/projects/${slug}/page.mdx`);
 
       // Mark as summarized
