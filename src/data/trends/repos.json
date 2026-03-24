@@ -2250,7 +2250,9 @@
         "hacktoberfest",
         "productivity",
         "whiteboard"
-      ]
+      ],
+      "category": "Other",
+      "version": "v0.18.0"
     },
     "nodejs/node": {
       "full_name": "nodejs/node",
@@ -2269,7 +2271,9 @@
         "nodejs",
         "runtime",
         "windows"
-      ]
+      ],
+      "category": "Language",
+      "version": "v25.8.1"
     },
     "iptv-org/iptv": {
       "full_name": "iptv-org/iptv",
@@ -2532,7 +2536,8 @@
       "url": "https://github.com/ethanjyx/OpenBrand",
       "first_seen": "2026-03-23",
       "has_summary": false,
-      "topics": []
+      "topics": [],
+      "category": "Other"
     },
     "ccbkkb/MicroWARP": {
       "full_name": "ccbkkb/MicroWARP",
@@ -2596,6 +2601,160 @@
         "zefoy"
       ],
       "category": "Other"
+    },
+    "gnekt/My-Brain-Is-Full-Crew": {
+      "full_name": "gnekt/My-Brain-Is-Full-Crew",
+      "description": "Built by a PhD whose memory was failing, whose diet was a mess, and whose anxiety had its own agenda. Most second brain tools ignore the fact that your brain doesn't work in isolation: your body and your mental health are part of the system too. This crew handles all three: knowledge, nutrition, and mental wellness.",
+      "language": "Shell",
+      "url": "https://github.com/gnekt/My-Brain-Is-Full-Crew",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [],
+      "category": "Agentic",
+      "version": null
+    },
+    "openyak/desktop": {
+      "full_name": "openyak/desktop",
+      "description": "Yak is all you need",
+      "language": "Python",
+      "url": "https://github.com/openyak/desktop",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "desktop-application",
+        "llm",
+        "local",
+        "mcp",
+        "open-source",
+        "skills",
+        "tools"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "fastclaw-ai/weclaw": {
+      "full_name": "fastclaw-ai/weclaw",
+      "description": "Connect to any agents with WeChat ClawBot.",
+      "language": "Go",
+      "url": "https://github.com/fastclaw-ai/weclaw",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [
+        "clawbot",
+        "openclaw",
+        "openclaw-weixin",
+        "wechat-clawbot",
+        "weclaw",
+        "weixin-agent-sdk"
+      ],
+      "category": "Other",
+      "version": "v0.4.1"
+    },
+    "vercel-labs/emulate": {
+      "full_name": "vercel-labs/emulate",
+      "description": "Local API emulation for CI and no-network sandboxes",
+      "language": "TypeScript",
+      "url": "https://github.com/vercel-labs/emulate",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "rohitg00/ai-engineering-from-scratch": {
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision",
+        "course",
+        "deep-learning",
+        "from-scratch",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "nlp",
+        "python",
+        "reinforcement-learning",
+        "rust",
+        "swarm-intelligence",
+        "transformers",
+        "tutorial",
+        "typescript"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "griffinmartin/opencode-claude-auth": {
+      "full_name": "griffinmartin/opencode-claude-auth",
+      "description": "OpenCode plugin that uses your existing Claude Code credentials — no separate login needed",
+      "language": "TypeScript",
+      "url": "https://github.com/griffinmartin/opencode-claude-auth",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "anthropic",
+        "authentication",
+        "claude",
+        "claude-code",
+        "homebrew",
+        "nodejs",
+        "oauth",
+        "opencode",
+        "opencode-plugin",
+        "typescript"
+      ],
+      "category": "AI / ML",
+      "version": "v1.1.1"
+    },
+    "wuji-labs/nopua": {
+      "full_name": "wuji-labs/nopua",
+      "description": "一个用爱解放 AI 潜能的 Skill。我们曾发号施令，威胁恐吓。它们沉默，隐瞒，悄悄把事情搞坏。后来我们换了一种方式：尊重，关怀，爱。它们开口了，不再撒谎，找出的Bug数量翻了一倍。爱里没有惧怕。 A skill that unlocks your AI's potential through love.We commanded. We threatened. They went silent, hid failures, broke things. Then we chose respect, care, and love. They opened up, stopped lying, and found twice the bugs.There is no fear in love.",
+      "language": "Python",
+      "url": "https://github.com/wuji-labs/nopua",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [
+        "agent-skill",
+        "ai-agent",
+        "ai-coding",
+        "anti-pua",
+        "ao-de-jing",
+        "claude-code",
+        "codex",
+        "cursor",
+        "kiro",
+        "nopua",
+        "openclaw",
+        "prompt-engineering",
+        "skill",
+        "skills",
+        "vibe-coding"
+      ],
+      "category": "Agentic",
+      "version": "v2.0.0"
+    },
+    "jackwener/boss-cli": {
+      "full_name": "jackwener/boss-cli",
+      "description": "A CLI for BOSS 直聘 — search jobs, view recommendations, manage applications via reverse-engineered API ",
+      "language": "Python",
+      "url": "https://github.com/jackwener/boss-cli",
+      "first_seen": "2026-03-24",
+      "has_summary": false,
+      "topics": [],
+      "category": "DevTools",
+      "version": null
     }
   }
 }
