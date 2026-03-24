@@ -1,0 +1,61 @@
+<GuideHeader tool="724-office" difficulty="Beginner" lastTested="2026-01" readTime="5 min" />
+
+# 724 Office
+
+724 Office is a self-evolving AI agent system built in 3,500 lines of pure Python with zero framework dependencies. It runs 24/7 in production with 26 built-in tools, three-layer memory, and runtime tool creation capabilities.
+
+## Key Features
+
+- **Tool Use Loop** — OpenAI-compatible function calling with automatic retry, up to 20 iterations per conversation
+- **Three-Layer Memory** — Session history + LLM-compressed long-term memory + LanceDB vector retrieval
+- **MCP/Plugin System** — Connect external MCP servers via JSON-RPC with hot-reload support
+- **Runtime Tool Creation** — Agent can write, save, and load new Python tools at runtime
+- **Self-Repair** — Daily health checks, session diagnostics, error analysis with auto-notification
+- **Cron Scheduling** — Persistent one-shot and recurring tasks with timezone awareness
+- **Multi-Tenant Router** — Docker-based auto-provisioning with per-user containers
+- **Multimodal Support** — Image, video, file, voice, and link handling with ASR
+- **Web Search** — Multi-engine search across Tavily, GitHub, and HuggingFace
+
+## Installation
+
+```bash
+git clone https://github.com/wangziqi06/724-office.git
+cd 724-office
+pip install croniter lancedb websocket-client
+cp config.example.json config.json
+mkdir -p workspace/memory workspace/files
+```
+
+Edit `config.json` with your API keys and configuration.
+
+## Basic Usage
+
+```bash
+python3 xiaowang.py
+```
+
+The agent starts an HTTP server on port 8080. Point your messaging platform webhook to `http://YOUR_SERVER_IP:8080/`.
+
+<Callout type="info">
+Create optional personality files in workspace: `SOUL.md` (behavior rules), `AGENT.md` (procedures), and `USER.md` (preferences) for better context.
+</Callout>
+
+```python
+# Example tool creation at runtime
+@tool
+def my_custom_tool(param: str) -> str:
+    """Custom tool description"""
+    return f"Processed: {param}"
+```
+
+<Callout type="tip">
+The system is designed for edge deployment and runs on devices like Jetson Orin Nano with under 2GB RAM usage.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python (3,500 lines, no frameworks)
+- **Community**: 809 GitHub stars
+- **Architecture**: Single-file tools with `@tool` decorator pattern
+- **Memory**: Automatic compression and deduplication with 0.92 cosine similarity threshold

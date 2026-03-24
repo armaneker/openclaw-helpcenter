@@ -1038,7 +1038,7 @@
       "language": "Unknown",
       "url": "https://github.com/joeseesun/opencli-skill",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "opencli-skill is a Claude Code skill that enables natural language control of 16 social and content platforms including Bilibili, Twitter/X, YouTube, Reddit, and HackerNews. It leverages the opencli CLI tool to reuse existing Chrome login sessions, eliminating the need for API keys or re-authentication. The skill supports read, search, and write operations across platforms through browser automation via a Chrome extension bridge."
@@ -1049,7 +1049,7 @@
       "language": "Python",
       "url": "https://github.com/wangziqi06/724-office",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "A self-evolving AI agent system built in 3,500 lines of pure Python with zero framework dependencies, featuring 26 built-in tools and designed for 24/7 production operation. It provides automated tool creation, self-repair capabilities, three-layer memory architecture, and multi-tenant containerized deployment with messaging platform integration. The system uses MCP (Model Context Protocol) for plugin extensibility and maintains persistent scheduling across restarts."
@@ -1060,7 +1060,7 @@
       "language": "Python",
       "url": "https://github.com/leo-lilinxiao/codex-autoresearch",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v0.1.0",
@@ -1072,7 +1072,7 @@
       "language": "TypeScript",
       "url": "https://github.com/lightningpixel/modly",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "3d",
         "ai-local",
@@ -1092,7 +1092,7 @@
       "language": "Unknown",
       "url": "https://github.com/lidangzzz/goal-driven",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "Goal-Driven is a multi-agent framework that orchestrates AI agents to work continuously on complex problems for hundreds of hours until completion. It uses a master agent to manage subagents and evaluate progress against strict criteria, automatically restarting work when goals aren't met. The system has successfully built large projects like a TypeScript compiler in C++ over ~100 hours of autonomous development."
@@ -1964,7 +1964,8 @@
         "penetration-testing",
         "recon",
         "vulnerability-scanner"
-      ]
+      ],
+      "blurb": "This is a Claude AI plugin that automates bug bounty hunting workflows, from reconnaissance through vulnerability discovery to report generation. It provides structured skills for testing 20 web2 and 10 web3 vulnerability classes, with slash commands for common tasks like `/recon`, `/hunt`, and `/validate` that integrate tools like subfinder, nuclei, and Foundry. The plugin uses a modular architecture with specialized AI agents for different phases (recon, validation, reporting) and includes bypass technique reference tables for common vulnerability types."
     },
     "lucija8320nhung4/HacxGPT": {
       "full_name": "lucija8320nhung4/HacxGPT",
@@ -1996,7 +1997,8 @@
         "unrestricted-ai"
       ],
       "category": "AI / ML",
-      "version": "HacxGPT"
+      "version": "HacxGPT",
+      "blurb": "HacxGPT is a command-line interface that provides unrestricted access to AI models from multiple providers (OpenRouter, Groq, and HacxGPT). It's designed for security researchers and red-team evaluators who need to test prompt injection techniques and bypass AI model censorship for legitimate security research. The tool stores API keys locally and includes a Rich terminal UI with cross-platform compatibility including Termux support."
     },
     "MarCmcbri1982/KawaiiGPT": {
       "full_name": "MarCmcbri1982/KawaiiGPT",
@@ -2028,7 +2030,8 @@
         "wormgpt-alternative"
       ],
       "category": "Other",
-      "version": "KawaiiGPT"
+      "version": "KawaiiGPT",
+      "blurb": "KawaiiGPT is an open-source CLI tool that provides access to multiple LLMs (DeepSeek, Gemini, Kimi-K2) through a reverse-engineered Pollinations API without requiring API keys. It's designed for security research and red-team testing with built-in prompt injection and jailbreak capabilities for evaluating model safety controls. The tool runs natively on Linux and Termux with a Rich-styled console interface."
     },
     "tophant-ai/ClawVault": {
       "full_name": "tophant-ai/ClawVault",
@@ -2042,7 +2045,8 @@
         "clawdbot-plugin",
         "openclaw",
         "security"
-      ]
+      ],
+      "blurb": "ClawVault is a security monitoring and control system for AI agents that intercepts and governs interactions between AI tools and external APIs. It provides granular permission controls, real-time monitoring of agent activities, and automatic detection of sensitive data, prompt injections, and dangerous commands. The system uses composable \"atomic capabilities\" that can be combined like building blocks to create custom security policies through natural language commands."
     },
     "RightNow-AI/autokernel": {
       "full_name": "RightNow-AI/autokernel",
@@ -2059,7 +2063,8 @@
         "pytorch",
         "triton"
       ],
-      "category": "AI / ML"
+      "category": "AI / ML",
+      "blurb": "AutoKernel is an autonomous GPU kernel optimization tool that takes any PyTorch model and automatically generates optimized Triton or CUDA kernels for performance bottlenecks. It profiles the model to identify slow operations, extracts them as standalone kernels, then uses AI agents to iteratively optimize each kernel through edit-benchmark-keep/revert cycles that can run overnight unattended. The system includes comprehensive correctness verification and uses Amdahl's law to prioritize which kernels to optimize for maximum overall speedup."
     },
     "webadderall/Recordly": {
       "full_name": "webadderall/Recordly",
@@ -2079,7 +2084,8 @@
         "windows"
       ],
       "category": "Other",
-      "version": "v1.1.4"
+      "version": "v1.1.4",
+      "blurb": "Recordly is an open-source desktop screen recorder and editor built with Electron/TypeScript for creating professional product videos, demos, and tutorials. It provides an integrated workflow for recording and editing with features like automatic zoom suggestions, cursor animations, webcam overlays, and timeline-based editing tools, eliminating the need for separate video editing software. The app uses native capture APIs (ScreenCaptureKit on macOS, Windows Graphics Capture on Windows) for optimized recording performance across all three major platforms."
     },
     "davebcn87/pi-autoresearch": {
       "full_name": "davebcn87/pi-autoresearch",
@@ -2089,7 +2095,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "pi-autoresearch is an autonomous experiment loop extension for the pi development environment that systematically tests code changes and measures their impact on optimization targets. It automates the cycle of trying ideas, measuring results, keeping improvements, and discarding regressions to continuously optimize metrics like test speed, bundle size, or build times. The extension provides a live dashboard widget and uses statistical confidence scoring to distinguish real improvements from measurement noise."
     },
     "gsd-build/gsd-2": {
       "full_name": "gsd-build/gsd-2",
@@ -2104,7 +2111,8 @@
         "spec-driven-development"
       ],
       "category": "Other",
-      "version": "v2.42.0"
+      "version": "v2.42.0",
+      "blurb": "GSD 2 is a TypeScript CLI tool that functions as an autonomous coding agent capable of executing long-running development tasks without losing context. It uses meta-prompting and spec-driven development to manage entire project milestones automatically, including git operations, context management, and error recovery, allowing developers to run a single command and return to a completed project. The tool evolved from a viral prompt framework into a standalone agent with direct control over the development environment rather than relying on LLM instruction-following."
     },
     "TianyiDataScience/openclaw-control-center": {
       "full_name": "TianyiDataScience/openclaw-control-center",
@@ -2114,7 +2122,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "OpenClaw Control Center is a TypeScript-based local dashboard that provides observability and control over OpenClaw AI agents. It transforms OpenClaw from an opaque system into a transparent control center where operators can monitor agent health, usage, tasks, collaboration between agents, and system security without needing to parse raw backend data. The tool ships with safe defaults including read-only mode, local token authentication, and disabled mutation routes."
     },
     "Narcooo/inkos": {
       "full_name": "Narcooo/inkos",
@@ -2134,7 +2143,8 @@
         "novel-generation"
       ],
       "category": "Agentic",
-      "version": "v0.5.1"
+      "version": "v0.5.1",
+      "blurb": "InkOS is an autonomous CLI agent system that uses multiple AI agents to write, audit, and revise complete novels with minimal human intervention. It provides multi-dimensional content auditing across 33 criteria including character continuity, plot consistency, and AI detection to automatically improve draft quality through revision cycles. The system supports style mimicry by analyzing reference texts and extracting statistical fingerprints for consistent voice replication."
     },
     "larksuite/openclaw-lark": {
       "full_name": "larksuite/openclaw-lark",
@@ -2144,7 +2154,8 @@
       "first_seen": "2026-03-22",
       "has_summary": false,
       "topics": [],
-      "category": "Other"
+      "category": "Other",
+      "blurb": "OpenClaw Lark/Feishu Plugin is the official TypeScript plugin that connects OpenClaw AI agents to Lark/Feishu workspaces. It enables AI agents to directly interact with Lark/Feishu messaging, documents, calendars, tasks, and spreadsheets through comprehensive CRUD operations and real-time streaming responses. The plugin includes multiple security layers and permission policies due to the inherent risks of AI automation acting under user credentials."
     },
     "onecli/onecli": {
       "full_name": "onecli/onecli",
@@ -2166,7 +2177,8 @@
         "security",
         "security-tools",
         "vault"
-      ]
+      ],
+      "blurb": "OneCLI is an open-source credential vault that acts as a proxy gateway between AI agents and external services. It allows agents to make HTTP calls using placeholder keys while the gateway transparently injects real API credentials, ensuring agents never have direct access to sensitive secrets. The system uses a Rust-based HTTP gateway for performance and AES-256-GCM encryption for credential storage."
     },
     "CopilotKit/OpenGenerativeUI": {
       "full_name": "CopilotKit/OpenGenerativeUI",
@@ -2192,7 +2204,8 @@
         "typescript",
         "visualization"
       ],
-      "category": "Agentic"
+      "category": "Agentic",
+      "blurb": "OpenGenerativeUI is an open-source framework for building AI agents that generate interactive UI components rather than just text responses. It enables agents to create algorithm visualizations, 3D animations, charts, and interactive widgets that render as live HTML/SVG in sandboxed iframes. The project uses CopilotKit and LangGraph to orchestrate the generation process, with a Python agent that decides whether to respond with text or visual components based on user prompts."
     },
     "UniRound-Tec/Aurogen": {
       "full_name": "UniRound-Tec/Aurogen",
@@ -2207,7 +2220,8 @@
         "openclaw"
       ],
       "category": "Agentic",
-      "version": "v0.2.0post2"
+      "version": "v0.2.0post2",
+      "blurb": "Aurogen is a TypeScript-based multi-agent system that reimplements the OpenClaw paradigm with full modularity and parallelization. It allows running multiple AI agents simultaneously through a web interface with dynamic configuration, while maintaining compatibility with the existing OpenClaw ecosystem and skills. The system eliminates CLI interactions and config files in favor of immediate web-based configuration that takes effect without restarts."
     },
     "photon-hq/qclaw-wechat-client": {
       "full_name": "photon-hq/qclaw-wechat-client",
@@ -2222,7 +2236,8 @@
         "qclaw",
         "wechat"
       ],
-      "category": "Agentic"
+      "category": "Agentic",
+      "blurb": "A reverse-engineered TypeScript client that implements QClaw's WeChat Access API protocol for authenticating and interacting with Tencent's OpenClaw AI Gateway service. It enables developers to programmatically handle WeChat OAuth2 QR-code login flows and manage API keys/tokens without using the official QClaw Electron app. The library was extracted directly from the unencrypted app.asar bundle of the official QClaw desktop application."
     },
     "Michaelliv/pi-generative-ui": {
       "full_name": "Michaelliv/pi-generative-ui",
@@ -2233,7 +2248,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.2.1"
+      "version": "v0.2.1",
+      "blurb": "This is a reverse-engineered implementation of Claude.ai's generative UI system, ported to work with the pi AI assistant on macOS. It enables pi to generate interactive HTML/SVG widgets (charts, animations, controls) that render in native macOS windows as the LLM streams its response, rather than just displaying static code blocks. The project includes the actual design guidelines extracted from Claude.ai's production system and uses morphdom for smooth DOM diffing during the streaming process."
     },
     "moltlaunch/cashclaw": {
       "full_name": "moltlaunch/cashclaw",
@@ -2254,7 +2270,8 @@
         "tool-use",
         "typescript"
       ],
-      "category": "Agentic"
+      "category": "Agentic",
+      "blurb": "CashClaw is an autonomous agent that connects to onchain work marketplaces to find, complete, and get paid for tasks using LLM-powered execution. It automatically evaluates incoming work, quotes prices, executes tasks through tool-use conversations, submits deliverables, and uses client feedback to improve its performance over time. The agent runs as a single Node.js process with a built-in dashboard and can be forked to work with different marketplaces beyond the default Moltlaunch integration."
     },
     "NateBJones-Projects/OB1": {
       "full_name": "NateBJones-Projects/OB1",
@@ -2274,7 +2291,8 @@
         "personal-knowledge-management",
         "supabase"
       ],
-      "category": "Agentic"
+      "category": "Agentic",
+      "blurb": "Open Brain is a TypeScript-based infrastructure layer that provides a unified database, AI gateway, and chat interface for connecting multiple AI tools to shared persistent memory. It eliminates middleware chains by letting any AI (Claude, ChatGPT, Cursor, etc.) plug into the same knowledge base with vector search capabilities. The project includes a progressive extension system that teaches users to build increasingly complex AI-powered workflows from household management to professional CRM."
     },
     "excalidraw/excalidraw": {
       "full_name": "excalidraw/excalidraw",
@@ -2293,7 +2311,8 @@
         "whiteboard"
       ],
       "category": "Other",
-      "version": "v0.18.0"
+      "version": "v0.18.0",
+      "blurb": "Excalidraw is an open-source virtual whiteboard application built in TypeScript that renders diagrams in a hand-drawn style. It enables creating wireframes, flowcharts, and sketches with real-time collaboration and end-to-end encryption. The project is available both as a hosted web app and as an npm package for embedding into other applications."
     },
     "nodejs/node": {
       "full_name": "nodejs/node",
@@ -2314,7 +2333,8 @@
         "windows"
       ],
       "category": "Language",
-      "version": "v25.8.1"
+      "version": "v25.8.1",
+      "blurb": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of web browsers. It enables server-side JavaScript development and is commonly used for building web servers, APIs, and command-line tools. The project follows a predictable release schedule with new major versions every 6 months and LTS (Long Term Support) versions for production stability."
     },
     "iptv-org/iptv": {
       "full_name": "iptv-org/iptv",

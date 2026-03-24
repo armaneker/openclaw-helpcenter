@@ -1,0 +1,61 @@
+<GuideHeader tool="modly" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Modly
+
+Modly is a desktop application that generates 3D models from images using AI models. It runs entirely on your GPU with no cloud dependencies, providing local AI-powered image-to-3D mesh conversion.
+
+## Key Features
+
+- **Local GPU processing** — All AI inference runs on your hardware
+- **Image-to-3D conversion** — Turn photos into 3D meshes
+- **Extension system** — Install community AI model extensions from GitHub
+- **Cross-platform** — Windows and Linux support (macOS coming soon)
+- **Open source** — Self-hosted with extensible architecture
+
+## Installation
+
+Download the latest installer from the [releases page](https://github.com/lightningpixel/modly/releases/latest), or run directly from source:
+
+```bash
+# Clone and run without installing
+git clone https://github.com/lightningpixel/modly
+cd modly
+
+# Windows
+launcher.bat
+
+# Linux  
+./launcher.sh
+```
+
+## Basic Usage
+
+```bash
+# Install dependencies
+npm install
+
+# Set up Python backend
+cd api
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+
+# Run development server
+npm run dev
+```
+
+<Callout type="info">
+Install AI model extensions through the Models page by entering GitHub repository URLs. Official extensions include Hunyuan3D 2 Mini.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT (requires attribution if forked)
+- **Language**: TypeScript with Python backend
+- **Community**: 670+ GitHub stars, active Discord server
+- **Extension support**: Install models via GitHub repositories with `manifest.json` and `generator.py`
+
+<Callout type="tip">
+Join the [Discord server](https://discord.gg/FjzjRgweVk) for updates, bug reports, and community support.
+</Callout>

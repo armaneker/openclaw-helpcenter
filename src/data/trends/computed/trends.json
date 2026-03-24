@@ -374,7 +374,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v2.42.0",
-      "blurb": null
+      "blurb": "GSD 2 is a TypeScript CLI tool that functions as an autonomous coding agent capable of executing long-running development tasks without losing context. It uses meta-prompting and spec-driven development to manage entire project milestones automatically, including git operations, context management, and error recovery, allowing developers to run a single command and return to a completed project. The tool evolved from a viral prompt framework into a standalone agent with direct control over the development environment rather than relying on LLM instruction-following."
     },
     {
       "full_name": "awesome-selfhosted/awesome-selfhosted",
@@ -566,7 +566,7 @@
       "delta_week": 322,
       "delta_month": 322,
       "delta_year": 322,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "A self-evolving AI agent system built in 3,500 lines of pure Python with zero framework dependencies, featuring 26 built-in tools and designed for 24/7 production operation. It provides automated tool creation, self-repair capabilities, three-layer memory architecture, and multi-tenant containerized deployment with messaging platform integration. The system uses MCP (Model Context Protocol) for plugin extensibility and maintains persistent scheduling across restarts."
@@ -644,7 +644,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v0.5.1",
-      "blurb": null
+      "blurb": "InkOS is an autonomous CLI agent system that uses multiple AI agents to write, audit, and revise complete novels with minimal human intervention. It provides multi-dimensional content auditing across 33 criteria including character continuity, plot consistency, and AI detection to automatically improve draft quality through revision cycles. The system supports style mimicry by analyzing reference texts and extracting statistical fingerprints for consistent voice replication."
     },
     {
       "full_name": "nv-tlabs/kimodo",
@@ -764,7 +764,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "pi-autoresearch is an autonomous experiment loop extension for the pi development environment that systematically tests code changes and measures their impact on optimization targets. It automates the cycle of trying ideas, measuring results, keeping improvements, and discarding regressions to continuously optimize metrics like test speed, bundle size, or build times. The extension provides a live dashboard widget and uses statistical confidence scoring to distinguish real improvements from measurement noise."
     },
     {
       "full_name": "ccbkkb/MicroWARP",
@@ -854,7 +854,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.1.4",
-      "blurb": null
+      "blurb": "Recordly is an open-source desktop screen recorder and editor built with Electron/TypeScript for creating professional product videos, demos, and tutorials. It provides an integrated workflow for recording and editing with features like automatic zoom suggestions, cursor animations, webcam overlays, and timeline-based editing tools, eliminating the need for separate video editing software. The app uses native capture APIs (ScreenCaptureKit on macOS, Windows Graphics Capture on Windows) for optimized recording performance across all three major platforms."
     },
     {
       "full_name": "win4r/ClawTeam-OpenClaw",
@@ -986,7 +986,7 @@
       "delta_week": 190,
       "delta_month": 190,
       "delta_year": 190,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v0.2.0",
       "blurb": "Modly is a desktop application that generates 3D meshes from images using AI models running locally on your GPU. It eliminates the need for cloud services by processing everything on-device, and supports extensible AI models through a plugin system that can install models from GitHub repositories."
@@ -1019,7 +1019,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "OpenClaw Control Center is a TypeScript-based local dashboard that provides observability and control over OpenClaw AI agents. It transforms OpenClaw from an opaque system into a transparent control center where operators can monitor agent health, usage, tasks, collaboration between agents, and system security without needing to parse raw backend data. The tool ships with safe defaults including read-only mode, local token authentication, and disabled mutation routes."
     },
     {
       "full_name": "m1heng/claude-plugin-weixin",
@@ -1244,7 +1244,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "Open Brain is a TypeScript-based infrastructure layer that provides a unified database, AI gateway, and chat interface for connecting multiple AI tools to shared persistent memory. It eliminates middleware chains by letting any AI (Claude, ChatGPT, Cursor, etc.) plug into the same knowledge base with vector search capabilities. The project includes a progressive extension system that teaches users to build increasingly complex AI-powered workflows from household management to professional CRM."
     },
     {
       "full_name": "leo-lilinxiao/codex-autoresearch",
@@ -1256,7 +1256,7 @@
       "delta_week": 98,
       "delta_month": 98,
       "delta_year": 98,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v0.1.0",
       "blurb": "This is a Codex skill that implements an autonomous modify-verify-iterate loop for code improvement tasks. It continuously makes atomic changes to your codebase, tests them against measurable metrics (like type errors, test coverage, or performance), and keeps improvements while auto-reverting failures. The system can run unattended for hours or overnight, accumulating progress through git commits while targeting any goal with a quantifiable metric."
@@ -1289,7 +1289,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "OpenGenerativeUI is an open-source framework for building AI agents that generate interactive UI components rather than just text responses. It enables agents to create algorithm visualizations, 3D animations, charts, and interactive widgets that render as live HTML/SVG in sandboxed iframes. The project uses CopilotKit and LangGraph to orchestrate the generation process, with a Python agent that decides whether to respond with text or visual components based on user prompts."
     },
     {
       "full_name": "huggingface/transformers",
@@ -1469,7 +1469,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": null,
-      "blurb": null
+      "blurb": "AutoKernel is an autonomous GPU kernel optimization tool that takes any PyTorch model and automatically generates optimized Triton or CUDA kernels for performance bottlenecks. It profiles the model to identify slow operations, extracts them as standalone kernels, then uses AI agents to iteratively optimize each kernel through edit-benchmark-keep/revert cycles that can run overnight unattended. The system includes comprehensive correctness verification and uses Amdahl's law to prioritize which kernels to optimize for maximum overall speedup."
     },
     {
       "full_name": "sstklen/trump-code",
@@ -1574,7 +1574,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v0.2.1",
-      "blurb": null
+      "blurb": "This is a reverse-engineered implementation of Claude.ai's generative UI system, ported to work with the pi AI assistant on macOS. It enables pi to generate interactive HTML/SVG widgets (charts, animations, controls) that render in native macOS windows as the LLM streams its response, rather than just displaying static code blocks. The project includes the actual design guidelines extracted from Claude.ai's production system and uses morphdom for smooth DOM diffing during the streaming process."
     },
     {
       "full_name": "vercel/next.js",
@@ -1604,7 +1604,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "CashClaw is an autonomous agent that connects to onchain work marketplaces to find, complete, and get paid for tasks using LLM-powered execution. It automatically evaluates incoming work, quotes prices, executes tasks through tool-use conversations, submits deliverables, and uses client feedback to improve its performance over time. The agent runs as a single Node.js process with a built-in dashboard and can be forked to work with different marketplaces beyond the default Moltlaunch integration."
     },
     {
       "full_name": "facebook/react-native",
@@ -1664,7 +1664,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "A reverse-engineered TypeScript client that implements QClaw's WeChat Access API protocol for authenticating and interacting with Tencent's OpenClaw AI Gateway service. It enables developers to programmatically handle WeChat OAuth2 QR-code login flows and manage API keys/tokens without using the official QClaw Electron app. The library was extracted directly from the unencrypted app.asar bundle of the official QClaw desktop application."
     },
     {
       "full_name": "kubernetes/kubernetes",

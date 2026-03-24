@@ -1,0 +1,57 @@
+<GuideHeader tool="goal-driven" difficulty="Beginner" lastTested="2026-01" readTime="4 min" />
+
+# Goal-Driven Multi-Agent System
+
+Goal-Driven is a framework that enables multi-agent systems to work continuously for 100+ hours on complex problems. It uses a master-subagent architecture where agents persist until strict success criteria are met.
+
+## Key Features
+
+- **Continuous operation** - Agents work for hundreds of hours without stopping
+- **Master-subagent coordination** - Master agent monitors and restarts inactive subagents
+- **Criteria-based completion** - Tasks only complete when predefined success conditions are satisfied
+- **Complex problem solving** - Designed for compiler design, theorem proving, system architecture
+- **Auto-restart mechanism** - Inactive agents are automatically replaced to maintain progress
+
+## Installation
+
+No installation required. Goal-Driven is a prompt template that works with any multi-agent system like Claude Code, Codex, or OpenClaw.
+
+## Basic Usage
+
+Copy the template and fill in your goal and success criteria:
+
+```markdown
+Goal: [[[[[Write a TypeScript compiler in C++ that correctly transpiles TypeScript into JavaScript, including complete documentation and unit tests.]]]]]
+
+Criteria for success: [[[[[Ensure that the TypeScript compiler successfully compiles and generates 2,000 comprehensive TypeScript test case files covering as many TypeScript syntax features as possible. Confirm that the C++ TypeScript compiler correctly transpiles the code into JavaScript.]]]]]
+```
+
+<Callout type="warning">
+The system will consume significant LLM tokens and API credits during extended runs. Ensure your subscription can handle multi-hour operations.
+</Callout>
+
+The master agent follows this logic:
+```pseudocode
+create a subagent to complete the goal
+
+while (criteria are not met) {
+  check subagent activity every 5 minutes
+  if (subagent inactive or claims completion) {
+    verify if criteria are met
+    if (criteria not met) {
+      restart new subagent
+    }
+  }
+}
+```
+
+<Callout type="tip">
+Goal-Driven has successfully built a TypeScript compiler in C++ (~100 hours) and SQLite in Rust (~30 hours).
+</Callout>
+
+## Notable Details
+
+- **Repository**: [lidangzzz/goal-driven](https://github.com/lidangzzz/goal-driven)
+- **Stars**: 561 GitHub stars
+- **License**: Not specified
+- **Language**: Language-agnostic prompt template

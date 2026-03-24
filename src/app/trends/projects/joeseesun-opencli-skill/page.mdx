@@ -1,0 +1,71 @@
+<GuideHeader tool="opencli-skill" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenCLI Skill
+
+OpenCLI Skill bridges Claude with 16+ major platforms (Bilibili, Twitter/X, YouTube, Reddit, etc.) through natural language commands. It leverages your existing Chrome login sessions, eliminating the need for API keys or re-authentication.
+
+## Key Features
+
+- **16 platform integrations**: Bilibili, Zhihu, Twitter/X, YouTube, Weibo, Reddit, HackerNews, V2EX, and more
+- **Reuses Chrome sessions**: No API keys or separate logins required
+- **Read/search/write operations**: Browse feeds, search content, post updates (with confirmation)
+- **Natural language interface**: Ask Claude to interact with platforms conversationally
+- **Automatic translation**: Chinese content titles translated to English in results
+
+<Callout type="warning">
+Write operations require confirmation and may trigger platform bot-detection systems.
+</Callout>
+
+## Installation
+
+**Prerequisites**: Node.js 16+, Chrome browser, Claude Code
+
+Install the opencli CLI tool:
+```bash
+npm install -g @jackwener/opencli
+```
+
+Install Playwright MCP Bridge Chrome extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/playwright-mcp-bridge/kldoghpdblpjbjeechcaoibpfbgfomkn).
+
+Configure Playwright MCP in Claude Code:
+```bash
+claude mcp add playwright --scope user -- npx @playwright/mcp@latest
+```
+
+Install the skill:
+```bash
+npx skills add joeseesun/opencli-skill
+```
+
+## Basic Usage
+
+Ensure Chrome is open and you're logged into target platforms. Use natural language:
+
+```
+"Get top 20 HackerNews stories"
+"Search YouTube for LLM tutorials" 
+"What's trending on Twitter?"
+"Check AAPL stock price"
+"Post a tweet: Just discovered Claude Code skills!"
+```
+
+<Callout type="info">
+Claude automatically selects appropriate opencli commands and formats results in clean tables.
+</Callout>
+
+Example commands:
+```bash
+opencli twitter timeline -f json
+opencli bilibili hot --limit 10 -f json  
+opencli hackernews top --limit 20 -f json
+opencli yahoo-finance quote --symbol AAPL
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: JavaScript/Node.js
+- **Community**: 614+ GitHub stars
+- **Built on**: [jackwener/opencli](https://github.com/jackwener/opencli)
+- **Platforms supported**: 16 major social and content platforms
+- **Write operations**: Include confirmation prompts for safety

@@ -1,0 +1,65 @@
+<GuideHeader tool="codex-autoresearch" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Codex Autoresearch
+
+Codex Autoresearch is a self-directed iterative system that enables Codex to autonomously improve codebases through continuous modify-verify-retain cycles. It implements Karpathy's autoresearch concept for software engineering tasks.
+
+## Key Features
+
+- **Autonomous iteration**: Runs modify-verify-decide loops without human intervention
+- **Metric-driven improvement**: Targets measurable outcomes like test coverage, type errors, or performance
+- **Git-based state management**: Each change commits to git, failed attempts auto-revert
+- **Background execution**: Can run unattended for hours or overnight
+- **Cross-run learning**: Accumulates lessons across sessions to avoid repeating failures
+- **Parallel experimentation**: Tests multiple hypotheses simultaneously when beneficial
+
+## Installation
+
+Clone and install as a Codex skill:
+
+```bash
+git clone https://github.com/leo-lilinxiao/codex-autoresearch.git
+cp -r codex-autoresearch your-project/.agents/skills/codex-autoresearch
+```
+
+Or use Codex's skill installer:
+
+```text
+$skill-installer install https://github.com/leo-lilinxiao/codex-autoresearch
+```
+
+## Basic Usage
+
+Start Codex in your project and describe your goal:
+
+```text
+$codex-autoresearch
+I want to get rid of all the `any` types in my TypeScript code
+```
+
+Codex will scan your repository, confirm the target metric, and begin iterating:
+
+```text
+Codex: Found 47 `any` occurrences across src/**/*.ts
+       Target: eliminate `any` types
+       Metric: `any` count (current: 47), direction: lower
+       
+       Choose run mode: foreground or background?
+
+You:   Background, run overnight
+
+Codex: Starting background run. Detached runtime is now iterating.
+```
+
+<Callout type="info">
+Each iteration makes one atomic change, commits it to git, verifies the improvement, and either keeps or reverts the change based on your target metric.
+</Callout>
+
+## Project Details
+
+- **Language**: Python
+- **License**: MIT
+- **GitHub Stars**: 633
+- **Repository**: [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch)
+
+The system works with any measurable software engineering goal - from eliminating lint warnings to improving test coverage or reducing bundle size. Progress accumulates automatically while you focus on other work.
