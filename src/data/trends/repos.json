@@ -2650,12 +2650,13 @@
       "first_seen": "2026-03-23",
       "has_summary": false,
       "topics": [
+        "agents",
         "ai",
         "macos",
         "skills",
         "swiftui"
       ],
-      "category": "AI / ML",
+      "category": "Agentic",
       "version": "v1.6.0"
     },
     "eze-is/web-access": {
@@ -2928,6 +2929,57 @@
       ],
       "category": "Agentic",
       "version": null
+    },
+    "opa334/darksword-kexploit": {
+      "full_name": "opa334/darksword-kexploit",
+      "description": "iOS <=26.0.1 DarkSword Kernel Exploit reimplemented in Objective-C",
+      "language": "Objective-C",
+      "url": "https://github.com/opa334/darksword-kexploit",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "dashersw/gea": {
+      "full_name": "dashersw/gea",
+      "description": "",
+      "language": "JavaScript",
+      "url": "https://github.com/dashersw/gea",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "@geajs/vite-plugin@1.0.4"
+    },
+    "LimHyungTae/Awesome-PhD-CV": {
+      "full_name": "LimHyungTae/Awesome-PhD-CV",
+      "description": "Curated academic CV templates and guidelines for PhD students, researchers, and faculty job applicants.",
+      "language": "TeX",
+      "url": "https://github.com/LimHyungTae/Awesome-PhD-CV",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [
+        "academia-resume",
+        "bigtech-resume",
+        "cv",
+        "latex-resume-template",
+        "resume",
+        "resume-templates"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "twwch/AIComicBuilder": {
+      "full_name": "twwch/AIComicBuilder",
+      "description": "  AI-powered animated comic generator — transform scripts into fully animated videos with AI-driven character design,    storyboarding, and video synthesis.  ",
+      "language": "TypeScript",
+      "url": "https://github.com/twwch/AIComicBuilder",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.1.0"
     }
   }
 }
