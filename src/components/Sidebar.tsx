@@ -2,14 +2,19 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { navigation, NavItem } from '@/lib/navigation';
 
+/** Normalize paths for comparison — strip trailing slash */
+function normalizePath(path: string) {
+  return path.endsWith('/') && path.length > 1 ? path.slice(0, -1) : path;
+}
+
 function NavSection({ item }: { item: NavItem }) {
-  const pathname = usePathname();
+  const pathname = normalizePath(usePathname());
   const isActive = pathname === item.href || item.children?.some(c => pathname === c.href);
-  const [open, setOpen] = useState(isActive);
+  // Also match sub-paths (e.g. /skills/anatomy matches /skills parent)
+  const isInSection = pathname.startsWith(item.href + '/') || pathname === item.href;
 
   if (!item.children) {
     return (
@@ -22,19 +27,26 @@ function NavSection({ item }: { item: NavItem }) {
     );
   }
 
+  // Auto-open if any child or the section itself is active
+  const shouldOpen = isActive || isInSection;
+
   return (
     <div>
       <button
-        onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between px-3 py-1.5 text-sm text-gray-300 hover:text-gray-100 rounded-md hover:bg-gray-800/50 transition-colors"
+        onClick={() => {/* toggle handled by Link navigation */}}
+        className={`flex w-full items-center justify-between px-3 py-1.5 text-sm rounded-md transition-colors ${
+          isInSection ? 'text-gray-100 bg-gray-800/30' : 'text-gray-300 hover:text-gray-100 hover:bg-gray-800/50'
+        }`}
       >
-        <span className="font-medium">{item.title}</span>
+        <Link href={item.href} className="font-medium flex-1 text-left">
+          {item.title}
+        </Link>
         <ChevronRight
           size={14}
-          className={`transition-transform ${open ? 'rotate-90' : ''}`}
+          className={`transition-transform ${shouldOpen ? 'rotate-90' : ''}`}
         />
       </button>
-      {open && (
+      {shouldOpen && (
         <div className="ml-3 mt-0.5 border-l border-gray-800 pl-2 space-y-0.5">
           {item.children.map((child) => (
             <Link
@@ -59,7 +71,6 @@ interface SidebarProps {
 export default function Sidebar({ open, onClose }: SidebarProps) {
   return (
     <>
-      {/* Mobile overlay */}
       {open && (
         <div
           className="fixed inset-0 z-40 bg-black/60 lg:hidden"
