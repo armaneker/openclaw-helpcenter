@@ -135,11 +135,9 @@ Avoid enabling `agentToAgent` in your initial setup. There are known bugs where 
 
 ### Communication Cost Comparison
 
-| Pattern | Token Cost | Complexity | Debuggability |
-|---------|------------|------------|---------------|
-| Sub-agent spawning | Medium | Low | Good |
-| Shared files | None | Very Low | Excellent |
-| Direct agent-to-agent | High | High | Poor |
+- **Sub-agent spawning** — Token cost: Medium. Complexity: Low. Debuggability: Good.
+- **Shared files** — Token cost: None. Complexity: Very Low. Debuggability: Excellent.
+- **Direct agent-to-agent** — Token cost: High. Complexity: High. Debuggability: Poor.
 
 ---
 
@@ -239,15 +237,13 @@ Each binding has:
 
 ### Workspace Files Reference
 
-| File | Purpose | Required? |
-|------|---------|-----------|
-| `SOUL.md` | Agent persona, tone, domain knowledge, boundaries | Yes |
-| `AGENTS.md` | Operational rules, protocols, workflow instructions | Yes |
-| `USER.md` | User context — who interacts with this agent | Recommended |
-| `MEMORY.md` | Persistent memory across sessions | Auto-managed |
-| `HEARTBEAT.md` | Periodic task definitions (cron-like) | Optional |
-| `TOOLS.md` | Tool references, API endpoints, connection details | Recommended |
-| `skills/` | Agent-specific skill definitions | Optional |
+- `SOUL.md` — Agent persona, tone, domain knowledge, boundaries. **Required.**
+- `AGENTS.md` — Operational rules, protocols, workflow instructions. **Required.**
+- `USER.md` — User context — who interacts with this agent. **Recommended.**
+- `MEMORY.md` — Persistent memory across sessions. **Auto-managed.**
+- `HEARTBEAT.md` — Periodic task definitions (cron-like). **Optional.**
+- `TOOLS.md` — Tool references, API endpoints, connection details. **Recommended.**
+- `skills/` — Agent-specific skill definitions. **Optional.**
 
 <Callout type="danger" title="Never Share Auth">
 Never reuse `agentDir` across agents — this causes auth and session collisions. Each workspace should be a separate private Git repo. Secrets belong in environment variables, never in workspace files.

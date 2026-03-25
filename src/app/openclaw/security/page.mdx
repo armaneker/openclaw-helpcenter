@@ -8,12 +8,10 @@ Production agent deployments require careful attention to access control, tool p
 
 The **deny list always wins** over the allow list. Follow minimal privilege:
 
-| Agent | Allowed | Denied |
-|-------|---------|--------|
-| Coordinator | All core tools + `sessions_spawn` | — |
-| Engineering | `read`, `write`, `exec`, `process`, `git` | `sessions_spawn`, `gateway`, `cron` |
-| Product | `read`, `write`, `web_search` | `exec`, `process`, `git`, `gateway` |
-| Risk / Analytics | `read`, `write`, `web_search` | `exec`, `gateway`, `sessions_spawn` |
+- **Coordinator** — Allow: all core tools + `sessions_spawn`. Deny: none.
+- **Engineering** — Allow: `read`, `write`, `exec`, `process`, `git`. Deny: `sessions_spawn`, `gateway`, `cron`.
+- **Product** — Allow: `read`, `write`, `web_search`. Deny: `exec`, `process`, `git`, `gateway`.
+- **Risk / Analytics** — Allow: `read`, `write`, `web_search`. Deny: `exec`, `gateway`, `sessions_spawn`.
 
 <Callout type="tip" title="Principle of Least Privilege">
 Each agent should only have access to the tools it needs for its specific role. When in doubt, deny a tool and add it later if needed.

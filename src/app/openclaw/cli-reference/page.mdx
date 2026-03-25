@@ -6,35 +6,27 @@ Quick reference for common OpenClaw CLI commands.
 
 ## Agent Management
 
-| Command | Description |
-|---------|-------------|
-| `openclaw agents add <id>` | Create a new agent |
-| `openclaw agents set-identity --agent <id> --name "Name"` | Set agent display name |
-| `openclaw agents list --bindings` | List all agents and their routing bindings |
-| `openclaw agents bind --agent <id> --bind slack:<account>` | Bind agent to a Slack account |
-| `openclaw agents unbind --agent <id> --bind slack:<account>` | Remove a Slack binding |
+- `openclaw agents add <id>` — Create a new agent
+- `openclaw agents set-identity --agent <id> --name "Name"` — Set agent display name
+- `openclaw agents list --bindings` — List all agents and their routing bindings
+- `openclaw agents bind --agent <id> --bind slack:<account>` — Bind agent to a Slack account
+- `openclaw agents unbind --agent <id> --bind slack:<account>` — Remove a Slack binding
 
 ## Gateway
 
-| Command | Description |
-|---------|-------------|
-| `openclaw gateway --port 18789` | Start the gateway on a specific port |
-| `openclaw gateway restart` | Restart the gateway process |
-| `openclaw onboard --install-daemon` | Install as a systemd daemon |
+- `openclaw gateway --port 18789` — Start the gateway on a specific port
+- `openclaw gateway restart` — Restart the gateway process
+- `openclaw onboard --install-daemon` — Install as a systemd daemon
 
 ## Channel & Connectivity
 
-| Command | Description |
-|---------|-------------|
-| `openclaw channels status --probe` | Check all channel connections |
-| `openclaw pairing list slack` | List pending Slack pairing requests |
-| `openclaw pairing approve slack <code> --account <account>` | Approve a Slack pairing code |
+- `openclaw channels status --probe` — Check all channel connections
+- `openclaw pairing list slack` — List pending Slack pairing requests
+- `openclaw pairing approve slack <code> --account <account>` — Approve a Slack pairing code
 
 ## Diagnostics
 
-| Command | Description |
-|---------|-------------|
-| `openclaw doctor` | Run a full health check |
+- `openclaw doctor` — Run a full health check
 
 ## Common Workflows
 

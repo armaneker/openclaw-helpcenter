@@ -59,10 +59,8 @@ After step 3 completes, the reference content can be released from context if sp
 
 ## Token Budget Comparison
 
-| Approach | 50 skills | 200 skills | 1,000 skills |
-|----------|-----------|------------|--------------|
-| Load everything upfront | 400K tokens | 1.6M tokens | 8M tokens |
-| Progressive loading (typical query) | ~8K tokens | ~8K tokens | ~8K tokens |
+- **Load everything upfront** — 400K tokens (50 skills) / 1.6M tokens (200 skills) / 8M tokens (1,000 skills)
+- **Progressive loading (typical query)** — ~8K tokens regardless of skill count
 
 The key insight: context usage is proportional to the **active skill's complexity**, not the **total number of skills**.
 
