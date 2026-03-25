@@ -1,0 +1,31 @@
+<GuideHeader tool="Skills" difficulty="All levels" lastTested="2026-03" readTime="3 min" />
+
+# Skills
+
+Skills are the building blocks of agentic workflows. A skill is a self-contained instruction set that tells an AI agent **what to do**, **how to do it**, and **where to find supporting data**.
+
+Think of a skill as a runbook for an agent — structured enough to be deterministic, flexible enough to handle edge cases.
+
+## Why Skills Matter
+
+Without skills, agents rely entirely on their training data. That means inconsistent outputs, hallucinated steps, and no access to your internal tools or APIs. Skills solve this by giving agents:
+
+- **Explicit instructions** — step-by-step procedures instead of guessing
+- **Access to external resources** — API scripts, reference docs, calculation engines
+- **Consistent behavior** — same input produces same output, every time
+- **Progressive loading** — only the relevant knowledge gets loaded, keeping context windows lean
+
+## Section Overview
+
+<Callout type="info" title="Start here">
+If you're new to skills, read [Anatomy of a Skill](/skills/anatomy) first. It covers the three-tier architecture that makes skills efficient.
+</Callout>
+
+| Guide | What you'll learn |
+|-------|-------------------|
+| [Anatomy of a Skill](/skills/anatomy) | The three-tier structure: metadata, instructions, supporting files |
+| [YAML Frontmatter](/skills/frontmatter) | How agents discover and trigger skills |
+| [Writing Steps](/skills/steps) | Structuring the instruction body for reliable execution |
+| [References](/skills/references) | Storing large docs, examples, and static data |
+| [Scripts](/skills/scripts) | Running code for calculations, API calls, and file processing |
+| [Progressive Loading](/skills/progressive-loading) | How the three tiers keep context windows efficient |

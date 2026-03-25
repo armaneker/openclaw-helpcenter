@@ -1,0 +1,85 @@
+<GuideHeader tool="Skills" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# YAML Frontmatter
+
+The frontmatter is the `---` delimited block at the top of SKILL.md. It's the only part of the skill that stays in the agent's context window at all times (Tier 1). The agent reads it to decide whether to activate the skill.
+
+## Fields
+
+### name (required, max 64 characters)
+
+The skill's unique identifier. Use kebab-case, no spaces.
+
+```yaml
+name: sales-reporting
+```
+
+### description (required, max 1024 characters)
+
+The single most important field. The agent matches user queries against this text to decide whether the skill is relevant. A bad description means the skill never triggers.
+
+```yaml
+description: |
+  Access sales data via the reporting API. Covers daily/monthly
+  volume, commission rates, customer counts, churn metrics.
+  Triggers on "today's numbers", "monthly performance",
+  "which product is growing", "revenue breakdown".
+```
+
+A good description includes:
+- **What the skill does** — action verbs, not abstract nouns
+- **What triggers it** — phrases users actually say
+- **What domain it covers** — products, metrics, entities
+- **What it needs** — environment variables, prerequisites
+
+### tools (optional)
+
+Restricts which tools the skill can use. If omitted, the agent uses its default tool access.
+
+```yaml
+tools:
+  - bash_tool
+  - web_search
+```
+
+## Good vs. Bad Descriptions
+
+```yaml
+# Bad — too vague, won't match anything specific
+description: Handles reporting tasks.
+
+# Bad — lists features but no trigger phrases
+description: |
+  A comprehensive reporting module with support for
+  multiple output formats and data sources.
+
+# Good — specific, includes trigger phrases and domain terms
+description: |
+  Pull sales reports from the reporting API. Daily and monthly
+  volume, commission, take rate, customer count, churn analysis
+  by product line. Responds to "show me today's numbers",
+  "monthly comparison", "which segment is growing", "churn rate".
+  Requires REPORTING_API_USER and REPORTING_API_PASS env vars.
+```
+
+## Complete Example
+
+```yaml
+---
+name: deploy-checker
+description: |
+  Check deployment status across environments.
+  Queries the CI/CD pipeline for latest releases,
+  rollback history, and health checks. Triggers on
+  "is it deployed", "what version", "release status",
+  "last deployment". Requires DEPLOY_API_TOKEN env var.
+tools:
+  - bash_tool
+---
+```
+
+## Tips
+
+- Write the description as if you're writing a search index entry. The agent does keyword matching, not semantic understanding of the frontmatter.
+- Include the environment variables your skill needs — if they're missing, the agent can tell the user upfront instead of failing mid-execution.
+- Keep `name` stable once published. Other skills or automation may reference it.

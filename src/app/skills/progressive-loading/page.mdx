@@ -1,0 +1,98 @@
+<GuideHeader tool="Skills" difficulty="Intermediate" lastTested="2026-03" readTime="5 min" />
+
+# Progressive Loading
+
+Progressive loading is the architectural decision that makes skills scale. Instead of dumping every skill's full content into the agent's context window, the system loads knowledge in three tiers — metadata first, instructions when needed, supporting files only at the point of use.
+
+## The Problem
+
+An agent with 50 skills, each averaging 3,000 tokens of instructions plus 5,000 tokens of reference material, would need 400,000 tokens just for skill content. Most context windows can't handle that, and even if they could, the signal-to-noise ratio would be terrible.
+
+## The Solution: Three Tiers
+
+### Tier 1 — Skill Discovery (~100 tokens per skill)
+
+The agent always has the YAML frontmatter of every skill in memory. For 50 skills, that's roughly 5,000 tokens — a small fraction of any context window.
+
+```
+Agent context at startup:
+├── System prompt
+├── Conversation history
+└── Skill index (Tier 1)
+    ├── sales-reporting: "Access sales data via reporting API..."
+    ├── deploy-checker: "Check deployment status across environments..."
+    ├── customer-lookup: "Find customer records by name, ID, or email..."
+    └── ... (47 more, ~100 tokens each)
+```
+
+The agent reads the `description` field of each skill and decides which one matches the user's query. This is why the description is the most critical line in any skill.
+
+### Tier 2 — Full Instructions (&lt;5,000 tokens)
+
+When a skill is triggered, the agent loads the full markdown body of SKILL.md — Steps, Guidelines, Output format. Only the matched skill loads, not all 50.
+
+```
+Agent context after matching "sales-reporting":
+├── System prompt
+├── Conversation history
+├── Skill index (Tier 1) — all 50 skills
+└── Active skill (Tier 2) — sales-reporting
+    ├── Steps (1-4)
+    ├── Guidelines
+    └── Output format
+```
+
+### Tier 3 — On-Demand Resources (variable)
+
+When a specific step references a file, the agent loads it at that point. Step 3 says "read `references/metric-definitions.md`" — the file loads when the agent reaches step 3, not before.
+
+```
+Agent context at step 3:
+├── System prompt
+├── Conversation history
+├── Skill index (Tier 1)
+├── Active skill (Tier 2)
+└── Step 3 resource (Tier 3) — metric-definitions.md
+```
+
+After step 3 completes, the reference content can be released from context if space is needed.
+
+## Token Budget Comparison
+
+| Approach | 50 skills | 200 skills | 1,000 skills |
+|----------|-----------|------------|--------------|
+| Load everything upfront | 400K tokens | 1.6M tokens | 8M tokens |
+| Progressive loading (typical query) | ~8K tokens | ~8K tokens | ~8K tokens |
+
+The key insight: context usage is proportional to the **active skill's complexity**, not the **total number of skills**.
+
+## Design Implications
+
+### Description quality is everything
+
+Since Tier 1 is the only thing the agent always sees, the `description` field determines whether a skill gets triggered at all. Invest time here.
+
+### Keep SKILL.md body under 5,000 tokens
+
+If your instructions exceed this, you're probably mixing reference material into the body. Move lookup tables, API docs, and examples into `references/`.
+
+### Reference files should be self-contained
+
+When the agent loads `references/calculation-rules.md` at step 3, it shouldn't need to also load `references/api-endpoints.md` to understand it. Each file should be independently useful.
+
+### Scripts return structured output
+
+The agent needs to parse script output and fold it into its response. JSON or consistent tabular output works best. Unstructured text forces the agent to guess at parsing.
+
+## Practical Example
+
+A user asks: "What was our churn rate last month?"
+
+1. **Tier 1**: Agent scans all skill descriptions. `sales-reporting` matches on "churn" and "monthly".
+2. **Tier 2**: Agent loads the full Steps/Guidelines/Output format from `sales-reporting/SKILL.md`.
+3. **Step 1**: Agent parses the request — product: all, metric: churn, period: last month. No Tier 3 needed.
+4. **Step 2**: Agent runs `scripts/fetch-report.py --metric churn --period last-month`. Tier 3: script executes, returns JSON.
+5. **Step 3**: Agent needs the churn calculation definition. Loads `references/metric-definitions.md` (Tier 3). Applies the formula.
+6. **Step 4**: Agent formats the output per the rules. No additional loading needed.
+
+Total context used: ~8,000 tokens. Total skills available: as many as you want.

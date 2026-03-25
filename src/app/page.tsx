@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Server, Cpu, BarChart3, Puzzle, Shield, BookOpen, TrendingUp, ArrowRight } from 'lucide-react';
+import { Server, Cpu, BarChart3, Zap, Puzzle, Shield, BookOpen, TrendingUp, ArrowRight } from 'lucide-react';
 
 const tools = [
   {
@@ -27,12 +27,12 @@ const tools = [
     available: false,
   },
   {
-    title: 'Skills & Plugins',
-    description: 'Extending agent capabilities',
-    href: '/skills-and-plugins',
-    icon: Puzzle,
-    count: 'Coming soon',
-    available: false,
+    title: 'Skills',
+    description: 'Anatomy, structure, and progressive loading',
+    href: '/skills',
+    icon: Zap,
+    count: '6 guides',
+    available: true,
   },
   {
     title: 'Security',

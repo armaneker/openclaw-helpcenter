@@ -1,0 +1,168 @@
+<GuideHeader tool="Skills" difficulty="Beginner" lastTested="2026-03" readTime="8 min" />
+
+# Anatomy of a Skill
+
+A skill is a folder with one required file (`SKILL.md`) and optional supporting directories. The architecture uses three tiers of progressive loading — the agent only pulls in what it needs, when it needs it.
+
+<img src="/images/skill-anatomy.svg" alt="Skill anatomy diagram showing the three-tier structure" style={{width: '100%', maxWidth: '720px', margin: '2rem auto', display: 'block'}} />
+
+## Skill Package Structure
+
+```
+my-skill/
+├── SKILL.md              # Required — metadata + instructions
+├── references/           # Optional — static docs, examples, data
+│   ├── api-endpoints.md
+│   └── calculation-rules.md
+└── scripts/              # Optional — executable code
+    ├── fetch-data.py
+    └── calculate.py
+```
+
+`SKILL.md` is the only required file. Everything else is optional and loaded on demand.
+
+## The Three Tiers
+
+### Tier 1 — Always Loaded (~100 tokens)
+
+The agent sees **only the YAML frontmatter** at all times. This is the skill's identity — name, description, and optionally which tools it needs.
+
+```yaml
+---
+name: sales-reporting
+description: |
+  Access sales data via the reporting API. Covers daily/monthly
+  volume, commission, take rate, churn analysis. Triggers on
+  questions like "today's numbers", "monthly performance",
+  "which product is growing".
+tools:
+  - bash_tool
+  - web_search
+---
+```
+
+The `description` field is the most important line you'll write. The agent decides whether to activate a skill based entirely on this text. A vague description means the skill never triggers.
+
+<Callout type="tip" title="Description quality = trigger accuracy">
+Include action verbs, specific terms the user might say, and the domain the skill covers. Think of it as a search index — the agent matches user queries against these words.
+</Callout>
+
+### Tier 2 — Loaded When Triggered (&lt;5,000 tokens)
+
+When the agent decides this skill is relevant, it loads the **full markdown body** of SKILL.md. This contains:
+
+- **Steps** — numbered, sequential instructions
+- **Guidelines** — cross-cutting rules that apply to all steps
+- **Output format** — how the result should look
+
+```markdown
+## Steps
+
+1. **Parse the user's request**
+   - Which product is being asked about?
+   - What time range: today, this month, comparison?
+   - If unclear, ask — don't assume
+
+2. **Fetch the data**
+   - Run `scripts/fetch-data.py` with the parsed parameters
+   - If it fails, explain the error and suggest a retry
+
+3. **Calculate metrics**
+   - For definitions, read `references/calculation-rules.md`
+   - Compute month-over-month change as percentage
+   - Flag positive/negative trends
+
+4. **Format the output**
+   - Executive audience: summary table + 2-sentence insight
+   - Operations audience: detailed per-customer breakdown
+   - Always use localized number formatting
+
+## Guidelines
+
+- Never fabricate numbers — always fetch from the API
+- If the user says "estimate", still use real data as the baseline
+- On errors, specify which environment variable is missing
+
+## Output format
+
+- Currency: localized with thousands separator ($1,234,567)
+- Percentages: two decimal places (12.34%)
+- Table headers: short, descriptive
+```
+
+Each step starts with an action verb. Sub-items define conditions and exceptions. References to Tier 3 files appear inline — "read `references/calculation-rules.md`" — so the agent knows exactly when to pull them.
+
+### Tier 3 — Loaded On Demand (variable size)
+
+The `references/` and `scripts/` directories contain supporting material that only gets loaded when a specific step needs it.
+
+**references/** — Large, static content that would waste context window space if loaded upfront:
+- API documentation and endpoint lists
+- Calculation methodologies and business rules
+- Few-shot examples and output templates
+- Lookup tables and static datasets
+
+**scripts/** — Executable code for deterministic operations:
+- API integration scripts
+- Calculation engines
+- Data parsers and transformers
+- Validation logic
+
+<Callout type="info" title="When to use scripts vs. natural language">
+Use scripts when you need deterministic results — financial calculations, API calls, data parsing. Let the agent handle explanation, interpretation, and formatting in natural language.
+</Callout>
+
+## Why Progressive Loading Matters
+
+Without progressive loading, every skill would dump its full content into the agent's context window at startup. With 50 skills averaging 3,000 tokens each, that's 150,000 tokens consumed before the user even asks a question.
+
+The three-tier approach means:
+- **Tier 1**: 50 skills × ~100 tokens = **~5,000 tokens** always in memory
+- **Tier 2**: Only the triggered skill's body loads = **~3,000 tokens** on demand
+- **Tier 3**: Only the referenced file loads = **variable** per step
+
+This is how thousands of skills can coexist without destroying performance.
+
+## Putting It Together
+
+Here's a complete minimal skill:
+
+```yaml
+---
+name: deploy-status
+description: |
+  Check deployment status and recent releases.
+  Triggers on "is it deployed", "latest release",
+  "deployment status", "what version is live".
+---
+```
+
+```markdown
+## Steps
+
+1. **Identify the target**
+   - Which service or environment?
+   - If not specified, ask before proceeding
+
+2. **Check current status**
+   - Run `scripts/check-deploy.sh` with the service name
+   - Parse the JSON output for version, timestamp, status
+
+3. **Report back**
+   - State the version, when it was deployed, and by whom
+   - If there are errors, include the relevant log lines
+
+## Guidelines
+
+- Never trigger a deployment — this skill is read-only
+- If credentials are missing, tell the user which env var to set
+```
+
+The agent sees the description at all times. When a user asks "what version is live?", it matches, loads the steps, runs the script, and reports back. The script output replaces what would otherwise be a hallucinated answer.
+
+## Next Steps
+
+- [YAML Frontmatter](/skills/frontmatter) — writing descriptions that trigger reliably
+- [Writing Steps](/skills/steps) — structuring instructions for consistent execution
+- [References](/skills/references) — organizing supporting documentation
+- [Scripts](/skills/scripts) — adding executable code to skills

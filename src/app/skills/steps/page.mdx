@@ -1,0 +1,129 @@
+<GuideHeader tool="Skills" difficulty="Intermediate" lastTested="2026-03" readTime="6 min" />
+
+# Writing Steps
+
+The Steps section is the core of your skill's instruction body (Tier 2). It tells the agent exactly what to do, in what order, and what to watch out for.
+
+## Structure
+
+Every step follows the same pattern: a numbered action verb, followed by sub-items that define conditions and exceptions.
+
+```markdown
+## Steps
+
+1. **[Action verb] [object]**
+   - Condition or sub-task
+   - Exception or edge case
+   - Reference to supporting file
+
+2. **[Action verb] [object]**
+   - When to do X vs Y
+   - What to ask the user if unclear
+```
+
+## A Real Example
+
+```markdown
+## Steps
+
+1. **Parse the user's request**
+   - Identify the product: is it subscriptions, one-time, or enterprise?
+   - Determine the time range: today, this month, year-over-year?
+   - If ambiguous, ask — don't default silently
+
+2. **Fetch the data**
+   - Run `scripts/fetch-report.py` with the parsed parameters
+   - If it returns an error, show the error message and suggest checking credentials
+   - If it returns empty data, confirm the time range with the user
+
+3. **Calculate and interpret**
+   - Metric definitions are in `references/metric-definitions.md`
+   - Compute month-over-month change as a percentage
+   - Flag any metric that changed more than 20% — that's notable
+
+4. **Format the response**
+   - Executive questions: summary table + 2-sentence takeaway
+   - Operational questions: per-customer detail with sortable columns
+   - Always include the data source and timestamp
+```
+
+## Writing Rules
+
+### Start every step with an action verb
+
+The agent processes steps linearly. Action verbs make each step unambiguous.
+
+```markdown
+# Bad
+1. **User input** — get what they need
+2. **Data** — find relevant information
+
+# Good
+1. **Collect user input** — ask which product and time range
+2. **Query the API** — run the fetch script with parsed parameters
+```
+
+### Mark pause points explicitly
+
+The agent needs to know when to stop and ask the user for input versus when to proceed autonomously.
+
+```markdown
+3. **Validate the results**
+   - If any field is null, stop and ask: "The report is missing [field]. Should I proceed without it?"
+   - If all fields are present, continue to step 4
+```
+
+### Reference Tier 3 files inline
+
+Don't put a generic "see the references folder" note. Specify which file, in which step.
+
+```markdown
+# Bad
+3. **Apply the rules**
+   - Check the references folder for details
+
+# Good
+3. **Apply discount rules**
+   - Load the current rules from `references/discount-tiers.md`
+   - Match the customer's volume to the appropriate tier
+```
+
+### Keep steps independent
+
+Each step should assume the previous one completed successfully, but contain enough context to be understood on its own.
+
+## Guidelines Section
+
+Below Steps, add a Guidelines section for rules that apply across all steps:
+
+```markdown
+## Guidelines
+
+- Never fabricate data — always fetch from the source
+- If credentials are missing, name the specific env var that's needed
+- When doing comparisons, always state the base period explicitly
+- Monetary values use localized formatting with thousands separators
+```
+
+Guidelines are constraints and quality standards. Steps are procedures. Don't mix them.
+
+## Output Format Section
+
+Define what the result should look like:
+
+```markdown
+## Output format
+
+- Currency: localized with thousands separator ($1,234,567)
+- Percentages: two decimal places (12.34%)
+- Dates: ISO 8601 (2026-03-25)
+- Tables: short headers, right-aligned numbers
+- If multiple audiences exist, state which format applies to each
+```
+
+## Common Mistakes
+
+- **Steps that are too vague**: "Process the data" doesn't tell the agent anything. "Run `scripts/process.py` with the user's date range" does.
+- **Missing pause points**: The agent will assume it should continue unless you tell it to stop and ask.
+- **Mixing guidelines into steps**: "Always be careful with numbers" belongs in Guidelines, not as a sub-item of step 3.
+- **Referencing files that don't exist**: If you mention `references/rules.md` in a step, make sure the file is actually there.

@@ -1,0 +1,116 @@
+<GuideHeader tool="Skills" difficulty="Intermediate" lastTested="2026-03" readTime="5 min" />
+
+# Scripts
+
+The `scripts/` directory holds executable code — Python, Node.js, shell scripts — that the skill runs during specific steps. Scripts handle operations that need to be deterministic: API calls, calculations, data parsing, validation.
+
+## When to Use Scripts
+
+Use a script when:
+- **The answer must be exact** — financial calculations, scoring algorithms, metric computations
+- **External data is needed** — API calls, database queries, file reads
+- **Transformation is complex** — parsing Excel files, normalizing data schemas, format conversion
+- **Validation rules are strict** — regex checks, threshold comparisons, rule engines
+
+Let the agent handle natural language tasks: explanation, interpretation, summarization, formatting the final response.
+
+## Directory Structure
+
+```
+my-skill/
+├── SKILL.md
+├── references/
+└── scripts/
+    ├── fetch-report.py       # Pulls data from API
+    ├── calculate-metrics.py  # Computes derived values
+    └── validate-input.py     # Checks data quality
+```
+
+## How to Reference
+
+In your SKILL.md Steps section:
+
+```markdown
+2. **Fetch the data**
+   - Run `scripts/fetch-report.py` with parameters:
+     - `--product` from user input
+     - `--date-range` from parsed time range
+   - If the script returns non-zero, show the error to the user
+```
+
+## Writing Good Scripts
+
+### Accept parameters, return structured output
+
+```python
+#!/usr/bin/env python3
+"""Fetch daily sales report from the API."""
+
+import argparse
+import json
+import os
+import sys
+import urllib.request
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--product', required=True)
+    parser.add_argument('--date', required=True)
+    args = parser.parse_args()
+
+    api_key = os.environ.get('REPORTING_API_KEY')
+    if not api_key:
+        print(json.dumps({"error": "REPORTING_API_KEY not set"}))
+        sys.exit(1)
+
+    url = f"https://api.example.com/sales?product={args.product}&date={args.date}"
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {api_key}"})
+
+    try:
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
+            print(json.dumps(data, indent=2))
+    except urllib.error.HTTPError as e:
+        print(json.dumps({"error": f"API returned {e.code}", "detail": e.read().decode()}))
+        sys.exit(1)
+
+if __name__ == '__main__':
+    main()
+```
+
+Key patterns:
+- **Structured output** (JSON) so the agent can parse it reliably
+- **Clear error messages** that name the missing env var or failed API call
+- **Non-zero exit code** on failure so the agent knows something went wrong
+
+### Keep scripts focused
+
+One script = one job. Don't build a Swiss Army knife.
+
+```
+# Bad: one script does everything
+scripts/
+└── do-everything.py
+
+# Good: each script has a single responsibility
+scripts/
+├── fetch-data.py
+├── calculate-churn.py
+└── format-table.py
+```
+
+## Scripts vs. References
+
+| | references/ | scripts/ |
+|---|---|---|
+| Content | Static text, documentation | Executable code |
+| Loading | Read into context | Executed, output returned |
+| Mutability | Rarely changes | Output varies by input |
+| Use case | "Look up and apply" | "Run and get result" |
+
+## Common Mistakes
+
+- **Hardcoded credentials** — always use environment variables
+- **No error handling** — if the API is down, the script should say so, not crash silently
+- **Printing unstructured text** — the agent needs to parse the output. Use JSON or a consistent format.
+- **Side effects without confirmation** — if a script writes data or triggers a deployment, the skill's Steps should include a confirmation step before running it

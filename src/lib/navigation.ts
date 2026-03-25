@@ -14,6 +14,19 @@ export const navigation: NavItem[] = [
     ],
   },
   {
+    title: 'Skills',
+    href: '/skills',
+    children: [
+      { title: 'Overview', href: '/skills' },
+      { title: 'Anatomy of a Skill', href: '/skills/anatomy' },
+      { title: 'YAML Frontmatter', href: '/skills/frontmatter' },
+      { title: 'Writing Steps', href: '/skills/steps' },
+      { title: 'References', href: '/skills/references' },
+      { title: 'Scripts', href: '/skills/scripts' },
+      { title: 'Progressive Loading', href: '/skills/progressive-loading' },
+    ],
+  },
+  {
     title: 'OpenClaw',
     href: '/openclaw',
     children: [
@@ -32,10 +45,6 @@ export const navigation: NavItem[] = [
   {
     title: 'LangSmith Fleet',
     href: '/langsmith',
-  },
-  {
-    title: 'Skills & Plugins',
-    href: '/skills-and-plugins',
   },
   {
     title: 'Security',

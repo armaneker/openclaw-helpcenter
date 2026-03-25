@@ -1,0 +1,75 @@
+<GuideHeader tool="Skills" difficulty="Beginner" lastTested="2026-03" readTime="4 min" />
+
+# References
+
+The `references/` directory stores large, static content that the skill needs but shouldn't load into the context window upfront. It's Tier 3 — loaded only when a specific step requires it.
+
+## What Goes in References
+
+- **API documentation** — endpoint lists, parameter schemas, response formats
+- **Business rules** — calculation methodologies, decision trees, compliance requirements
+- **Few-shot examples** — 5-10 example inputs and outputs the agent can pattern-match against
+- **Lookup tables** — category codes, rate schedules, mapping tables
+- **Prompt templates** — reusable prompt fragments for consistent formatting
+
+## Directory Structure
+
+```
+my-skill/
+├── SKILL.md
+└── references/
+    ├── api-endpoints.md         # Full API surface
+    ├── calculation-rules.md     # Business logic
+    ├── example-outputs.md       # Few-shot examples
+    └── category-codes.md        # Lookup table
+```
+
+## How to Reference
+
+In your SKILL.md Steps section, point to the specific file:
+
+```markdown
+3. **Apply the calculation**
+   - Load rules from `references/calculation-rules.md`
+   - Match the input to the correct formula
+   - Return the result with two decimal places
+```
+
+The agent reads the file only when it reaches that step. If the user's query doesn't trigger step 3, the file never loads.
+
+<Callout type="warning" title="Be specific">
+Don't write "check the references folder." Name the exact file. The agent needs a clear path, not a vague direction.
+</Callout>
+
+## What NOT to Put in References
+
+- **Frequently changing data** — daily rates, live API responses, real-time metrics. These belong in scripts that fetch fresh data at runtime.
+- **Tiny snippets** — if it's under 200 tokens, just put it in the Steps section directly.
+- **Executable logic** — if it needs to run, it belongs in `scripts/`, not `references/`.
+
+## Example: API Endpoint Reference
+
+```markdown
+# Reporting API Endpoints
+
+## GET /api/v1/sales/daily
+
+Returns daily sales aggregates.
+
+**Parameters:**
+- `date` (required) — ISO 8601 date (2026-03-25)
+- `product` (optional) — filter by product line
+- `format` — `json` (default) or `csv`
+
+**Response:**
+- `volume` — total transaction count
+- `revenue` — total revenue in base currency
+- `customers` — unique customer count
+
+**Errors:**
+- `401` — invalid or expired credentials
+- `404` — no data for the requested date
+- `429` — rate limited, retry after 60 seconds
+```
+
+This file might be 500+ tokens. Loading it only when the agent needs to make an API call keeps the context window lean for all other interactions.
