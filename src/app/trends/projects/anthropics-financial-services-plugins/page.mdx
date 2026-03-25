@@ -1,0 +1,60 @@
+<GuideHeader tool="financial-services-plugins" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Financial Services Plugins for Claude
+
+Plugins that turn Claude into a specialist for financial services workflows including investment banking, equity research, private equity, and wealth management. Built for Claude Cowork with compatibility for Claude Code.
+
+## Key Features
+
+- **End-to-end workflows** from research to finished deliverables (reports, models, presentations)
+- **Financial modeling** with DCF, LBO, and 3-statement models in Excel format
+- **Data integration** via MCP connectors to Bloomberg, FactSet, S&P Global, and other providers
+- **41 skills and 38 slash commands** across five specialized plugins
+- **Partner integrations** with LSEG and S&P Global for real-time financial data
+
+<Callout type="info">
+Install the **financial-analysis** core plugin first — it provides shared modeling tools and all MCP data connectors that other plugins depend on.
+</Callout>
+
+## Installation
+
+### Claude Cowork
+Install directly from [claude.com/plugins](https://claude.com/plugins/).
+
+### Claude Code
+```bash
+# Add the marketplace
+claude plugin marketplace add anthropics/financial-services-plugins
+
+# Install core plugin first (required)
+claude plugin install financial-analysis@financial-services-plugins
+
+# Add function-specific plugins
+claude plugin install investment-banking@financial-services-plugins
+claude plugin install equity-research@financial-services-plugins
+```
+
+## Basic Usage
+
+Once installed, use slash commands for specific workflows:
+
+```bash
+/comps AAPL                    # Comparable company analysis
+/dcf TSLA                      # DCF valuation model
+/earnings MSFT Q1              # Post-earnings update report
+/ic-memo "Project Alpha"       # Investment committee memo
+/client-review "JP Morgan"     # Client meeting prep
+```
+
+Skills activate automatically when Claude detects relevant financial analysis tasks.
+
+## Notable Details
+
+**License:** Apache-2.0  
+**Language:** Python  
+**Community:** 6,847 GitHub stars  
+**Data Partners:** Daloopa, Morningstar, FactSet, S&P Global, Moody's, LSEG, PitchBook
+
+<Callout type="tip">
+The plugin architecture is file-based (markdown and JSON) with no code or infrastructure requirements, making customization straightforward for firm-specific workflows.
+</Callout>

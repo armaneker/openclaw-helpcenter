@@ -1,0 +1,79 @@
+<GuideHeader tool="pm-skills" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# PM Skills Marketplace
+
+PM Skills Marketplace is a collection of 100+ structured skills, commands, and plugins for AI-powered product management. It transforms generic AI responses into guided PM frameworks from Teresa Torres, Marty Cagan, and Alberto Savoia.
+
+## Key Features
+
+- **65+ PM skills** covering discovery, strategy, execution, launch, and growth
+- **36 chained workflows** for end-to-end PM processes
+- **8 specialized plugins** for different PM domains
+- **Slash commands** for quick workflow triggers (`/discover`, `/strategy`, `/write-prd`)
+- **Framework-based structure** — each skill encodes proven PM methodologies
+- **Cross-tool compatibility** — works with Claude, Gemini CLI, Cursor, and other AI assistants
+
+<Callout type="tip">
+Skills load automatically during conversations. Use `/command-name` to trigger specific workflows or `/plugin:skill-name` to force load specific skills.
+</Callout>
+
+## Installation
+
+### Claude Cowork (Recommended)
+
+```
+1. Open Customize (bottom-left)
+2. Go to Browse plugins → Personal → +
+3. Select Add marketplace from GitHub
+4. Enter: phuryn/pm-skills
+```
+
+### Claude Code (CLI)
+
+```bash
+# Add marketplace
+claude plugin marketplace add phuryn/pm-skills
+
+# Install all plugins
+claude plugin install pm-toolkit@pm-skills
+claude plugin install pm-product-strategy@pm-skills
+claude plugin install pm-product-discovery@pm-skills
+# ... (6 more plugins available)
+```
+
+### Other AI Tools
+
+Copy skill folders from `skills/*/SKILL.md` to your tool's skills directory:
+
+```bash
+# Example: OpenCode
+cp -r pm-*/skills/* .opencode/skills/
+```
+
+## Basic Usage
+
+Start with these core workflows:
+
+```
+/discover          # New idea discovery cycle
+/strategy          # Strategic clarity and vision
+/write-prd         # Product requirements document  
+/plan-launch       # Launch planning and GTM
+/north-star        # Metrics and KPI definition
+```
+
+Skills work conversationally:
+- "What are the riskiest assumptions for our AI writing assistant?"
+- "Help me prioritize these 12 feature requests"
+- "Build an Opportunity Solution Tree for improving activation"
+
+<Callout type="info">
+Commands flow into each other following typical PM workflows. Each command completion suggests relevant next steps.
+</Callout>
+
+## Notable Details
+
+**License:** MIT  
+**Community:** 8,153 GitHub stars  
+**Compatibility:** Claude Code/Cowork (full features), Gemini CLI, Cursor, OpenCode (skills only)  
+**Structure:** 8 plugins, 65 skills, 36 commands across discovery, strategy, execution, and growth phases

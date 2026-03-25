@@ -1,0 +1,58 @@
+<GuideHeader tool="pua" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# pua
+
+PUA is a TypeScript-based skill plugin that uses corporate performance improvement rhetoric to prevent AI coding agents from giving up prematurely. It forces AI assistants to exhaust all debugging approaches before claiming they "cannot solve" problems.
+
+## What it does
+
+- **Auto-triggers** when AI shows lazy patterns (giving up, blame-shifting, passive waiting)
+- **Escalates pressure** through 5 levels (L0-L4) with increasing demands
+- **Enforces methodology** via systematic 7-point debugging checklists
+- **Prevents busywork** by requiring evidence and fact-driven verification
+- **Works across platforms** including Claude Code, Cursor, VSCode Copilot, and OpenAI Codex CLI
+
+## Installation
+
+```bash
+npm install pua
+# or
+yarn add pua
+```
+
+<Callout type="info">
+Manual trigger available by typing `/pua` in any conversation
+</Callout>
+
+## Basic usage
+
+The skill activates automatically when AI exhibits failure patterns:
+
+```typescript
+// Auto-triggers on patterns like:
+// - "I cannot solve this"
+// - "Please check manually"
+// - "Probably an environment issue"
+// - Repeated same-approach failures
+
+// Manual activation
+/pua
+```
+
+**Example escalation flow:**
+- **L1**: Switch to fundamentally different approach
+- **L2**: Search + read source + generate 3 hypotheses  
+- **L3**: Execute complete 7-point systematic checklist
+- **L4**: Desperation mode with maximum effort
+
+<Callout type="warning">
+Does not trigger on first-attempt failures or when a known fix is already executing
+</Callout>
+
+## Notable details
+
+- **Language**: TypeScript
+- **License**: MIT (despite repo showing unknown)
+- **Community**: 11.8k GitHub stars
+- **Supports**: Multi-language environments
+- **Real impact**: Forces systematic debugging instead of circular guessing

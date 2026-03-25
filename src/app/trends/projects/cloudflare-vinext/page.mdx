@@ -1,0 +1,66 @@
+<GuideHeader tool="vinext" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# vinext
+
+vinext is a Vite plugin that reimplements the Next.js API surface, allowing you to run Next.js applications on Vite's toolchain. It enables deployment to any platform, with native Cloudflare Workers support and other platforms via Nitro.
+
+## Key Features
+
+- **Deploy anywhere** — Native Cloudflare Workers support with Nitro adapters for Vercel, Netlify, AWS, and more
+- **Drop-in replacement** — Uses existing `pages/`, `app/`, `next.config.js`, and `public/` directories
+- **Vite-powered** — Fast HMR, native ESM, and access to Vite's plugin ecosystem  
+- **React Server Components** — Full App Router support via `@vitejs/plugin-rsc`
+- **Auto-migration** — AI agent skill handles migration automatically
+- **Compatibility scanning** — Built-in tools to check existing Next.js apps
+
+## Installation
+
+```bash
+npm install -D vinext vite @vitejs/plugin-react
+```
+
+For App Router projects, also install:
+
+```bash
+npm install -D @vitejs/plugin-rsc react-server-dom-webpack
+```
+
+## Basic Usage
+
+Replace Next.js scripts in your `package.json`:
+
+```json
+{
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build", 
+    "start": "vinext start"
+  }
+}
+```
+
+Run your development server:
+
+```bash
+vinext dev          # Development with HMR
+vinext build        # Production build
+vinext deploy       # Deploy to Cloudflare Workers
+```
+
+<Callout type="warning">
+This project is experimental and AI-generated. Most code hasn't been reviewed line-by-line by humans. Expect bugs and rough edges.
+</Callout>
+
+For automated migration of existing Next.js projects:
+
+```bash
+npx vinext init
+```
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** TypeScript  
+- **Community:** 7,179 GitHub stars
+- **Compatibility:** Targets ~94% of Next.js API surface
+- **AI-driven:** Built primarily by Claude Code with human architectural guidance

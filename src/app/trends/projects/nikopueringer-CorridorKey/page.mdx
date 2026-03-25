@@ -1,0 +1,67 @@
+<GuideHeader tool="CorridorKey" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# CorridorKey
+
+CorridorKey is a neural network-based green screen keying tool that physically separates foreground subjects from green backgrounds. Unlike traditional keyers that struggle with color blending at edges, it reconstructs the true color of foreground objects while generating clean alpha channels.
+
+## Key Features
+
+- **Physical color unmixing** - Separates blended edge pixels into clean foreground color and linear alpha
+- **Resolution independent** - Handles 4K footage by dynamically scaling inference from 2048x2048 backbone
+- **VFX-standard output** - Native 16-bit/32-bit linear EXR support for professional compositing workflows  
+- **Auto cleanup** - Morphological system removes tracking markers and background artifacts
+- **Optional AI alpha hints** - Integrates GVM, VideoMaMa, and BiRefNet for improved results
+
+<Callout type="info">
+Designed for professional VFX workflows in Nuke, Fusion, and DaVinci Resolve with proper linear color handling.
+</Callout>
+
+## Installation
+
+CorridorKey uses `uv` for dependency management, which handles Python installation automatically.
+
+**Windows:**
+```bash
+# Run the automated installer
+Install_CorridorKey_Windows.bat
+```
+
+**Linux/Mac:**
+```bash
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install dependencies (uv downloads Python automatically)
+uv sync                  # CPU/MPS
+uv sync --extra cuda     # NVIDIA GPU
+uv sync --extra mlx      # Apple Silicon
+```
+
+The CorridorKey model (~300MB) downloads automatically on first run.
+
+## Basic Usage
+
+```bash
+# Process single frame with alpha hint
+uv run python CorridorKey.py --input greenscreen.exr --alpha_hint rough_mask.png --output result
+
+# Batch process sequence  
+uv run python CorridorKey.py --input_dir frames/ --alpha_hint_dir masks/ --output_dir results/
+```
+
+<Callout type="tip">
+Better alpha hints produce better results. Generate rough masks from your NLE or use the optional BiRefNet module.
+</Callout>
+
+## Hardware Requirements
+
+- **Minimum:** 6-8GB VRAM or M1+ Mac with unified memory
+- **Recommended:** NVIDIA GPU with CUDA 12.8+ drivers
+- **Optional modules:** GVM and VideoMaMa require 24-80GB VRAM
+
+## Notable Details
+
+- **Language:** Python
+- **License:** No assertion
+- **Community:** 8,990 GitHub stars, active Discord community
+- **Professional focus:** Built by Corridor Digital for VFX production workflows

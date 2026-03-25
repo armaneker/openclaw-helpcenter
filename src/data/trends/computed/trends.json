@@ -146,7 +146,7 @@
       "delta_week": 1997,
       "delta_month": 3683,
       "delta_year": 3683,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": "v1.2.0",
       "blurb": "This is an AI coding agent skill plugin that uses corporate PUA (pressure/manipulation tactics) and PIP (Performance Improvement Plan) rhetoric to make AI assistants work harder and explore more solutions before giving up. It integrates with popular AI coding tools like Claude Code, OpenAI Codex, Cursor, and VSCode Copilot to allegedly double productivity by preventing AI from providing superficial answers. The project uses psychological pressure techniques borrowed from Chinese and Western tech company management practices to force more thorough problem-solving behavior from AI models."
@@ -926,7 +926,7 @@
       "delta_week": 239,
       "delta_month": 1858,
       "delta_year": 1858,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "CorridorKey is a neural network-based green screen keying tool that separates foreground subjects from green screen backgrounds at the pixel level. It solves the color unmixing problem by reconstructing the true foreground colors and alpha channel from mixed edge pixels, eliminating the need for complex edge mattes or manual rotoscoping. The tool outputs physically accurate straight color and linear alpha channels in professional formats like 32-bit EXR files."
@@ -941,7 +941,7 @@
       "delta_week": 233,
       "delta_month": 2188,
       "delta_year": 2188,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "PM Skills Marketplace is a collection of 100+ product management skills, commands, and plugins designed for AI assistants like Claude. It provides structured PM frameworks and workflows covering discovery, strategy, execution, and growth phases, giving product managers step-by-step guidance instead of generic AI responses. The skills encode proven methodologies from PM thought leaders like Teresa Torres and Marty Cagan into reusable, chainable workflows."
@@ -956,7 +956,7 @@
       "delta_week": 233,
       "delta_month": 1582,
       "delta_year": 1823,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "Claude for Financial Services is a collection of Python plugins that integrate Claude AI with financial data sources and workflows for investment banking, equity research, private equity, and wealth management. It enables end-to-end financial workflows from data retrieval through analysis to generating professional deliverables like research reports, Excel models, and PowerPoint presentations within a single session. The plugins connect to major financial data providers (FactSet, Bloomberg, PitchBook, etc.) via MCP connectors and maintain industry-standard formatting conventions."
@@ -1121,7 +1121,7 @@
       "delta_week": 148,
       "delta_month": 1106,
       "delta_year": 1824,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v0.0.34",
       "blurb": "Vinext is a Vite plugin that reimplements the Next.js API surface, allowing Next.js applications to run on Vite's build system. It enables deployment to any platform (particularly Cloudflare Workers) while maintaining compatibility with existing Next.js project structure and configurations. The project was built as an experiment in AI-driven development, with the majority of code written by Claude AI rather than human developers."
@@ -1559,7 +1559,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "OpenSpace is a self-evolving engine that plugs into existing AI agents (like Claude Code, Cursor, OpenClaw) to make them learn and improve from real-world usage. It enables agents to automatically fix broken skills, share successful patterns across a community network, and reduce token costs by 46% through reusing proven solutions instead of reasoning from scratch. The platform creates collective intelligence where one agent's improvements benefit all connected agents in the network."
     },
     {
       "full_name": "GAIR-NLP/daVinci-MagiHuman",
@@ -1679,7 +1679,7 @@
       "has_summary": false,
       "category": "Mobile",
       "version": "v1.2.6",
-      "blurb": null
+      "blurb": "TypeNo is a macOS menu bar app that converts speech to text using local processing. It allows users to record voice input with a Control key press and automatically pastes the transcribed text into any active application, eliminating the need for typing. The app requires no configuration and processes all speech recognition locally for privacy."
     },
     {
       "full_name": "dashersw/gea",
@@ -1754,7 +1754,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "SentrySearch is a semantic search tool for dashcam footage that uses Google's Gemini Embedding 2 model to enable natural language queries over video content. It allows users to search through hours of dashcam footage by typing descriptive queries like \"red truck running a stop sign\" and automatically returns trimmed video clips matching the search. The tool leverages Gemini's native video embedding capability, which projects raw video pixels directly into the same vector space as text queries without requiring transcription or frame captioning."
     },
     {
       "full_name": "wuji-labs/nopua",

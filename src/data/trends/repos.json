@@ -1501,7 +1501,7 @@
       "language": "TypeScript",
       "url": "https://github.com/tanweai/pua",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agency",
         "agent",
@@ -1518,7 +1518,7 @@
       "language": "Python",
       "url": "https://github.com/nikopueringer/CorridorKey",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "CorridorKey is a neural network-based green screen keying tool that separates foreground subjects from green screen backgrounds at the pixel level. It solves the color unmixing problem by reconstructing the true foreground colors and alpha channel from mixed edge pixels, eliminating the need for complex edge mattes or manual rotoscoping. The tool outputs physically accurate straight color and linear alpha channels in professional formats like 32-bit EXR files."
@@ -1529,7 +1529,7 @@
       "language": "Unknown",
       "url": "https://github.com/phuryn/pm-skills",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agent-skill-repository",
         "agent-skills",
@@ -1548,7 +1548,7 @@
       "language": "TypeScript",
       "url": "https://github.com/cloudflare/vinext",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v0.0.34",
@@ -1560,7 +1560,7 @@
       "language": "Python",
       "url": "https://github.com/anthropics/financial-services-plugins",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "Claude for Financial Services is a collection of Python plugins that integrate Claude AI with financial data sources and workflows for investment banking, equity research, private equity, and wealth management. It enables end-to-end financial workflows from data retrieval through analysis to generating professional deliverables like research reports, Excel models, and PowerPoint presentations within a single session. The plugins connect to major financial data providers (FactSet, Bloomberg, PitchBook, etc.) via MCP connectors and maintain industry-standard formatting conventions."
@@ -3129,7 +3129,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "OpenSpace is a self-evolving engine that plugs into existing AI agents (like Claude Code, Cursor, OpenClaw) to make them learn and improve from real-world usage. It enables agents to automatically fix broken skills, share successful patterns across a community network, and reduce token costs by 46% through reusing proven solutions instead of reasoning from scratch. The platform creates collective intelligence where one agent's improvements benefit all connected agents in the network."
     },
     "marswaveai/TypeNo": {
       "full_name": "marswaveai/TypeNo",
@@ -3152,7 +3153,8 @@
         "voice-input"
       ],
       "category": "Mobile",
-      "version": "v1.2.6"
+      "version": "v1.2.6",
+      "blurb": "TypeNo is a macOS menu bar app that converts speech to text using local processing. It allows users to record voice input with a Control key press and automatically pastes the transcribed text into any active application, eliminating the need for typing. The app requires no configuration and processes all speech recognition locally for privacy."
     },
     "ssrajadh/sentrysearch": {
       "full_name": "ssrajadh/sentrysearch",
@@ -3170,7 +3172,8 @@
         "video"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "SentrySearch is a semantic search tool for dashcam footage that uses Google's Gemini Embedding 2 model to enable natural language queries over video content. It allows users to search through hours of dashcam footage by typing descriptive queries like \"red truck running a stop sign\" and automatically returns trimmed video clips matching the search. The tool leverages Gemini's native video embedding capability, which projects raw video pixels directly into the same vector space as text queries without requiring transcription or frame captioning."
     }
   }
 }
