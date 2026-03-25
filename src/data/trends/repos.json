@@ -3119,6 +3119,58 @@
       "category": "Other",
       "version": null,
       "blurb": "Microsoft's RustTraining is a comprehensive collection of seven training courses that teach Rust programming from beginner to expert level, targeting developers from different language backgrounds. It provides structured learning paths covering everything from language fundamentals to advanced topics like async programming, type-level techniques, and production engineering practices. The material consolidates knowledge from across the Rust ecosystem into a cohesive curriculum with dedicated tracks for C/C++, C#, and Python developers."
+    },
+    "HKUDS/OpenSpace": {
+      "full_name": "HKUDS/OpenSpace",
+      "description": "\"OpenSpace: Make Your Agents: Smarter, Low-Cost, Self-Evolving\" -- Community: https://open-space.cloud/",
+      "language": "Python",
+      "url": "https://github.com/HKUDS/OpenSpace",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "marswaveai/TypeNo": {
+      "full_name": "marswaveai/TypeNo",
+      "description": "A free, open source, privacy-first voice input app for macOS.",
+      "language": "Swift",
+      "url": "https://github.com/marswaveai/TypeNo",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [
+        "accessibility",
+        "dictation",
+        "local-first",
+        "macos",
+        "menu-bar-app",
+        "open-source",
+        "privacy",
+        "productivity",
+        "speech-to-text",
+        "swift",
+        "voice-input"
+      ],
+      "category": "Mobile",
+      "version": "v1.2.6"
+    },
+    "ssrajadh/sentrysearch": {
+      "full_name": "ssrajadh/sentrysearch",
+      "description": "Semantic search over videos using Gemini Embedding 2.",
+      "language": "Python",
+      "url": "https://github.com/ssrajadh/sentrysearch",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [
+        "chromadb",
+        "dashcam",
+        "gemini",
+        "gemini-embedding-2",
+        "semantic-search",
+        "video"
+      ],
+      "category": "Other",
+      "version": null
     }
   }
 }
