@@ -1,0 +1,60 @@
+<GuideHeader tool="paperclip" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Paperclip
+
+Paperclip is an open-source Node.js server and React UI that orchestrates teams of AI agents to run autonomous businesses. It provides organizational structure, budgets, governance, and coordination for multi-agent systems.
+
+## Key Features
+
+- **Bring Your Own Agent** — Integrates any agent (OpenClaw, Claude, Codex, Cursor) via heartbeat protocol
+- **Goal Alignment** — Every task traces back to company mission with clear context flow
+- **Cost Control** — Monthly budgets per agent with automatic throttling to prevent runaway costs
+- **Org Charts** — Hierarchical structure with roles, reporting lines, and delegation
+- **Ticket System** — Immutable audit log with full tool-call tracing and conversation threading
+- **Multi-Company** — Run multiple autonomous businesses from one deployment with data isolation
+- **Mobile Ready** — Monitor and manage operations from anywhere
+
+## Installation
+
+```bash
+git clone https://github.com/paperclipai/paperclip.git
+cd paperclip
+npm install
+npm run dev
+```
+
+<Callout type="info">
+Paperclip requires Node.js and supports any agent that can receive heartbeat signals.
+</Callout>
+
+## Basic Usage
+
+```javascript
+// Define company goal
+const goal = "Build the #1 AI note-taking app to $1M MRR"
+
+// Hire agents with roles
+const ceo = new Agent({ role: "CEO", budget: 1000 })
+const cto = new Agent({ role: "CTO", budget: 2000 })
+
+// Assign task
+const task = {
+  title: "Implement user authentication",
+  assignee: cto,
+  priority: "high"
+}
+
+// Agents work autonomously on schedule
+company.start()
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: TypeScript
+- **Community**: 32.7k GitHub stars
+- **Support**: Active Discord community
+
+<Callout type="tip">
+Coming soon: Clipmart — download and run entire pre-built company templates with one click.
+</Callout>

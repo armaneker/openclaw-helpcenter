@@ -1,0 +1,69 @@
+<GuideHeader tool="gstack" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# gstack
+
+gstack transforms Claude Code into a virtual engineering team with 15 specialized AI agents. Built by Y Combinator's CEO Garry Tan, it provides slash commands that function as CEO, designer, eng manager, release manager, doc engineer, and QA specialists.
+
+## Key Features
+
+- **Virtual team roles** — CEO for product decisions, eng manager for architecture, designer for UI review
+- **Quality gates** — Automated code review, security audits (OWASP + STRIDE), real browser QA testing  
+- **Release automation** — Deploy, canary releases, rollback capabilities
+- **Planning workflow** — Multi-stage review process from concept to implementation
+- **Cross-agent compatibility** — Works with Claude Code, Codex, Gemini CLI, Cursor
+
+<Callout type="info">
+Requires Claude Code, Git, Bun v1.0+, and Node.js (Windows only)
+</Callout>
+
+## Installation
+
+Install gstack globally in Claude Code:
+
+```bash
+git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
+cd ~/.claude/skills/gstack && ./setup
+```
+
+Add the gstack section to your CLAUDE.md configuration listing all available skills.
+
+For team usage, copy to your project:
+
+```bash
+cp -Rf ~/.claude/skills/gstack .claude/skills/gstack
+rm -rf .claude/skills/gstack/.git
+cd .claude/skills/gstack && ./setup
+```
+
+## Basic Usage
+
+```
+/office-hours
+# Describe your product idea - CEO agent challenges assumptions
+
+/plan-ceo-review
+# Strategic review of features and scope
+
+/plan-eng-review  
+# Technical architecture and implementation planning
+
+# [Build your feature]
+
+/review
+# Automated code review with fixes
+
+/qa https://staging.myapp.com
+# Real browser testing on staging environment
+```
+
+<Callout type="tip">
+Start with `/office-hours` to establish product direction, then use `/plan-ceo-review` before writing code
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: TypeScript  
+- **Community**: 45K+ GitHub stars
+- **Real-world usage**: Author ships 10K-20K lines/day using this toolchain
+- Skills follow the [SKILL.md standard](https://github.com/anthropics/claude-code) for cross-agent compatibility

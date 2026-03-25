@@ -1,0 +1,64 @@
+<GuideHeader tool="openfang" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenFang
+
+OpenFang is an open-source Agent Operating System built in Rust that runs autonomous agents continuously. Unlike traditional chatbot frameworks, OpenFang agents work independently on schedules, building knowledge graphs, monitoring targets, and delivering results without human prompting.
+
+## Key Features
+
+- **Autonomous Hands**: 7 pre-built agent packages (Lead generation, OSINT collection, Twitter management, Research, etc.)
+- **Single binary deployment**: ~32MB executable with 137K LOC, 14 crates, 1,767+ tests
+- **Scheduled operation**: Agents run 24/7 on configured schedules
+- **Built-in dashboard**: Web UI at localhost:4200 for monitoring and control
+- **Security hardened**: 16 security systems with mandatory approval gates for sensitive actions
+- **Zero dependencies**: All capabilities compiled into the binary
+
+## Installation
+
+```bash
+curl -fsSL https://openfang.sh/install | sh
+openfang init
+openfang start
+```
+
+Windows users can use PowerShell:
+```powershell
+irm https://openfang.sh/install.ps1 | iex
+```
+
+<Callout type="warning">
+OpenFang is pre-1.0 and may have breaking changes between minor versions. Pin to a specific commit for production use.
+</Callout>
+
+## Basic Usage
+
+Activate and manage Hands (autonomous agent packages):
+
+```bash
+# Activate the lead generation Hand
+openfang hand activate lead
+
+# Check Hand status
+openfang hand status lead
+
+# List all available Hands
+openfang hand list
+
+# Pause a Hand without losing state
+openfang hand pause lead
+```
+
+Access the dashboard at `http://localhost:4200` after running `openfang start`.
+
+<Callout type="tip">
+Each Hand includes a detailed system prompt (500+ words), domain expertise files, and built-in guardrails for safe operation.
+</Callout>
+
+## Notable Details
+
+- **Language**: Rust
+- **License**: Apache-2.0
+- **Community**: 15,489 stars on GitHub
+- **Performance**: 180ms cold start, 40MB idle memory usage
+- **Testing**: Zero clippy warnings, extensive test coverage
+- **Architecture**: 14 separate crates with MCP (Model Context Protocol) support

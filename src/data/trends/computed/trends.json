@@ -11,7 +11,7 @@
       "delta_week": 9488,
       "delta_month": 14072,
       "delta_year": 14072,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "gstack is a collection of 15 opinionated Claude Code tools that simulate different engineering roles (CEO, Designer, Eng Manager, QA, etc.) through slash commands. It enables individual developers to systematically review, test, and ship code with the rigor of a full engineering team, allowing for faster solo development cycles. The author claims to have shipped 600,000+ lines of production code in 60 days using this workflow while running Y Combinator full-time."
@@ -131,7 +131,7 @@
       "delta_week": 1842,
       "delta_month": 5440,
       "delta_year": 5440,
-      "has_summary": false,
+      "has_summary": true,
       "category": "DevTools",
       "version": null,
       "blurb": "CLI-Anything is a Python framework that generates command-line interfaces for existing software applications to make them accessible to AI agents. It allows agents to programmatically control GUI applications, web services, and other software through standardized CLI commands with JSON output. The project includes a community hub with CLIs for 16+ applications and maintains 1,839 passing tests across its implementations."
@@ -176,7 +176,7 @@
       "delta_week": 1555,
       "delta_month": 7808,
       "delta_year": 7808,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v2026.318.0",
       "blurb": "Paperclip is a TypeScript-based orchestration platform that manages teams of AI agents to run autonomous businesses without human involvement. It provides a dashboard to coordinate multiple AI agents (OpenClaw, Claude, Cursor, etc.) toward business goals, with features like org charts, budgets, and task management. The project has gained significant traction with over 32K stars and promises a \"Clipmart\" feature for downloading pre-built company templates."
@@ -416,7 +416,7 @@
       "delta_week": 467,
       "delta_month": 5119,
       "delta_year": 5119,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": "v0.18.1",
       "blurb": "`gws` is a unified command-line interface for all Google Workspace APIs (Drive, Gmail, Calendar, Sheets, etc.) built in Rust. It dynamically generates commands by reading Google's Discovery Service at runtime, ensuring automatic support for new API endpoints without manual updates. The tool outputs structured JSON and includes 40+ pre-built AI agent skills for LLM integration."
@@ -656,7 +656,7 @@
       "delta_week": 300,
       "delta_month": 4306,
       "delta_year": 4306,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": "v0.5.1",
       "blurb": "OpenFang is an open-source Agent Operating System built in Rust that compiles to a single 32MB binary for running autonomous AI agents. Unlike traditional chatbot frameworks, it provides pre-built \"Hands\" that execute tasks autonomously on schedules—such as researching competitors, generating leads, or creating social media content—without requiring user prompts. The system bundles 7 different agent types and includes 137K lines of code with comprehensive testing and zero Clippy warnings."
@@ -1679,7 +1679,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "daVinci-MagiHuman is a 15B-parameter single-stream Transformer that generates synchronized audio-video content from text prompts and reference images. It achieves fast inference speeds (2 seconds for 5-second 256p video on H100) while maintaining high-quality human-centric generation with accurate facial expressions, speech coordination, and multilingual support. The model uses a unified architecture that processes text, video, and audio tokens through self-attention only, eliminating the complexity of traditional multi-stream approaches."
     },
     {
       "full_name": "alvinunreal/awesome-autoresearch",
@@ -1709,7 +1709,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This repository provides curated LaTeX CV templates specifically designed for PhD students and researchers transitioning between academia and industry. It addresses the critical gap between publication-heavy academic CVs and ATS-optimized industry resumes that can survive automated parsing systems. The templates are organized by use case, with specific guidance on reformatting academic achievements into project-driven narratives that industry recruiters actually want to see."
     },
     {
       "full_name": "vercel-labs/emulate",
@@ -1769,7 +1769,7 @@
       "has_summary": false,
       "category": "Mobile",
       "version": "v1.0.13",
-      "blurb": null
+      "blurb": "JKVideo is a third-party Bilibili client built with React Native and TypeScript that runs on Android, iOS, and web platforms. It provides native DASH video playback with 4K HDR support, real-time danmaku (bullet comments), live streaming, and features like QR code login and offline downloads. The project implements Bilibili's WBI signing protocol purely in TypeScript and includes a local HTTP server for LAN video sharing."
     },
     {
       "full_name": "wuji-labs/nopua",
@@ -1799,7 +1799,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "LeWorldModel is a Joint Embedding Predictive Architecture (JEPA) that learns world models from raw pixels using only two loss terms instead of complex multi-term objectives. It trains stably end-to-end on a single GPU in hours while planning up to 48× faster than foundation-model-based world models, making it practical for 2D and 3D control tasks. The model uses ~15M parameters and reduces tunable hyperparameters from six to one compared to existing end-to-end alternatives."
     },
     {
       "full_name": "Soul-AILab/SoulX-LiveAct",
@@ -1859,7 +1859,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v0.1.0",
-      "blurb": null
+      "blurb": "AIComicBuilder is a TypeScript-based pipeline that converts scripts into animated videos using AI for character design, storyboarding, and video synthesis. It automates the entire workflow from script parsing and character extraction to generating reference frames and stitching final videos together. The tool supports multiple AI providers (OpenAI, Gemini, Kling, etc.) and includes a complete project management interface with multi-language support."
     }
   ]
 }

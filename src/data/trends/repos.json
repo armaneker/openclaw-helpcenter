@@ -1322,7 +1322,7 @@
       "language": "TypeScript",
       "url": "https://github.com/garrytan/gstack",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "gstack is a collection of 15 opinionated Claude Code tools that simulate different engineering roles (CEO, Designer, Eng Manager, QA, etc.) through slash commands. It enables individual developers to systematically review, test, and ship code with the rigor of a full engineering team, allowing for faster solo development cycles. The author claims to have shipped 600,000+ lines of production code in 60 days using this workflow while running Y Combinator full-time."
@@ -1333,7 +1333,7 @@
       "language": "TypeScript",
       "url": "https://github.com/paperclipai/paperclip",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v2026.318.0",
@@ -1345,7 +1345,7 @@
       "language": "Rust",
       "url": "https://github.com/googleworkspace/cli",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agent-skills",
         "ai-agent",
@@ -1374,7 +1374,7 @@
       "language": "Python",
       "url": "https://github.com/HKUDS/CLI-Anything",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "DevTools",
       "blurb": "CLI-Anything is a Python framework that generates command-line interfaces for existing software applications to make them accessible to AI agents. It allows agents to programmatically control GUI applications, web services, and other software through standardized CLI commands with JSON output. The project includes a community hub with CLIs for 16+ applications and maintains 1,839 passing tests across its implementations."
@@ -1385,7 +1385,7 @@
       "language": "Rust",
       "url": "https://github.com/RightNow-AI/openfang",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agent-framework",
         "ai-agents",
@@ -2990,7 +2990,8 @@
         "resume-templates"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This repository provides curated LaTeX CV templates specifically designed for PhD students and researchers transitioning between academia and industry. It addresses the critical gap between publication-heavy academic CVs and ATS-optimized industry resumes that can survive automated parsing systems. The templates are organized by use case, with specific guidance on reformatting academic achievements into project-driven narratives that industry recruiters actually want to see."
     },
     "twwch/AIComicBuilder": {
       "full_name": "twwch/AIComicBuilder",
@@ -3001,7 +3002,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.1.0"
+      "version": "v0.1.0",
+      "blurb": "AIComicBuilder is a TypeScript-based pipeline that converts scripts into animated videos using AI for character design, storyboarding, and video synthesis. It automates the entire workflow from script parsing and character extraction to generating reference frames and stitching final videos together. The tool supports multiple AI providers (OpenAI, Gemini, Kling, etc.) and includes a complete project management interface with multi-language support."
     },
     "GAIR-NLP/daVinci-MagiHuman": {
       "full_name": "GAIR-NLP/daVinci-MagiHuman",
@@ -3012,7 +3014,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "daVinci-MagiHuman is a 15B-parameter single-stream Transformer that generates synchronized audio-video content from text prompts and reference images. It achieves fast inference speeds (2 seconds for 5-second 256p video on H100) while maintaining high-quality human-centric generation with accurate facial expressions, speech coordination, and multilingual support. The model uses a unified architecture that processes text, video, and audio tokens through self-attention only, eliminating the complexity of traditional multi-stream approaches."
     },
     "tiajinsha/JKVideo": {
       "full_name": "tiajinsha/JKVideo",
@@ -3035,7 +3038,8 @@
         "zustand"
       ],
       "category": "Mobile",
-      "version": "v1.0.13"
+      "version": "v1.0.13",
+      "blurb": "JKVideo is a third-party Bilibili client built with React Native and TypeScript that runs on Android, iOS, and web platforms. It provides native DASH video playback with 4K HDR support, real-time danmaku (bullet comments), live streaming, and features like QR code login and offline downloads. The project implements Bilibili's WBI signing protocol purely in TypeScript and includes a local HTTP server for LAN video sharing."
     },
     "lucas-maes/le-wm": {
       "full_name": "lucas-maes/le-wm",
@@ -3046,7 +3050,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "LeWorldModel is a Joint Embedding Predictive Architecture (JEPA) that learns world models from raw pixels using only two loss terms instead of complex multi-term objectives. It trains stably end-to-end on a single GPU in hours while planning up to 48× faster than foundation-model-based world models, making it practical for 2D and 3D control tasks. The model uses ~15M parameters and reduces tunable hyperparameters from six to one compared to existing end-to-end alternatives."
     }
   }
 }

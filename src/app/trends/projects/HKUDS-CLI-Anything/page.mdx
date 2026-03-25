@@ -1,0 +1,68 @@
+<GuideHeader tool="CLI-Anything" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# CLI-Anything
+
+CLI-Anything transforms any software into an agent-native command line interface. It analyzes GUI applications and generates comprehensive CLIs that AI agents can operate programmatically.
+
+## Key Features
+
+- **Universal Software Support** - Works with GIMP, Blender, LibreOffice, Zoom, MuseScore, and any GUI application
+- **Agent-Optimized Output** - Structured JSON responses eliminate parsing complexity for AI systems
+- **Self-Describing Commands** - Built-in help flags provide automatic documentation discovery
+- **Complete Test Coverage** - Generates unit and E2E test suites with 1,839+ passing tests
+- **REPL Interface** - Interactive shell with undo/redo, state management, and session persistence
+- **Multi-Platform Support** - Integrates with Claude Code, OpenClaw, Cursor, nanobot, and other AI coding platforms
+- **CLI Hub Marketplace** - Central registry for browsing and installing community-contributed CLIs
+
+## Installation
+
+<Callout type="info">
+Requires Python 3.10+ and target software already installed on your system.
+</Callout>
+
+### Via Claude Code Plugin
+
+```bash
+# Add marketplace and install plugin
+/plugin marketplace add HKUDS/CLI-Anything
+/plugin install cli-anything
+```
+
+### Direct Installation
+
+```bash
+pip install cli-anything
+```
+
+## Basic Usage
+
+Generate a complete CLI for any software in one command:
+
+```bash
+# Analyze and build CLI for GIMP
+/cli-anything:cli-anything ./gimp
+
+# For other applications
+cli-anything /path/to/software
+```
+
+This executes a 7-phase pipeline:
+1. **Analyze** - Maps GUI actions to APIs
+2. **Design** - Architects command structure
+3. **Implement** - Builds Click CLI with REPL
+4. **Plan Tests** - Creates comprehensive test strategy
+5. **Write Tests** - Implements test suite
+6. **Document** - Updates documentation with results
+7. **Publish** - Creates installable package
+
+<Callout type="tip">
+The generated CLI includes automatic skill definitions that agents can discover and use autonomously.
+</Callout>
+
+## Notable Details
+
+- **License**: Apache-2.0
+- **Language**: Python
+- **Community**: 22.6K GitHub stars
+- **Platform Support**: Windows, macOS, Linux with bash compatibility
+- **Integration**: Works with major AI coding platforms including Claude Code, OpenClaw, and Cursor

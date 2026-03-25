@@ -1,0 +1,77 @@
+<GuideHeader tool="cli" difficulty="Beginner" lastTested="2026-01" readTime="5 min" />
+
+# Google Workspace CLI
+
+A unified command-line interface for all Google Workspace APIs built from Google's Discovery Service. It dynamically generates commands for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and other Workspace services without hardcoded endpoints.
+
+## Key Features
+
+- **Dynamic API coverage** — Automatically picks up new Google Workspace endpoints as they're released
+- **AI agent ready** — Structured JSON output with 40+ included agent skills
+- **Zero boilerplate** — No REST calls or SDK setup required
+- **Built-in pagination** — Stream results as NDJSON with `--page-all`
+- **Request introspection** — Preview calls with `--dry-run` and inspect schemas
+- **Multiple auth flows** — OAuth, service accounts, and token-based authentication
+
+## Installation
+
+```bash
+npm install -g @googleworkspace/cli
+```
+
+<Callout type="info">
+The npm package includes pre-built binaries for all platforms. No Rust toolchain required.
+</Callout>
+
+Alternative installation methods:
+
+```bash
+# Homebrew
+brew install googleworkspace-cli
+
+# From source
+cargo install --git https://github.com/googleworkspace/cli --locked
+
+# Nix
+nix run github:googleworkspace/cli
+```
+
+## Basic Usage
+
+Set up authentication and start using Workspace APIs:
+
+```bash
+# One-time setup (requires gcloud CLI)
+gws auth setup
+
+# Login with scope selection
+gws auth login
+
+# List recent files
+gws drive files list --params '{"pageSize": 10}'
+
+# Create a spreadsheet
+gws sheets spreadsheets create --json '{"properties": {"title": "Q1 Budget"}}'
+
+# Preview requests before sending
+gws chat spaces messages create \
+  --params '{"parent": "spaces/xyz"}' \
+  --json '{"text": "Deploy complete"}' \
+  --dry-run
+```
+
+<Callout type="warning">
+For unverified OAuth apps, Google limits consent to ~25 scopes. The default scope preset includes 85+ scopes and will fail. Use `-s drive,gmail,sheets` to select specific services.
+</Callout>
+
+## Notable Details
+
+- **Language**: Rust
+- **License**: Apache-2.0
+- **Community**: 22,441 GitHub stars
+- **Status**: Under active development (pre-v1.0)
+- **Maintainer**: Not officially supported by Google
+
+<Callout type="tip">
+The CLI reads Google's Discovery Service at runtime, so new API methods appear automatically without updates.
+</Callout>
