@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { X, FileText, FolderOpen, Code, Hash, AlignLeft, Layers, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -163,6 +163,71 @@ function DiagramBox({
   );
 }
 
+function SkillInfoModal({ panel, onClose }: { panel: InfoPanel; onClose: () => void }) {
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  const handleBackdropClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (e.target === overlayRef.current) onClose();
+    },
+    [onClose],
+  );
+
+  return (
+    <div
+      ref={overlayRef}
+      onClick={handleBackdropClick}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+    >
+      <div className={`relative w-full max-w-md rounded-xl border ${panel.borderColor} bg-gray-900 shadow-2xl`}>
+        <div className="flex items-start justify-between gap-4 border-b border-gray-800 p-5">
+          <h3 className="text-lg font-semibold text-gray-100">{panel.title}</h3>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-300 transition-colors p-1 -m-1 shrink-0"
+          >
+            <X size={18} />
+          </button>
+        </div>
+
+        <div className="p-5 space-y-4">
+          <p className="text-sm text-gray-300 leading-relaxed">{panel.description}</p>
+
+          <ul className="space-y-2">
+            {panel.details.map((d) => (
+              <li key={d} className="text-sm text-gray-400 flex items-start gap-2">
+                <span className="text-gray-600 mt-1 shrink-0">•</span>
+                {d}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="border-t border-gray-800 px-5 py-3">
+          <Link
+            href={panel.link}
+            className="inline-flex items-center gap-1.5 text-sm text-brand-400 hover:text-brand-300 transition-colors"
+          >
+            {panel.linkLabel} <ChevronRight size={14} />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function SkillAnatomyDiagram() {
   const [active, setActive] = useState<string | null>(null);
   const panel = active ? panels[active] : null;
@@ -310,32 +375,9 @@ export default function SkillAnatomyDiagram() {
         </div>
       </div>
 
-      {/* Info Panel */}
+      {/* Modal */}
       {panel && (
-        <div className={`mt-4 rounded-xl border ${panel.borderColor} ${panel.color} p-5 relative`}>
-          <button
-            onClick={() => setActive(null)}
-            className="absolute top-3 right-3 text-gray-500 hover:text-gray-300 transition-colors"
-          >
-            <X size={16} />
-          </button>
-          <h3 className="text-base font-semibold text-gray-100 mb-2">{panel.title}</h3>
-          <p className="text-sm text-gray-400 leading-relaxed mb-3">{panel.description}</p>
-          <ul className="space-y-1 mb-4">
-            {panel.details.map((d) => (
-              <li key={d} className="text-xs text-gray-500 flex items-start gap-2">
-                <span className="text-gray-600 mt-0.5">-</span>
-                {d}
-              </li>
-            ))}
-          </ul>
-          <Link
-            href={panel.link}
-            className="inline-flex items-center gap-1.5 text-xs text-brand-400 hover:text-brand-300 transition-colors"
-          >
-            Read the {panel.linkLabel} <ChevronRight size={12} />
-          </Link>
-        </div>
+        <SkillInfoModal panel={panel} onClose={() => setActive(null)} />
       )}
     </div>
   );
