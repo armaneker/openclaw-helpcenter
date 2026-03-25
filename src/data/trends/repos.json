@@ -730,16 +730,20 @@
       "first_seen": "2026-03-22",
       "has_summary": true,
       "topics": [
+        "antigravity-skills",
         "claude-code",
         "claude-skills",
         "codex",
         "codex-skills",
+        "gemini-cli-skills",
         "knowledge-graph",
         "opencode-skills",
+        "pi-agent",
         "understandcode"
       ],
       "category": "Other",
-      "blurb": "Understand Anything is a Claude Code plugin that analyzes codebases and generates interactive knowledge graphs with AI-powered explanations of functions, classes, and dependencies. It helps developers onboard to unfamiliar projects by providing visual exploration, natural language search, and plain-English explanations of code architecture instead of manual code reading. The tool uses a multi-agent pipeline that combines LLM intelligence with static analysis to create a living map of the entire project structure."
+      "blurb": "Understand Anything is a Claude Code plugin that analyzes codebases and generates interactive knowledge graphs with AI-powered explanations of functions, classes, and dependencies. It helps developers onboard to unfamiliar projects by providing visual exploration, natural language search, and plain-English explanations of code architecture instead of manual code reading. The tool uses a multi-agent pipeline that combines LLM intelligence with static analysis to create a living map of the entire project structure.",
+      "version": "v1.2.0"
     },
     "HKUDS/ClawTeam": {
       "full_name": "HKUDS/ClawTeam",
@@ -2998,6 +3002,51 @@
       "topics": [],
       "category": "Other",
       "version": "v0.1.0"
+    },
+    "GAIR-NLP/daVinci-MagiHuman": {
+      "full_name": "GAIR-NLP/daVinci-MagiHuman",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/GAIR-NLP/daVinci-MagiHuman",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "tiajinsha/JKVideo": {
+      "full_name": "tiajinsha/JKVideo",
+      "description": "高颜值的第三方 B 站 React Native 客户端，支持安卓、H5、iOS | Bilibili-like app with DASH playback, danmaku, WBI sign & live streaming",
+      "language": "TypeScript",
+      "url": "https://github.com/tiajinsha/JKVideo",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [
+        "android",
+        "bilibili",
+        "bilibili-client",
+        "bilibili-live",
+        "danmaku",
+        "dash",
+        "expo",
+        "react-native",
+        "typescript",
+        "video-player",
+        "zustand"
+      ],
+      "category": "Mobile",
+      "version": "v1.0.13"
+    },
+    "lucas-maes/le-wm": {
+      "full_name": "lucas-maes/le-wm",
+      "description": "Official code base for LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels",
+      "language": "Python",
+      "url": "https://github.com/lucas-maes/le-wm",
+      "first_seen": "2026-03-25",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
