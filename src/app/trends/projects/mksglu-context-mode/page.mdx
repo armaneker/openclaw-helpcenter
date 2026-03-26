@@ -1,0 +1,65 @@
+<GuideHeader tool="context-mode" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Context Mode
+
+Context Mode is a privacy-first MCP server that acts as a virtualization layer for context management. It sandboxes tool execution to prevent raw data from flooding your context window while maintaining session continuity through local SQLite tracking.
+
+## What it does
+
+- **Context compression** — Reduces tool output by ~98% (315 KB becomes 5.4 KB) by processing data in sandboxed subprocesses
+- **Session continuity** — Tracks file edits, git operations, tasks, and decisions in SQLite with FTS5 search
+- **Privacy-first architecture** — All data stays local, no telemetry or cloud sync
+- **Automatic routing** — Intercepts MCP tool calls to prevent context window pollution
+- **Cross-platform support** — Works with Claude Code, Gemini CLI, VS Code Copilot, and other MCP-compatible platforms
+
+## Installation
+
+### Claude Code (recommended)
+```bash
+/plugin marketplace add mksglu/context-mode
+/plugin install context-mode@context-mode
+```
+
+### Other platforms
+```bash
+npm install -g context-mode
+```
+
+Then add to your MCP configuration:
+```json
+{
+  "mcpServers": {
+    "context-mode": {
+      "command": "context-mode"
+    }
+  }
+}
+```
+
+## Basic usage
+
+<Callout type="info">
+Context Mode works automatically once installed. It intercepts tool calls and processes them in sandboxed subprocesses.
+</Callout>
+
+Check installation and view savings:
+```bash
+# Verify setup
+/context-mode:ctx-doctor
+
+# View context savings breakdown
+/context-mode:ctx-stats
+```
+
+The tool provides six sandbox commands: `ctx_batch_execute`, `ctx_execute`, `ctx_execute_file`, `ctx_index`, `ctx_search`, and `ctx_fetch_and_index`. These automatically replace standard file/web/shell operations when routing is active.
+
+<Callout type="warning">
+Session data is deleted immediately when starting fresh sessions. Use `--continue` flag to preserve previous session context.
+</Callout>
+
+## Notable details
+
+**Language:** TypeScript  
+**License:** Not specified  
+**Community:** 5,916 GitHub stars  
+**Platform support:** Claude Code, Gemini CLI, VS Code Copilot, and other MCP-compatible tools

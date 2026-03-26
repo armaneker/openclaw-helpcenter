@@ -1571,7 +1571,7 @@
       "language": "Objective-C",
       "url": "https://github.com/maderix/ANE",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "This project enables training neural networks directly on Apple's Neural Engine (ANE) by reverse-engineering private APIs that Apple normally restricts to inference-only operations. It bypasses CoreML's limitations to demonstrate that the ANE hardware is capable of backpropagation and gradient computation, not just forward inference. The implementation achieves low but measurable utilization (~5-9% of peak) and serves as a research proof-of-concept rather than a production framework."
@@ -1582,7 +1582,7 @@
       "language": "JavaScript",
       "url": "https://github.com/calesthio/Crucix",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "ai",
         "intelligence",
@@ -1597,7 +1597,7 @@
       "language": "C++",
       "url": "https://github.com/smartcmd/MinecraftConsoles",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "MinecraftConsoles is a C++ project based on Minecraft Legacy Console Edition v1.6.0560.0 source code with fixes and improvements. It serves as a multi-platform base for modding and development while providing a quality desktop experience with keyboard/mouse support alongside the original controller gameplay. The project includes both client and dedicated server builds with features like LAN multiplayer, splitscreen support, and enhanced Windows compatibility through Visual Studio 2022."
@@ -1608,7 +1608,7 @@
       "language": "HTML",
       "url": "https://github.com/ringhyacinth/Star-Office-UI",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agent-collaboration",
         "ai-assistant",
@@ -1631,7 +1631,7 @@
       "language": "TypeScript",
       "url": "https://github.com/mksglu/context-mode",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "antigravity",
         "claude",
@@ -3199,7 +3199,8 @@
         "sorts"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "TheAlgorithms/Python is a comprehensive collection of algorithm implementations written in Python for educational purposes. It serves as a learning resource for students, interview preparation, and algorithm competitions, covering everything from basic sorting and searching to advanced data structures. The implementations prioritize clarity over performance and may be less efficient than standard library equivalents."
     },
     "nashsu/opencli-rs": {
       "full_name": "nashsu/opencli-rs",
@@ -3210,7 +3211,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.1.0"
+      "version": "v0.1.0",
+      "blurb": "opencli-rs is a Rust-based command-line tool that scrapes data from 55+ websites including Twitter, Reddit, YouTube, and HackerNews with a single command. It provides a unified interface for fetching web data and can integrate with existing CLI tools like Docker and kubectl, making it particularly useful for AI agents that need web access. The Rust rewrite delivers up to 12x performance improvement over the original TypeScript version while using 10x less memory."
     },
     "zengwenliang416/ppt-agent": {
       "full_name": "zengwenliang416/ppt-agent",
@@ -3221,7 +3223,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "PPT Agent is a multi-agent workflow system for generating PowerPoint presentations that outputs SVG slides in 1280×720 Bento Grid layout. It combines LLM content generation with Gemini-powered quality review, supporting cross-platform execution through various AI platforms like OpenCode and Claude Code. The system uses specialized agents for research, content planning, design generation, and quality assurance with hard stops for user approval at key stages."
     },
     "apechurch/polymarket-arbitrage-trading-bot": {
       "full_name": "apechurch/polymarket-arbitrage-trading-bot",
@@ -3239,7 +3242,8 @@
         "trading"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is an automated arbitrage trading bot for Polymarket's 15-minute cryptocurrency Up/Down prediction markets, built in TypeScript using the official CLOB client. It detects rapid price drops on one side of a market, buys the dumped position, then hedges with the opposite side when the combined cost is below $1 per paired share to lock in profit. The bot supports BTC, ETH, SOL, and XRP markets with configurable risk controls and simulation mode for testing strategies."
     },
     "xiaolajiaoyyds/regplatformm": {
       "full_name": "xiaolajiaoyyds/regplatformm",
@@ -3250,7 +3254,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "RegPlatform is a multi-platform account batch registration system written in Go that automates account creation for services like OpenAI, Grok, Kiro, and Gemini. It provides a complete SaaS platform with user management, credit systems, real-time task monitoring, and OAuth token extraction capabilities. The system uses a distributed architecture with HuggingFace Spaces as worker nodes and Cloudflare Workers for load balancing across different platform-specific registration endpoints."
     },
     "bramcohen/manyana": {
       "full_name": "bramcohen/manyana",
@@ -3261,7 +3266,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Manyana is a version control system built on CRDTs (Conflict-Free Replicated Data Types) that guarantees merges never fail and always converge to the same deterministic result. It provides Git-style workflow while offering more informative conflict presentations that show what each side actually did (added, deleted, modified) rather than just displaying opaque \"ours vs theirs\" blocks. The system surfaces conflicts only when concurrent edits are too close together in the document structure, auto-merging everything else through principled CRDT algorithms."
     },
     "K-Dense-AI/k-dense-byok": {
       "full_name": "K-Dense-AI/k-dense-byok",
@@ -3272,7 +3278,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.2.8"
+      "version": "v0.2.8",
+      "blurb": "K-Dense BYOK is a desktop AI research assistant that uses Claude Scientific Skills to handle complex scientific and analytical tasks. It allows users to bring their own API keys to work with 40+ AI models, access 250+ scientific databases and 500k+ Python packages, and delegate complex work to specialized AI experts that operate locally on your machine. The application includes 326 pre-built workflows spanning 22 disciplines and can optionally offload heavy computations to cloud infrastructure."
     },
     "CoderLuii/HolyClaude": {
       "full_name": "CoderLuii/HolyClaude",
@@ -3299,7 +3306,8 @@
         "playwright"
       ],
       "category": "AI / ML",
-      "version": "v1.1.0"
+      "version": "v1.1.0",
+      "blurb": "HolyClaude is a Docker container that packages Claude Code with a web UI, headless browser, AI CLIs, and 50+ development tools into a single deployable workstation. It eliminates the manual setup and configuration issues developers face when trying to combine these tools, providing a ready-to-use AI development environment accessible through a browser. The container works with existing Claude subscriptions and API keys without requiring additional services or proxies."
     },
     "NVIDIA/OpenShell": {
       "full_name": "NVIDIA/OpenShell",
@@ -3310,7 +3318,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.0.16"
+      "version": "v0.0.16",
+      "blurb": "OpenShell is a sandboxed runtime environment designed for secure execution of autonomous AI agents. It provides declarative YAML-based policies to control file access, network activity, and data exfiltration while agents perform tasks like debugging or development work. The system enforces HTTP-level access controls through a proxy that can be updated without restarting containers."
     },
     "millionco/expect": {
       "full_name": "millionco/expect",
@@ -3326,7 +3335,8 @@
         "test"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Expect is a CLI tool that uses AI agents to automatically generate and execute browser tests based on code changes. It analyzes unstaged changes or branch diffs to create test plans and runs them against a live browser, eliminating manual test writing for web applications. The tool supports natural language instructions for test specification and can operate in both interactive and headless modes."
     },
     "jakemor/kanna": {
       "full_name": "jakemor/kanna",
@@ -3337,7 +3347,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.15.0"
+      "version": "v0.15.0",
+      "blurb": "Kanna is a web-based UI that provides a unified interface for Claude Code and Codex CLIs. It enables developers to interact with multiple AI coding assistants through a single browser interface with features like project organization, real-time collaboration, and persistent chat history. The tool uses event sourcing architecture with WebSocket-driven real-time updates and supports advanced features like plan mode for reviewing agent actions before execution."
     }
   }
 }

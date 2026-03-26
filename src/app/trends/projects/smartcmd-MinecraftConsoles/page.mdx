@@ -1,0 +1,64 @@
+<GuideHeader tool="MinecraftConsoles" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# MinecraftConsoles (Legacy Console Edition)
+
+MinecraftConsoles is a multi-platform port of Minecraft Legacy Console Edition v1.6.0560.0 (TU19) with modern improvements. It serves as a foundation for modding, backports, and enhanced desktop gameplay while retaining console compatibility.
+
+## Key Features
+
+- **Cross-platform support** - Windows native, macOS/Linux via Wine
+- **Dedicated server software** - Full multiplayer server with configuration
+- **Modern input methods** - Keyboard/mouse support with customizable controls
+- **Enhanced performance** - High-resolution timers, dynamic screen resolution, V-sync options
+- **LAN multiplayer** - Local network discovery and connection
+- **Splitscreen support** - Multiple local players can join dedicated servers
+- **Quality of life improvements** - Fullscreen toggle (F11), persistent usernames, security fixes
+
+## Installation
+
+Download the latest nightly build for Windows from the [releases page](https://github.com/smartcmd/MinecraftConsoles/releases/tag/nightly). Extract the zip file to your preferred directory.
+
+Create a `username.txt` file in the game directory to set your player name:
+
+```txt
+YourUsername
+```
+
+<Callout type="info">
+For dedicated servers, download the separate nightly build from the same releases page.
+</Callout>
+
+## Basic Usage
+
+Launch the client with optional arguments:
+
+```bash
+Minecraft.Client.exe -name Steve -fullscreen
+```
+
+For dedicated servers, configure via `server.properties`:
+
+```properties
+server-name=MyServer
+server-port=25565
+max-players=8
+level-name=world
+world-size=medium
+```
+
+Then start the server:
+
+```bash
+Minecraft.Server.exe -name MyServer -port 25565 -maxplayers 8
+```
+
+## Notable Details
+
+**License:** Unknown  
+**Language:** C++  
+**Community:** 5,877 GitHub stars  
+**Platform focus:** Currently Windows-first with Wine compatibility for other platforms
+
+<Callout type="warning">
+Console builds exist in the codebase but are not actively maintained by current developers.
+</Callout>

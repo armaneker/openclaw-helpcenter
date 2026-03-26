@@ -1,0 +1,73 @@
+<GuideHeader tool="Crucix" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Crucix
+
+Crucix is a self-hosted intelligence terminal that aggregates data from 27 OSINT sources into a single dashboard. It monitors satellites, flight tracking, radiation levels, conflicts, markets, and social feeds to provide real-time situational awareness.
+
+## Key Features
+
+- **27 data sources** - Satellite fire detection, flight tracking, radiation monitoring, economic indicators, conflict data, and social sentiment feeds
+- **Real-time dashboard** - 3D WebGL globe with live markers, market data, and risk gauges
+- **No cloud dependencies** - Runs entirely on your machine with zero telemetry
+- **LLM integration** - Optional two-way intelligence assistant with Telegram/Discord alerts
+- **Cross-domain correlation** - Synthesizes signals across satellite, economic, conflict, and social domains
+- **Auto-refresh cycles** - Updates every 15 minutes via Server-Sent Events
+
+## Installation
+
+<Callout type="info">
+Requires Node.js 22+ for native fetch and ESM support
+</Callout>
+
+```bash
+# Clone and setup
+git clone https://github.com/calesthio/Crucix.git
+cd Crucix
+npm install
+
+# Configure API keys
+cp .env.example .env
+# Edit .env with your API keys
+
+# Start dashboard
+npm run dev
+```
+
+The dashboard opens at `http://localhost:3117`. Initial sweep takes 30-60 seconds to populate data.
+
+## Basic Usage
+
+```bash
+# Standard mode
+node server.mjs
+
+# Debug mode if npm fails silently
+node --trace-warnings server.mjs
+
+# Check system compatibility
+node diag.mjs
+```
+
+<Callout type="tip">
+Use the live demo at crucix.live before setting up locally to understand the interface
+</Callout>
+
+The dashboard provides multiple views:
+- 3D globe with animated flight corridors and atmospheric effects
+- Flat map toggle for performance or mobile use
+- Region filters (World, Americas, Europe, Middle East, Asia Pacific, Africa)
+- Real-time market data and risk indicators
+- OSINT feed from 17 Telegram intelligence channels
+
+## Notable Details
+
+- **License**: AGPL-3.0
+- **Language**: JavaScript (Node.js)
+- **Community**: 6.8k GitHub stars
+- **Dependencies**: Minimal (just Express for server)
+- **Topics**: AI, intelligence, OSINT
+- **Performance**: VISUALS FULL/LITE modes for different hardware capabilities
+
+<Callout type="warning">
+Crucix has not launched any official token or blockchain asset. Any such claims are unauthorized
+</Callout>

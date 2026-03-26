@@ -1,0 +1,83 @@
+<GuideHeader tool="ANE" difficulty="Advanced" lastTested="2026-03" readTime="8 min" />
+
+# ANE Training
+
+ANE enables training neural networks directly on Apple's Neural Engine via reverse-engineered private APIs. This bypasses CoreML's inference-only restrictions to run custom compute graphs including backpropagation on ANE hardware.
+
+## Key Features
+
+- **Direct ANE training** via `_ANEClient` and `_ANECompiler` private APIs
+- **Dynamic pipeline** with shared kernels and no recompilation when weights change  
+- **Transformer support** including grouped-query attention (GQA) for modern architectures
+- **INT8 W8A8 quantization** delivering 1.88x throughput improvement over FP16
+- **GPU↔ANE zero-copy** pipeline via shared IOSurface for hybrid workflows
+- **Channel-first optimizations** eliminating transpose overhead between CPU and ANE
+
+<Callout type="warning">
+This is a research project demonstrating ANE capabilities, not a production framework. Training utilization remains low (~5-9% of peak) with significant engineering challenges.
+</Callout>
+
+## Installation
+
+Clone and build the bridge:
+
+```bash
+git clone https://github.com/maderix/ANE.git
+cd ANE/bridge
+make
+```
+
+<Callout type="info">
+Requires Apple Silicon Mac with Xcode command line tools. Uses private APIs that may break across OS updates.
+</Callout>
+
+## Basic Usage
+
+Train a Stories110M transformer model:
+
+```objc
+#import "train.m"
+
+// Configure model (12 layers, 768 dim, 12 heads)
+ModelConfig config = {
+    .n_layers = 12,
+    .dim = 768,
+    .n_heads = 12,
+    .vocab_size = 32000
+};
+
+// Initialize training
+TrainingState *state = init_training(&config);
+
+// Training loop
+for (int step = 0; step &lt; max_steps; step++) {
+    float loss = training_step(state, batch_tokens);
+    
+    if (step % 100 == 0) {
+        printf("Step %d, Loss: %.4f\n", step, loss);
+    }
+}
+```
+
+## Performance Benchmarks
+
+Current results on M4 (15.8 TFLOPS peak):
+
+| Model | Parameters | ms/step | Pipeline |
+|-------|-----------|---------|----------|
+| Stories110M | 109M | 91ms | Dynamic |
+| Qwen3-0.6B | 596M | 412ms | Dynamic |
+
+INT8 quantization achieves 35.1 TOPS vs 18.6 TOPS FP16 on convolution workloads.
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Objective-C with private Apple APIs
+- **Community**: 6,472 stars, research-focused rather than production use
+- **Hardware**: Apple Silicon only (M1/M2/M3/M4)
+- **Limitations**: Many element-wise ops fall back to CPU, low ANE utilization
+
+<Callout type="tip">
+Fork and modify for your needs — the author encourages experimentation but maintains this as a research project rather than a supported framework.
+</Callout>

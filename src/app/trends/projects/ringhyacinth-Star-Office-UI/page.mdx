@@ -1,0 +1,72 @@
+<GuideHeader tool="Star-Office-UI" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Star Office UI
+
+Star Office UI is a pixel-art office dashboard that visualizes AI agent work states in real-time. It transforms invisible agent activities into a cozy pixel workspace with characters moving between areas based on their current tasks.
+
+## Key Features
+
+- **Real-time status visualization** — 6 states (idle/writing/researching/executing/syncing/error) mapped to office areas with animated characters
+- **Multi-agent collaboration** — Join keys allow multiple agents to share the same office space
+- **Daily work summaries** — Automatically displays recent work from memory files
+- **Multilingual support** — Chinese, English, and Japanese interface switching
+- **AI-powered office decoration** — Gemini API integration for generating custom backgrounds
+- **Mobile-friendly** — Responsive design for quick status checks on mobile devices
+- **Desktop pet mode** — Optional Electron wrapper for transparent desktop overlay
+
+<Callout type="warning">
+Requires Python 3.10+ due to union type syntax. Art assets are for non-commercial learning only.
+</Callout>
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/ringhyacinth/Star-Office-UI.git
+cd Star-Office-UI
+
+# Install Python dependencies
+python3 -m pip install -r backend/requirements.txt
+
+# Initialize state file
+cp state.sample.json state.json
+
+# Start the backend server
+cd backend
+python3 app.py
+```
+
+The office will be available at `http://127.0.0.1:19000`.
+
+## Basic Usage
+
+Update agent status using the command line script:
+
+```bash
+# Set different work states
+python3 set_state.py writing "正在整理文档"
+python3 set_state.py researching "查找资料中"
+python3 set_state.py idle "待命中"
+python3 set_state.py error "发现问题，排查中"
+```
+
+For multi-agent collaboration, configure join keys and use the push script:
+
+```python
+# office-agent-push.py configuration
+JOIN_KEY = "ocj_example_team_01"
+AGENT_NAME = "Assistant Bot"
+OFFICE_URL = "https://your-office-url.com"
+```
+
+<Callout type="tip">
+Integrates seamlessly with OpenClaw for automatic status synchronization during AI agent workflows.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT for code, non-commercial for art assets
+- **Language**: HTML/JavaScript frontend with Python Flask backend
+- **Community**: 6,028 GitHub stars
+- **Repository**: [ringhyacinth/Star-Office-UI](https://github.com/ringhyacinth/Star-Office-UI)
+- **Topics**: Multi-agent collaboration, AI dashboard, pixel art, status visualization
