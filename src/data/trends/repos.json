@@ -1655,7 +1655,7 @@
       "language": "TypeScript",
       "url": "https://github.com/BigBodyCobain/Shadowbroker",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "air-force-one",
         "airforce1",
@@ -1682,7 +1682,7 @@
       "language": "Swift",
       "url": "https://github.com/Lakr233/vphone-cli",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "DevTools",
       "version": "0.1.4",
@@ -1694,7 +1694,7 @@
       "language": "TypeScript",
       "url": "https://github.com/jackwener/opencli",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "ai-agent",
         "ai-agents",
@@ -1711,7 +1711,7 @@
       "language": "TypeScript",
       "url": "https://github.com/srizzon/git-city",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "3d",
         "github",
@@ -1733,7 +1733,7 @@
       "language": "Python",
       "url": "https://github.com/Gen-Verse/OpenClaw-RL",
       "first_seen": "2026-03-22",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "async",
         "coding",
@@ -3370,7 +3370,8 @@
         "rag"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "This is a curated collection of AI engineering interview questions and answers organized by topic areas like LLMs, RAG, fine-tuning, and AI agents. It serves as a study guide for engineers preparing for interviews in AI/ML roles, covering both fundamental concepts and practical implementation details. The repository spans 15 categories from basic LLM fundamentals to advanced topics like multi-modal AI and production deployment strategies."
     },
     "Claw-Company/clawcompany": {
       "full_name": "Claw-Company/clawcompany",
@@ -3390,7 +3391,8 @@
         "web4"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "ClawCompany is a TypeScript infrastructure for creating AI-powered \"One Person Companies\" where a single user acts as chairman while AI agents handle various business roles. It uses a multi-agent system with different AI models assigned to specific roles (CEO, CTO, CFO, etc.) to decompose and execute business missions autonomously, offering significant cost savings compared to using premium models for all tasks. The system claims to be 30x cheaper than using Claude Opus alone by intelligently routing tasks to appropriate models based on complexity."
     }
   }
 }

@@ -1,0 +1,66 @@
+<GuideHeader tool="OpenClaw-RL" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenClaw-RL
+
+OpenClaw-RL is a fully asynchronous reinforcement learning framework that trains personalized AI agents from natural conversation feedback. It intercepts live multi-turn conversations and continuously optimizes the policy in the background without interrupting usage.
+
+## Key Features
+
+- **Fully async architecture** - Decouples agent serving, rollout collection, PRM/judge evaluation, and policy training into independent loops
+- **Self-hosted and private** - Entire stack runs on your infrastructure, no third-party APIs required
+- **Automatic feedback processing** - Converts conversations into training signals without manual labeling
+- **Three optimization methods** - Binary RL (GRPO), On-Policy Distillation (OPD), and Combination method
+- **Real-world agentic RL** - Supports terminal, GUI, SWE, and tool-call agent training scenarios
+- **Session-aware training** - Organizes multi-turn interactions into coherent training trajectories
+- **LoRA training support** - Efficient fine-tuning for resource-constrained environments
+
+<Callout type="info">
+OpenClaw-RL wraps your self-hosted model as an OpenAI-compatible API through OpenClaw, enabling seamless integration with existing applications.
+</Callout>
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Gen-Verse/OpenClaw-RL.git
+cd OpenClaw-RL
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install OpenClaw extension for RL training
+cd extensions/rl-training-headers
+pip install -e .
+```
+
+## Basic Usage
+
+```python
+from openclaw_rl import OpenClawTrainer
+from openclaw_rl.methods import BinaryRL, OPD, CombinationMethod
+
+# Initialize trainer with your model
+trainer = OpenClawTrainer(
+    model_path="your/model/path",
+    method=CombinationMethod(),  # or BinaryRL(), OPD()
+    async_mode=True
+)
+
+# Start the async training loop
+trainer.start_training()
+
+# Your model continues serving requests while training runs in background
+# Natural conversations automatically become training data
+```
+
+<Callout type="tip">
+The framework automatically classifies API messages into main-line (trainable) vs. side (non-trainable) turns and uses next user feedback as natural reward signals.
+</Callout>
+
+## Notable Details
+
+- **Language**: Python
+- **License**: Apache-2.0
+- **Community**: 4.2k GitHub stars
+- **Cloud deployment**: Supports both local GPU and Tinker cloud deployment
+- **Integration**: Works with SDFT, SDPO, and other RL methods for LLMs

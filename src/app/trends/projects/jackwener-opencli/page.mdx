@@ -1,0 +1,67 @@
+<GuideHeader tool="opencli" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenCLI
+
+OpenCLI transforms any website, Electron app, or local binary into a standardized command-line interface. It's designed as an AI-native runtime that enables agents to discover and execute tools through a unified interface.
+
+## Key Features
+
+- **Universal CLI Hub** — Convert websites (Twitter, Reddit, Bilibili), Electron apps (Cursor, Notion), and local tools into CLI commands
+- **Browser session reuse** — Leverages Chrome's existing login state without exposing credentials
+- **Zero LLM cost** — Deterministic output with no tokens consumed at runtime
+- **AI agent discovery** — Built-in `explore`, `synthesize`, and `cascade` commands for API discovery
+- **Self-healing setup** — Auto-diagnoses and starts required daemon and browser connections
+- **50+ pre-built adapters** — Ready-to-use commands for major platforms
+
+<Callout type="info">
+Browser commands require you to be logged into the target website in Chrome before running commands.
+</Callout>
+
+## Installation
+
+Install globally via npm:
+
+```bash
+npm install -g @jackwener/opencli
+```
+
+You'll also need the Browser Bridge Chrome extension for browser commands:
+
+1. Download `opencli-extension.zip` from the [GitHub releases page](https://github.com/jackwener/opencli/releases)
+2. Unzip and open `chrome://extensions`
+3. Enable Developer mode and click "Load unpacked"
+4. Select the unzipped folder
+
+## Basic Usage
+
+```bash
+# List all available commands
+opencli list
+
+# Get trending posts from Reddit
+opencli reddit hot --limit 5
+
+# Search Twitter (requires Chrome login)
+opencli twitter search "AI agents" --limit 10
+
+# Control Cursor IDE from terminal
+opencli cursor status
+
+# Register external CLI tools
+opencli register mycli
+
+# Diagnose setup issues
+opencli doctor
+```
+
+<Callout type="tip">
+Use `opencli list -f yaml` to see command schemas in YAML format for easier AI agent integration.
+</Callout>
+
+## Notable Details
+
+- **License**: Apache-2.0
+- **Language**: TypeScript
+- **Community**: 7.1k+ GitHub stars
+- **Node.js**: Requires v20.0.0 or higher
+- **Architecture**: Dual-engine supporting both YAML declarative pipelines and TypeScript browser injections

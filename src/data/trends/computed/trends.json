@@ -71,7 +71,7 @@
       "delta_week": 2924,
       "delta_month": 3342,
       "delta_year": 3342,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": "v1.3.1",
       "blurb": "OpenCLI is a TypeScript tool that converts websites, Electron apps, and local binaries into standardized command-line interfaces. It enables developers to interact with web services programmatically while reusing existing Chrome login sessions, and provides AI agents with a unified way to discover and execute tools through standardized interfaces. The tool includes a browser bridge extension that connects to Chrome and supports both YAML declarative pipelines and TypeScript runtime injections for maximum flexibility."
@@ -521,7 +521,7 @@
       "delta_week": 460,
       "delta_month": 1188,
       "delta_year": 1188,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v0.9.5",
       "blurb": "ShadowBroker is a real-time OSINT dashboard that aggregates public intelligence feeds (aircraft tracking, satellite data, earthquakes, maritime traffic) into a unified geospatial interface. It consolidates scattered public datasets that analysts typically need to access across dozens of separate tools and APIs. Built with Next.js and Python, it runs entirely in your browser against a self-hosted backend without collecting user data."
@@ -761,7 +761,7 @@
       "delta_week": 278,
       "delta_month": 1083,
       "delta_year": 1088,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "OpenClaw-RL is a reinforcement learning framework that trains AI agents through natural language feedback and conversation. It enables personalized agent training across real-world environments including terminal, GUI, software engineering, and tool-call scenarios without requiring API costs or GPU resources. The framework implements hybrid RL approaches with async processing and supports both local and cloud deployment."
@@ -1001,7 +1001,7 @@
       "delta_week": 149,
       "delta_month": 1155,
       "delta_year": 1174,
-      "has_summary": false,
+      "has_summary": true,
       "category": "DevTools",
       "version": "0.1.4",
       "blurb": "vphone-cli is a tool that boots virtualized iOS devices on macOS using Apple's Virtualization.framework. It enables running iPhone VMs for security research, jailbreak development, and iOS testing without requiring physical hardware. The project offers three firmware variants with increasing security bypasses, from regular patching to full jailbreak environments with automated tool installation."
@@ -1664,7 +1664,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "This is a curated collection of AI engineering interview questions and answers organized by topic areas like LLMs, RAG, fine-tuning, and AI agents. It serves as a study guide for engineers preparing for interviews in AI/ML roles, covering both fundamental concepts and practical implementation details. The repository spans 15 categories from basic LLM fundamentals to advanced topics like multi-modal AI and production deployment strategies."
     },
     {
       "full_name": "microsoft/RustTraining",
@@ -1844,7 +1844,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "ClawCompany is a TypeScript infrastructure for creating AI-powered \"One Person Companies\" where a single user acts as chairman while AI agents handle various business roles. It uses a multi-agent system with different AI models assigned to specific roles (CEO, CTO, CFO, etc.) to decompose and execute business missions autonomously, offering significant cost savings compared to using premium models for all tasks. The system claims to be 30x cheaper than using Claude Opus alone by intelligently routing tasks to appropriate models based on complexity."
     }
   ]
 }

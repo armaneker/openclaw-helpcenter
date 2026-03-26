@@ -1,0 +1,82 @@
+<GuideHeader tool="vphone-cli" difficulty="Advanced" lastTested="2025-01" readTime="8 min" />
+
+# vphone-cli
+
+vphone-cli boots a virtual iPhone running iOS 26 using Apple's Virtualization.framework and PCC research VM infrastructure. It creates fully functional iOS virtual machines that can run jailbroken or development configurations.
+
+## Key Features
+
+- Boot virtual iPhones with iOS 26 on macOS Sequoia
+- Three firmware variants: Regular, Development, and Jailbreak
+- SSH, VNC, and RPC access to virtual devices
+- Support for TrollStore and Sileo (jailbreak variant)
+- VM backup and switching capabilities
+- Direct console access for system-level operations
+
+## Installation
+
+<Callout type="warning">
+Requires macOS 15+ (Sequoia) and disabling SIP/AMFI security features. Boot into Recovery mode first.
+</Callout>
+
+```bash
+# In Recovery mode
+csrutil disable
+csrutil allow-research-guests enable
+
+# After restart, add AMFI boot arg
+sudo nvram boot-args="amfi_get_out_of_my_way=1 -v"
+
+# Install dependencies
+brew install aria2 ideviceinstaller wget gnu-tar openssl@3 ldid-procursus sshpass keystone autoconf automake pkg-config libtool cmake
+
+# Clone with submodules
+git clone --recurse-submodules https://github.com/Lakr233/vphone-cli.git
+```
+
+## Basic Usage
+
+```bash
+# Full automated setup (creates VM, downloads firmware, patches, installs)
+make setup_machine
+
+# For jailbreak variant with Sileo and TrollStore
+make setup_machine JB=1
+
+# Boot the VM
+make boot
+
+# In separate terminal, set up port forwarding
+iproxy 2222 22    # SSH
+iproxy 5901 5901  # VNC
+
+# Connect via SSH
+ssh -p 2222 mobile@127.0.0.1  # password: alpine
+```
+
+<Callout type="tip">
+Use two terminals during restore: one for `make boot_dfu` (keep running) and another for `make restore`.
+</Callout>
+
+## Manual Setup Flow
+
+```bash
+make setup_tools    # Build dependencies
+make build          # Compile vphone-cli
+make vm_new         # Create VM config
+make fw_prepare     # Download iOS firmware
+make fw_patch_jb    # Patch for jailbreak (or fw_patch for regular)
+make boot_dfu       # Terminal 1: Boot DFU mode
+make restore        # Terminal 2: Flash firmware
+make cfw_install_jb # Install custom firmware
+make boot          # First boot
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Swift
+- **Community**: 4,475 GitHub stars
+- **Firmware variants**: Regular (41 patches), Development (52 patches), Jailbreak (112 patches)
+- **Tested configurations**: Mac16,12 with various iPhone 17,3 builds
+- **VM config**: Stored in `vm/config.plist`, supports custom CPU/memory/disk settings

@@ -1,0 +1,55 @@
+<GuideHeader tool="git-city" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Git City
+
+Git City transforms your GitHub profile into a unique 3D pixel art building in an interactive city. Building height reflects your contributions, width represents your repositories, and lit windows show your activity levels.
+
+## Key Features
+
+- **3D pixel art buildings** generated from GitHub contribution data
+- **Interactive flight mode** to explore the city and visit other developers
+- **Profile pages** with stats, achievements, and repository highlights
+- **Building customization** with crowns, auras, and decorative effects
+- **Social features** including kudos, gifting, and activity feeds
+- **Comparison mode** to view two developers side by side
+- **Shareable cards** for social media profiles
+
+## Installation
+
+```bash
+git clone https://github.com/srizzon/git-city.git
+cd git-city
+npm install
+```
+
+Set up environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+Configure your Supabase credentials and GitHub token in `.env.local`, then start the development server:
+
+```bash
+npm run dev
+```
+
+## Basic Usage
+
+Visit `http://localhost:3001` to see the city. Users authenticate with GitHub OAuth to claim their buildings. The application automatically fetches contribution data and generates 3D representations based on:
+
+- **Contributions** → building height
+- **Public repositories** → building width  
+- **Stars received** → window brightness
+- **Recent activity** → window animation patterns
+
+<Callout type="info">
+Buildings use LOD (Level of Detail) rendering for performance. Close buildings show full detail while distant ones use simplified geometry.
+</Callout>
+
+## Notable Details
+
+**License:** AGPL-3.0 (requires source sharing for public deployments)  
+**Language:** TypeScript with Next.js 16 and Three.js  
+**Community:** 4.4k GitHub stars  
+**Tech Stack:** React Three Fiber, Supabase, Stripe payments, Vercel hosting

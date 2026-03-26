@@ -1,0 +1,50 @@
+<GuideHeader tool="Shadowbroker" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Shadowbroker
+
+Shadowbroker is a real-time OSINT dashboard that aggregates dozens of public intelligence feeds into a unified geospatial interface. It provides a single-pane view of global aircraft, ships, satellites, earthquakes, conflict zones, and breaking geopolitical events.
+
+## Key Features
+
+- **Multi-domain tracking**: Aircraft (commercial, private jets, military), ships via AIS, satellites with orbital propagation
+- **Geopolitical intelligence**: GDELT conflict events, Ukraine frontline data, SIGINT news feeds
+- **Satellite imagery**: NASA GIBS daily imagery with time slider, high-res Esri World Imagery, Sentinel-2 intel cards
+- **Real-time data**: Live WebSocket feeds from OpenSky Network (~5,000 aircraft), aisstream.io (~25,000 vessels)
+- **Advanced analytics**: Holding pattern detection, carrier strike group tracking, GPS jamming zones
+- **Interactive mapping**: Region dossiers, flight trail accumulation, clustered displays at low zoom
+
+## Installation
+
+<Callout type="info">
+Requires Docker or Podman. The dashboard runs entirely in your browser against a self-hosted backend.
+</Callout>
+
+```bash
+git clone https://github.com/BigBodyCobain/Shadowbroker.git
+cd Shadowbroker
+./compose.sh up -d
+```
+
+For Windows:
+```bash
+docker-compose up -d
+```
+
+Access the dashboard at `http://localhost:3000`.
+
+## Basic Usage
+
+The interface loads with a dark-ops map showing real-time global activity. Aircraft appear as shape-accurate SVG icons, ships are color-coded by vessel type, and satellites show mission classifications. Right-click anywhere for region intelligence including country profiles and latest satellite imagery.
+
+Use the layer controls to toggle between aviation, maritime, space, and geopolitical data feeds. The time slider enables historical satellite imagery playback.
+
+## Notable Details
+
+**License**: AGPL-3.0  
+**Language**: TypeScript (Next.js + MapLibre GL frontend, FastAPI Python backend)  
+**Community**: 5,057 GitHub stars  
+**Topics**: OSINT, satellite imagery, aviation tracking, maritime intelligence
+
+<Callout type="tip">
+For production deployments, Shadowbroker includes Kubernetes/Helm charts with modular scaling and ingress support.
+</Callout>
