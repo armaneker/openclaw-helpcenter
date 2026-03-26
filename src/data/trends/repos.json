@@ -3174,6 +3174,170 @@
       "category": "Other",
       "version": null,
       "blurb": "SentrySearch is a semantic search tool for dashcam footage that uses Google's Gemini Embedding 2 model to enable natural language queries over video content. It allows users to search through hours of dashcam footage by typing descriptive queries like \"red truck running a stop sign\" and automatically returns trimmed video clips matching the search. The tool leverages Gemini's native video embedding capability, which projects raw video pixels directly into the same vector space as text queries without requiring transcription or frame captioning."
+    },
+    "TheAlgorithms/Python": {
+      "full_name": "TheAlgorithms/Python",
+      "description": "All Algorithms implemented in Python",
+      "language": "Python",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [
+        "algorithm",
+        "algorithm-competitions",
+        "algorithms-implemented",
+        "algos",
+        "community-driven",
+        "education",
+        "hacktoberfest",
+        "interview",
+        "learn",
+        "practice",
+        "python",
+        "searches",
+        "sorting-algorithms",
+        "sorts"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "nashsu/opencli-rs": {
+      "full_name": "nashsu/opencli-rs",
+      "description": "Opencli-rs is a  Blazing fast, memory-safe command-line tool — Fetch information from any website with a single command. Covers Twitter/X, Reddit, YouTube, HackerNews, Bilibili, Zhihu, Xiaohongshu, and 55+ sites, with support for controlling Electron desktop apps, integrating local CLI tools (gh, docker, kubectl)",
+      "language": "Rust",
+      "url": "https://github.com/nashsu/opencli-rs",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.1.0"
+    },
+    "zengwenliang416/ppt-agent": {
+      "full_name": "zengwenliang416/ppt-agent",
+      "description": "",
+      "language": "HTML",
+      "url": "https://github.com/zengwenliang416/ppt-agent",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Agentic",
+      "version": null
+    },
+    "apechurch/polymarket-arbitrage-trading-bot": {
+      "full_name": "apechurch/polymarket-arbitrage-trading-bot",
+      "description": "polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot, polymarket arbitrage bot",
+      "language": "TypeScript",
+      "url": "https://github.com/apechurch/polymarket-arbitrage-trading-bot",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [
+        "arbitrage",
+        "bot",
+        "polymarket",
+        "polymarket-arbitrage-bot-15min",
+        "polymarket-arbitraget-trading-bot",
+        "trading"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "xiaolajiaoyyds/regplatformm": {
+      "full_name": "xiaolajiaoyyds/regplatformm",
+      "description": "样板演示请查看～ 不提供技术指导，自己研究，代码无删减",
+      "language": "Go",
+      "url": "https://github.com/xiaolajiaoyyds/regplatformm",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "bramcohen/manyana": {
+      "full_name": "bramcohen/manyana",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/bramcohen/manyana",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "K-Dense-AI/k-dense-byok": {
+      "full_name": "K-Dense-AI/k-dense-byok",
+      "description": "An AI co-scientist powered by Claude Scientific Skills running on your desktop.",
+      "language": "TypeScript",
+      "url": "https://github.com/K-Dense-AI/k-dense-byok",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.2.8"
+    },
+    "CoderLuii/HolyClaude": {
+      "full_name": "CoderLuii/HolyClaude",
+      "description": "AI coding workstation: Claude Code + web UI + 5 AI CLIs + headless browser + 50+ tools",
+      "language": "Dockerfile",
+      "url": "https://github.com/CoderLuii/HolyClaude",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "ai-coding",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "container",
+        "developer-tools",
+        "devtools",
+        "docker",
+        "docker-compose",
+        "gemini",
+        "headless-browser",
+        "openai",
+        "playwright"
+      ],
+      "category": "AI / ML",
+      "version": "v1.1.0"
+    },
+    "NVIDIA/OpenShell": {
+      "full_name": "NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.0.16"
+    },
+    "millionco/expect": {
+      "full_name": "millionco/expect",
+      "description": "Let agents test your code in a real browser",
+      "language": "TypeScript",
+      "url": "https://github.com/millionco/expect",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "browser",
+        "expect",
+        "test"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "jakemor/kanna": {
+      "full_name": "jakemor/kanna",
+      "description": "A beautiful web-based UI for Claude Code & Codex",
+      "language": "TypeScript",
+      "url": "https://github.com/jakemor/kanna",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.15.0"
     }
   }
 }
