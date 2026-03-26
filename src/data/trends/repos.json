@@ -3393,6 +3393,41 @@
       "category": "Agentic",
       "version": null,
       "blurb": "ClawCompany is a TypeScript infrastructure for creating AI-powered \"One Person Companies\" where a single user acts as chairman while AI agents handle various business roles. It uses a multi-agent system with different AI models assigned to specific roles (CEO, CTO, CFO, etc.) to decompose and execute business missions autonomously, offering significant cost savings compared to using premium models for all tasks. The system claims to be 30x cheaper than using Claude Opus alone by intelligently routing tasks to appropriate models based on complexity."
+    },
+    "getcompanion-ai/feynman": {
+      "full_name": "getcompanion-ai/feynman",
+      "description": "",
+      "language": "TypeScript",
+      "url": "https://github.com/getcompanion-ai/feynman",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.2.14"
+    },
+    "alvinunreal/awesome-opensource-ai": {
+      "full_name": "alvinunreal/awesome-opensource-ai",
+      "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure.",
+      "language": "Unknown",
+      "url": "https://github.com/alvinunreal/awesome-opensource-ai",
+      "first_seen": "2026-03-26",
+      "has_summary": false,
+      "topics": [
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "awesome",
+        "awesome-list",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "open-source",
+        "open-source-ai",
+        "rag"
+      ],
+      "category": "Agentic",
+      "version": null
     }
   }
 }
