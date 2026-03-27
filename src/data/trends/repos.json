@@ -1793,7 +1793,7 @@
     "wanshuiyin/Auto-claude-code-research-in-sleep": {
       "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.",
-      "language": "Python",
+      "language": "TeX",
       "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
       "first_seen": "2026-03-22",
       "has_summary": true,
@@ -3570,6 +3570,60 @@
       "category": "Other",
       "version": null,
       "blurb": "Optio is a TypeScript workflow orchestration platform that automates the complete lifecycle of AI coding agents from task intake to merged pull requests. It eliminates manual intervention by automatically resuming agents on CI failures or code review feedback, handling everything from provisioning isolated Kubernetes environments to merging approved PRs. The system uses a pod-per-repo architecture with git worktree isolation and supports intake from GitHub Issues, Linear tickets, or manual task creation."
+    },
+    "x1xhlol/system-prompts-and-models-of-ai-tools": {
+      "full_name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+      "language": "Unknown",
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "first_seen": "2026-03-27",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "bolt",
+        "cluely",
+        "copilot",
+        "cursor",
+        "cursorai",
+        "devin",
+        "github-copilot",
+        "lovable",
+        "open-source",
+        "perplexity",
+        "replit",
+        "system-prompts",
+        "trae",
+        "trae-ai",
+        "trae-ide",
+        "v0",
+        "vscode",
+        "windsurf",
+        "windsurf-ai"
+      ],
+      "category": "AI / ML",
+      "version": null
+    },
+    "jxnxts/mcp-brasil": {
+      "full_name": "jxnxts/mcp-brasil",
+      "description": "MCP Server para 27 APIs públicas brasileiras",
+      "language": "Python",
+      "url": "https://github.com/jxnxts/mcp-brasil",
+      "first_seen": "2026-03-27",
+      "has_summary": false,
+      "topics": [],
+      "category": "Agentic",
+      "version": "v0.4.0"
+    },
+    "Flowseal/tg-ws-proxy": {
+      "full_name": "Flowseal/tg-ws-proxy",
+      "description": "Local SOCKS5 proxy server for partial bypassing of Telegram loading",
+      "language": "Python",
+      "url": "https://github.com/Flowseal/tg-ws-proxy",
+      "first_seen": "2026-03-27",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v1.3.0"
     }
   }
 }
