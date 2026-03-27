@@ -1,0 +1,89 @@
+<GuideHeader tool="ClawVault" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# ClawVault
+
+ClawVault is a security vault for AI agents that provides atomic control over every AI interaction. It acts as a transparent proxy gateway to monitor, guard, and audit AI agent communications with external APIs.
+
+## Key Features
+
+- **Sensitive Data Detection** — Detects API keys, passwords, PII, credit cards across 15+ pattern types
+- **Prompt Injection Defense** — Blocks role hijacking, instruction override, and data exfiltration attempts
+- **Dangerous Command Guard** — Intercepts risky commands like `rm -rf`, `curl|bash`, privilege escalation
+- **Auto-Sanitization** — Replaces secrets with placeholders, restores on response
+- **Token Budget Control** — Daily/monthly limits with cost alerts
+- **Real-time Dashboard** — Web UI for per-agent configuration and detection monitoring
+
+## Installation
+
+### As OpenClaw Skill (Recommended)
+
+```bash
+# Install from ClawHub
+openclaw skills install tophant-clawvault
+
+# Or via clawhub CLI
+clawhub install tophant-clawvault
+```
+
+### As Python Package
+
+```bash
+pip install -e .
+```
+
+## Basic Usage
+
+```bash
+# Start the proxy gateway and dashboard
+clawvault start
+
+# Scan text for sensitive data
+clawvault scan "password=MySecret key=sk-proj-abc123"
+
+# Interactive demo
+clawvault demo
+```
+
+<Callout type="info">
+ClawVault runs a transparent proxy on port 8765 that intercepts traffic between AI tools and external APIs (OpenAI, Anthropic, etc.).
+</Callout>
+
+### Using as OpenClaw Skill
+
+```bash
+# Quick setup
+/clawvault install --mode quick
+
+# Generate security rules
+/clawvault generate-rule "Block AWS credentials"
+
+# Test detection capabilities
+/clawvault test --category all
+```
+
+## Configuration
+
+```yaml
+# ~/.ClawVault/config.yaml
+proxy:
+  port: 8765
+  intercept_hosts: ["api.openai.com", "api.anthropic.com"]
+
+guard:
+  mode: "interactive"  # interactive | strict | permissive
+
+monitor:
+  daily_token_budget: 50000
+```
+
+## Notable Details
+
+- **Language**: Python 3.10+
+- **License**: MIT
+- **Community**: 995+ GitHub stars
+- **Architecture**: Gateway proxy + detection engine + web dashboard
+- **Integration**: Works standalone or as OpenClaw skill
+
+<Callout type="tip">
+The system supports generative policy creation through natural language — describe security requirements in chat and ClawVault generates the corresponding rules automatically.
+</Callout>

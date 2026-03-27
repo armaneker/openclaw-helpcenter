@@ -1229,7 +1229,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "vol.119",
-      "blurb": null
+      "blurb": "HelloGitHub is a curated collection of interesting, beginner-friendly open source projects on GitHub, published monthly as a newsletter. It helps developers discover engaging open source projects across various categories including educational resources, practical projects, and enterprise-level tools. The project has been running for over 120 monthly editions and maintains a website with enhanced reading experience alongside the GitHub repository."
     },
     {
       "full_name": "slavingia/skills",
@@ -1484,7 +1484,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "G0DM0D3 is an open-source TypeScript chat interface that runs multiple AI models simultaneously to bypass safety filters and content restrictions. It's designed for red-teaming, AI research, and \"liberated\" conversations using techniques like prompt injection, model racing, and input obfuscation across 50+ models via OpenRouter. The project deploys as a single HTML file with no backend dependencies and includes features like \"Parseltongue\" for input perturbation and \"ULTRAPLINIAN\" for multi-model evaluation."
     },
     {
       "full_name": "magnum6actual/flipoff",
@@ -1499,7 +1499,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "FlipOff is a web-based split-flap display emulator that turns any TV or monitor into a retro airport terminal-style board. It provides realistic flip animations, authentic mechanical sounds, and runs entirely offline in a browser without external dependencies. The implementation uses vanilla JavaScript with no frameworks and includes embedded audio from actual split-flap hardware."
     },
     {
       "full_name": "amitshekhariitbhu/ai-engineering-interview-questions",
@@ -1574,7 +1574,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "Agent Flow is a VS Code extension that provides real-time visualization of Claude Code agent execution as an interactive node graph. It allows developers to debug agent behavior by showing tool call chains, execution branching, and coordination between subagents that are normally invisible in Claude's black-box execution. The extension automatically detects active Claude Code sessions and streams events with zero latency through lightweight HTTP hooks."
     },
     {
       "full_name": "TheAlgorithms/Python",
@@ -1634,7 +1634,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v1.8.4",
-      "blurb": null
+      "blurb": "code-review-graph is a Python tool that builds a persistent knowledge graph of your codebase using Tree-sitter parsing to optimize Claude's context consumption. It performs blast-radius analysis to identify only the relevant files Claude needs to read, reducing token usage by 6.8× for code reviews and up to 49× for daily coding tasks. The tool integrates with major AI coding platforms through MCP (Model Context Protocol) and updates incrementally in under 2 seconds per change."
     },
     {
       "full_name": "facebookresearch/HyperAgents",
@@ -1769,7 +1769,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a TypeScript template that uses Claude Code to automatically reverse-engineer and rebuild websites as pixel-perfect clones. It analyzes a target URL through Chrome MCP to extract design tokens, assets, and component specifications, then dispatches parallel AI agents to reconstruct each section in isolated git worktrees. The system handles the complete pipeline from reconnaissance and asset extraction to component building and visual diff validation against the original site."
     },
     {
       "full_name": "ethanjyx/OpenBrand",

@@ -1,0 +1,69 @@
+<GuideHeader tool="HacxGPT" difficulty="Beginner" lastTested="2026-01" readTime="5 min" />
+
+# HacxGPT CLI
+
+HacxGPT is an open-source command-line interface for unrestricted AI model access with multi-provider support. It provides prompt injection research capabilities and security evaluation tools through a rich terminal interface.
+
+## Key Features
+
+- Multi-provider API support (OpenRouter, Groq, HacxGPT)
+- Local API key storage (keys never leave your machine)
+- Cross-platform compatibility (Windows, Linux, macOS, Termux)
+- Rich terminal UI with interactive menus
+- Configurable API endpoints and model selection
+- Built-in chat commands (`/clear`, `/exit`)
+- Security research and red-team evaluation capabilities
+
+<Callout type="warning">
+This tool is designed for educational and research purposes. Users are responsible for complying with applicable laws and API provider terms of service.
+</Callout>
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/lucija8320nhung4/HacxGPT.git
+cd HacxGPT
+pip install -r requirements.txt
+```
+
+For Windows, you can also double-click `run.bat` after cloning.
+
+## Basic Usage
+
+Launch the CLI and configure your API provider:
+
+```bash
+python3 -m main
+```
+
+The interactive menu will guide you through setup. First, configure your API key via Settings (option 2), then start chatting (option 3).
+
+**Chat commands:**
+- `/clear` - Clear conversation history
+- `/exit` or `/quit` - Return to main menu
+
+## Configuration
+
+Config is stored locally at `~/.hacxgpt_cli/config.json`:
+
+```json
+{
+  "provider": "openrouter",
+  "model": "mimo-v2-flash", 
+  "api_key": "sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxx"
+}
+```
+
+<Callout type="info">
+Get free API keys from [OpenRouter](https://openrouter.ai/keys) or [Groq](https://console.groq.com/keys) to start using the tool.
+</Callout>
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** Python 3.10+
+- **Stars:** 908
+- **Dependencies:** Rich, Colorama, Requests
+- **Community:** Active Telegram group and GitHub discussions

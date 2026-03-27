@@ -1,0 +1,64 @@
+<GuideHeader tool="claude-bug-bounty" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Claude Bug Bounty
+
+Claude Bug Bounty is an AI-powered agent harness for professional bug bounty hunting that operates directly from your terminal. It combines autonomous hunting capabilities with Claude Code integration to orchestrate reconnaissance, vulnerability testing, and report generation.
+
+## Key Features
+
+- **7 specialized AI agents** for recon, hunting, validation, and report writing
+- **20 web vulnerability classes** and 10 web3 bug categories coverage
+- **Autonomous hunt loops** with safety checkpoints and circuit breakers
+- **Persistent memory system** that learns from previous hunts across targets
+- **Burp Suite MCP integration** for live traffic analysis
+- **HackerOne API integration** for program intelligence and disclosure research
+- **Automated report generation** for major bug bounty platforms
+
+<Callout type="info">
+Claude Bug Bounty requires Claude Code to run the agent orchestration, though individual tools can be executed standalone.
+</Callout>
+
+## Installation
+
+```bash
+git clone https://github.com/shuvonsec/claude-bug-bounty.git
+cd claude-bug-bounty
+chmod +x install.sh && ./install.sh
+```
+
+## Basic Usage
+
+```bash
+# Start Claude Code
+claude
+
+# Core workflow
+/recon target.com               # Discover attack surface
+/hunt target.com                # Test for vulnerabilities  
+/validate                       # Verify findings
+/report                         # Generate submission-ready report
+
+# Autonomous mode
+/autopilot target.com --normal  # Full autonomous hunt loop
+/resume target.com              # Continue previous hunt
+```
+
+<Callout type="tip">
+Use `/scope &lt;asset>` before testing to verify the target is in program scope and avoid out-of-scope submissions.
+</Callout>
+
+## Tools can run independently
+
+```bash
+python3 tools/hunt.py --target target.com
+./tools/recon_engine.sh target.com
+python3 tools/intel_engine.py --target target.com --tech nextjs
+```
+
+## Notable Details
+
+- **Language**: Python 3.8+
+- **License**: MIT
+- **Community**: 1,211 GitHub stars
+- **Integration**: Burp Suite MCP, HackerOne API
+- **Safety**: Built-in rate limiting, audit logging, circuit breakers for autonomous mode

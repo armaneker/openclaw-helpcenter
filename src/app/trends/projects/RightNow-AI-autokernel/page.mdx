@@ -1,0 +1,60 @@
+<GuideHeader tool="autokernel" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# AutoKernel
+
+AutoKernel is an autonomous GPU kernel optimization system that takes any PyTorch model and generates optimized Triton or CUDA kernels overnight. It applies autoresearch principles to kernel optimization through iterative edit-benchmark-keep/revert cycles.
+
+## Key Features
+
+- **Autonomous optimization**: Profiles models, extracts bottleneck kernels, and optimizes them without human intervention
+- **Multi-kernel support**: Handles 9 core kernel types (matmul, softmax, layernorm, flash_attention, fused_mlp, etc.)
+- **Comprehensive validation**: 5-stage correctness checking plus performance benchmarking with roofline analysis
+- **Amdahl's law scheduling**: Prioritizes kernels by optimization potential using mathematical principles
+- **KernelBench integration**: Runs 50-300+ iterative experiments per problem vs one-shot generation
+- **HuggingFace export**: Packages optimized kernels for distribution on the Hub
+
+## Installation
+
+<Callout type="info">
+Requires NVIDIA GPU (H100/A100/RTX 4090 tested) and Python 3.10+
+</Callout>
+
+```bash
+# Install uv if needed
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone and setup
+git clone https://github.com/RightNow-AI/autokernel.git
+cd autokernel
+uv sync
+
+# One-time setup
+uv run prepare.py
+```
+
+## Basic Usage
+
+```bash
+# Profile a model to identify bottlenecks
+uv run profile.py --model models/llama_7b.py --class-name LlamaModel \
+  --input-shape 1,512 --dtype float16
+
+# Extract top 5 bottleneck kernels
+uv run extract.py --top 5
+
+# Verify benchmark works
+uv run bench.py
+
+# Start autonomous optimization with any coding agent
+# Agent reads program.md and optimizes each kernel iteratively
+```
+
+The agent runs ~40 experiments per hour across all kernels, with each experiment taking ~90 seconds including correctness validation and performance measurement.
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python with Triton/CUDA C++ kernel generation  
+- **Community**: 846+ GitHub stars, active Discord community
+- **Integration**: Works with both custom models and HuggingFace transformers
+- **Benchmark compatibility**: Full KernelBench integration for standardized evaluation

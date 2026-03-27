@@ -1,0 +1,78 @@
+<GuideHeader tool="KawaiiGPT" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# KawaiiGPT
+
+KawaiiGPT is an open-source LLM gateway that accesses DeepSeek, Gemini, and Kimi-K2 through reverse-engineered Pollinations API. It provides free model access without API keys and includes prompt injection capabilities for security research.
+
+## Key Features
+
+- **Multi-LLM access** - DeepSeek, Gemini, Kimi-K2 through Pollinations API
+- **No API keys required** - Uses reverse-engineered endpoints
+- **Built-in prompt injection** - Jailbreak capabilities for red-team testing
+- **Native platform support** - Linux and Termux (Android)
+- **Rich console interface** - Styled terminal UI with ASCII art
+- **Persistent configuration** - JSON-based settings management
+
+<Callout type="info">
+KawaiiGPT is not a proprietary model — it proxies requests to existing LLMs through reverse-engineered endpoints.
+</Callout>
+
+## Installation
+
+### Linux
+```bash
+apt-get update && apt-get upgrade -y
+apt install python3 python3-pip git -y
+git clone https://github.com/MarCmcbri1982/KawaiiGPT
+cd KawaiiGPT
+python3 install.py
+python3 kawai.py
+```
+
+### Termux (Android)
+```bash
+pkg update && pkg upgrade -y
+pkg install python3 git -y
+git clone https://github.com/MarCmcbri1982/KawaiiGPT
+cd KawaiiGPT
+python3 install.py
+python3 kawai.py
+```
+
+## Basic Usage
+
+Launch the Rich-styled console menu:
+
+```python
+python3 main.py
+```
+
+Navigate the menu options:
+- `[1]` Install dependencies
+- `[2]` Start LLM chat interface  
+- `[3]` Configure settings (provider, model, API URL)
+- `[4]` View project description
+- `[0]` Exit
+
+Configuration is stored in `config.json`:
+
+```json
+{
+  "llm_provider": "pollinations",
+  "api_base_url": "",
+  "default_model": "deepseek"
+}
+```
+
+<Callout type="warning">
+Designed for security research and penetration testing. Ensure you comply with your organization's policies and applicable laws.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python 3.8+
+- **GitHub Stars**: 820
+- **Platform**: Linux/Termux native
+- **Dependencies**: requests, rich
+- **Use Case**: Red-team tools, security research, uncensored LLM access
