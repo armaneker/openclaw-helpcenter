@@ -1,0 +1,61 @@
+<GuideHeader tool="pi-autoresearch" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# pi-autoresearch
+
+pi-autoresearch is an autonomous experiment loop extension for pi, the AI coding agent. It enables pi to run continuous optimization loops: try ideas, benchmark results, keep improvements, revert regressions, and repeat automatically.
+
+## Key Features
+
+- **Autonomous optimization loops** — agent runs experiments continuously without human intervention
+- **Universal metrics support** — optimize test speed, bundle size, LLM training loss, build times, or any measurable target
+- **Git-aware experiment tracking** — each run is committed with automatic rollback on regressions
+- **Session persistence** — experiments survive restarts and context resets through `autoresearch.jsonl` and `autoresearch.md`
+- **Real-time dashboard** — live widget shows progress with expandable results table and fullscreen overlay
+- **Confidence scoring** — statistical analysis determines if improvements are significant vs. noise
+- **Branch finalization** — converts noisy experiment history into clean, reviewable branches
+
+## Installation
+
+```bash
+pi install https://github.com/davebcn87/pi-autoresearch
+```
+
+<Callout type="info">
+After installation, run `/reload` in pi to activate the extension and skills.
+</Callout>
+
+## Basic Usage
+
+Start an optimization session:
+
+```bash
+/skill:autoresearch-create
+```
+
+The agent will ask about your optimization target and create the necessary files:
+- `autoresearch.md` — session document with objectives and context
+- `autoresearch.sh` — benchmark script that outputs metrics
+- `autoresearch.jsonl` — append-only experiment log
+
+Monitor progress with keyboard shortcuts:
+- `Ctrl+X` — toggle expanded dashboard
+- `Ctrl+Shift+X` — fullscreen results overlay
+
+Convert experiments to reviewable branches:
+
+```bash
+/skill:autoresearch-finalize
+```
+
+<Callout type="tip">
+The widget shows confidence scores: ≥2.0× (green) indicates likely real improvements, while &lt;1.0× (red) suggests results within noise levels.
+</Callout>
+
+## Notable Details
+
+**License:** MIT  
+**Language:** TypeScript  
+**Community:** 2,967 GitHub stars  
+**Repository:** [davebcn87/pi-autoresearch](https://github.com/davebcn87/pi-autoresearch)
+
+The extension works with any optimization target by separating infrastructure (tools, UI) from domain knowledge (metrics, commands). This allows unlimited optimization domains while maintaining consistent experiment tracking and analysis.

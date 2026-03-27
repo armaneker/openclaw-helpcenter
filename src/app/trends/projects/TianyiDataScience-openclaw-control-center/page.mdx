@@ -1,0 +1,54 @@
+<GuideHeader tool="openclaw-control-center" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenClaw Control Center
+
+OpenClaw Control Center turns OpenClaw from a black box into a local dashboard you can see, trust, and control. Built for operators who need observability without digging through backend payloads.
+
+## Key Features
+
+- **Overview**: Health status, current state, pending decisions, and operator summaries
+- **Usage**: Token spend, subscription windows, quota consumption, and context pressure tracking
+- **Staff**: Live activity vs queued work with clear execution status
+- **Collaboration**: Parent-child handoffs and cross-session agent communication (`Main ⇄ Pandas`)
+- **Tasks**: Work chains, approvals, execution evidence, and blocked items
+- **Documents & Memory**: Source-backed workbenches scoped to active OpenClaw agents
+- **Settings**: Connection health, security risk assessment, and update status
+
+<Callout type="info">
+Ships with safety-first defaults: read-only mode, local token auth required, and mutations disabled by default.
+</Callout>
+
+## Installation
+
+```bash
+npm install
+cp .env.example .env
+npm run build
+npm test
+npm run smoke:ui
+npm run dev:ui
+```
+
+Access the dashboard at:
+- `http://127.0.0.1:4310/?section=overview&lang=en`
+- `http://127.0.0.1:4310/?section=overview&lang=zh`
+
+<Callout type="tip">
+Use `npm run dev:ui` for better cross-platform reliability, especially on Windows.
+</Callout>
+
+## Basic Usage
+
+The control center operates entirely within `control-center/` and requires no changes to your OpenClaw installation. Start with the Overview section for system health, then navigate to specific areas:
+
+- **Staff** to see who's actually working vs queued
+- **Usage** to monitor spend and quota risk
+- **Collaboration** to track work handoffs between agents
+- **Settings** to verify connections and security posture
+
+## Notable Details
+
+**License:** MIT  
+**Language:** TypeScript  
+**Community:** 2.8K GitHub stars  
+**Repository:** [TianyiDataScience/openclaw-control-center](https://github.com/TianyiDataScience/openclaw-control-center)

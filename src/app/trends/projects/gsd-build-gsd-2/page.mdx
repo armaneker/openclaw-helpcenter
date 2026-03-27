@@ -1,0 +1,64 @@
+<GuideHeader tool="gsd-2" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# GSD 2
+
+GSD 2 is a meta-prompting and context engineering system that enables coding agents to work autonomously for extended periods. It provides spec-driven development with direct TypeScript access to agent controls, context management, and execution flow.
+
+## Key Features
+
+- **Autonomous agent execution** — Run complete development cycles without losing context or getting stuck
+- **Context engineering** — Inject precise files at dispatch time with intelligent context window management
+- **Git integration** — Automatic branch management, clean commit history, and worktree isolation
+- **Cost and token tracking** — Monitor resource usage across long-running sessions
+- **Loop detection and recovery** — Detect stuck states and automatically recover from crashes
+- **Web UI and VS Code extension** — Browser interface and editor integration for project management
+- **Quality gates** — Built-in validation and compliance checks before milestone completion
+- **Skills system** — 30+ skill packs covering major frameworks, databases, and cloud platforms
+
+## Installation
+
+```bash
+npm install -g gsd-pi@latest
+```
+
+<Callout type="info">
+GSD automatically provisions a managed RTK binary on macOS, Linux, and Windows for shell command compression. Set `GSD_RTK_DISABLED=1` to disable this integration.
+</Callout>
+
+## Basic Usage
+
+Start an autonomous development session:
+
+```bash
+gsd auto
+```
+
+Run with web interface:
+
+```bash
+gsd --web
+```
+
+Quick non-interactive project initialization:
+
+```bash
+gsd auto --yolo
+```
+
+Target specific milestones for discussion:
+
+```bash
+gsd discuss
+```
+
+## Notable Details
+
+- **Language**: TypeScript
+- **License**: MIT
+- **Community**: 3.3k GitHub stars
+- **Built on**: Pi SDK for direct agent harness access
+- **Platform support**: macOS, Linux, Windows with cross-platform tooling
+
+<Callout type="tip">
+GSD v2 evolved from a viral Claude Code prompt framework into a standalone CLI with actual control over agent execution, moving beyond prompt injection to programmatic agent management.
+</Callout>

@@ -1529,7 +1529,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.2.3",
-      "blurb": null
+      "blurb": "Type4Me is a macOS voice input tool that provides real-time speech recognition using both local and cloud-based engines, with AI-powered text optimization. It enables users to dictate speech that gets transcribed and optionally processed by large language models before being typed into any application, with support for custom prompts and processing modes. All data is stored locally with no telemetry, and it includes offline recognition capabilities using SherpaOnnx for complete privacy."
     },
     {
       "full_name": "apechurch/polymarket-arbitrage-trading-bot",
@@ -1559,7 +1559,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v1.0",
-      "blurb": null
+      "blurb": "lil-agents is a macOS app that displays animated AI companion characters on your dock. It provides a terminal interface to interact with Claude, OpenAI Codex, or GitHub Copilot CLIs through clickable characters that walk across your screen. The characters are rendered using transparent HEVC video and display thinking bubbles with sound effects during AI processing."
     },
     {
       "full_name": "xiaolajiaoyyds/regplatformm",
@@ -1829,7 +1829,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Optio is a TypeScript workflow orchestration platform that automates the complete lifecycle of AI coding agents from task intake to merged pull requests. It eliminates manual intervention by automatically resuming agents on CI failures or code review feedback, handling everything from provisioning isolated Kubernetes environments to merging approved PRs. The system uses a pod-per-repo architecture with git worktree isolation and supports intake from GitHub Issues, Linear tickets, or manual task creation."
     },
     {
       "full_name": "patoles/agent-flow",

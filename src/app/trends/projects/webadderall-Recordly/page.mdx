@@ -1,0 +1,53 @@
+<GuideHeader tool="Recordly" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Recordly
+
+Recordly is an open-source screen recorder and editor built specifically for creating professional product videos, demos, and tutorials. Instead of recording raw footage and editing elsewhere, it handles the entire workflow in one Electron-based desktop application.
+
+## Key Features
+
+- **Auto-zoom detection** based on cursor activity with smooth transitions
+- **Webcam overlay bubbles** with positioning, mirroring, and zoom-reactive scaling
+- **Timeline editor** with drag-and-drop regions for zooms, trims, speed changes, and annotations
+- **Cursor enhancements** including smoothing, motion blur, click bounce, and sway effects
+- **Frame styling** with wallpapers, gradients, padding, rounded corners, and drop shadows
+- **Native capture backends** using ScreenCaptureKit (macOS) and Windows Graphics Capture (Windows)
+- **Project persistence** with `.recordly` files to save and resume editing sessions
+- **Multiple export formats** (MP4, GIF) with quality and aspect ratio controls
+
+## Installation
+
+Download prebuilt releases from the [GitHub releases page](https://github.com/webadderall/Recordly/releases).
+
+For Arch Linux users:
+```bash
+yay -S recordly-bin
+```
+
+To build from source:
+```bash
+git clone https://github.com/webadderall/Recordly.git recordly
+cd recordly
+npm install
+npm run dev
+```
+
+<Callout type="warning">
+On macOS, locally built apps may be quarantined. Remove with: `xattr -rd com.apple.quarantine /Applications/Recordly.app`
+</Callout>
+
+## Basic Usage
+
+1. Launch Recordly and select a screen or window to record
+2. Configure microphone and system audio settings
+3. Start recording, then stop to automatically open the editor
+4. Use the timeline to add zooms, adjust cursor behavior, and style the frame
+5. Export as MP4 for video or GIF for lightweight sharing
+
+<Callout type="info">
+Projects save as `.recordly` files, preserving all editor state and allowing you to resume work later.
+</Callout>
+
+## Platform Support
+
+Works on macOS 12.3+, Windows 10 Build 19041+, and modern Linux distributions. The project is written in TypeScript, has 3.2k GitHub stars, and uses AGPL 3.0 licensing.

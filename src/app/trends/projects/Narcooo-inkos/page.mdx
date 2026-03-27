@@ -1,0 +1,62 @@
+<GuideHeader tool="inkos" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Inkos
+
+Inkos is an autonomous CLI agent that writes complete novels using AI agents for writing, auditing, and revision with human review gates. It handles everything from initial drafts to multi-chapter continuity tracking.
+
+## Key Features
+
+- **Multi-agent pipeline**: 10 specialized agents (planner, writer, auditor, reviser, etc.) collaborate on each chapter
+- **Continuity management**: Maintains 7 "truth files" tracking world state, character relationships, plot hooks, and resource inventories
+- **Anti-AI detection**: Built-in rules to avoid common LLM writing patterns and maintain natural prose
+- **Style mimicry**: Analyze reference texts and extract statistical fingerprints for consistent voice
+- **Multi-model routing**: Route different agents to different LLMs (creative work to Claude, auditing to GPT-4, etc.)
+- **Fanfiction support**: Import existing works and continue seamlessly with canon/AU/OOC modes
+- **Memory system**: SQLite-backed retrieval for long-form narrative consistency
+- **Daemon mode**: Automated background writing with notification webhooks
+
+## Installation
+
+```bash
+npm i -g @actalk/inkos
+```
+
+<Callout type="info">
+Requires Node.js 20+ and an OpenAI-compatible API key (supports OpenAI, Anthropic, or custom providers).
+</Callout>
+
+## Basic Usage
+
+```bash
+# Global configuration (one-time setup)
+inkos config set-global \
+  --provider openai \
+  --base-url https://api.openai.com/v1 \
+  --api-key your-api-key \
+  --model gpt-4
+
+# Create and write your first novel
+inkos book create --title "My Novel" --genre fantasy
+inkos write next "My Novel"
+inkos status
+inkos export "My Novel" --format epub
+```
+
+For existing works:
+```bash
+inkos import chapters existing-novel.txt --book "Continued Story"
+inkos write next "Continued Story"  # Seamlessly continues from imported content
+```
+
+<Callout type="tip">
+Use `inkos plan chapter` and `inkos compose chapter` to prepare context before writing, especially for complex multi-chapter narratives.
+</Callout>
+
+## Notable Details
+
+**License**: MIT  
+**Language**: TypeScript  
+**GitHub Stars**: 2,566  
+**Community**: Active development with bilingual (English/Chinese) support and integration with OpenClaw agent framework
+
+The tool excels at maintaining narrative consistency across long-form works through its structured state management and cross-reference auditing system.
