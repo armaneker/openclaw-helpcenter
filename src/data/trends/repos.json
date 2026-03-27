@@ -3537,7 +3537,7 @@
     },
     "joewongjc/type4me": {
       "full_name": "joewongjc/type4me",
-      "description": "MacOS语音输入工具，实时识别、大模型文本优化、全本地存储",
+      "description": "MacOS语音输入法，实时识别、大模型文本优化、全本地存储",
       "language": "Swift",
       "url": "https://github.com/joewongjc/type4me",
       "first_seen": "2026-03-27",
@@ -3627,6 +3627,28 @@
       "category": "Other",
       "version": "v1.3.0",
       "blurb": "TG WS Proxy is a local SOCKS5 proxy server that accelerates Telegram Desktop by routing traffic through WebSocket connections to Telegram's data centers. It bypasses network restrictions and improves connection reliability by automatically falling back to direct TCP when WebSocket connections are blocked. The proxy intercepts Telegram traffic locally, extracts the data center ID from MTProto packets, and establishes secure WebSocket tunnels without requiring external servers."
+    },
+    "NomaDamas/k-skill": {
+      "full_name": "NomaDamas/k-skill",
+      "description": "한국인을 위한 스킬 모음집 - SRT, KTX, KBO, 카카오톡, 쿠팡, 다나와, 네이버 스토어, 당근, 한글과 컴퓨터 등등...",
+      "language": "JavaScript",
+      "url": "https://github.com/NomaDamas/k-skill",
+      "first_seen": "2026-03-27",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "Michaelliv/markit": {
+      "full_name": "Michaelliv/markit",
+      "description": "🖍️ Convert anything to markdown. Mark it.",
+      "language": "TypeScript",
+      "url": "https://github.com/Michaelliv/markit",
+      "first_seen": "2026-03-27",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.2.0"
     }
   }
 }
