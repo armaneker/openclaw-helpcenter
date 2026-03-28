@@ -3630,7 +3630,7 @@
     },
     "NomaDamas/k-skill": {
       "full_name": "NomaDamas/k-skill",
-      "description": "한국인을 위한 스킬 모음집 - SRT, KTX, KBO, 카카오톡, 쿠팡, 다나와, 네이버 스토어, 당근, 한글과 컴퓨터 등등...",
+      "description": "한국인을 위한 스킬 모음집 - SRT, KTX, KBO, 카카오톡, 한글과 컴퓨터, 미세먼지, 우편번호, 블루리본 등등...",
       "language": "JavaScript",
       "url": "https://github.com/NomaDamas/k-skill",
       "first_seen": "2026-03-27",
@@ -3730,6 +3730,17 @@
       "category": "Other",
       "version": null,
       "blurb": "OBLITERATUS is an open-source toolkit that removes refusal behaviors from large language models using abliteration techniques, which surgically eliminate internal representations responsible for content filtering without retraining. It provides a complete pipeline from identifying refusal directions in model hidden states to intervening at inference time, preserving core language capabilities while eliminating artificial gatekeeping. The project doubles as a distributed research experiment, collecting anonymous benchmark data from user runs to advance understanding of how alignment mechanisms work inside transformer architectures."
+    },
+    "larksuite/cli": {
+      "full_name": "larksuite/cli",
+      "description": "A command-line tool for Lark/Feishu Open Platform — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Meetings, and more, with 200+ commands and 19 AI Agent Skills.",
+      "language": "Go",
+      "url": "https://github.com/larksuite/cli",
+      "first_seen": "2026-03-28",
+      "has_summary": false,
+      "topics": [],
+      "category": "DevTools",
+      "version": "v1.0.0"
     }
   }
 }
