@@ -1,0 +1,76 @@
+<GuideHeader tool="ClawTeam-OpenClaw" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# ClawTeam-OpenClaw
+
+ClawTeam-OpenClaw is a multi-agent swarm coordination framework that enables CLI coding agents to self-organize into teams. This fork integrates deeply with OpenClaw as the default agent, providing session isolation and production-hardened spawn backends.
+
+## Key Features
+
+- **Agent-driven coordination** - Agents spawn other agents, split work, and communicate autonomously
+- **Multi-agent support** - Works with OpenClaw, Claude Code, Codex, nanobot, Cursor, and custom CLI agents
+- **Git worktree isolation** - Each agent gets its own branch and workspace
+- **tmux session management** - Visual monitoring of all agents in a tiled interface
+- **File and P2P transport** - Communication via filesystem or ZeroMQ
+- **Web dashboard** - Optional web UI for team monitoring
+
+<Callout type="info">
+This is a fork of HKUDS/ClawTeam specifically adapted for OpenClaw integration. Don't install the upstream version from PyPI.
+</Callout>
+
+## Installation
+
+**Prerequisites**: Python 3.10+, tmux, and a CLI coding agent
+
+```bash
+git clone https://github.com/win4r/ClawTeam-OpenClaw.git
+cd ClawTeam-OpenClaw
+pip install -e .
+
+# Create symlink for spawned agents
+mkdir -p ~/bin
+ln -sf "$(which clawteam)" ~/bin/clawteam
+```
+
+For OpenClaw users, install the skill and configure exec approvals:
+
+```bash
+# Install skill
+mkdir -p ~/.openclaw/workspace/skills/clawteam
+cp skills/openclaw/SKILL.md ~/.openclaw/workspace/skills/clawteam/SKILL.md
+
+# Configure approvals
+openclaw approvals allowlist add --agent "*" "*/clawteam"
+```
+
+## Basic Usage
+
+**Agent-driven approach** (recommended):
+```bash
+# Just prompt your agent:
+# "Build a web app. Use clawteam to split the work across multiple agents."
+```
+
+**Manual coordination**:
+```bash
+# Create team
+clawteam team spawn-team my-team -d "Build auth module" -n leader
+
+# Spawn workers
+clawteam spawn --team my-team --agent-name alice --task "Implement OAuth2"
+clawteam spawn --team my-team --agent-name bob --task "Write tests"
+
+# Monitor progress
+clawteam board attach my-team
+```
+
+<Callout type="tip">
+Each spawned agent gets its own git worktree and tmux window, enabling true parallel development without conflicts.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 832 GitHub stars
+- **Transport options**: Filesystem (default) or ZeroMQ P2P
+- **Version**: 0.3.0 with OpenClaw adaptations

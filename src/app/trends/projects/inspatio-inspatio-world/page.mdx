@@ -1,0 +1,69 @@
+<GuideHeader tool="inspatio-world" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# InSpatio-World
+
+InSpatio-World is a video-to-video synthesis model that generates novel camera viewpoints from input videos. It combines depth estimation, video captioning, and diffusion models to enable controllable camera trajectory synthesis.
+
+## Key Features
+
+- Novel view synthesis from single input videos
+- Controllable camera trajectories (orbit, dolly zoom, custom paths)
+- Two model sizes: 14B and 1.3B parameters
+- Three-stage pipeline: captioning → depth estimation → video generation
+- Multi-GPU inference support
+
+## Installation
+
+<Callout type="warning">
+Requires Python 3.10 and CUDA 12.1
+</Callout>
+
+```bash
+# Create environment
+conda env create -f environment.yml
+conda activate inspatio_world
+
+# Install flash attention
+pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
+
+# Download model checkpoints
+mkdir -p checkpoints
+wget -O checkpoints/InSpatio-World/InSpatio-World.safetensors \
+  "https://huggingface.co/inspatio/world/resolve/main/InSpatio-World.safetensors"
+
+# Download additional models (DA3, Florence-2, Wan models)
+huggingface-cli download Wan-AI/Wan2.1-I2V-14B-480P --local-dir checkpoints/Wan2.1-I2V-14B-480P
+huggingface-cli download microsoft/Florence-2-large --local-dir checkpoints/Florence-2-large
+```
+
+## Basic Usage
+
+```bash
+# Place input videos in a directory
+mkdir -p my_videos
+cp your_video.mp4 my_videos/
+
+# Run full pipeline with circular orbit trajectory
+bash run_test_pipeline.sh \
+  --input_dir ./my_videos \
+  --traj_txt_path ./traj/x_y_circle_cycle.txt
+
+# Use lighter 1.3B model
+bash run_test_pipeline.sh \
+  --input_dir ./my_videos \
+  --traj_txt_path ./traj/zoom_out_in.txt \
+  --config_path ./configs/inference_1.3b.yaml \
+  --checkpoint_path ./checkpoints/InSpatio-World-1.3B/InSpatio-World-1.3B.safetensors
+```
+
+<Callout type="tip">
+Trajectory files define camera motion: `x_y_circle_cycle.txt` for orbital motion, `zoom_out_in.txt` for dolly zoom effects.
+</Callout>
+
+## Notable Details
+
+- **Language**: Python
+- **License**: Apache 2.0 
+- **Community**: 596 GitHub stars
+- **Models**: Available on HuggingFace as `inspatio/world`
+- **Architecture**: Uses STAR + Joint DMD inference with causal attention and KV caching

@@ -1,0 +1,62 @@
+<GuideHeader tool="Netryx-OpenSource-Next-Gen-Street-Level-Geolocation" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Netryx Street-Level Geolocation
+
+Netryx is a locally-hosted geolocation engine that identifies GPS coordinates from street-level photos using computer vision. It replicates commercial geolocation platforms but runs entirely on your hardware.
+
+<Callout type="warning">
+This repository has been superseded. Use the [Netryx Astra V2](https://github.com/sparkyniner/Netryx-Astra-V2-Geolocation-Tool) repository instead.
+</Callout>
+
+## Key Features
+
+- **Sub-50m accuracy** - Precise coordinate identification without landmarks
+- **Local-first operation** - No data leaves your machine
+- **Three-stage pipeline** - CosPlace for global retrieval, ALIKED/DISK for feature extraction, LightGlue for matching
+- **Multi-FOV analysis** - Tests multiple field-of-view crops for zoom mismatches
+- **Ultra Mode** - LoFTR dense matching for difficult images (night, blur, low contrast)
+- **Street View integration** - Matches against systematically crawled panoramas
+
+## Installation
+
+```bash
+git clone https://github.com/sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation.git
+cd Netryx-OpenSource-Next-Gen-Street-Level-Geolocation
+
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+pip install git+https://github.com/cvg/LightGlue.git
+pip install kornia  # Optional: for Ultra Mode
+```
+
+<Callout type="info">
+Requires 4GB+ GPU VRAM (CUDA/MPS) or 8GB+ RAM for CPU operation. macOS users may need `brew install python-tk@3.11` for GUI support.
+</Callout>
+
+## Basic Usage
+
+Launch the GUI application:
+
+```bash
+python test_super.py
+```
+
+The workflow involves:
+1. **Index creation** - Crawl Street View panoramas for your target area
+2. **Image upload** - Submit your street-level photo
+3. **Coordinate extraction** - Get GPS coordinates with confidence scores
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 537 GitHub stars
+- **Hardware requirements**: Works on NVIDIA GPU (CUDA), Apple Silicon (MPS), or CPU
+- **Accuracy**: Achieves sub-50 meter precision through geometric verification
+- **Data source**: Street View panoramas, not web image databases
+
+<Callout type="tip">
+The system processes 300-500 candidates in 2-5 minutes depending on hardware. For difficult images, Ultra Mode with LoFTR provides better results at the cost of increased processing time.
+</Callout>

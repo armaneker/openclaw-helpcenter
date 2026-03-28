@@ -2433,7 +2433,7 @@
       "language": "Python",
       "url": "https://github.com/inspatio/inspatio-world",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "InSpatio-World is a video-to-video generation model that performs novel view synthesis using camera trajectory control. It takes input videos and generates new viewpoints by following specified camera paths, using a multi-step pipeline that combines video captioning, depth estimation, and diffusion-based rendering. The system offers both 14B and 1.3B parameter variants and integrates multiple pre-trained models including Florence-2 for captioning and Depth-Anything-3 for depth estimation."
@@ -2444,7 +2444,7 @@
       "language": "Python",
       "url": "https://github.com/win4r/ClawTeam-OpenClaw",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "ai-agents",
         "clawdbot",
@@ -2465,7 +2465,7 @@
       "language": "Python",
       "url": "https://github.com/sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "Netryx is an open-source, locally-hosted geolocation engine that identifies GPS coordinates of street-level photographs using computer vision models. It matches uploaded photos against systematically crawled street-view panoramas rather than web images, enabling geolocation of any street corner regardless of internet presence. The system achieves sub-50m accuracy through a three-stage pipeline combining global visual place recognition, local feature matching, and geometric verification."
@@ -2476,7 +2476,7 @@
       "language": "Unknown",
       "url": "https://github.com/olelehmann100kMRR/autoresearch-skill",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "This is a GitHub repository for an autoresearch skill with no available documentation or clear language identification. Without a README or description, its purpose and functionality cannot be determined from the provided information. The 563 stars suggest community interest, but the lack of documentation makes evaluation impossible."
@@ -2487,7 +2487,7 @@
       "language": "Unknown",
       "url": "https://github.com/naver-ai/seoul-world-model",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "blurb": "Seoul World Model is a world simulation system trained on data from the real city of Seoul. It enables grounding of simulation models in actual urban environments rather than synthetic or simplified scenarios. The project is still in development with model checkpoints and training data planned for release after internal review."
     },
@@ -3728,7 +3728,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "OBLITERATUS is an open-source toolkit that removes refusal behaviors from large language models using abliteration techniques, which surgically eliminate internal representations responsible for content filtering without retraining. It provides a complete pipeline from identifying refusal directions in model hidden states to intervening at inference time, preserving core language capabilities while eliminating artificial gatekeeping. The project doubles as a distributed research experiment, collecting anonymous benchmark data from user runs to advance understanding of how alignment mechanisms work inside transformer architectures."
     }
   }
 }

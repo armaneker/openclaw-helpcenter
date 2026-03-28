@@ -641,7 +641,7 @@
       "delta_week": 331,
       "delta_month": 397,
       "delta_year": 397,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": null,
       "blurb": "ClawTeam-OpenClaw is a multi-agent swarm coordination framework that enables CLI coding agents to self-organize into teams for collaborative software development. It allows agents to autonomously spawn workers, distribute tasks, communicate through message passing, and merge results without human orchestration, using filesystem-based coordination and git worktrees for isolation. The framework supports any CLI agent but defaults to OpenClaw integration with auto-injected coordination commands."
@@ -1649,7 +1649,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "OBLITERATUS is an open-source toolkit that removes refusal behaviors from large language models using abliteration techniques, which surgically eliminate internal representations responsible for content filtering without retraining. It provides a complete pipeline from identifying refusal directions in model hidden states to intervening at inference time, preserving core language capabilities while eliminating artificial gatekeeping. The project doubles as a distributed research experiment, collecting anonymous benchmark data from user runs to advance understanding of how alignment mechanisms work inside transformer architectures."
     },
     {
       "full_name": "facebookresearch/HyperAgents",
