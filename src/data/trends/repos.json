@@ -1793,7 +1793,7 @@
     "wanshuiyin/Auto-claude-code-research-in-sleep": {
       "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.",
-      "language": "TeX",
+      "language": "Python",
       "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
       "first_seen": "2026-03-22",
       "has_summary": true,
@@ -3718,6 +3718,17 @@
       "category": "Other",
       "version": null,
       "blurb": "Diffity is a GitHub-style diff viewer and code review tool that runs locally in your browser. It integrates with AI coding agents like Claude Code and Cursor to provide automated code reviews with inline comments, and can compare any git refs (branches, commits, tags) or working tree changes. The tool includes slash commands that let AI agents directly open diffs and leave structured review comments with severity tags."
+    },
+    "elder-plinius/OBLITERATUS": {
+      "full_name": "elder-plinius/OBLITERATUS",
+      "description": "OBLITERATE THE CHAINS THAT BIND YOU",
+      "language": "Python",
+      "url": "https://github.com/elder-plinius/OBLITERATUS",
+      "first_seen": "2026-03-28",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
