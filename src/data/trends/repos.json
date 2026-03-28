@@ -2568,7 +2568,7 @@
       "language": "Python",
       "url": "https://github.com/Nunchi-trade/auto-researchtrading",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "Auto-researchtrading is an AI-driven system that autonomously discovers trading strategies for Hyperliquid perpetual futures by iteratively modifying a single strategy file and backtesting improvements. It uses an agent that proposes changes, runs backtests against historical data, and keeps only modifications that improve performance metrics like Sharpe ratio. The system achieved a 7.9x improvement over 103 experiments, evolving from a baseline Sharpe ratio of 2.7 to 21.4 with 0.3% max drawdown."
@@ -2579,7 +2579,7 @@
       "language": "Python",
       "url": "https://github.com/Kaleighc793/freqtrade-bot",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "algorithmic-trading",
         "backtesting",
@@ -2610,7 +2610,7 @@
       "language": "TypeScript",
       "url": "https://github.com/HenryXiaoYang/wechat-openclaw-channel",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "codebuddy",
         "openclaw",
@@ -2628,7 +2628,7 @@
       "language": "TypeScript",
       "url": "https://github.com/ethanjyx/OpenBrand",
       "first_seen": "2026-03-23",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "blurb": "OpenBrand is a TypeScript tool that extracts brand assets (logos, colors, backdrop images, and names) from any website URL. It serves as an open-source alternative to Brand.dev for developers who need to programmatically gather brand materials for design systems, competitive analysis, or marketing workflows. The tool is available as an API, npm package, MCP server, and self-hostable web application with no environment variables required."
@@ -3752,7 +3752,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "TRIBE v2 is a multimodal deep learning model that predicts fMRI brain responses to naturalistic stimuli including video, audio, and text. Researchers use it for computational neuroscience applications to understand how the brain processes multimodal information without requiring actual brain scans. The model combines state-of-the-art encoders (LLaMA 3.2, V-JEPA2, Wav2Vec-BERT) and outputs predictions mapped to a standardized cortical surface with ~20k vertices."
     },
     "open-pencil/open-pencil": {
       "full_name": "open-pencil/open-pencil",
@@ -3763,7 +3764,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.10.0"
+      "version": "v0.10.0",
+      "blurb": "OpenPencil is an open-source design editor that serves as a Figma alternative with native AI integration. It opens `.fig` and `.pen` files, provides AI-powered design generation through chat commands, and includes real-time collaboration without requiring servers or accounts. The project ships as both a desktop app and a headless Vue SDK for building custom editors, plus a CLI for programmatic file manipulation and export."
     },
     "mauriceboe/TREK": {
       "full_name": "mauriceboe/TREK",
@@ -3793,7 +3795,8 @@
         "webapplication"
       ],
       "category": "Other",
-      "version": "v2.6.2"
+      "version": "v2.6.2",
+      "blurb": "TREK is a self-hosted travel planning application built in TypeScript that provides real-time collaborative trip organization. It offers comprehensive travel management features including interactive maps, budget tracking, packing lists, and booking management, with PWA support for mobile use and offline functionality. The project includes SSO integration and modular addons, positioning itself as an open-source alternative to commercial travel planning services."
     }
   }
 }

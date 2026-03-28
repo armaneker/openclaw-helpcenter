@@ -1,0 +1,92 @@
+<GuideHeader tool="auto-researchtrading" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Nunchi Auto-ResearchTrading
+
+An AI agent that autonomously evolves trading strategies by modifying a single Python file, backtesting changes against historical Hyperliquid perpetual futures data, and keeping only improvements. Uses Karpathy's autoresearch pattern to discover profitable strategies through iterative experimentation.
+
+## Key Features
+
+- **Autonomous strategy evolution** — Agent modifies `strategy.py`, backtests, and keeps improvements
+- **Zero human intervention** — 103 experiments run without manual input
+- **Proven results** — Improved baseline Sharpe from 2.7 to 21.4 over validation period
+- **Constrained search space** — Only one file editable, preventing overfitting
+- **Git-based experiment tracking** — Each commit represents one atomic experiment
+- **Multiple data sources** — Hyperliquid perps with funding rates, volume, OHLC data
+
+<Callout type="info">
+The system achieved 20.6 Sharpe with 0.3% max drawdown on BTC/ETH/SOL futures, starting from a simple momentum baseline.
+</Callout>
+
+## Installation
+
+Requires Python 3.10+ and [uv](https://docs.astral.sh/uv/) package manager.
+
+```bash
+# Install uv if needed
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone and setup
+git clone https://github.com/Nunchi-trade/auto-researchtrading.git
+cd auto-researchtrading
+uv run prepare.py  # Downloads historical data (~1 min)
+```
+
+No API keys required — uses public CryptoCompare and Hyperliquid endpoints.
+
+## Basic Usage
+
+Run a backtest on current strategy:
+
+```bash
+uv run backtest.py
+```
+
+Manual experiment loop:
+
+```bash
+git checkout -b autotrader/experiment1
+# Edit strategy.py with your changes
+uv run backtest.py
+# If score improved: git commit, else: git reset --hard HEAD~1
+```
+
+Autonomous loop using Claude Code:
+
+```bash
+claude
+/autoresearch  # Runs indefinitely until interrupted
+```
+
+<Callout type="warning">
+Only edit `strategy.py` — modifying other files breaks the experiment constraints and invalidates comparisons.
+</Callout>
+
+## Strategy Interface
+
+Implement a `Strategy` class with `on_bar()` method:
+
+```python
+class Strategy:
+    def on_bar(self, bar_data: dict, portfolio: PortfolioState) -> list[Signal]:
+        """Called once per hourly bar across all symbols"""
+        signals = []
+        
+        for symbol in ['BTC', 'ETH', 'SOL']:
+            history = bar_data[symbol].history  # Last 500 bars DataFrame
+            current_price = bar_data[symbol].close
+            
+            # Your strategy logic here
+            if some_condition:
+                signals.append(Signal(symbol, target_position=10000))  # $10k long
+                
+        return signals
+```
+
+## Notable Details
+
+- **Language**: Python with numpy, pandas, scipy
+- **License**: MIT (inferred from README badges)
+- **Community**: 652 GitHub stars
+- **Validation period**: July 2024 - March 2025
+- **Performance**: 7.9x Sharpe improvement over 103 autonomous experiments
+- **Scoring**: Sharpe ratio with drawdown and turnover penalties

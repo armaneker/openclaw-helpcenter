@@ -1,0 +1,54 @@
+<GuideHeader tool="wechat-openclaw-channel" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# WeChat OpenClaw Channel
+
+A TypeScript plugin that connects WeChat to OpenClaw through dual authentication modes. Extracts the channel functionality from WeChat's OpenClaw wrapper implementation.
+
+## Key Features
+
+- **Dual login modes**: QClaw and WorkBuddy OAuth support
+- **WebSocket gateway**: Real-time message handling via multiple connection types
+- **Device binding**: Link WeChat conversations to OpenClaw agents
+- **Interactive CLI**: Simple commands for login, logout, and binding
+- **Unified configuration**: Centralized credential storage in OpenClaw config
+
+## Installation
+
+```bash
+openclaw plugins install @henryxiaoyang/wechat-openclaw-channel
+```
+
+## Basic Usage
+
+```bash
+# Interactive login with mode selection
+openclaw wechat login
+
+# Start the gateway
+openclaw gateway restart
+
+# Bind device (first-time setup)
+openclaw wechat bind
+```
+
+<Callout type="info">
+The bind command returns a WeChat link. Open it in WeChat to complete device pairing.
+</Callout>
+
+Login credentials are stored in `~/.openclaw/openclaw.json` under the `channels.wechat-openclaw-channel` section. You can switch between QClaw and WorkBuddy modes by updating the `loginMode` field.
+
+```bash
+# Clear login state
+openclaw wechat logout
+```
+
+<Callout type="tip">
+The plugin supports both production and test environments through the `environment` configuration field.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: TypeScript
+- **Community**: 624 GitHub stars
+- **Integration**: Works as OpenClaw plugin with WebSocket message adapters

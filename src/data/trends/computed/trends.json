@@ -1559,7 +1559,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "TRIBE v2 is a multimodal deep learning model that predicts fMRI brain responses to naturalistic stimuli including video, audio, and text. Researchers use it for computational neuroscience applications to understand how the brain processes multimodal information without requiring actual brain scans. The model combines state-of-the-art encoders (LLaMA 3.2, V-JEPA2, Wav2Vec-BERT) and outputs predictions mapped to a standardized cortical surface with ~20k vertices."
     },
     {
       "full_name": "microsoft/RustTraining",
@@ -1634,7 +1634,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v0.10.0",
-      "blurb": null
+      "blurb": "OpenPencil is an open-source design editor that serves as a Figma alternative with native AI integration. It opens `.fig` and `.pen` files, provides AI-powered design generation through chat commands, and includes real-time collaboration without requiring servers or accounts. The project ships as both a desktop app and a headless Vue SDK for building custom editors, plus a CLI for programmatic file manipulation and export."
     },
     {
       "full_name": "facebookresearch/HyperAgents",
@@ -1709,7 +1709,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v2.6.2",
-      "blurb": null
+      "blurb": "TREK is a self-hosted travel planning application built in TypeScript that provides real-time collaborative trip organization. It offers comprehensive travel management features including interactive maps, budget tracking, packing lists, and booking management, with PWA support for mobile use and offline functionality. The project includes SSO integration and modular addons, positioning itself as an open-source alternative to commercial travel planning services."
     },
     {
       "full_name": "getcompanion-ai/feynman",

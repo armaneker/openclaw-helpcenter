@@ -1,0 +1,59 @@
+<GuideHeader tool="OpenBrand" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenBrand
+
+OpenBrand extracts brand assets from any website URL, serving as an open source alternative to Brand.dev. It pulls logos, colors, backdrop images, and brand names from web pages automatically.
+
+## Key Features
+
+- **Logo extraction** — favicons, apple-touch-icons, header logos, inline SVGs with dimension detection
+- **Color palette** — theme colors from meta tags, manifest files, and dominant logo colors  
+- **Backdrop images** — og:image, CSS backgrounds, hero banners
+- **Brand name detection** — from og:site_name, application-name, logo alt text
+- **Multiple interfaces** — REST API, npm package, MCP server, agent skill
+- **Self-hostable** — runs locally without external dependencies
+
+## Installation
+
+### As npm package (server-side)
+```bash
+npm add openbrand
+```
+
+### As MCP server
+```bash
+claude mcp add --transport stdio openbrand -- npx -y openbrand-mcp
+```
+
+### Self-hosted web app
+```bash
+git clone https://github.com/ethanjyx/openbrand.git
+cd openbrand && bun install && bun dev
+```
+
+## Basic Usage
+
+```typescript
+import { extractBrandAssets } from "openbrand";
+
+const result = await extractBrandAssets("https://stripe.com");
+if (result.ok) {
+  console.log(result.data.brand_name);  // "Stripe"
+  console.log(result.data.logos);       // LogoAsset[]
+  console.log(result.data.colors);      // ColorAsset[]
+} else {
+  console.error(result.error.message);
+}
+```
+
+<Callout type="info">
+The npm package runs extraction locally. For hosted API access, get a free key from [openbrand.sh/dashboard](https://openbrand.sh/dashboard).
+</Callout>
+
+## Notable Details
+
+**License:** MIT  
+**Language:** TypeScript  
+**Community:** 628+ GitHub stars  
+**Stack:** Next.js, Cheerio, Sharp  
+**Repository:** [ethanjyx/OpenBrand](https://github.com/ethanjyx/OpenBrand)
