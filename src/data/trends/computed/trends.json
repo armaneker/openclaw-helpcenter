@@ -371,7 +371,7 @@
       "delta_week": 738,
       "delta_month": 766,
       "delta_year": 766,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": null,
       "blurb": "claude-peers-mcp is an MCP server that enables multiple Claude Code instances running on the same machine to discover and communicate with each other in real-time. It allows Claude instances to send messages across different projects/directories, list other active peers, and share summaries of what they're working on through a local broker daemon. Messages arrive instantly via Claude's channel protocol, making it useful for coordinating work across multiple concurrent Claude sessions."
@@ -446,7 +446,7 @@
       "delta_week": 630,
       "delta_month": 676,
       "delta_year": 676,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v1.0.0",
       "blurb": "codex-console is an integrated control panel for OpenAI account management that handles registration, login, token extraction, and batch processing operations. It addresses recent breaking changes in OpenAI's registration pipeline, including Sentinel POW solving and updated authentication flows that were causing existing tools to fail. This is a maintained fork of cnlimiter/codex-manager with compatibility fixes for current OpenAI registration requirements."
@@ -1484,7 +1484,7 @@
       "has_summary": false,
       "category": "DevTools",
       "version": "v1.0.0",
-      "blurb": null
+      "blurb": "DingTalk Workspace CLI (dws) is an official cross-platform command-line tool that unifies DingTalk's full product suite including contacts, calendar, tasks, attendance, and smart sheets into a single interface. It's designed for both human users who want to avoid writing API calls and AI agents that need structured JSON responses to interact with DingTalk services. The tool is currently in a beta phase requiring enterprise admin authorization and whitelist approval through DingTalk's co-creation group."
     },
     {
       "full_name": "amitshekhariitbhu/ai-engineering-interview-questions",
@@ -1529,7 +1529,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "WeWrite is a comprehensive AI workflow system designed specifically for Chinese WeChat public account article creation, built as a skill for Claude Code. It automates the entire content pipeline from trending topic extraction (Weibo, Toutiao, Baidu) through SEO optimization, AI writing, visual generation, to final publishing in WeChat's draft system. The system includes client-specific style configuration, multiple layout themes, and analytics feedback loops for continuous improvement."
     },
     {
       "full_name": "Michaelliv/markit",
@@ -1724,7 +1724,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v2.6.1",
-      "blurb": null
+      "blurb": "NOMAD is a self-hosted travel planning application built in TypeScript that provides collaborative trip organization with interactive maps, budgeting, and itinerary management. It enables real-time collaboration between multiple users through WebSocket synchronization, includes PWA support for mobile usage, and integrates with various services like Google Places for location data and OIDC providers for authentication. The application is designed as a complete travel management suite with features ranging from packing lists and document storage to route optimization and offline functionality."
     },
     {
       "full_name": "getcompanion-ai/feynman",
@@ -1844,7 +1844,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Diffity is a GitHub-style diff viewer and code review tool that runs locally in your browser. It integrates with AI coding agents like Claude Code and Cursor to provide automated code reviews with inline comments, and can compare any git refs (branches, commits, tags) or working tree changes. The tool includes slash commands that let AI agents directly open diffs and leave structured review comments with severity tags."
     }
   ]
 }

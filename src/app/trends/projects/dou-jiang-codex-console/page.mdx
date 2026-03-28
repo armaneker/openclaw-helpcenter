@@ -1,0 +1,77 @@
+<GuideHeader tool="codex-console" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# codex-console
+
+codex-console is an integrated console for OpenAI account management, providing automated registration, login, and token management. It's a maintained fork of cnlimiter/codex-manager with fixes for current OpenAI registration workflows.
+
+## Key Features
+
+- Web UI for batch account registration and management
+- Multiple email service integrations for verification
+- SQLite and PostgreSQL database support
+- Automated subscription management and card binding
+- Real-time logging and data export/import
+- Cross-platform executable packaging
+- Docker deployment support
+
+<Callout type="info">
+This project specifically addresses recent OpenAI registration flow changes, including Sentinel POW solving and updated login workflows.
+</Callout>
+
+## Installation
+
+```bash
+# Using uv (recommended)
+uv sync
+
+# Or using pip
+pip install -r requirements.txt
+```
+
+## Basic Usage
+
+Start the web interface:
+
+```bash
+# Default startup (127.0.0.1:8000)
+python webui.py
+
+# Custom host and port
+python webui.py --host 0.0.0.0 --port 8080 --access-password mypassword
+```
+
+Access the web UI at `http://127.0.0.1:8000`
+
+For Docker deployment:
+
+```bash
+docker-compose up -d
+```
+
+<Callout type="tip">
+Use the `--access-password` parameter to set a custom web UI password that overrides database settings.
+</Callout>
+
+## Configuration
+
+Copy `.env.example` to `.env` and configure:
+
+```bash
+APP_HOST=0.0.0.0
+APP_PORT=8000
+APP_ACCESS_PASSWORD=admin123
+APP_DATABASE_URL=data/database.db
+```
+
+For PostgreSQL:
+```bash
+export APP_DATABASE_URL="postgresql://user:password@host:5432/dbname"
+```
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** Python 3.10+
+- **Community:** 1,142 stars, active QQ group (291638849) and Telegram channel
+- **Executable packaging:** Supports Windows/Linux/macOS builds via PyInstaller
+- **Disclaimer:** Educational and research purposes only, users assume responsibility for compliance

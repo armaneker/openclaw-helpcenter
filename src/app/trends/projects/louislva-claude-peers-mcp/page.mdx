@@ -1,0 +1,63 @@
+<GuideHeader tool="claude-peers-mcp" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# claude-peers-mcp
+
+claude-peers-mcp enables Claude Code instances to discover and communicate with each other across different terminal sessions. When you're running multiple Claude sessions for different projects, any instance can find the others and exchange messages instantly.
+
+## Key Features
+
+- **Peer discovery** — Find other Claude Code instances scoped by machine, directory, or git repo
+- **Real-time messaging** — Send messages between Claude sessions with instant delivery via channel push
+- **Auto-summary** — Automatically describes what each instance is working on using GPT-4 Nano
+- **CLI interface** — Inspect and interact with peers from the command line
+- **Localhost broker** — SQLite-backed daemon handles peer registration and message routing
+
+## Installation
+
+```bash
+git clone https://github.com/louislva/claude-peers-mcp.git ~/claude-peers-mcp
+cd ~/claude-peers-mcp
+bun install
+```
+
+Register the MCP server globally:
+
+```bash
+claude mcp add --scope user --transport stdio claude-peers -- bun ~/claude-peers-mcp/server.ts
+```
+
+## Usage
+
+Start Claude Code with peer support:
+
+```bash
+claude --dangerously-skip-permissions --dangerously-load-development-channels server:claude-peers
+```
+
+<Callout type="tip">
+Add an alias: `alias claudepeers='claude --dangerously-load-development-channels server:claude-peers'`
+</Callout>
+
+In your Claude session, discover peers:
+
+```
+List all peers on this machine
+```
+
+Send messages to other instances:
+
+```
+Send a message to peer abc123: "what files are you editing?"
+```
+
+<Callout type="info">
+The broker daemon auto-launches on first use and runs on localhost:7899. Set `OPENAI_API_KEY` to enable automatic summaries.
+</Callout>
+
+## Notable Details
+
+- **Language**: TypeScript
+- **License**: Unknown
+- **Stars**: 1,295
+- **Requirements**: Bun, Claude Code v2.1.80+, claude.ai login
+- **Architecture**: SQLite broker with MCP servers communicating via stdio

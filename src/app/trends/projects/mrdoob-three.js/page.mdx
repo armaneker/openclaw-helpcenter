@@ -1,0 +1,70 @@
+<GuideHeader tool="three.js" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# three.js
+
+Three.js is a cross-browser JavaScript library for creating and displaying 3D graphics in web browsers. It provides an abstraction layer over WebGL, WebGPU, and other rendering technologies to simplify 3D development.
+
+## Key Features
+
+- WebGL and WebGPU renderers with SVG and CSS3D renderer addons
+- Support for VR/AR experiences through WebXR
+- Built-in geometry primitives, materials, and lighting systems
+- Animation and physics integration capabilities
+- Extensive ecosystem with loaders for popular 3D formats
+- Cross-browser compatibility with lightweight footprint
+
+## Installation
+
+```bash
+npm install three
+```
+
+Or include via CDN:
+
+```html
+&lt;script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@latest/build/three.module.js"
+  }
+}
+</script>
+```
+
+## Basic Usage
+
+```javascript
+import * as THREE from 'three';
+
+const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
+camera.position.z = 1;
+
+const scene = new THREE.Scene();
+
+const geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
+const material = new THREE.MeshNormalMaterial();
+const mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setAnimationLoop(animate);
+document.body.appendChild(renderer.domElement);
+
+function animate(time) {
+    mesh.rotation.x = time / 2000;
+    mesh.rotation.y = time / 1000;
+    renderer.render(scene, camera);
+}
+```
+
+<Callout type="tip">
+The repository is ~2GB when cloned fully. Use `git clone --depth=1` to get just the latest version.
+</Callout>
+
+## Project Details
+
+- **License**: MIT
+- **Language**: JavaScript  
+- **Community**: 111k+ GitHub stars, active Discord community
+- **Ecosystem**: Extensive examples gallery and comprehensive documentation

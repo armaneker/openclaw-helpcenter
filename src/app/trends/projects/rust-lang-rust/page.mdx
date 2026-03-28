@@ -1,0 +1,63 @@
+<GuideHeader tool="rust" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Rust Programming Language
+
+Rust is a systems programming language focused on safety, speed, and concurrency. It prevents common programming errors like null pointer dereferences and buffer overflows through its ownership system and type checker.
+
+## Key Features
+
+- **Memory safety** without garbage collection through ownership and borrowing
+- **Zero-cost abstractions** that compile to efficient machine code
+- **Thread safety** enforced at compile time
+- **Pattern matching** and algebraic data types
+- **Trait system** for code reuse and polymorphism
+- **Cargo** package manager and build system
+- **Cross-platform** support for embedded to server environments
+
+## Installation
+
+Install Rust using rustup (recommended):
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
+```
+
+<Callout type="tip">
+rustup manages Rust toolchains, making it easy to switch between stable, beta, and nightly releases.
+</Callout>
+
+## Basic Usage
+
+Create a new project and run it:
+
+```bash
+cargo new hello_world
+cd hello_world
+cargo run
+```
+
+Example Rust code:
+
+```rust
+fn main() {
+    let numbers = vec![1, 2, 3, 4, 5];
+    let doubled: Vec&lt;i32> = numbers
+        .iter()
+        .map(|x| x * 2)
+        .collect();
+    
+    println!("Doubled: {:?}", doubled);
+}
+```
+
+<Callout type="info">
+Rust's compiler provides detailed error messages and suggestions, making it easier to fix issues during development.
+</Callout>
+
+## Notable Details
+
+- **License**: Apache 2.0 and MIT
+- **Language**: Rust (self-hosting compiler)
+- **Community**: 111k+ GitHub stars, active forums and Discord
+- **Governance**: Managed by the Rust Foundation with RFC process for language changes
