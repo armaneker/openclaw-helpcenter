@@ -1,0 +1,73 @@
+<GuideHeader tool="opencode-claude-auth" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenCode Claude Auth
+
+An OpenCode plugin that automatically uses your existing Claude Code credentials for Anthropic API access. No separate API keys or logins required.
+
+## Key Features
+
+- **Automatic credential detection** — reads OAuth tokens from macOS Keychain or `~/.claude/.credentials.json`
+- **Multiple account support** — detects and switches between Claude Code accounts on macOS
+- **Background token refresh** — handles token expiry automatically via Claude CLI
+- **Zero configuration** — works immediately after installation if Claude Code is authenticated
+- **Fallback auth** — gracefully falls back to standard API key auth when needed
+
+## Installation
+
+Add the plugin to your OpenCode configuration:
+
+```json
+{
+  "plugin": ["opencode-claude-auth"]
+}
+```
+
+<Callout type="info">
+OpenCode automatically installs npm plugins at startup — no manual `npm install` required.
+</Callout>
+
+## Prerequisites
+
+- Claude Code installed and authenticated (run `claude` at least once)
+- OpenCode installed
+- macOS preferred (uses Keychain), but Linux/Windows work via credentials file
+
+## Basic Usage
+
+The plugin works automatically once installed. It intercepts Anthropic API requests and injects your Claude Code credentials:
+
+```bash
+# Just run OpenCode — auth happens transparently
+opencode
+
+# Switch between multiple Claude accounts (macOS only)
+opencode auth login
+```
+
+<Callout type="tip">
+The plugin supports 15+ Claude models including claude-sonnet-4-6, claude-opus-4-6, and claude-haiku-4-5.
+</Callout>
+
+## Troubleshooting
+
+Enable debug logging for auth issues:
+
+```bash
+export CLAUDE_AUTH_DEBUG=1
+# Logs written to ~/.local/share/opencode/claude-auth-debug.log
+# Secrets are automatically redacted
+```
+
+For 1M context on Claude Max accounts:
+
+```bash
+export ANTHROPIC_ENABLE_1M_CONTEXT=true
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: TypeScript  
+- **Community**: 552 GitHub stars
+- **Platform support**: macOS (Keychain), Linux/Windows (credential files)
+- **Credential refresh**: Automatic every 5 minutes with 30-second cache TTL

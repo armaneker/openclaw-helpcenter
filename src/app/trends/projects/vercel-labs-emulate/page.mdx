@@ -1,0 +1,88 @@
+<GuideHeader tool="emulate" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Emulate
+
+Emulate provides local drop-in replacement services for CI and no-network sandboxes. It delivers fully stateful, production-fidelity API emulation for Vercel, GitHub, and Google services.
+
+## Key Features
+
+- **Zero-config startup** - All services start with sensible defaults
+- **Stateful emulation** - Not mocks, but full API implementations with state
+- **OAuth support** - Configurable OAuth apps with strict client validation
+- **Production fidelity** - Matches real API responses and pagination
+- **Test-friendly** - Built-in reset and seed capabilities
+
+## Installation
+
+```bash
+# CLI usage
+npx emulate
+
+# Programmatic usage
+npm install emulate
+```
+
+<Callout type="info">
+The CLI starts all services by default: Vercel on port 4000, GitHub on 4001, and Google on 4002.
+</Callout>
+
+## Basic Usage
+
+### CLI
+
+```bash
+# Start all services
+emulate
+
+# Start specific services
+emulate --service vercel,github
+
+# Use custom port base
+emulate --port 3000
+
+# With seed configuration
+emulate --seed config.yaml
+```
+
+### Programmatic API
+
+```typescript
+import { createEmulator } from 'emulate'
+
+const github = await createEmulator({ service: 'github', port: 4001 })
+const vercel = await createEmulator({ service: 'vercel', port: 4002 })
+
+console.log(github.url) // 'http://localhost:4001'
+
+// Reset state between tests
+github.reset()
+
+// Clean up
+await github.close()
+await vercel.close()
+```
+
+### Test Setup
+
+```typescript
+// vitest.setup.ts
+import { createEmulator, type Emulator } from 'emulate'
+
+let github: Emulator
+
+beforeAll(async () => {
+  github = await createEmulator({ service: 'github', port: 4001 })
+  process.env.GITHUB_URL = github.url
+})
+
+afterEach(() => github.reset())
+afterAll(() => github.close())
+```
+
+## Notable Details
+
+- **License**: Apache-2.0
+- **Language**: TypeScript
+- **Community**: 618 GitHub stars
+- **Maintainer**: Vercel Labs
+- **Configuration**: Optional YAML/JSON seed files supported

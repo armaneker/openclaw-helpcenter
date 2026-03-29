@@ -1634,7 +1634,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": null,
-      "blurb": null
+      "blurb": "Prompt Master is a Claude skill that generates precise prompts for any AI tool including Claude, ChatGPT, Midjourney, and coding assistants. It eliminates wasted API calls by analyzing intent across 9 dimensions and producing optimized prompts that work on the first attempt. The system automatically detects the target tool and applies the appropriate prompt framework without showing the user its internal routing logic."
     },
     {
       "full_name": "facebookresearch/HyperAgents",
@@ -1691,7 +1691,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Agentic",
       "version": null,
       "blurb": "This is a comprehensive AI engineering curriculum with 230+ hands-on lessons across 20 phases, covering everything from linear algebra foundations to autonomous agent swarms using Python, TypeScript, Rust, and Julia. It focuses on building practical, reusable components like prompts, skills, agents, and MCP servers rather than just theoretical knowledge. The course emphasizes implementing algorithms from scratch before using frameworks, producing a portfolio of deployable tools."
@@ -1811,7 +1811,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "Emulate is a TypeScript tool that provides local, stateful API emulators for popular services like Vercel, GitHub, and Google APIs. It enables developers to test applications in CI environments or no-network sandboxes without relying on external services or simple mocks. The emulators run as production-fidelity HTTP servers with zero configuration required, automatically starting on incrementing ports from 4000."
@@ -1826,7 +1826,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "AI / ML",
       "version": "v1.1.1",
       "blurb": "This is an OpenCode plugin that enables Claude AI authentication using existing Claude Code credentials stored on your system. It eliminates the need for separate API keys or logins by automatically reading OAuth tokens from macOS Keychain or credential files and handling token refresh in the background. The plugin supports multiple Claude Code accounts on macOS with automatic detection and switching capabilities."
