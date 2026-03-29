@@ -1019,7 +1019,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "A curated list of SaaS, PaaS, and IaaS services that offer free tiers for developers and infrastructure practitioners. It serves as a comprehensive reference to help engineers quickly identify cost-effective cloud services and tools without having to research individual provider offerings. The list is maintained by 1600+ contributors and focuses specifically on services useful for DevOps and system administration rather than general development tools."
     },
     {
       "full_name": "nodejs/node",
@@ -1049,7 +1049,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v1.9.0",
-      "blurb": null
+      "blurb": "Everything Claude Code is a performance optimization system for AI agent harnesses, providing skills, instincts, memory, and security capabilities for Claude Code, Codex, and similar tools. It offers production-ready configurations, hooks, and MCP setups developed through 10+ months of intensive daily use building real products, focusing on token optimization, memory persistence, and security scanning. The project won an Anthropic hackathon and has accumulated over 100k GitHub stars."
     },
     {
       "full_name": "iptv-org/iptv",
@@ -1424,7 +1424,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "WecoAI/awesome-autoresearch is a curated list of AutoResearch implementations, which is an automated optimization framework where AI agents iteratively edit code, test performance, and keep or revert changes based on metrics. It provides real-world use cases with optimization traces showing the full improvement trajectory, from the original LLM training optimization to applications in GPU kernels, template engines, and ML model tuning. Each entry includes links to the actual optimization traces so you can examine the agent's decision-making process, not just final results."
     },
     {
       "full_name": "m1heng/claude-plugin-weixin",
@@ -1454,7 +1454,7 @@
       "has_summary": false,
       "category": "Data",
       "version": null,
-      "blurb": null
+      "blurb": "PumpAnalyzer is a real-time monitoring and analytics platform for tracking Pump.fun tokens on Solana. It enables traders to monitor new token launches, analyze price movements and volume data, and receive instant alerts based on custom criteria. The platform is built as a pure client-side application using only HTML, CSS, and JavaScript with WebSocket integration for real-time data."
     },
     {
       "full_name": "tonbistudio/turboquant-pytorch",
@@ -1469,7 +1469,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "TurboQuant is a PyTorch implementation of Google's two-stage vector quantization algorithm for compressing LLM key-value caches. It achieves 5x compression at 3-bit quantization while maintaining 99.5% attention fidelity by using random rotation with Lloyd-Max quantization followed by QJL residual correction. The algorithm preserves attention accuracy despite high per-vector reconstruction error by ensuring inner products remain mathematically unbiased."
     },
     {
       "full_name": "zc-zhangchen/any-auto-register",
@@ -1484,7 +1484,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Any Auto Register is a multi-platform account registration automation system with a plugin architecture, web UI, and support for various email services and CAPTCHA solvers. It enables automated account creation across platforms like Trae.ai, Cursor, Kiro, and Grok with configurable concurrency, proxy management, and real-time logging. The project includes integrated plugins for proxy pool management, Grok token handling, and local Turnstile solving capabilities."
     },
     {
       "full_name": "glommer/pgmicro",
@@ -1499,7 +1499,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "pgmicro is an in-process reimplementation of PostgreSQL backed by a SQLite-compatible storage engine, built as a fork of Turso. It parses PostgreSQL SQL using the actual PostgreSQL parser and compiles it directly to SQLite bytecode, allowing developers to use PostgreSQL syntax and features in an embeddable, single-file database. The project uses libpg_query to achieve 100% PostgreSQL parsing fidelity rather than implementing its own parser."
     },
     {
       "full_name": "TheTom/turboquant_plus",
@@ -1514,7 +1514,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "TurboQuant+ is a Python implementation of KV cache compression for transformer models that achieves 4.6x compression using PolarQuant with Walsh-Hadamard rotation. It enables memory-efficient local LLM inference with ~1% perplexity increase while maintaining near-baseline prefill speeds and introducing \"Sparse V\" attention-gated decoding that skips low-contribution computations for up to 22.8% decode speedup at long contexts. The implementation includes a C port integrated into llama.cpp with Metal GPU kernels and has been validated across multiple hardware configurations including Apple Silicon and NVIDIA GPUs."
     },
     {
       "full_name": "walter-grace/mac-code",
@@ -1529,7 +1529,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "mac-code is a Python project that enables running large AI models (up to 35B parameters) locally on Mac computers using Apple Silicon. It uses flash-paging and streaming techniques to run models that don't fit in RAM, providing a free alternative to cloud-based AI coding assistants like Claude Code. The project achieves 30 tok/s with a 35B parameter model on a 16GB Mac mini M4 through clever memory management and quantization strategies."
     },
     {
       "full_name": "TheAlgorithms/Python",
@@ -1679,7 +1679,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.2.1",
-      "blurb": null
+      "blurb": "cc-connect is a Go-based bridge that connects local AI coding agents (Claude Code, Cursor, Gemini CLI, Codex) to messaging platforms like Slack, Discord, Telegram, and WeChat. It allows developers to interact with their AI development assistants from any device through chat apps without requiring a public IP address. The tool supports session management, auto-compression for long conversations, and cron job scheduling with per-job timeouts."
     },
     {
       "full_name": "chenglou/pretext",
@@ -1694,7 +1694,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Pretext is a pure JavaScript/TypeScript library for multiline text measurement and layout without DOM interaction. It eliminates expensive browser layout reflows by implementing its own text measurement logic while using the browser's font engine for accuracy, enabling proper UI virtualization, layout calculations, and manual text rendering to Canvas/SVG. The library supports complex text including mixed bidirectional text, emojis, and international languages with microsecond-level layout performance after initial preparation."
     },
     {
       "full_name": "facebookresearch/HyperAgents",
@@ -1799,7 +1799,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a Claude Code skill that translates entire books (PDF/DOCX/EPUB) into other languages using parallel processing. It splits books into chunks and uses multiple concurrent Claude subagents to translate them in parallel, then reassembles the results into multiple output formats (HTML, DOCX, EPUB, PDF). The system includes resumable translation with manifest-based integrity checks to handle interruptions and prevent corrupt outputs."
     },
     {
       "full_name": "mauriceboe/TREK",
@@ -1964,7 +1964,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "ASCII Studio is a TypeScript tool that converts video files into ASCII character-based animations. It allows developers to create terminal-friendly video playback by mapping pixel brightness to ASCII characters, useful for retro aesthetics, terminal applications, or bandwidth-constrained environments."
     }
   ]
 }

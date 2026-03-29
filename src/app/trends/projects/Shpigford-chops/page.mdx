@@ -1,0 +1,58 @@
+<GuideHeader tool="chops" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Chops
+
+Chops is a native macOS app that centralizes AI agent skills and agents across multiple coding tools. Instead of hunting through dotfiles, it provides a unified interface to browse, edit, and organize your AI skills from Claude Code, Cursor, Windsurf, Codex, and Amp.
+
+## Key Features
+
+- **Multi-tool support** — Discovers skills from Claude Code, Cursor, Codex, Windsurf, Copilot, Aider, and Amp
+- **Built-in editor** — Native text editor with Cmd+S save and frontmatter parsing
+- **Collections** — Organize skills without modifying source files
+- **Real-time file watching** — Instant updates when files change on disk
+- **Full-text search** — Search across names, descriptions, and content
+- **Skill creation** — Generate correct boilerplate for each tool
+- **Remote servers** — Connect to services like OpenClaw to discover and install skills
+
+## Installation
+
+<Callout type="info">
+Requires macOS 15 (Sequoia) or later with Xcode command-line tools.
+</Callout>
+
+```bash
+# Install dependencies
+brew install xcodegen
+
+# Clone and build
+git clone https://github.com/Shpigford/chops.git
+cd chops
+xcodegen generate
+open Chops.xcodeproj
+```
+
+Hit **Cmd+R** in Xcode to build and run the app.
+
+## Basic Usage
+
+The app automatically scans these directories for skills and agents:
+
+- **Claude Code**: `~/.claude/skills/`, `~/.claude/agents/`
+- **Cursor**: `~/.cursor/skills/`, `~/.cursor/agents/`  
+- **Windsurf**: `~/.codeium/windsurf/memories/`
+- **Codex**: `~/.codex/skills/`, `~/.codex/agents/`
+- **Amp**: `~/.config/amp/skills/`
+
+The three-column interface shows tools/collections in the sidebar, filtered skills in the middle, and an editor on the right. Use the search bar to find specific skills across all tools.
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Swift (SwiftUI + SwiftData)
+- **Community**: 963 GitHub stars
+- **Architecture**: Native macOS app with no sandbox restrictions (required for filesystem access)
+- **Auto-updates**: Built-in Sparkle updater framework
+
+<Callout type="warning">
+The app intentionally disables macOS sandboxing to access dotfiles across your home directory.
+</Callout>

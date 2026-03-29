@@ -1,0 +1,65 @@
+<GuideHeader tool="web-access" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Web-Access
+
+Web-Access is a skill that adds complete web browsing capabilities to Claude Code. It bridges the gap between Claude's basic web tools and full browser automation through intelligent routing and Chrome DevTools Protocol integration.
+
+## Key Features
+
+- **Automatic tool selection** - Routes between WebSearch, WebFetch, curl, Jina, and CDP based on context
+- **CDP browser automation** - Direct Chrome connection with login state preservation and dynamic page support
+- **Multiple interaction modes** - JS clicks, real mouse events, and file uploads
+- **Parallel task distribution** - Spawns sub-agents for concurrent execution with shared proxy
+- **Site experience accumulation** - Stores domain-specific patterns and gotchas across sessions
+- **Media extraction** - Direct DOM access for images/videos plus video frame capture
+
+## Installation
+
+**Auto-install via Claude:**
+```
+帮我安装这个 skill：https://github.com/eze-is/web-access
+```
+
+**Manual installation:**
+```bash
+git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
+```
+
+## Prerequisites
+
+<Callout type="info">
+CDP mode requires Node.js 22+ and Chrome with remote debugging enabled.
+</Callout>
+
+Enable Chrome debugging:
+1. Open `chrome://inspect/#remote-debugging` 
+2. Check "Allow remote debugging for this browser instance"
+3. Restart browser if needed
+
+Verify setup:
+```bash
+bash ~/.claude/skills/web-access/scripts/check-deps.sh
+```
+
+## Basic Usage
+
+Start the CDP proxy:
+```bash
+node ~/.claude/skills/web-access/scripts/cdp-proxy.mjs &
+```
+
+Then use natural language with Claude:
+- "Search for the latest developments in xxx"
+- "Read this page: [URL]"
+- "Find xxx's account on XiaoHongShu"
+- "Help me post content to creator platform"
+
+The skill automatically handles tool selection and browser automation behind the scenes.
+
+## Notable Details
+
+- **Language**: JavaScript
+- **License**: MIT
+- **Community**: 2,021 GitHub stars
+- **Philosophy**: Skills should provide trade-offs and technical facts, not step-by-step procedures
+- **Architecture**: Three-layer channel scheduling with browser CDP and parallel divide-and-conquer

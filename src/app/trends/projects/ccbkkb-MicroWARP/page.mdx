@@ -1,0 +1,76 @@
+<GuideHeader tool="MicroWARP" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# MicroWARP
+
+MicroWARP is an ultra-lightweight Cloudflare WARP SOCKS5 proxy that runs in only 800KB of RAM. It replaces userspace WARP clients with kernel-level WireGuard and a pure C microsocks server.
+
+## Key Features
+
+- **Extreme efficiency**: 800KB RAM usage vs 150MB+ for standard WARP images
+- **Kernel-level performance**: Uses native Linux `wg0` interface for near-zero CPU overhead
+- **Docker-optimized**: 9MB image size with multi-architecture support (amd64, arm64)
+- **Authentication support**: Optional SOCKS5 username/password protection
+- **Tailscale compatible**: Resolves asymmetric routing issues in mesh networks
+- **Port hopping**: Bypass datacenter UDP restrictions with configurable endpoints
+
+<Callout type="warning">
+This project is designed for server-side use cases, not as a personal desktop proxy client.
+</Callout>
+
+## Installation
+
+Create a `docker-compose.yml` file:
+
+```yaml
+services:
+  microwarp:
+    image: ghcr.io/ccbkkb/microwarp:latest
+    container_name: microwarp
+    restart: always
+    ports:
+      - "127.0.0.1:1080:1080"
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    volumes:
+      - warp-data:/etc/wireguard
+
+volumes:
+  warp-data:
+```
+
+```bash
+docker compose up -d
+```
+
+## Basic Usage
+
+The proxy runs on port 1080 by default. Test the connection:
+
+```bash
+curl -x socks5://127.0.0.1:1080 https://ipinfo.io
+```
+
+For authenticated access, add environment variables:
+
+```yaml
+environment:
+  - SOCKS_USER=admin
+  - SOCKS_PASS=123456
+  - BIND_PORT=1080
+  - ENDPOINT_IP=162.159.192.1:4500  # For restricted datacenters
+```
+
+<Callout type="tip">
+Use port 4500 (IPsec NAT-T) if your datacenter throttles UDP 2408 traffic.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Shell scripts with C-based microsocks
+- **Community**: 815 GitHub stars
+- **Performance**: Processes 90MB+ traffic while maintaining sub-1MB memory footprint
+- **Use cases**: API routing, outbound privacy, sidecar proxy for microservices
