@@ -1,0 +1,240 @@
+<GuideHeader tool="OpenClaw" difficulty="Intermediate" lastTested="2026-03" readTime="10 min" />
+
+# Mission Control — Ubuntu Server Setup
+
+Mission Control is an open-source dashboard for managing OpenClaw agents. This guide covers installation on an Ubuntu server and remote access from a MacBook.
+
+- **Repo:** [github.com/builderz-labs/mission-control](https://github.com/builderz-labs/mission-control)
+- **License:** MIT
+- **Stack:** Next.js 16, SQLite, TypeScript
+
+---
+
+## Prerequisites
+
+- Ubuntu 20.04+
+- Node.js 22+
+- OpenClaw installed and running
+- SSH access from your MacBook
+
+---
+
+## 1. Installation
+
+```bash
+git clone https://github.com/builderz-labs/mission-control.git
+cd mission-control
+bash install.sh --local
+```
+
+The script installs Node.js 22, pnpm, and all dependencies automatically.
+
+<Callout type="warning" title="Google Fonts firewall issue">
+If your server can't reach Google Fonts (common in data center environments), the build will fail. Allow `fonts.googleapis.com` and `fonts.gstatic.com` in your firewall, then run `pnpm build`. No need to re-run `install.sh`.
+</Callout>
+
+---
+
+## 2. OpenClaw Integration
+
+### Configure `.env`
+
+```bash
+nano ~/mission-control/.env
+```
+
+Fill in these variables:
+
+```env
+# Server-side: Mission Control backend → OpenClaw gateway
+OPENCLAW_GATEWAY_HOST=127.0.0.1
+OPENCLAW_GATEWAY_PORT=18789
+OPENCLAW_GATEWAY_TOKEN=your-token-here
+
+# Browser-side: MacBook browser WebSocket (leave host empty)
+NEXT_PUBLIC_GATEWAY_HOST=
+NEXT_PUBLIC_GATEWAY_PORT=18789
+
+# OpenClaw directory
+OPENCLAW_HOME=/root/.openclaw
+```
+
+<Callout type="danger" title="Leave NEXT_PUBLIC_GATEWAY_HOST empty">
+If you put the server IP here, the browser will try to connect directly to the server's localhost and WebSocket will fail.
+</Callout>
+
+### Update OpenClaw Config
+
+Add the following to `~/.openclaw/openclaw.json`:
+
+```json
+"gateway": {
+  "auth": {
+    "token": "your-token-here"
+  },
+  "remote": {
+    "token": "your-token-here"
+  },
+  "controlUi": {
+    "allowedOrigins": [
+      "http://localhost:3000"
+    ]
+  }
+}
+```
+
+`auth.token` and `remote.token` must be the same value.
+
+### Generate a Token
+
+```bash
+openssl rand -hex 32
+```
+
+Don't edit the token manually after generating — if the format breaks, auth breaks completely.
+
+### Restart OpenClaw
+
+```bash
+systemctl restart openclaw
+```
+
+---
+
+## 3. Start the Service
+
+```bash
+cd ~/mission-control
+pnpm start
+```
+
+---
+
+## 4. Remote Access from MacBook (SSH Tunnel)
+
+If your server is in a data center, ports 3000 and 18789 aren't exposed. Tunnel both via SSH:
+
+```bash
+ssh -L 3000:localhost:3000 -L 18789:localhost:18789 root@<server-ip> -N
+```
+
+Then open in your MacBook browser:
+
+```
+http://localhost:3000
+```
+
+<Callout type="warning" title="Don't forget port 18789">
+Tunneling only port 3000 isn't enough. The browser connects directly to `ws://127.0.0.1:18789` for WebSocket. If you skip 18789 in the tunnel, the Gateway will show as **Offline**.
+</Callout>
+
+---
+
+## 5. Admin Account (First Run)
+
+On first startup, navigate to:
+
+```
+http://localhost:3000/setup
+```
+
+Create an admin account from there.
+
+---
+
+## 6. Register an Agent (API)
+
+```bash
+export MC_URL=http://localhost:3000
+export MC_API_KEY=<api-key-from-settings>
+
+curl -X POST "$MC_URL/api/agents/register" \
+  -H "Authorization: Bearer $MC_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"name": "orion", "role": "sales-intelligence"}'
+```
+
+---
+
+## 7. Auto-Start on Reboot
+
+Create a systemd service:
+
+```ini
+# /etc/systemd/system/mission-control.service
+[Unit]
+Description=Mission Control
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/mission-control
+ExecStart=/usr/local/bin/pnpm start
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+systemctl enable mission-control
+systemctl start mission-control
+```
+
+---
+
+## Troubleshooting
+
+### Google Fonts — Build Error
+
+```
+Error: Failed to fetch `Inter` from Google Fonts
+```
+
+Allow `fonts.googleapis.com` and `fonts.gstatic.com` in your server firewall.
+
+---
+
+### Gateway Offline — WebSocket Error
+
+```
+Handshake failed on root path. Retrying WebSocket via /gateway-ws.
+```
+
+Common causes:
+
+- **`OPENCLAW_GATEWAY_TOKEN` missing** — add the token to `.env`
+- **`remote.token` empty** — set `remote.token` = `auth.token` in `openclaw.json`
+- **`allowedOrigins` missing** — add `controlUi.allowedOrigins` to `openclaw.json`
+- **Port 18789 not tunneled** — add `-L 18789:localhost:18789` to your SSH command
+- **`NEXT_PUBLIC_GATEWAY_HOST` is filled in** — leave it empty
+
+---
+
+### `Error opening terminal: xterm-ghostty`
+
+If nano doesn't work, use an alternative editor:
+
+```bash
+vi ~/mission-control/.env
+# or
+sed -i 's/old-value/new-value/' ~/mission-control/.env
+```
+
+---
+
+## Architecture
+
+```
+MacBook (browser)
+    │
+    │  SSH Tunnel
+    │  -L 3000:localhost:3000   → Mission Control UI
+    │  -L 18789:localhost:18789 → OpenClaw Gateway WebSocket
+    ▼
+Ubuntu Server
+    ├── Mission Control  (port 3000)
+    └── OpenClaw Gateway (port 18789, loopback)
+```
