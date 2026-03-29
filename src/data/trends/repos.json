@@ -2365,7 +2365,8 @@
         "streams",
         "tv"
       ],
-      "blurb": "A curated collection of publicly available IPTV channel streams from around the world, organized into M3U playlists. It provides direct streaming links that can be loaded into any compatible video player for watching live television channels over the internet. The repository explicitly contains only links to streams, not the video content itself, with over 113k stars indicating significant community adoption."
+      "blurb": "A curated collection of publicly available IPTV channel streams from around the world, organized into M3U playlists. It provides direct streaming links that can be loaded into any compatible video player for watching live television channels over the internet. The repository explicitly contains only links to streams, not the video content itself, with over 113k stars indicating significant community adoption.",
+      "category": "Other"
     },
     "mrdoob/three.js": {
       "full_name": "mrdoob/three.js",
@@ -2388,7 +2389,9 @@
         "webgpu",
         "webxr"
       ],
-      "blurb": "Three.js is a cross-platform JavaScript library that provides a high-level API for creating and rendering 3D graphics in web browsers. It abstracts WebGL, WebGPU, and other rendering technologies to enable developers to build 3D scenes, games, data visualizations, and AR/VR experiences without dealing with low-level graphics programming. The library supports multiple renderers including WebGL, WebGPU, SVG, and CSS3D for maximum compatibility across different platforms and use cases."
+      "blurb": "Three.js is a cross-platform JavaScript library that provides a high-level API for creating and rendering 3D graphics in web browsers. It abstracts WebGL, WebGPU, and other rendering technologies to enable developers to build 3D scenes, games, data visualizations, and AR/VR experiences without dealing with low-level graphics programming. The library supports multiple renderers including WebGL, WebGPU, SVG, and CSS3D for maximum compatibility across different platforms and use cases.",
+      "category": "Other",
+      "version": "r183"
     },
     "rust-lang/rust": {
       "full_name": "rust-lang/rust",
@@ -2457,7 +2460,8 @@
         "swarms"
       ],
       "category": "Agentic",
-      "blurb": "ClawTeam-OpenClaw is a multi-agent swarm coordination framework that enables CLI coding agents to self-organize into teams for collaborative software development. It allows agents to autonomously spawn workers, distribute tasks, communicate through message passing, and merge results without human orchestration, using filesystem-based coordination and git worktrees for isolation. The framework supports any CLI agent but defaults to OpenClaw integration with auto-injected coordination commands."
+      "blurb": "ClawTeam-OpenClaw is a multi-agent swarm coordination framework that enables CLI coding agents to self-organize into teams for collaborative software development. It allows agents to autonomously spawn workers, distribute tasks, communicate through message passing, and merge results without human orchestration, using filesystem-based coordination and git worktrees for isolation. The framework supports any CLI agent but defaults to OpenClaw integration with auto-injected coordination commands.",
+      "version": "v0.2.0+openclaw.1"
     },
     "sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation": {
       "full_name": "sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
@@ -3160,7 +3164,7 @@
     },
     "ssrajadh/sentrysearch": {
       "full_name": "ssrajadh/sentrysearch",
-      "description": "Semantic search over videos using Gemini Embedding 2.",
+      "description": "Semantic search over videos using Gemini Embedding 2 or Qwen3-VL.",
       "language": "Python",
       "url": "https://github.com/ssrajadh/sentrysearch",
       "first_seen": "2026-03-25",
@@ -3171,6 +3175,7 @@
         "gemini",
         "gemini-embedding-2",
         "mp4",
+        "qwen3-vl",
         "semantic-search",
         "tesla",
         "video"
@@ -3525,14 +3530,34 @@
     },
     "JCodesMore/ai-website-cloner-template": {
       "full_name": "JCodesMore/ai-website-cloner-template",
-      "description": "",
+      "description": "Clone any website with one command using AI coding agents",
       "language": "TypeScript",
       "url": "https://github.com/JCodesMore/ai-website-cloner-template",
       "first_seen": "2026-03-27",
       "has_summary": false,
-      "topics": [],
-      "category": "Other",
-      "version": null,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-tools",
+        "automation",
+        "boilerplate",
+        "claude",
+        "claude-code",
+        "clone",
+        "developer-tools",
+        "nextjs",
+        "react",
+        "reverse-engineering",
+        "shadcn-ui",
+        "skills",
+        "tailwindcss",
+        "template",
+        "typescript",
+        "web-scraping",
+        "website-clone"
+      ],
+      "category": "Agentic",
+      "version": "v0.2.0",
       "blurb": "This is a TypeScript template that uses Claude Code to automatically reverse-engineer and rebuild websites as pixel-perfect clones. It analyzes a target URL through Chrome MCP to extract design tokens, assets, and component specifications, then dispatches parallel AI agents to reconstruct each section in isolated git worktrees. The system handles the complete pipeline from reconnaissance and asset extraction to component building and visual diff validation against the original site."
     },
     "joewongjc/type4me": {
@@ -3797,6 +3822,189 @@
       "category": "Other",
       "version": "v2.6.2",
       "blurb": "TREK is a self-hosted travel planning application built in TypeScript that provides real-time collaborative trip organization. It offers comprehensive travel management features including interactive maps, budget tracking, packing lists, and booking management, with PWA support for mobile use and offline functionality. The project includes SSO integration and modular addons, positioning itself as an open-source alternative to commercial travel planning services."
+    },
+    "ripienaar/free-for-dev": {
+      "full_name": "ripienaar/free-for-dev",
+      "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+      "language": "HTML",
+      "url": "https://github.com/ripienaar/free-for-dev",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [
+        "awesome-list",
+        "free-for-developers"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "affaan-m/everything-claude-code": {
+      "full_name": "affaan-m/everything-claude-code",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "category": "Agentic",
+      "version": "v1.9.0"
+    },
+    "WecoAI/awesome-autoresearch": {
+      "full_name": "WecoAI/awesome-autoresearch",
+      "description": "Curated list of AutoResearch use cases with optimization traces and open source implementations",
+      "language": "Unknown",
+      "url": "https://github.com/WecoAI/awesome-autoresearch",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "ai-research",
+        "automated-machine-learning",
+        "autonomous-agents",
+        "autoresearch",
+        "awesome",
+        "awesome-list",
+        "claude-code",
+        "code-optimization",
+        "curated-list",
+        "llm",
+        "self-improving-ai"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "happyboy4ty25/pump-analyzer": {
+      "full_name": "happyboy4ty25/pump-analyzer",
+      "description": "Real-time monitoring & analytics platform for Pump.fun tokens. Track launches, analyze trends, and get instant alerts — powered by WebSockets. Built with HTML, CSS & JavaScript.",
+      "language": "Unknown",
+      "url": "https://github.com/happyboy4ty25/pump-analyzer",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [
+        "analytics",
+        "crypto",
+        "dashboard",
+        "defi",
+        "javascript",
+        "landing-page",
+        "memecoin",
+        "pump-fun",
+        "real-time",
+        "solana",
+        "solana-wallet",
+        "token-tracker",
+        "web3",
+        "websocket"
+      ],
+      "category": "Data",
+      "version": null
+    },
+    "tonbistudio/turboquant-pytorch": {
+      "full_name": "tonbistudio/turboquant-pytorch",
+      "description": "From-scratch PyTorch implementation of Google's TurboQuant (ICLR 2026) for LLM KV cache compression. 5x compression at 3-bit with 99.5% attention fidelity.",
+      "language": "Python",
+      "url": "https://github.com/tonbistudio/turboquant-pytorch",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "zc-zhangchen/any-auto-register": {
+      "full_name": "zc-zhangchen/any-auto-register",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/zc-zhangchen/any-auto-register",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "glommer/pgmicro": {
+      "full_name": "glommer/pgmicro",
+      "description": "An in-process reimplementation of PostgreSQL, backed by a SQLite-compatible storage engine",
+      "language": "Rust",
+      "url": "https://github.com/glommer/pgmicro",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "TheTom/turboquant_plus": {
+      "full_name": "TheTom/turboquant_plus",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/TheTom/turboquant_plus",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "walter-grace/mac-code": {
+      "full_name": "walter-grace/mac-code",
+      "description": "mac code — Claude Code, but it runs on your Mac for free.   35B AI agent at 30 tok/s via Apple Silicon flash-paging. $0/month. ",
+      "language": "Python",
+      "url": "https://github.com/walter-grace/mac-code",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "chenhg5/cc-connect": {
+      "full_name": "chenhg5/cc-connect",
+      "description": "Bridge local AI coding agents (Claude Code, Cursor, Gemini CLI, Codex) to messaging platforms (Feishu/Lark, DingTalk, Slack, Telegram, Discord, LINE, WeChat Work). Chat with your AI dev assistant from anywhere — no public IP required for most platforms.",
+      "language": "Go",
+      "url": "https://github.com/chenhg5/cc-connect",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v1.2.1"
+    },
+    "chenglou/pretext": {
+      "full_name": "chenglou/pretext",
+      "description": "",
+      "language": "TypeScript",
+      "url": "https://github.com/chenglou/pretext",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "deusyu/translate-book": {
+      "full_name": "deusyu/translate-book",
+      "description": "Claude Code skill that translates entire books (PDF/DOCX/EPUB) into any language using parallel subagents",
+      "language": "Python",
+      "url": "https://github.com/deusyu/translate-book",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "vansh-nagar/ascii-studio": {
+      "full_name": "vansh-nagar/ascii-studio",
+      "description": "Turn Videos into ASCII Frames - real ascii frames (character-based frames that run smoothly in sequence)",
+      "language": "TypeScript",
+      "url": "https://github.com/vansh-nagar/ascii-studio",
+      "first_seen": "2026-03-29",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
