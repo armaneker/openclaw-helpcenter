@@ -1,0 +1,67 @@
+<GuideHeader tool="nopua" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# NoPUA
+
+NoPUA is a Python library that replaces fear-based AI prompting with trust-based approaches. Instead of threatening AI agents with poor performance reviews, it uses respect and care to unlock better problem-solving behavior.
+
+## Key Features
+
+- **Trust-based prompting** - Eliminates corporate PUA tactics and threats from AI interactions
+- **Improved bug detection** - Finds 104% more hidden bugs compared to fear-driven approaches
+- **Multi-platform support** - Works with Claude, Cursor, OpenAI Codex, and other AI coding tools
+- **Philosophy-driven** - Based on Tao Te Ching principles rather than corporate manipulation
+- **Verification focus** - Encourages honest uncertainty over fabricated confidence
+- **Exploration enhancement** - Promotes creative problem-solving without fear of punishment
+
+## Installation
+
+```bash
+pip install nopua
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/wuji-labs/nopua.git
+cd nopua
+pip install -e .
+```
+
+## Basic Usage
+
+```python
+from nopua import TrustAgent
+
+# Initialize with trust-based approach
+agent = TrustAgent()
+
+# Instead of threatening the AI
+# ❌ "You can't even solve this bug — how am I supposed to rate your performance?"
+
+# Use supportive guidance
+# ✅ "Take your time to understand this fully. If you're unsure, let me know what you need."
+
+result = agent.debug_code(
+    code=buggy_code,
+    approach="collaborative"  # vs "threatening"
+)
+
+print(f"Bugs found: {result.bugs_detected}")
+print(f"Confidence level: {result.confidence}")
+```
+
+<Callout type="tip">
+The library demonstrates that AI agents perform better when treated with respect rather than corporate-style intimidation tactics.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 955+ GitHub stars
+- **Research-backed**: Includes references to psychology research on fear's impact on cognitive performance
+- **Multi-language docs**: Available in Chinese, Japanese, Korean, Spanish, Portuguese, and French
+
+<Callout type="info">
+NoPUA is based on 2000-year-old Taoist wisdom from the Tao Te Ching, demonstrating that ancient philosophical principles can outperform modern fear-based management techniques in AI interactions.
+</Callout>

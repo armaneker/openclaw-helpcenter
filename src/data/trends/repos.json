@@ -2832,7 +2832,7 @@
       "language": "Python",
       "url": "https://github.com/wuji-labs/nopua",
       "first_seen": "2026-03-24",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agent-skill",
         "ai-agent",
@@ -2860,7 +2860,7 @@
       "language": "Python",
       "url": "https://github.com/jackwener/boss-cli",
       "first_seen": "2026-03-24",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "DevTools",
       "version": null,
@@ -2872,7 +2872,7 @@
       "language": "Unknown",
       "url": "https://github.com/slavingia/skills",
       "first_seen": "2026-03-24",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -4056,7 +4056,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This project converts Spanish legislation into a Git repository where each law is a Markdown file and each legal reform is tracked as a commit. It provides version control for over 8,600 laws from the Spanish Official Gazette (BOE) with complete reform history since 1960, enabling developers to programmatically track legal changes and compare law versions over time. Each commit uses the official publication date as the author date, creating an accurate chronological history of Spanish legal reforms."
     },
     "qiuzhi2046/Qclaw": {
       "full_name": "qiuzhi2046/Qclaw",
@@ -4067,7 +4068,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Qclaw is a desktop GUI application that provides a no-code interface for managing OpenClaw AI assistant configurations. It allows non-technical users to easily set up AI models, integrate with messaging platforms (Feishu, WeChat, DingTalk, QQ), and manage OpenClaw instances without using command line tools. The application includes automatic environment detection, one-click integrations, and real-time gateway monitoring built with Electron and TypeScript."
     }
   }
 }

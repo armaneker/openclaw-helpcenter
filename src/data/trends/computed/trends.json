@@ -1016,7 +1016,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "This is a Claude Code plugin that implements business decision-making skills based on Sahil Lavingia's \"The Minimalist Entrepreneur\" methodology. It provides nine commands (like `/validate-idea`, `/mvp`, `/pricing`) that guide users through the entrepreneurial process from finding a community to scaling sustainably. The skills follow the book's structured progression from initial community building through product development to company culture decisions."
@@ -1379,7 +1379,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This project converts Spanish legislation into a Git repository where each law is a Markdown file and each legal reform is tracked as a commit. It provides version control for over 8,600 laws from the Spanish Official Gazette (BOE) with complete reform history since 1960, enabling developers to programmatically track legal changes and compare law versions over time. Each commit uses the official publication date as the author date, creating an accurate chronological history of Spanish legal reforms."
     },
     {
       "full_name": "qiuzhi2046/Qclaw",
@@ -1394,7 +1394,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Qclaw is a desktop GUI application that provides a no-code interface for managing OpenClaw AI assistant configurations. It allows non-technical users to easily set up AI models, integrate with messaging platforms (Feishu, WeChat, DingTalk, QQ), and manage OpenClaw instances without using command line tools. The application includes automatic environment detection, one-click integrations, and real-time gateway monitoring built with Electron and TypeScript."
     },
     {
       "full_name": "tonbistudio/turboquant-pytorch",

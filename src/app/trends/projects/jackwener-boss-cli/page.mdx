@@ -1,0 +1,63 @@
+<GuideHeader tool="boss-cli" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# boss-cli
+
+boss-cli is a Python command-line interface for BOSS 直聘, China's leading job recruitment platform. It provides programmatic access to job search, recommendations, applications, and recruiter communication through a reverse-engineered API.
+
+## Key Features
+
+- **Multi-browser authentication** — Auto-extracts cookies from 10+ browsers or QR code login
+- **Advanced job search** — Filter by city, salary, experience, degree, industry, company size, and funding stage
+- **Personalized recommendations** — View jobs recommended based on your profile
+- **Application management** — Track applied jobs, interview invitations, and chat history
+- **Batch operations** — Send greetings to multiple recruiters with rate limiting
+- **Structured output** — JSON/YAML export with schema envelopes for agent integration
+- **Anti-detection measures** — Gaussian jitter, random pauses, and exponential backoff
+
+## Installation
+
+```bash
+# Recommended: uv tool (fast, isolated)
+uv tool install kabi-boss-cli
+
+# Or: pipx
+pipx install kabi-boss-cli
+
+# Optional: YAML output support
+pip install kabi-boss-cli[yaml]
+```
+
+## Basic Usage
+
+```bash
+# Authenticate (auto-detects browser cookies)
+boss login
+
+# Search for jobs
+boss search "Python" --city 杭州 --salary 20-30K
+
+# View job details from search results
+boss show 3
+
+# Get personalized recommendations
+boss recommend
+
+# Export search results
+boss export "golang" -n 50 -o jobs.csv --format json
+
+# Send greeting to recruiter
+boss greet &lt;securityId>
+```
+
+<Callout type="warning">
+boss-cli uses reverse-engineered APIs and implements anti-detection measures. Use responsibly and respect rate limits to avoid account restrictions.
+</Callout>
+
+## Notable Details
+
+- **Language**: Python 3.10+
+- **License**: Unknown
+- **Community**: 553 GitHub stars
+- **Output**: Structured JSON/YAML envelopes for AI agent integration
+- **Authentication**: Persistent cookie storage with 7-day auto-refresh
+- **Rate limiting**: Built-in delays and exponential backoff for API protection
