@@ -1349,7 +1349,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a Python-based API for detecting personal information leaks in data breaches. It provides programmatic access to check if personal data (likely email addresses, usernames, or other identifiers) has been compromised in known security incidents. The project offers a simple bash-based installation script for quick deployment."
     },
     {
       "full_name": "glommer/pgmicro",
@@ -1556,7 +1556,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Mobile",
       "version": "v1.0.13",
       "blurb": "JKVideo is a third-party Bilibili client built with React Native and TypeScript that runs on Android, iOS, and web platforms. It provides native DASH video playback with 4K HDR support, real-time danmaku (bullet comments), live streaming, and features like QR code login and offline downloads. The project implements Bilibili's WBI signing protocol purely in TypeScript and includes a local HTTP server for LAN video sharing."
@@ -1631,7 +1631,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "daVinci-MagiHuman is a 15B-parameter single-stream Transformer that generates synchronized audio-video content from text prompts and reference images. It achieves fast inference speeds (2 seconds for 5-second 256p video on H100) while maintaining high-quality human-centric generation with accurate facial expressions, speech coordination, and multilingual support. The model uses a unified architecture that processes text, video, and audio tokens through self-attention only, eliminating the complexity of traditional multi-stream approaches."
@@ -1859,7 +1859,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v0.1.0",
-      "blurb": null
+      "blurb": "Hucre is a zero-dependency TypeScript spreadsheet engine that can read and write XLSX, CSV, and ODS files. It provides a lightweight alternative to libraries like SheetJS and ExcelJS with a much smaller bundle size (~18KB vs ~300-500KB) while supporting modern environments like Edge runtime and ESM modules. The library is fully tree-shakeable, allowing you to import only the specific format handlers you need."
     }
   ]
 }

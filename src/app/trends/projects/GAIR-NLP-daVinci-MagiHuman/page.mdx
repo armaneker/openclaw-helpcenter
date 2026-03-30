@@ -1,0 +1,85 @@
+<GuideHeader tool="daVinci-MagiHuman" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# daVinci-MagiHuman
+
+daVinci-MagiHuman is a single-stream Transformer architecture for fast audio-video generation with human-centric quality. It uses a unified 15B-parameter model that jointly processes text, video, and audio through self-attention only.
+
+## Key Features
+
+- **Single-stream architecture** — 40-layer Transformer with no cross-attention or multi-stream complexity
+- **Fast inference** — Generates 5-second 256p video in 2 seconds, 1080p in 38 seconds on H100
+- **Multilingual support** — Chinese (Mandarin & Cantonese), English, Japanese, Korean, German, French  
+- **Human-centric quality** — Expressive facial performance and natural speech-expression coordination
+- **Complete model stack** — Base model, distilled model, super-resolution model, and inference code
+- **Advanced optimizations** — Latent-space super-resolution, turbo VAE decoder, full-graph compilation
+
+<Callout type="info">
+The model achieves 80.0% win rate vs Ovi 1.1 and 60.9% vs LTX 2.3 in human evaluation over 2,000 pairwise comparisons.
+</Callout>
+
+## Installation
+
+**Docker (Recommended)**
+```bash
+docker pull sandai/magi-human:latest
+
+docker run -it --gpus all --network host --ipc host \
+  -v /path/to/repos:/workspace \
+  -v /path/to/checkpoints:/models \
+  sandai/magi-human:latest bash
+
+# Install dependencies
+git clone https://github.com/SandAI-org/MagiCompiler.git
+cd MagiCompiler && pip install -r requirements.txt && pip install . && cd ..
+
+git clone https://github.com/GAIR-NLP/daVinci-MagiHuman
+cd daVinci-MagiHuman
+```
+
+**Manual Setup**
+```bash
+conda create -n davinci-magihuman python=3.12
+conda activate davinci-magihuman
+conda install ffmpeg
+
+pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
+
+# Install Flash Attention
+git clone https://github.com/Dao-AILab/flash-attention
+cd flash-attention/hopper && python setup.py install && cd ../..
+
+git clone https://github.com/GAIR-NLP/daVinci-MagiHuman
+cd daVinci-MagiHuman
+pip install -r requirements.txt
+```
+
+## Basic Usage
+
+Download model checkpoints from [HuggingFace](https://huggingface.co/GAIR/daVinci-MagiHuman) and update paths in config files under `example/`.
+
+<Callout type="warning">
+Update checkpoint paths in `example/*/config.json` before running. First run will be slower due to model compilation.
+</Callout>
+
+**Generate 256p video:**
+```bash
+bash example/base/run.sh
+```
+
+**Fast generation (8 steps, no CFG):**
+```bash
+bash example/distill/run.sh  
+```
+
+**Super-resolution to 1080p:**
+```bash
+bash example/sr-1080p/run.sh
+```
+
+## Notable Details
+
+- **License:** Apache 2.0
+- **Language:** Python 3.12+
+- **Community:** 1,330+ GitHub stars
+- **Requirements:** PyTorch 2.10+, H100 GPU recommended
+- **External models needed:** T5Gemma-9B, Stable Audio Open 1.0, Wan2.2-TI2V-5B VAE

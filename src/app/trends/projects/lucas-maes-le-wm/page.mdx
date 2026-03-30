@@ -1,0 +1,67 @@
+<GuideHeader tool="le-wm" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# LeWorldModel (LeWM)
+
+LeWorldModel is the first Joint Embedding Predictive Architecture (JEPA) that trains stably end-to-end from raw pixels using only two loss terms. It provides a stable alternative to existing world models that typically require complex multi-term losses, exponential moving averages, or auxiliary supervision.
+
+## Key Features
+
+- **Simplified training**: Only two loss terms vs six hyperparameters in alternatives
+- **Compact model**: ~15M parameters trainable on single GPU in hours
+- **Fast planning**: Up to 48× faster than foundation-model-based world models
+- **End-to-end learning**: Trains directly from pixels without pretrained encoders
+- **Physical understanding**: Latent space encodes meaningful physical structure
+
+## Installation
+
+```bash
+uv venv --python=3.10
+source .venv/bin/activate
+uv pip install stable-worldmodel[train,env]
+```
+
+<Callout type="info">
+Set the `STABLEWM_HOME` environment variable to specify where datasets and checkpoints are stored (defaults to `~/.stable-wm/`).
+</Callout>
+
+## Basic Usage
+
+Download datasets from [HuggingFace](https://huggingface.co/collections/quentinll/lewm) and extract:
+
+```bash
+tar --zstd -xvf archive.tar.zst
+export STABLEWM_HOME=/path/to/your/storage
+```
+
+Configure WandB in `config/train/lewm.yaml`, then train:
+
+```bash
+python train.py data=pusht
+```
+
+Evaluate with pretrained checkpoints:
+
+```python
+import stable_worldmodel as swm
+
+# Load cost model for MPC planning
+cost = swm.policy.AutoCostModel('pusht/lewm')
+```
+
+Or run evaluation directly:
+
+```bash
+python eval.py --config-name=pusht.yaml policy=pusht/lewm
+```
+
+<Callout type="warning">
+When specifying checkpoint paths, use the path relative to `$STABLEWM_HOME` without the `_object.ckpt` suffix.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 1,492 GitHub stars
+- **Authors**: Lucas Maes, Quentin Le Lidec, Damien Scieur, Yann LeCun, Randall Balestriero
+- **Pretrained models**: Available for pusht, two-room, cube, and reacher tasks

@@ -1,0 +1,66 @@
+<GuideHeader tool="JKVideo" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# JKVideo
+
+JKVideo is a feature-rich React Native video player client with DASH playback support and real-time danmaku (bullet comments). Built for cross-platform deployment, it handles high-quality video streaming with native performance.
+
+## Key Features
+
+- **DASH Stream Playback** - Native ExoPlayer decoding with 1080P+ and 4K HDR support
+- **Real-time Danmaku System** - XML timeline sync for videos, WebSocket live comments
+- **WBI Signing Implementation** - Pure TypeScript MD5 implementation, no external crypto dependencies
+- **Mini Player** - Global floating player with cross-component state management via Zustand
+- **QR Code Login** - Automatic cookie extraction and session management
+- **Download Management** - Multi-quality background downloads with local network sharing
+- **Cross-platform** - Android, iOS, and Web support through Expo
+
+## Installation
+
+### Quick Start (Expo Go)
+```bash
+git clone https://github.com/tiajinsha/JKVideo.git
+cd JKVideo
+npm install
+npx expo start
+```
+
+Scan the QR code with Expo Go app to run immediately.
+
+### Full Features (Dev Build)
+```bash
+npm install
+npx expo run:android   # Android
+npx expo run:ios       # iOS (requires macOS + Xcode)
+```
+
+<Callout type="info">
+Dev Build is recommended for full DASH playback capabilities and complete danmaku system functionality.
+</Callout>
+
+## Basic Usage
+
+```typescript
+// Video playback with danmaku
+import { VideoPlayer } from './components/VideoPlayer';
+
+const App = () => (
+  &lt;VideoPlayer
+    source={{ uri: dashUrl }}
+    danmakuEnabled={true}
+    quality="1080P"
+  />
+);
+```
+
+The app uses file-system routing with expo-router v4. Main screens include video details (`video/[bvid].tsx`), live streaming (`live/[roomId].tsx`), and download management.
+
+## Notable Details
+
+**License:** MIT  
+**Language:** TypeScript with React Native 0.83  
+**Community:** 4.8k GitHub stars  
+**Architecture:** Zustand for state management, react-native-video for playback  
+
+<Callout type="warning">
+High-quality streams (1080P+) require premium account login due to platform API restrictions. Web version needs local proxy server for image access.
+</Callout>
