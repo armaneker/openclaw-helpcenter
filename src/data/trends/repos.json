@@ -4237,6 +4237,55 @@
       "category": "Database",
       "version": null,
       "blurb": "RX is an embedded data store that encodes JSON-shaped data into a queryable format with automatic deduplication and random access capabilities. It eliminates the need to parse entire documents by allowing direct queries on the encoded buffer, making it ideal for large artifacts that are written once and read sparsely. The encoded format remains human-readable text rather than binary, enabling debugging without special tooling."
+    },
+    "yetone/voice-input-src": {
+      "full_name": "yetone/voice-input-src",
+      "description": "",
+      "language": "Unknown",
+      "url": "https://github.com/yetone/voice-input-src",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "revfactory/harness": {
+      "full_name": "revfactory/harness",
+      "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+      "language": "HTML",
+      "url": "https://github.com/revfactory/harness",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "claude-code",
+        "claude-code-plugin",
+        "harness",
+        "harness-engineering"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "WecomTeam/wecom-cli": {
+      "full_name": "WecomTeam/wecom-cli",
+      "description": "企业微信开放平台命令行工具 — 让人类和 AI Agent 都能在终端中操作企业微信",
+      "language": "Rust",
+      "url": "https://github.com/WecomTeam/wecom-cli",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "DevTools",
+      "version": null
+    },
+    "Ataraxy-Labs/opensessions": {
+      "full_name": "Ataraxy-Labs/opensessions",
+      "description": "bring your own multiplexer — terminal session manager with agent status, git branches, and instant switching",
+      "language": "TypeScript",
+      "url": "https://github.com/Ataraxy-Labs/opensessions",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
