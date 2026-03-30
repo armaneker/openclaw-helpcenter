@@ -4303,6 +4303,44 @@
       "category": "Other",
       "version": null,
       "blurb": "This is a curated list of resources for harness engineering, which is the practice of building reliable environments around AI agents to make them work dependably in production workflows. It focuses on tools and guides for context management, evaluation, observability, orchestration, and safe autonomy patterns that enable agents to handle long-running tasks like coding and research. The collection emphasizes that many AI agent failures are harness engineering problems rather than model limitations."
+    },
+    "garinasset/leak-check": {
+      "full_name": "garinasset/leak-check",
+      "description": "个人信息 “泄漏” 检测接口",
+      "language": "Python",
+      "url": "https://github.com/garinasset/leak-check",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "productdevbook/hucre": {
+      "full_name": "productdevbook/hucre",
+      "description": "Zero-dependency spreadsheet engine. Read & write XLSX, CSV, ODS. Pure TypeScript, works everywhere.",
+      "language": "TypeScript",
+      "url": "https://github.com/productdevbook/hucre",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "csv",
+        "csv-parser",
+        "esm",
+        "excel",
+        "ods",
+        "ods-parser",
+        "parser",
+        "spreadsheet",
+        "streaming",
+        "tree-shakeable",
+        "typescript",
+        "xlsx",
+        "xlsx-parser",
+        "xlsx-writer",
+        "zero-dependency"
+      ],
+      "category": "Other",
+      "version": "v0.1.0"
     }
   }
 }
