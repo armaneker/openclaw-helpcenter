@@ -343,26 +343,27 @@
     },
     "Snailclimb/JavaGuide": {
       "full_name": "Snailclimb/JavaGuide",
-      "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发与系统设计。准备后端技术面试，首选 JavaGuide！",
+      "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
       "language": "Java",
       "url": "https://github.com/Snailclimb/JavaGuide",
       "first_seen": "2026-03-22",
       "has_summary": true,
       "topics": [
-        "algorithms",
-        "distributed-systems",
+        "agent",
+        "context-engineering",
         "interview",
         "java",
         "jvm",
+        "mcp",
         "mysql",
         "redis",
         "redisson",
+        "skills",
         "spring",
         "system",
-        "system-design",
-        "zookeeper"
+        "system-design"
       ],
-      "category": "Database",
+      "category": "Agentic",
       "blurb": "JavaGuide is a comprehensive Chinese-language interview preparation guide for Java backend developers, covering computer science fundamentals, databases, distributed systems, concurrency, and system design. It serves as a study resource for backend engineering interviews, providing structured learning paths, practice questions, and detailed explanations of core concepts. With over 154k GitHub stars, it has become one of the most popular Java interview preparation resources in the Chinese developer community."
     },
     "f/prompts.chat": {
@@ -4070,6 +4071,163 @@
       "category": "Other",
       "version": null,
       "blurb": "Qclaw is a desktop GUI application that provides a no-code interface for managing OpenClaw AI assistant configurations. It allows non-technical users to easily set up AI models, integrate with messaging platforms (Feishu, WeChat, DingTalk, QQ), and manage OpenClaw instances without using command line tools. The application includes automatic environment detection, one-click integrations, and real-time gateway monitoring built with Electron and TypeScript."
+    },
+    "realkimbarrett/advertising-skills": {
+      "full_name": "realkimbarrett/advertising-skills",
+      "description": "Advertising Skills for Open Claw, Claude Code & AI agents. Direct response, paid ads, funnels, and copy systems.",
+      "language": "Unknown",
+      "url": "https://github.com/realkimbarrett/advertising-skills",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "advertising",
+        "claude-code",
+        "codex",
+        "openclaw",
+        "openclawskill"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "adamlyttleapps/notchy": {
+      "full_name": "adamlyttleapps/notchy",
+      "description": "",
+      "language": "Swift",
+      "url": "https://github.com/adamlyttleapps/notchy",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "AAAAAAAJ/slides": {
+      "full_name": "AAAAAAAJ/slides",
+      "description": "slides generates prompts for various expression styles",
+      "language": "Python",
+      "url": "https://github.com/AAAAAAAJ/slides",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "Timeverse/My-TW-Coverage": {
+      "full_name": "Timeverse/My-TW-Coverage",
+      "description": "Equity research coverage of 1,735 Taiwan-listed companies (TWSE + OTC). Business overviews, supply chain mapping, and financial data with wikilink cross-referencing.",
+      "language": "Python",
+      "url": "https://github.com/Timeverse/My-TW-Coverage",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "0xNyk/awesome-hermes-agent": {
+      "full_name": "0xNyk/awesome-hermes-agent",
+      "description": "A curated list of awesome skills, tools, integrations, and resources for Hermes Agent by Nous Research",
+      "language": "Unknown",
+      "url": "https://github.com/0xNyk/awesome-hermes-agent",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "hermes-agent",
+        "nous-research",
+        "skills"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "Nahuel990/ministack": {
+      "full_name": "Nahuel990/ministack",
+      "description": "Ministack: the free LocalStack replacement",
+      "language": "Python",
+      "url": "https://github.com/Nahuel990/ministack",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "aws",
+        "aws-emulation",
+        "aws-local",
+        "boto",
+        "docker",
+        "dynamodb",
+        "emulator",
+        "lambda",
+        "localstack",
+        "ministack",
+        "moto",
+        "pip",
+        "python",
+        "s3",
+        "testing"
+      ],
+      "category": "DevTools",
+      "version": "v1.1.1"
+    },
+    "EurekaClaw/EurekaClaw": {
+      "full_name": "EurekaClaw/EurekaClaw",
+      "description": "The official repo of EurekaClaw",
+      "language": "Python",
+      "url": "https://github.com/EurekaClaw/EurekaClaw",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "agi",
+        "llms",
+        "openclaw",
+        "theory"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "polymarket-dev/Polymarket-Arbitrage-Bot": {
+      "full_name": "polymarket-dev/Polymarket-Arbitrage-Bot",
+      "description": "polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket trading bot polymarket arbitrage bot",
+      "language": "TypeScript",
+      "url": "https://github.com/polymarket-dev/Polymarket-Arbitrage-Bot",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "algorithmic-trading",
+        "arbitrage",
+        "automation",
+        "crypto-arbitrage",
+        "crypto-trading",
+        "defi",
+        "finance",
+        "hft",
+        "market-making",
+        "polymarket",
+        "prediction-markets",
+        "quant-trading",
+        "trading-bot",
+        "trading-strategy",
+        "web3"
+      ],
+      "category": "DevTools",
+      "version": null
+    },
+    "creationix/rx": {
+      "full_name": "creationix/rx",
+      "description": "RX encoder, decoder, and CLI data tool",
+      "language": "TypeScript",
+      "url": "https://github.com/creationix/rx",
+      "first_seen": "2026-03-30",
+      "has_summary": false,
+      "topics": [
+        "database",
+        "random-access",
+        "rex",
+        "rx",
+        "serialization",
+        "text-encoding"
+      ],
+      "category": "Database",
+      "version": null
     }
   }
 }
