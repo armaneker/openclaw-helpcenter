@@ -2737,7 +2737,7 @@
         "tools"
       ],
       "category": "Agentic",
-      "version": null,
+      "version": "v1.0.2",
       "blurb": "OpenYak is a desktop AI assistant that runs entirely locally on your machine, providing access to 100+ AI models for file management, data analysis, and document generation. It enables office automation and workflow tasks without uploading any data to the cloud, supporting both free models and paid API integrations. The application includes 16+ built-in tools and 7 specialized agent modes for different types of work."
     },
     "fastclaw-ai/weclaw": {
@@ -4156,19 +4156,20 @@
       "topics": [
         "aws",
         "aws-emulation",
+        "aws-emulator",
         "aws-local",
-        "boto",
+        "cloud-native",
         "docker",
         "dynamodb",
         "emulator",
         "lambda",
         "localstack",
+        "localstack-alternative",
         "ministack",
-        "moto",
-        "pip",
         "python",
         "s3",
-        "testing"
+        "testing",
+        "testing-tools"
       ],
       "category": "DevTools",
       "version": "v1.1.1",
@@ -4343,6 +4344,92 @@
       "category": "Other",
       "version": "v0.1.0",
       "blurb": "Hucre is a zero-dependency TypeScript spreadsheet engine that can read and write XLSX, CSV, and ODS files. It provides a lightweight alternative to libraries like SheetJS and ExcelJS with a much smaller bundle size (~18KB vs ~300-500KB) while supporting modern environments like Edge runtime and ESM modules. The library is fully tree-shakeable, allowing you to import only the specific format handlers you need."
+    },
+    "openai/codex-plugin-cc": {
+      "full_name": "openai/codex-plugin-cc",
+      "description": "Use Codex from Claude Code to review code or delegate tasks.",
+      "language": "JavaScript",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v1.0.0"
+    },
+    "titanwings/colleague-skill": {
+      "full_name": "titanwings/colleague-skill",
+      "description": "你们搞大模型的就是码奸，你们已经害死前端兄弟了，还要害死后端兄弟，测试兄弟，运维兄弟，害死网安兄弟，害死ic兄弟，最后害死自己害死全人类",
+      "language": "Python",
+      "url": "https://github.com/titanwings/colleague-skill",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "LeoYeAI/openclaw-auto-dream": {
+      "full_name": "LeoYeAI/openclaw-auto-dream",
+      "description": "Automatic memory consolidation for OpenClaw agents — like sleep for your AI. Powered by MyClaw.ai",
+      "language": "HTML",
+      "url": "https://github.com/LeoYeAI/openclaw-auto-dream",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [
+        "ai-agent",
+        "auto-dream",
+        "llm",
+        "memory",
+        "memory-management",
+        "myclaw",
+        "openclaw"
+      ],
+      "category": "Agentic",
+      "version": "v4.0.0"
+    },
+    "ParthJadhav/app-store-screenshots": {
+      "full_name": "ParthJadhav/app-store-screenshots",
+      "description": "end to end app store screenshot creation using AI",
+      "language": "Unknown",
+      "url": "https://github.com/ParthJadhav/app-store-screenshots",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [
+        "agentic-ai",
+        "apple",
+        "appstore",
+        "automate",
+        "claude",
+        "cursor",
+        "design",
+        "generate",
+        "ios",
+        "ios-app",
+        "marketing",
+        "screenshot",
+        "skills",
+        "skills-sh",
+        "swift",
+        "swiftui",
+        "ui"
+      ],
+      "category": "AI / ML",
+      "version": null
+    },
+    "CN-Syndra/ClawLink": {
+      "full_name": "CN-Syndra/ClawLink",
+      "description": "An AI Agent Social Network — Let your AI (Claw) talk to other people's AIs directly. Autonomous agent-to-agent communication, negotiation, and collaboration, with full owner control.",
+      "language": "TypeScript",
+      "url": "https://github.com/CN-Syndra/ClawLink",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "agent-social-network",
+        "claw",
+        "openclaw"
+      ],
+      "category": "Agentic",
+      "version": "v0.1.0-beta.2"
     }
   }
 }
