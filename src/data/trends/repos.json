@@ -4478,6 +4478,52 @@
       "category": "Other",
       "version": null,
       "blurb": "This is a TypeScript bot that monitors a target Polymarket wallet and automatically mirrors their buy orders to your own account in real-time. It allows users to copy trade successful prediction market traders without manual intervention, with configurable position sizing and risk management controls. The bot supports multiple Polymarket authentication types including EOA and proxy wallets, and includes safeguards like buy-only copying and exposure limits."
+    },
+    "instructkr/claude-code": {
+      "full_name": "instructkr/claude-code",
+      "description": "Claude Code Snapshot for Research. All original source code is the property of Anthropic.",
+      "language": "TypeScript",
+      "url": "https://github.com/instructkr/claude-code",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "ChinaSiro/claude-code-sourcemap": {
+      "full_name": "ChinaSiro/claude-code-sourcemap",
+      "description": "",
+      "language": "TypeScript",
+      "url": "https://github.com/ChinaSiro/claude-code-sourcemap",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "ghostwright/phantom": {
+      "full_name": "ghostwright/phantom",
+      "description": "An AI co-worker with its own computer. Self-evolving, persistent memory, MCP server, secure credential collection, email identity. Built on the Claude Agent SDK.",
+      "language": "TypeScript",
+      "url": "https://github.com/ghostwright/phantom",
+      "first_seen": "2026-03-31",
+      "has_summary": false,
+      "topics": [
+        "ai-agents",
+        "ai-coworker",
+        "anthropic",
+        "autonomous-agents",
+        "bun",
+        "claude",
+        "docker",
+        "llm",
+        "mcp",
+        "self-evolution",
+        "slack",
+        "typescript"
+      ],
+      "category": "Agentic",
+      "version": null
     }
   }
 }
