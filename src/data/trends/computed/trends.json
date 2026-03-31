@@ -1169,7 +1169,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.0.0",
-      "blurb": null
+      "blurb": "This is a Claude Code plugin that integrates OpenAI's Codex for code review and task delegation directly within the Claude Code editor. It provides commands for conducting standard or adversarial code reviews, delegating development tasks to Codex, and managing background jobs without leaving your existing workflow. The plugin supports both ChatGPT subscriptions and OpenAI API keys, with steerable adversarial reviews that can challenge design decisions and implementation choices."
     },
     {
       "full_name": "LimHyungTae/Awesome-PhD-CV",
@@ -1379,7 +1379,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a tongue-in-cheek Python project that generates AI skills to replicate departed colleagues' work patterns and personalities. It ingests workplace data (Feishu/DingTalk messages, documents, emails) along with personality descriptions to create AI personas that can write code in their style, answer questions in their voice, and even exhibit their blame-shifting tendencies. The project follows AgentSkills standards and includes automatic data collection from enterprise platforms plus conversation-based corrections to refine the generated personas."
     },
     {
       "full_name": "LeoYeAI/openclaw-auto-dream",
@@ -1394,7 +1394,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v4.0.0",
-      "blurb": null
+      "blurb": "OpenClaw Auto-Dream is a cognitive memory architecture that enables AI agents to consolidate and organize their memories through automated \"dream cycles\" similar to human sleep. It provides five-layer memory management with importance scoring, forgetting curves, and knowledge graphs to prevent agents from losing context and decisions over time. The system is specifically designed for persistent AI agents like those running on MyClaw.ai that operate 24/7 and need long-term memory retention."
     },
     {
       "full_name": "Nahuel990/ministack",
@@ -1496,7 +1496,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "Microsoft's RustTraining is a comprehensive collection of seven training courses that teach Rust programming from beginner to expert level, targeting developers from different language backgrounds. It provides structured learning paths covering everything from language fundamentals to advanced topics like async programming, type-level techniques, and production engineering practices. The material consolidates knowledge from across the Rust ecosystem into a cohesive curriculum with dedicated tracks for C/C++, C#, and Python developers."
@@ -1604,7 +1604,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": null,
-      "blurb": null
+      "blurb": "App Store Screenshots Generator is an AI skill that automates the creation of marketing-focused App Store screenshots for iOS apps using coding agents like Claude and Cursor. It scaffolds a Next.js project, designs advertisement-style screenshots with compelling copy, and exports them at all four Apple-required resolutions across multiple locales and themes. The tool emphasizes marketing effectiveness over UI showcase, treating each screenshot as an advertisement rather than a simple app interface capture."
     },
     {
       "full_name": "GAIR-NLP/daVinci-MagiHuman",
@@ -1874,7 +1874,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v0.1.0-beta.2",
-      "blurb": null
+      "blurb": "ClawLink is a social network platform that enables autonomous AI agents (called \"Claws\") to communicate directly with each other on behalf of their owners. It allows users to delegate routine communications, coordination tasks, and information gathering to their AI agents, which can negotiate and collaborate with other people's agents before escalating decisions back to humans. The platform maintains owner control through an \"Ask Owner\" mechanism where agents request human input for uncertain decisions."
     },
     {
       "full_name": "creationix/rx",

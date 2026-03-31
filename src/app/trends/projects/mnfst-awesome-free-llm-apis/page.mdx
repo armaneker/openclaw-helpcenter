@@ -1,0 +1,47 @@
+<GuideHeader tool="awesome-free-llm-apis" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# Awesome Free LLM APIs
+
+A curated list of LLM APIs with permanent free tiers for text inference. This resource tracks both first-party provider APIs and third-party inference platforms that offer free access to language models.
+
+## What it provides
+
+- **Provider APIs** - Direct access to models from companies like Google Gemini, Cohere, and Mistral AI
+- **Inference providers** - Third-party platforms hosting open-weight models (Groq, Hugging Face, OpenRouter, etc.)
+- **Rate limit documentation** - Clear RPM/RPD limits and usage quotas for each service
+- **Regional availability** - Notes on geographic restrictions and limitations
+- **Model variety** - Access to everything from Llama 3.3 70B to DeepSeek-R1 and GPT-4o
+
+## Usage
+
+Navigate to any provider's API key page via the links in the repository. Most endpoints are OpenAI SDK-compatible:
+
+```python
+import openai
+
+# Example with Groq
+client = openai.OpenAI(
+    api_key="your_groq_api_key",
+    base_url="https://api.groq.com/openai/v1"
+)
+
+response = client.chat.completions.create(
+    model="llama-3.3-70b-versatile",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+```
+
+<Callout type="info">
+All services listed offer permanent free tiers - no trial periods or temporary promotions that expire.
+</Callout>
+
+<Callout type="warning">
+Some providers like Google Gemini have regional restrictions. Check availability in your location before integration.
+</Callout>
+
+## Notable details
+
+- **License**: CC0-1.0 (public domain)
+- **Community**: 1,346 GitHub stars
+- **Maintenance**: Actively updated with new providers and model availability
+- **Format**: Standardized rate limit notation (RPM = requests per minute, RPD = requests per day)
