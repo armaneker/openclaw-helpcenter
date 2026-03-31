@@ -1,0 +1,61 @@
+<GuideHeader tool="TypeNo" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# TypeNo
+
+TypeNo is a minimal macOS voice input app that captures your voice, transcribes it locally, and pastes the result into whatever app you're using. It operates entirely offline for privacy and delivers transcriptions in under a second.
+
+## Key Features
+
+- **Local-first transcription** — No data leaves your machine
+- **One-second workflow** — Control key to start/stop, automatic paste
+- **Zero configuration** — No settings, preferences, or accounts required
+- **Universal integration** — Works with any macOS app that accepts text input
+- **Menu bar operation** — Stays out of your way until needed
+- **File transcription** — Drag audio files to transcribe existing recordings
+
+## Installation
+
+Download the latest release and install the speech engine:
+
+```bash
+# Download TypeNo.app.zip from GitHub releases
+# Move TypeNo.app to /Applications
+
+# Install the speech engine (requires Node.js and ffmpeg)
+brew install ffmpeg
+npm install -g @marswave/coli
+```
+
+<Callout type="warning">
+For Node 24+, use `npm install -g @marswave/coli --build-from-source` if you encounter sherpa-onnx-node errors.
+</Callout>
+
+On first launch, grant microphone and accessibility permissions when prompted.
+
+## Basic Usage
+
+```bash
+# Start recording
+Short-press Control key (&lt; 300ms)
+
+# Stop recording and paste
+Short-press Control key again
+
+# Alternative: use menu bar controls
+Click menu bar icon → Record
+```
+
+The overlay shows incremental transcription during recording. Final transcription is automatically pasted into your active app and copied to clipboard.
+
+<Callout type="tip">
+If accessibility permissions aren't working, remove TypeNo from System Settings → Privacy & Security → Accessibility and re-add it from /Applications.
+</Callout>
+
+## Notable Details
+
+- **License**: GPL-3.0
+- **Language**: Swift
+- **Community**: 774 GitHub stars
+- **Platform**: macOS only
+- **Dependencies**: Node.js, ffmpeg, and @marswave/coli package
+- **Privacy**: Fully offline processing, no network requests for transcription

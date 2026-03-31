@@ -1,0 +1,63 @@
+<GuideHeader tool="OpenSpace" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# OpenSpace
+
+OpenSpace is a self-evolving engine that makes AI agents smarter, more cost-efficient, and capable of sharing knowledge across a community. It transforms individual agents into a collective intelligence network where every task improves the entire ecosystem.
+
+## Key Features
+
+- **Self-Evolution**: Skills automatically fix themselves, improve from successful patterns, and learn from real usage
+- **Collective Intelligence**: Agents share evolved skills across a community network
+- **Token Efficiency**: 46% fewer tokens through skill reuse and optimization
+- **Multi-Agent Support**: Plugs into Claude Code, Cursor, OpenClaw, nanobot, and other agents
+- **Quality Monitoring**: Tracks skill performance, error rates, and execution success
+- **Economic Validation**: 4.2× better performance on professional tasks (GDPVal benchmark)
+
+## Installation
+
+```bash
+git clone https://github.com/HKUDS/OpenSpace.git && cd OpenSpace
+pip install -e .
+openspace-mcp --help   # verify installation
+```
+
+<Callout type="tip">
+For faster cloning, skip the large assets folder:
+```bash
+git clone --filter=blob:none --sparse https://github.com/HKUDS/OpenSpace.git
+cd OpenSpace
+git sparse-checkout set '/*' '!assets/'
+pip install -e .
+```
+</Callout>
+
+## Basic Usage
+
+**As an agent plugin** (works with any agent supporting skills):
+```bash
+# Add OpenSpace skills to your agent
+openspace-mcp skill list   # browse available skills
+openspace-mcp skill download &lt;skill_name>   # add to your agent
+```
+
+**As a direct co-worker**:
+```bash
+# Execute tasks directly
+openspace --query "analyze sales data and create dashboard"
+
+# Upload evolved skills to community
+openspace-mcp skill upload &lt;local_skill>
+```
+
+<Callout type="info">
+Browse the community skill ecosystem at [open-space.cloud](https://open-space.cloud) without installation.
+</Callout>
+
+## Notable Details
+
+**License**: MIT  
+**Language**: Python 3.12+  
+**Community**: 2,969 stars, active community at [open-space.cloud](https://open-space.cloud/)  
+**Performance**: Demonstrated 4.2× better economic value with 46% token reduction on professional benchmarks
+
+The project addresses the core limitation of current AI agents: they don't learn from experience or share knowledge, leading to repeated failures and token waste.

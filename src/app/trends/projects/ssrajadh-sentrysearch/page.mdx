@@ -1,0 +1,78 @@
+<GuideHeader tool="sentrysearch" difficulty="Beginner" lastTested="2026-03" readTime="5 min" />
+
+# SentrySearch
+
+SentrySearch enables semantic search over video footage using natural language queries. Instead of scrubbing through hours of video, you describe what you're looking for and get trimmed clips back.
+
+## What it does
+
+- Splits MP4 videos into overlapping chunks and embeds them using Gemini Embedding 2 or local Qwen3-VL models
+- Stores video embeddings in ChromaDB for fast similarity search
+- Matches text queries against video content in vector space
+- Automatically trims and saves clips from the original footage
+- Supports both cloud (Gemini API) and local embedding backends
+- Optimized for dashcam and surveillance footage
+
+## Installation
+
+Install using `uv`:
+
+```bash
+# Install uv if needed
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone and install
+git clone https://github.com/ssrajadh/sentrysearch.git
+cd sentrysearch
+uv tool install .
+```
+
+For local models, add the appropriate extra:
+
+```bash
+# Apple Silicon or NVIDIA with 18GB+ VRAM
+uv tool install ".[local]"
+
+# NVIDIA with 8-16GB VRAM (uses 4-bit quantization)
+uv tool install ".[local-quantized]"
+```
+
+## Basic Usage
+
+Set up API key and index footage:
+
+```bash
+# Configure Gemini API key
+sentrysearch init
+
+# Index your video files
+sentrysearch index /path/to/video/footage
+
+# Search with natural language
+sentrysearch search "red truck running a stop sign"
+```
+
+The search returns ranked results with confidence scores and automatically saves the best match as a trimmed clip.
+
+For local/offline usage:
+
+```bash
+# Index with local model (no API key needed)
+sentrysearch index /path/to/footage --backend local
+
+# Search works the same way
+sentrysearch search "car running a red light"
+```
+
+<Callout type="info">
+The local backend auto-detects the best model for your hardware - qwen8b for high-memory systems, qwen2b for lighter configurations.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 1,084 stars on GitHub
+- **Dependencies**: ChromaDB for vector storage, FFmpeg for video processing
+- **Models**: Supports Google Gemini Embedding 2 and local Qwen3-VL variants
+- **Hardware**: Local models work on Apple Silicon and NVIDIA GPUs; CPU-only systems should use Gemini API

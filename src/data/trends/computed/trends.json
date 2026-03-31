@@ -1001,7 +1001,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "OpenSpace is a self-evolving engine that plugs into existing AI agents (like Claude Code, Cursor, OpenClaw) to make them learn and improve from real-world usage. It enables agents to automatically fix broken skills, share successful patterns across a community network, and reduce token costs by 46% through reusing proven solutions instead of reasoning from scratch. The platform creates collective intelligence where one agent's improvements benefit all connected agents in the network."
@@ -1286,7 +1286,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Mobile",
       "version": "v1.2.6",
       "blurb": "TypeNo is a macOS menu bar app that converts speech to text using local processing. It allows users to record voice input with a Control key press and automatically pastes the transcribed text into any active application, eliminating the need for typing. The app requires no configuration and processes all speech recognition locally for privacy."
@@ -1319,7 +1319,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a drop-in CLAUDE.md file that reduces Claude's output verbosity by ~63% without requiring any code changes. It works by instructing Claude to eliminate filler phrases, unnecessary formatting, and verbose explanations while maintaining the core information content. The file consumes input tokens on every message, so it only provides net savings for high-volume output scenarios rather than casual single queries."
     },
     {
       "full_name": "tonbistudio/turboquant-pytorch",
@@ -1646,7 +1646,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "SentrySearch is a semantic search tool for dashcam footage that uses Google's Gemini Embedding 2 model to enable natural language queries over video content. It allows users to search through hours of dashcam footage by typing descriptive queries like \"red truck running a stop sign\" and automatically returns trimmed video clips matching the search. The tool leverages Gemini's native video embedding capability, which projects raw video pixels directly into the same vector space as text queries without requiring transcription or frame captioning."
@@ -1844,7 +1844,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a TypeScript bot that monitors a target Polymarket wallet and automatically mirrors their buy orders to your own account in real-time. It allows users to copy trade successful prediction market traders without manual intervention, with configurable position sizing and risk management controls. The bot supports multiple Polymarket authentication types including EOA and proxy wallets, and includes safeguards like buy-only copying and exposure limits."
     },
     {
       "full_name": "apechurch/polymarket-arbitrage-trading-bot",

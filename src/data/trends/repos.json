@@ -3134,7 +3134,7 @@
       "language": "Python",
       "url": "https://github.com/HKUDS/OpenSpace",
       "first_seen": "2026-03-25",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -3146,7 +3146,7 @@
       "language": "Swift",
       "url": "https://github.com/marswaveai/TypeNo",
       "first_seen": "2026-03-25",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "accessibility",
         "dictation",
@@ -3170,7 +3170,7 @@
       "language": "Python",
       "url": "https://github.com/ssrajadh/sentrysearch",
       "first_seen": "2026-03-25",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "chromadb",
         "dashcam",
@@ -4445,7 +4445,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is a drop-in CLAUDE.md file that reduces Claude's output verbosity by ~63% without requiring any code changes. It works by instructing Claude to eliminate filler phrases, unnecessary formatting, and verbose explanations while maintaining the core information content. The file consumes input tokens on every message, so it only provides net savings for high-volume output scenarios rather than casual single queries."
     },
     "Neron888/Polymarket-copy-trading-bot": {
       "full_name": "Neron888/Polymarket-copy-trading-bot",
@@ -4475,7 +4476,8 @@
         "trading-bot-polymarket"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is a TypeScript bot that monitors a target Polymarket wallet and automatically mirrors their buy orders to your own account in real-time. It allows users to copy trade successful prediction market traders without manual intervention, with configurable position sizing and risk management controls. The bot supports multiple Polymarket authentication types including EOA and proxy wallets, and includes safeguards like buy-only copying and exposure limits."
     }
   }
 }
