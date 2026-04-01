@@ -4530,8 +4530,8 @@
     },
     "instructkr/claw-code": {
       "full_name": "instructkr/claw-code",
-      "description": "Better Harness Tools, not merely storing the archive of leaked Claude Code but also make real things done. Now rewriting in Rust.",
-      "language": "Python",
+      "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools, not merely storing the archive of leaked Claude Code but also make real things done. Now rewriting in Rust.",
+      "language": "Rust",
       "url": "https://github.com/instructkr/claw-code",
       "first_seen": "2026-03-31",
       "has_summary": false,
@@ -4575,8 +4575,8 @@
     },
     "Kuberwastaken/claude-code": {
       "full_name": "Kuberwastaken/claude-code",
-      "description": "Claude Code's Source Code & Breakdown from a leaked map file in their NPM registry",
-      "language": "TypeScript",
+      "description": "Claude Code in Rust & a Breakdown of How it Works",
+      "language": "Rust",
       "url": "https://github.com/Kuberwastaken/claude-code",
       "first_seen": "2026-03-31",
       "has_summary": false,
@@ -4634,6 +4634,72 @@
       "category": "Other",
       "version": null,
       "blurb": "This is a reverse-engineered TypeScript implementation of Anthropic's official Claude Code CLI tool, recreated from decompiled source code. It provides a full REPL interface with streaming conversations, tool execution capabilities (file operations, bash commands, web search, etc.), and support for multiple API backends including Anthropic Direct, AWS Bedrock, and Google Vertex. The project explicitly warns about its uncertain longevity and recommends downloading rather than forking due to rapid updates driven by Claude Opus optimization."
+    },
+    "obra/superpowers": {
+      "full_name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "url": "https://github.com/obra/superpowers",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v5.0.7"
+    },
+    "Leonxlnx/claude-code-system-prompts": {
+      "full_name": "Leonxlnx/claude-code-system-prompts",
+      "description": "Research into how agentic AI coding assistants work — reconstructed prompt patterns, agent coordination, and security classification",
+      "language": "Unknown",
+      "url": "https://github.com/Leonxlnx/claude-code-system-prompts",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [
+        "agentic-ai",
+        "ai-research",
+        "claude",
+        "prompt-engineering",
+        "system-prompts"
+      ],
+      "category": "AI / ML",
+      "version": null
+    },
+    "shipany-ai/open-agent-sdk": {
+      "full_name": "shipany-ai/open-agent-sdk",
+      "description": "Agent-SDK without CLI dependencies, as an alternative to claude-agent-sdk, completely open source",
+      "language": "TypeScript",
+      "url": "https://github.com/shipany-ai/open-agent-sdk",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [
+        "agent-sdk",
+        "claude-agent-sdk",
+        "claude-code",
+        "open-agent-sdk"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "hitmux/HitCC": {
+      "full_name": "hitmux/HitCC",
+      "description": "Complete reverse-engineering documentation of the full logic of Claude Code CLI Node.js version v2.1.84",
+      "language": "Python",
+      "url": "https://github.com/hitmux/HitCC",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "adamlyttleapps/claude-skill-aso-appstore-screenshots": {
+      "full_name": "adamlyttleapps/claude-skill-aso-appstore-screenshots",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
