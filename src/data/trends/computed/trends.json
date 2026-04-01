@@ -896,7 +896,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "vol.119",
       "blurb": "HelloGitHub is a curated collection of interesting, beginner-friendly open source projects on GitHub, published monthly as a newsletter. It helps developers discover engaging open source projects across various categories including educational resources, practical projects, and enterprise-level tools. The project has been running for over 120 monthly editions and maintains a website with enhanced reading experience alongside the GitHub repository."
@@ -1106,7 +1106,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "FlipOff is a web-based split-flap display emulator that turns any TV or monitor into a retro airport terminal-style board. It provides realistic flip animations, authentic mechanical sounds, and runs entirely offline in a browser without external dependencies. The implementation uses vanilla JavaScript with no frameworks and includes embedded audio from actual split-flap hardware."
@@ -1121,7 +1121,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "G0DM0D3 is an open-source TypeScript chat interface that runs multiple AI models simultaneously to bypass safety filters and content restrictions. It's designed for red-teaming, AI research, and \"liberated\" conversations using techniques like prompt injection, model racing, and input obfuscation across 50+ models via OpenRouter. The project deploys as a single HTML file with no backend dependencies and includes features like \"Parseltongue\" for input perturbation and \"ULTRAPLINIAN\" for multi-model evaluation."
@@ -1649,7 +1649,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Claw Dev is a local multi-provider coding assistant launcher that provides a unified interface for various AI providers including Anthropic, OpenAI, Google Gemini, Groq, OpenRouter, Ollama, and others through a bundled terminal client. It allows developers to switch between different AI model providers at startup while maintaining a consistent tool experience, routing non-Anthropic providers through a local compatibility proxy. The tool is designed to avoid provider-specific wrappers and auth conflicts by presenting itself as a single unified interface regardless of the underlying model provider."
     },
     {
       "full_name": "pengchengneo/Claude-Code",

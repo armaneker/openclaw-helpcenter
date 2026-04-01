@@ -1,0 +1,65 @@
+<GuideHeader tool="G0DM0D3" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# G0DM0D3
+
+G0DM0D3 is an open-source, privacy-first multi-model chat interface designed for red teaming and AI research. It provides uncensored access to 50+ models through OpenRouter with advanced prompt engineering and evaluation capabilities.
+
+## Key Features
+
+- **Multi-model access** — 50+ models including Claude, GPT-5, Gemini, Grok, Mistral via OpenRouter
+- **GODMODE CLASSIC** — 5 battle-tested prompt + model combos racing in parallel
+- **ULTRAPLINIAN** — Multi-model evaluation across 5 tiers (10-55 models) with composite scoring
+- **Parseltongue** — Input perturbation engine with 33 obfuscation techniques for red-teaming
+- **AutoTune** — Context-adaptive parameter optimization with EMA learning
+- **STM Modules** — Real-time output normalization (hedge reduction, direct mode)
+- **Privacy-first** — No login, API keys stay in browser, opt-out telemetry
+- **Single-file deployment** — Pure HTML/CSS/JS, no build step
+
+## Installation
+
+<Callout type="info">
+G0DM0D3 is a single `index.html` file with no dependencies or build process.
+</Callout>
+
+```bash
+# Clone and run locally
+git clone https://github.com/elder-plinius/G0DM0D3.git
+cd G0DM0D3
+
+# Open directly or serve locally
+open index.html
+# or
+python3 -m http.server 8000
+```
+
+For deployment, just upload `index.html` to any static host.
+
+## Basic Usage
+
+1. Open the application and navigate to Settings
+2. Enter your [OpenRouter API key](https://openrouter.ai/keys)
+3. Choose a mode:
+   - **GODMODE CLASSIC** — 5 parallel model combos with jailbreak prompts
+   - **ULTRAPLINIAN** — Multi-model evaluation with scoring
+   - **Single model** — Direct model access
+4. Enable Parseltongue for red-teaming research (optional)
+
+```javascript
+// The app runs entirely client-side
+// API key stored in localStorage only
+localStorage.setItem('openrouter_api_key', 'your_key_here');
+```
+
+<Callout type="warning">
+Your chat history lives entirely in browser localStorage. Clear browser data = lost conversations. Use the export feature to back up important chats.
+</Callout>
+
+## Notable Details
+
+- **License**: AGPL-3.0
+- **Language**: TypeScript (compiled to vanilla JS)
+- **Community**: 2,564 GitHub stars
+- **Privacy**: No PII collection, opt-out telemetry, API keys never leave browser
+- **Research focus**: Built specifically for AI safety research and red-teaming
+
+The project includes an optional Docker API server for advanced features, but the core application requires no backend infrastructure.

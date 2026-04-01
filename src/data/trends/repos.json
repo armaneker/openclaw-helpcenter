@@ -3451,7 +3451,7 @@
       "language": "Python",
       "url": "https://github.com/521xueweihan/HelloGitHub",
       "first_seen": "2026-03-27",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "awesome",
         "github",
@@ -3468,7 +3468,7 @@
       "language": "TypeScript",
       "url": "https://github.com/elder-plinius/G0DM0D3",
       "first_seen": "2026-03-27",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -3480,7 +3480,7 @@
       "language": "JavaScript",
       "url": "https://github.com/magnum6actual/flipoff",
       "first_seen": "2026-03-27",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -4945,7 +4945,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Claw Dev is a local multi-provider coding assistant launcher that provides a unified interface for various AI providers including Anthropic, OpenAI, Google Gemini, Groq, OpenRouter, Ollama, and others through a bundled terminal client. It allows developers to switch between different AI model providers at startup while maintaining a consistent tool experience, routing non-Anthropic providers through a local compatibility proxy. The tool is designed to avoid provider-specific wrappers and auth conflicts by presenting itself as a single unified interface regardless of the underlying model provider."
     }
   }
 }

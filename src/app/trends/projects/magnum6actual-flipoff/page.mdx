@@ -1,0 +1,73 @@
+<GuideHeader tool="flipoff" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# FlipOff
+
+FlipOff is a web-based emulator that turns any TV or monitor into a retro split-flap display — the classic flip-board style you'd see at airports and train stations. It provides the authentic mechanical look and sound without the $3,500 hardware cost.
+
+## Key Features
+
+- Realistic split-flap animations with colorful scramble transitions
+- Authentic mechanical clacking sounds recorded from real hardware
+- Auto-rotating inspirational quotes
+- Fullscreen TV mode for large displays
+- Keyboard controls for manual navigation
+- Zero dependencies — pure vanilla HTML/CSS/JS
+- Works offline with no external services
+- Responsive design from mobile to 4K
+
+## Installation
+
+Clone the repository and open `index.html` directly in any browser:
+
+```bash
+git clone https://github.com/magnum6actual/flipoff.git
+cd flipoff
+# Open index.html or serve locally
+python3 -m http.server 8080
+```
+
+<Callout type="info">
+No build tools or npm dependencies required. The entire app runs as static files.
+</Callout>
+
+## Basic Usage
+
+```bash
+# Open the app
+open index.html
+
+# Key controls:
+# F - Toggle fullscreen
+# Enter/Space - Next message  
+# Arrow keys - Navigate messages
+# M - Toggle mute
+```
+
+Click anywhere to enable audio, then press `F` for fullscreen TV mode. The display will automatically cycle through messages with realistic flip animations.
+
+## Customization
+
+Edit `js/constants.js` to modify:
+
+```javascript
+// Add custom messages
+MESSAGES = ["Your custom text here"];
+
+// Adjust grid size
+GRID_COLS = 40;
+GRID_ROWS = 6;
+
+// Customize colors and timing
+SCRAMBLE_COLORS = ["#ff6b6b", "#4ecdc4", "#45b7d1"];
+```
+
+## Notable Details
+
+**License:** MIT  
+**Language:** JavaScript (vanilla, no frameworks)  
+**Community:** 2,580 GitHub stars  
+**Dependencies:** None — completely self-contained
+
+<Callout type="tip">
+Perfect for lobby displays, digital signage, or just adding retro flair to any screen.
+</Callout>
