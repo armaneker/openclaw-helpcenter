@@ -2085,7 +2085,7 @@
     },
     "webadderall/Recordly": {
       "full_name": "webadderall/Recordly",
-      "description": "Recordly is a powerful open-source screen recorder and editor for professional product videos, demos, and tutorials. Adds auto-zooms, webcam overlays, cursor animations and more to your recordings.",
+      "description": "Recordly is an open‑source screen recorder for MacOS/Windows/Linux with auto-zoom, motion blur animated cursors, webcam overlays, auto-captions and more. Used to create product demos, guided walkthroughs and more.",
       "language": "TypeScript",
       "url": "https://github.com/webadderall/Recordly",
       "first_seen": "2026-03-22",
@@ -4359,7 +4359,7 @@
     },
     "titanwings/colleague-skill": {
       "full_name": "titanwings/colleague-skill",
-      "description": "将冰冷的离别化为温暖的 Skill，欢迎加入数字生命1.0！",
+      "description": "将冰冷的离别化为温暖的 Skill，欢迎加入数字生命1.0！Transforming cold farewells into warm skills? It's giving rebirth era. Welcome to Digital Life 1.0. 🫶",
       "language": "Python",
       "url": "https://github.com/titanwings/colleague-skill",
       "first_seen": "2026-03-31",
@@ -4530,7 +4530,7 @@
     },
     "instructkr/claw-code": {
       "full_name": "instructkr/claw-code",
-      "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools, not merely storing the archive of leaked Claude Code but also make real things done. Now rewriting in Rust.",
+      "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
       "language": "Rust",
       "url": "https://github.com/instructkr/claw-code",
       "first_seen": "2026-03-31",
@@ -4563,7 +4563,7 @@
     },
     "sanbuphy/claude-code-source-code": {
       "full_name": "sanbuphy/claude-code-source-code",
-      "description": "Claude Code v2.1.88 Source Code",
+      "description": "It will be revised soon.",
       "language": "TypeScript",
       "url": "https://github.com/sanbuphy/claude-code-source-code",
       "first_seen": "2026-03-31",
@@ -4625,7 +4625,7 @@
     },
     "claude-code-best/claude-code": {
       "full_name": "claude-code-best/claude-code",
-      "description": "Claude Code 可运行版; Typescript 类型全修复;企业级可靠性; 安全无毒, lock 文件保真, 可直接 bun i; bun run dev 启动",
+      "description": "原汁原昧 Claude Code 可运行版; Bun 可编译执行版; Typescript 类型全修复; 企业级可靠性; 安全无毒, lock 文件保真, 可直接 bun i; bun run dev 启动",
       "language": "TypeScript",
       "url": "https://github.com/claude-code-best/claude-code",
       "first_seen": "2026-03-31",
@@ -4705,6 +4705,104 @@
       "category": "Other",
       "version": null,
       "blurb": "A Claude Code skill that automatically generates App Store screenshots by analyzing iOS app codebases to identify key benefits and pairing them with simulator screenshots. It uses a two-stage pipeline where deterministic Python scaffolding creates consistent layouts, then AI enhancement via Gemini MCP adds visual polish and photorealistic device frames. The tool outputs App Store-ready screenshots at exact Apple dimensions along with working files organized in a structured directory."
+    },
+    "tvytlx/ai-agent-deep-dive": {
+      "full_name": "tvytlx/ai-agent-deep-dive",
+      "description": "Claude Code 源码深度研究报告",
+      "language": "Unknown",
+      "url": "https://github.com/tvytlx/ai-agent-deep-dive",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Agentic",
+      "version": null
+    },
+    "chatgptprojects/clear-code": {
+      "full_name": "chatgptprojects/clear-code",
+      "description": "https://x.com/paidev",
+      "language": "Unknown",
+      "url": "https://github.com/chatgptprojects/clear-code",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "NanmiCoder/claude-code-haha": {
+      "full_name": "NanmiCoder/claude-code-haha",
+      "description": "Claude Code leaked source - locally runnable version",
+      "language": "TypeScript",
+      "url": "https://github.com/NanmiCoder/claude-code-haha",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "ponponon/claude_code_src": {
+      "full_name": "ponponon/claude_code_src",
+      "description": "2026.3.31 claude code 意外把包含源码的文件上传到 npm 仓库，版本号是 2.1.88，其中 cli.js.map 文件有 57MB 的体积，claude code 的源码在该文件的 sourcesContent 字段里面，解压还原后有 70w 行代码",
+      "language": "TypeScript",
+      "url": "https://github.com/ponponon/claude_code_src",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "2.1.88"
+    },
+    "jarmuine/claude-code": {
+      "full_name": "jarmuine/claude-code",
+      "description": "Fork of instructkr/claude-code",
+      "language": "TypeScript",
+      "url": "https://github.com/jarmuine/claude-code",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "0xSero/turboquant": {
+      "full_name": "0xSero/turboquant",
+      "description": "TurboQuant: Near-optimal KV cache quantization for LLM inference (3-bit keys, 2-bit values) with Triton kernels + vLLM integration",
+      "language": "Python",
+      "url": "https://github.com/0xSero/turboquant",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "motiful/cc-gateway": {
+      "full_name": "motiful/cc-gateway",
+      "description": "AI API identity gateway — reverse proxy that normalizes device fingerprints and telemetry for privacy-preserving API proxying",
+      "language": "TypeScript",
+      "url": "https://github.com/motiful/cc-gateway",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [
+        "anthropic",
+        "api-gateway",
+        "claude-code",
+        "docker",
+        "fingerprint",
+        "privacy",
+        "reverse-proxy",
+        "telemetry",
+        "typescript"
+      ],
+      "category": "DevTools",
+      "version": null
+    },
+    "pengchengneo/Claude-Code": {
+      "full_name": "pengchengneo/Claude-Code",
+      "description": "可运行的Claude Code源码",
+      "language": "TypeScript",
+      "url": "https://github.com/pengchengneo/Claude-Code",
+      "first_seen": "2026-04-01",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
