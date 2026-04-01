@@ -3286,7 +3286,7 @@
       "language": "TypeScript",
       "url": "https://github.com/K-Dense-AI/k-dense-byok",
       "first_seen": "2026-03-26",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v0.2.8",
@@ -3298,7 +3298,7 @@
       "language": "Dockerfile",
       "url": "https://github.com/CoderLuii/HolyClaude",
       "first_seen": "2026-03-26",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "ai",
         "ai-coding",
@@ -3326,7 +3326,7 @@
       "language": "Rust",
       "url": "https://github.com/NVIDIA/OpenShell",
       "first_seen": "2026-03-26",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v0.0.16",
@@ -4644,7 +4644,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v5.0.7"
+      "version": "v5.0.7",
+      "blurb": "Superpowers is an agentic skills framework that provides a structured software development workflow for coding agents through composable skills and initial instructions. It enforces a disciplined process where agents gather requirements, create validated designs, generate detailed implementation plans, and execute work through subagent-driven development rather than jumping straight into coding. The framework supports multiple AI coding platforms including Claude Code, Cursor, and others through plugin marketplaces or manual installation."
     },
     "Leonxlnx/claude-code-system-prompts": {
       "full_name": "Leonxlnx/claude-code-system-prompts",
@@ -4661,7 +4662,8 @@
         "system-prompts"
       ],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "This repository documents reconstructed system prompts and architectural patterns used by agentic AI coding assistants like Claude Code, based on behavioral analysis rather than leaked source code. It provides educational insights into how these systems coordinate multiple specialized agents, manage security classifications for tool usage, and dynamically assemble modular prompt architectures at runtime. The project catalogs 20+ specific prompt patterns covering everything from multi-agent orchestration to context window management and autonomous tool execution safety."
     },
     "shipany-ai/open-agent-sdk": {
       "full_name": "shipany-ai/open-agent-sdk",
@@ -4677,7 +4679,8 @@
         "open-agent-sdk"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Open Agent SDK is an open-source TypeScript library for building autonomous AI agents that can read code, edit files, run commands, and execute multi-step workflows. It provides an in-process alternative to Anthropic's official Claude Agent SDK, eliminating CLI dependencies and enabling deployment to cloud servers, serverless functions, and containers. The SDK supports custom tools, MCP server integration, and both one-shot queries and persistent multi-turn conversations."
     },
     "hitmux/HitCC": {
       "full_name": "hitmux/HitCC",
@@ -4688,7 +4691,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "HitCC is a comprehensive reverse-engineering documentation project that analyzes the complete logic of Claude Code CLI Node.js version v2.1.84. It provides structured documentation of the CLI's execution chain, agent loop, tool systems, and surrounding ecosystem to serve as a reference for building alternative implementations or rewrites. The project contains 81 documentation files totaling over 27,000 lines covering everything from startup sequences to MCP integration and session persistence."
     },
     "adamlyttleapps/claude-skill-aso-appstore-screenshots": {
       "full_name": "adamlyttleapps/claude-skill-aso-appstore-screenshots",
@@ -4699,7 +4703,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "A Claude Code skill that automatically generates App Store screenshots by analyzing iOS app codebases to identify key benefits and pairing them with simulator screenshots. It uses a two-stage pipeline where deterministic Python scaffolding creates consistent layouts, then AI enhancement via Gemini MCP adds visual polish and photorealistic device frames. The tool outputs App Store-ready screenshots at exact Apple dimensions along with working files organized in a structured directory."
     }
   }
 }

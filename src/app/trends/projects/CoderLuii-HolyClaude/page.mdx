@@ -1,0 +1,70 @@
+<GuideHeader tool="HolyClaude" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# HolyClaude
+
+HolyClaude is a containerized AI development workstation that packages Claude Code, a web UI, headless browser, and 50+ development tools into a single Docker image. It eliminates the configuration overhead of setting up AI coding tools manually.
+
+## Key Features
+
+- **Complete Claude Code integration** — Works with existing Anthropic subscriptions (Max/Pro plans or API keys)
+- **Web-based interface** — Access Claude Code through your browser 
+- **Multi-AI CLI support** — Includes 7 AI CLIs (OpenAI, Gemini, Anthropic, etc.)
+- **Headless browser** — Playwright configured for screenshots and testing
+- **Development tools** — TypeScript, Python, Git, database clients, deployment tools
+- **Multi-platform** — Supports AMD64, ARM64, including Raspberry Pi and NAS devices
+- **Zero configuration** — Works out of the box with `docker compose up`
+
+## Installation
+
+Create a project directory and Docker Compose file:
+
+```bash
+mkdir holyclaude && cd holyclaude
+```
+
+Create `docker-compose.yaml`:
+
+```yaml
+services:
+  holyclaude:
+    image: coderluii/holyclaude:latest
+    container_name: holyclaude
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PUID=1000
+      - PGID=1000
+    restart: unless-stopped
+    shm_size: 2gb
+```
+
+Start the container:
+
+```bash
+docker compose up -d
+```
+
+## Usage
+
+Access the web interface at `http://localhost:3001`. Create a CloudCLI account and authenticate with your existing Anthropic credentials. No additional setup required.
+
+<Callout type="info">
+HolyClaude uses your existing Anthropic subscription directly. Your credentials are stored locally in the mounted volume, not transmitted elsewhere.
+</Callout>
+
+The container includes all major AI CLIs pre-configured. Access them through the terminal interface or use them in your development workflow.
+
+<Callout type="tip">
+For NAS deployments, add `CHOKIDAR_USEPOLLING=true` to the environment variables to handle SMB mount limitations.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Dockerfile-based multi-service container
+- **Community**: 1,485 GitHub stars
+- **Images**: Available in full and slim variants on Docker Hub
+- **Platforms**: Linux (AMD64/ARM64), macOS, Windows (WSL2)
+- **Memory**: Requires 2GB shared memory for headless browser functionality

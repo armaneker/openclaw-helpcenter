@@ -1,0 +1,67 @@
+<GuideHeader tool="OpenShell" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# OpenShell
+
+OpenShell is a safe, private runtime for autonomous AI agents. It provides sandboxed execution environments with policy-enforced network controls to protect your data, credentials, and infrastructure.
+
+## Key Features
+
+- **Sandboxed execution** — Isolated container environments for AI agents
+- **Declarative YAML policies** — Fine-grained control over file access, network activity, and process execution
+- **Hot-reloadable network policies** — Update network permissions without restarting sandboxes
+- **Privacy-aware LLM routing** — Credential management and controlled API access
+- **Built-in agent support** — Pre-configured for Claude, OpenCode, Codex, and Copilot
+- **GPU passthrough** — Experimental support for local inference workloads
+
+<Callout type="warning">
+OpenShell is alpha software designed for single-developer use. Expect rough edges and breaking changes.
+</Callout>
+
+## Installation
+
+**Binary (recommended):**
+
+```bash
+curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
+```
+
+**From PyPI (requires uv):**
+
+```bash
+uv tool install -U openshell
+```
+
+**Prerequisites:** Docker Desktop or Docker daemon must be running.
+
+## Basic Usage
+
+Create and connect to a sandbox:
+
+```bash
+# Create sandbox with Claude agent
+openshell sandbox create -- claude
+
+# Apply network policy
+openshell policy set demo --policy examples/sandbox-policy-quickstart/policy.yaml --wait
+
+# Connect to sandbox
+openshell sandbox connect demo
+```
+
+Inside the sandbox, network access is controlled by your YAML policies:
+
+```bash
+# Allowed by policy
+curl -sS https://api.github.com/zen
+
+# Blocked by policy
+curl -sS -X POST https://api.github.com/repos/octocat/hello-world/issues
+```
+
+## Notable Details
+
+- **License:** Apache-2.0
+- **Language:** Rust with Python bindings
+- **Community:** 4,172 GitHub stars
+- **Architecture:** K3s Kubernetes cluster running in Docker container
+- **GPU Support:** Experimental NVIDIA GPU passthrough available

@@ -944,7 +944,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v5.0.7",
-      "blurb": null
+      "blurb": "Superpowers is an agentic skills framework that provides a structured software development workflow for coding agents through composable skills and initial instructions. It enforces a disciplined process where agents gather requirements, create validated designs, generate detailed implementation plans, and execute work through subagent-driven development rather than jumping straight into coding. The framework supports multiple AI coding platforms including Claude Code, Cursor, and others through plugin marketplaces or manual installation."
     },
     {
       "full_name": "affaan-m/everything-claude-code",
@@ -1259,7 +1259,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": null,
-      "blurb": null
+      "blurb": "This repository documents reconstructed system prompts and architectural patterns used by agentic AI coding assistants like Claude Code, based on behavioral analysis rather than leaked source code. It provides educational insights into how these systems coordinate multiple specialized agents, manage security classifications for tool usage, and dynamically assemble modular prompt architectures at runtime. The project catalogs 20+ specific prompt patterns covering everything from multi-agent orchestration to context window management and autonomous tool execution safety."
     },
     {
       "full_name": "tvytlx/claude-code-deep-dive",
@@ -1394,7 +1394,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "Open Agent SDK is an open-source TypeScript library for building autonomous AI agents that can read code, edit files, run commands, and execute multi-step workflows. It provides an in-process alternative to Anthropic's official Claude Agent SDK, eliminating CLI dependencies and enabling deployment to cloud servers, serverless functions, and containers. The SDK supports custom tools, MCP server integration, and both one-shot queries and persistent multi-turn conversations."
     },
     {
       "full_name": "glommer/pgmicro",
@@ -1619,7 +1619,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "HitCC is a comprehensive reverse-engineering documentation project that analyzes the complete logic of Claude Code CLI Node.js version v2.1.84. It provides structured documentation of the CLI's execution chain, agent loop, tool systems, and surrounding ecosystem to serve as a reference for building alternative implementations or rewrites. The project contains 81 documentation files totaling over 27,000 lines covering everything from startup sequences to MCP integration and session persistence."
     },
     {
       "full_name": "adamlyttleapps/claude-skill-aso-appstore-screenshots",
@@ -1634,7 +1634,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "A Claude Code skill that automatically generates App Store screenshots by analyzing iOS app codebases to identify key benefits and pairing them with simulator screenshots. It uses a two-stage pipeline where deterministic Python scaffolding creates consistent layouts, then AI enhancement via Gemini MCP adds visual polish and photorealistic device frames. The tool outputs App Store-ready screenshots at exact Apple dimensions along with working files organized in a structured directory."
     },
     {
       "full_name": "mauriceboe/TREK",

@@ -1,0 +1,65 @@
+<GuideHeader tool="k-dense-byok" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# K-Dense BYOK
+
+K-Dense BYOK is a desktop AI research assistant that runs locally using your own API keys. The system features an AI agent called Kady that delegates complex tasks to specialized AI experts with access to scientific databases and tools.
+
+## Key Features
+
+- **Multi-agent system** — Kady coordinates specialized AI experts for complex scientific tasks
+- **326 pre-built workflows** — Ready-to-use templates spanning 22 disciplines from genomics to astrophysics
+- **Universal file support** — Upload, create, and preview files locally with sandbox isolation
+- **40+ AI models** — Choose from OpenAI, Anthropic, Google, xAI, Qwen via simple dropdown
+- **Scientific tooling** — Access to 250+ databases, 500k+ Python packages, and 170+ scientific skills
+- **Web search integration** — Real-time information lookup during task execution
+- **Remote compute** — Optional Modal integration for heavy computational workloads
+- **Custom MCP servers** — Extend capabilities with your own Model Context Protocol servers
+
+## Installation
+
+<Callout type="info">
+Requires macOS or Linux. Windows users should use WSL.
+</Callout>
+
+```bash
+git clone https://github.com/K-Dense-AI/k-dense-byok.git
+cd k-dense-byok
+
+# Copy environment template and add your OpenRouter API key
+cp kady_agent/env.example kady_agent/.env
+# Edit .env file with your API keys
+
+# Start the application
+chmod +x start.sh
+./start.sh
+```
+
+The startup script automatically installs dependencies and launches three services: frontend (port 3000), backend (port 8000), and LiteLLM proxy (port 4000).
+
+## Basic Usage
+
+After startup, navigate to `http://localhost:3000`. You can chat directly with Kady or browse the workflow library:
+
+```bash
+# Example query
+"Analyze this protein sequence for binding sites"
+
+# Workflow usage
+1. Select workflow from library
+2. Upload required files
+3. Choose AI model
+4. Launch execution
+```
+
+Files are processed in a local `sandbox/` directory. Expert agents automatically select appropriate tools based on task requirements.
+
+## Project Details
+
+- **License**: MIT
+- **Language**: TypeScript  
+- **Community**: 460 GitHub stars
+- **Status**: Beta with active development
+
+<Callout type="warning">
+Currently in beta. Core functionality is stable but expect frequent updates and new features.
+</Callout>
