@@ -899,7 +899,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a curated meta-repository that catalogs and organizes hundreds of \"awesome lists\" covering programming languages, tools, frameworks, and technical topics. Developers use it as a centralized directory to discover high-quality resources, libraries, and learning materials across virtually any technology domain. With over 450k stars, it has become the de facto standard for community-curated resource lists on GitHub."
     },
     {
       "full_name": "obra/superpowers",
@@ -959,7 +959,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "This is a research repository that analyzes the architecture of CLI coding agents, specifically focused on reverse-engineering Claude Code through publicly available information. It provides deep technical analysis including tool systems, permission flows, telemetry mechanisms, and internal features like \"undercover mode\" for hiding AI authorship. The project includes comprehensive multilingual documentation covering 40+ tools, progressive harness mechanisms, and undocumented features discovered through community research."
     },
     {
       "full_name": "openai/codex-plugin-cc",
@@ -1034,7 +1034,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Claurst is a Rust reimplementation of Claude Code, Anthropic's AI coding CLI terminal agent, created after the original source code was leaked via an npm sourcemap. It provides the same AI-powered coding assistance and terminal integration as Claude Code but written in idiomatic Rust rather than TypeScript. The project was built using clean-room engineering principles, with separate AI agents handling specification and implementation phases to avoid copyright issues."
     },
     {
       "full_name": "TheTom/turboquant_plus",
@@ -1184,7 +1184,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "The Open Agent SDK for TypeScript is an alternative to claude-agent-sdk that runs agent workflows in-process without CLI dependencies. It enables developers to deploy AI agents in any environment including cloud, serverless, and CI/CD pipelines while supporting custom tools and MCP server integration. The SDK runs the full agent loop in-process, eliminating the need for subprocess management."
     },
     {
       "full_name": "chatgptprojects/clear-code",
@@ -1229,7 +1229,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "This is a research repository that reverse-engineers the prompt architecture and agent coordination patterns used by modern AI coding assistants like Claude Code through behavioral analysis. Developers and AI researchers use it to understand how these systems dynamically assemble prompts, coordinate multiple specialized agents, and implement security mechanisms for autonomous tool execution. The project documents 20+ reconstructed prompt patterns ranging from core system prompts to specialized agents for verification, exploration, and multi-agent orchestration."
     },
     {
       "full_name": "revfactory/harness",
@@ -1304,7 +1304,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "Open Multi-Agent is a TypeScript framework for orchestrating teams of AI agents that collaborate on complex tasks through automatic task scheduling and inter-agent communication. It enables building specialized agent teams where different agents handle planning, implementation, and review while the framework manages dependencies and parallel execution automatically. The framework is model-agnostic, allowing mixed teams of Claude and GPT agents running in a single Node.js process without subprocess overhead."
     },
     {
       "full_name": "ponponon/claude_code_src",
@@ -1334,7 +1334,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "OpenClaude is a fork of the leaked Claude Code source that adds support for any OpenAI-compatible LLM instead of just Claude. It allows developers to use Claude Code's full toolset (bash, file operations, agents, MCP) with models like GPT-4o, DeepSeek, Gemini, or local models through Ollama. The project originated from Claude Code source maps that were accidentally exposed via npm in March 2026."
     },
     {
       "full_name": "oaker-io/wewrite",
@@ -1559,7 +1559,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Ex-skill is a Python tool that creates AI personas based on your ex-partner's communication patterns using chat logs, social media, and photos. It analyzes relationship data to generate a conversational AI that mimics their speech patterns, personality traits, and shared memories for personal reflection or emotional processing. The system supports multiple Chinese messaging platforms (WeChat, QQ) and includes version management for iterating on the AI persona over time."
     },
     {
       "full_name": "hitmux/HitCC",
@@ -1616,7 +1616,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v0.2.14",
       "blurb": "Feynman is an open-source AI research agent that conducts academic research tasks through a command-line interface. It automates literature reviews, paper analysis, experiment replication, and research synthesis by leveraging multiple AI agents that search papers, verify sources, and generate cited reports. The tool integrates with AlphaXiv for paper search, supports GPU compute via Modal/RunPod for experiment replication, and delivers all outputs with direct source links for verification."

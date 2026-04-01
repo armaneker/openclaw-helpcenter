@@ -1,0 +1,60 @@
+<GuideHeader tool="feynman" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Feynman
+
+Feynman is an open source AI research agent that conducts academic research with source citations. It searches papers, performs literature reviews, and replicates experiments through a command-line interface.
+
+## Key Features
+
+- **Multi-agent research workflows** — parallel investigators with synthesis and verification
+- **Literature reviews** — comprehensive paper analysis with consensus and disagreements
+- **Experiment replication** — reproduce studies on local or cloud GPUs
+- **Paper auditing** — compare claims against public codebases
+- **Source-grounded outputs** — all claims link to papers, docs, or repositories
+- **GPU compute integration** — Modal and RunPod support for training and inference
+
+## Installation
+
+**macOS/Linux:**
+```bash
+curl -fsSL https://feynman.is/install | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://feynman.is/install.ps1 | iex
+```
+
+<Callout type="info">
+The installer fetches the latest release. Pin a specific version with `bash -s -- 0.2.16`
+</Callout>
+
+## Basic Usage
+
+```bash
+# Research brief with citations
+feynman "what do we know about scaling laws"
+
+# Multi-agent deep investigation
+feynman deepresearch "mechanistic interpretability"
+
+# Literature review
+feynman lit "RLHF alternatives"
+
+# Paper vs codebase audit
+feynman audit 2401.12345
+
+# Replicate experiments
+feynman replicate "chain-of-thought improves math"
+```
+
+Available agents include Researcher (evidence gathering), Reviewer (peer review simulation), Writer (structured drafts), and Verifier (citation validation).
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** TypeScript
+- **Stars:** 1,488
+- **Requirements:** Node.js 20.19.0+ (if using npm/pnpm instead of standalone)
+- **Built on:** Pi agent runtime and alphaXiv for paper search
+- **Skills-only install** available for integration with other agent frameworks

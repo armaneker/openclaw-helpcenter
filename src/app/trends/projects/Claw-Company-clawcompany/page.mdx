@@ -1,0 +1,58 @@
+<GuideHeader tool="clawcompany" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# ClawCompany
+
+ClawCompany is an open-source AI company operating system that provides 38 specialized roles across 6 templates with a 4-layer memory architecture. It enables you to run an autonomous AI team locally where you act as Chairman directing AI agents to execute complex business tasks.
+
+## Key Features
+
+- **38 specialized AI roles** across 6 company templates (Default, YC Startup, Trading Desk, Research Lab, Software Dev, Harness Builder)
+- **4-layer memory system** that compresses and categorizes company knowledge while preserving everything locally
+- **9 integrated tools** including web search, code interpreter, browser automation, and real-time price feeds
+- **Multi-LLM support** for ClawAPI, Anthropic, OpenAI, Google, and Ollama with intelligent model routing
+- **Cost optimization** using appropriate models per task (~$0.06 per mission vs $0.40+ alternatives)
+- **Zero-config setup** with local execution and no external dependencies
+
+## Installation
+
+```bash
+npx clawcompany
+```
+
+<Callout type="info">
+Requires Node.js 20+. Setup takes 2 steps and completes in ~30 seconds.
+</Callout>
+
+## Basic Usage
+
+After running the command, you act as Chairman directing your AI team:
+
+```
+You → "Analyze NVDA stock for 2026 investment potential"
+↓
+Leader decomposes task into work streams
+→ Researcher gathers market data and financial reports
+→ Analyst builds valuation models using code interpreter  
+→ Writer formats comprehensive investment report
+↓
+You receive the final analysis
+```
+
+The system automatically routes tasks to appropriate specialists and uses optimal models for each job type.
+
+## Development Setup
+
+```bash
+git clone https://github.com/Claw-Company/clawcompany.git
+cd clawcompany
+pnpm install
+pnpm dev
+```
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** TypeScript
+- **GitHub Stars:** 718
+- **Community:** Active development with focus on autonomous multi-agent frameworks
+- **Architecture:** Local-first with 4-layer memory compression and LLM-powered categorization

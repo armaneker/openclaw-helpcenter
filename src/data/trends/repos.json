@@ -3393,7 +3393,7 @@
       "language": "TypeScript",
       "url": "https://github.com/Claw-Company/clawcompany",
       "first_seen": "2026-03-26",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agents",
         "ai",
@@ -3414,7 +3414,7 @@
       "language": "TypeScript",
       "url": "https://github.com/getcompanion-ai/feynman",
       "first_seen": "2026-03-26",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v0.2.14",
@@ -3426,7 +3426,7 @@
       "language": "Unknown",
       "url": "https://github.com/alvinunreal/awesome-opensource-ai",
       "first_seen": "2026-03-26",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "agents",
         "ai",
@@ -4827,7 +4827,8 @@
         "unicorns"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is a curated meta-repository that catalogs and organizes hundreds of \"awesome lists\" covering programming languages, tools, frameworks, and technical topics. Developers use it as a centralized directory to discover high-quality resources, libraries, and learning materials across virtually any technology domain. With over 450k stars, it has become the de facto standard for community-curated resource lists on GitHub."
     },
     "sanbuphy/learn-coding-agent": {
       "full_name": "sanbuphy/learn-coding-agent",
@@ -4838,7 +4839,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "This is a research repository that analyzes the architecture of CLI coding agents, specifically focused on reverse-engineering Claude Code through publicly available information. It provides deep technical analysis including tool systems, permission flows, telemetry mechanisms, and internal features like \"undercover mode\" for hiding AI authorship. The project includes comprehensive multilingual documentation covering 40+ tools, progressive harness mechanisms, and undocumented features discovered through community research."
     },
     "Kuberwastaken/claurst": {
       "full_name": "Kuberwastaken/claurst",
@@ -4849,7 +4851,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Claurst is a Rust reimplementation of Claude Code, Anthropic's AI coding CLI terminal agent, created after the original source code was leaked via an npm sourcemap. It provides the same AI-powered coding assistance and terminal integration as Claude Code but written in idiomatic Rust rather than TypeScript. The project was built using clean-room engineering principles, with separate AI agents handling specification and implementation phases to avoid copyright issues."
     },
     "codeany-ai/open-agent-sdk-typescript": {
       "full_name": "codeany-ai/open-agent-sdk-typescript",
@@ -4865,7 +4868,8 @@
         "open-agent-sdk"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "The Open Agent SDK for TypeScript is an alternative to claude-agent-sdk that runs agent workflows in-process without CLI dependencies. It enables developers to deploy AI agents in any environment including cloud, serverless, and CI/CD pipelines while supporting custom tools and MCP server integration. The SDK runs the full agent loop in-process, eliminating the need for subprocess management."
     },
     "Leonxlnx/agentic-ai-prompt-research": {
       "full_name": "Leonxlnx/agentic-ai-prompt-research",
@@ -4882,7 +4886,8 @@
         "system-prompts"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "This is a research repository that reverse-engineers the prompt architecture and agent coordination patterns used by modern AI coding assistants like Claude Code through behavioral analysis. Developers and AI researchers use it to understand how these systems dynamically assemble prompts, coordinate multiple specialized agents, and implement security mechanisms for autonomous tool execution. The project documents 20+ reconstructed prompt patterns ranging from core system prompts to specialized agents for verification, exploration, and multi-agent orchestration."
     },
     "JackChen-me/open-multi-agent": {
       "full_name": "JackChen-me/open-multi-agent",
@@ -4904,7 +4909,8 @@
         "typescript"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Open Multi-Agent is a TypeScript framework for orchestrating teams of AI agents that collaborate on complex tasks through automatic task scheduling and inter-agent communication. It enables building specialized agent teams where different agents handle planning, implementation, and review while the framework manages dependencies and parallel execution automatically. The framework is model-agnostic, allowing mixed teams of Claude and GPT agents running in a single Node.js process without subprocess overhead."
     },
     "Gitlawb/openclaude": {
       "full_name": "Gitlawb/openclaude",
@@ -4915,7 +4921,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "OpenClaude is a fork of the leaked Claude Code source that adds support for any OpenAI-compatible LLM instead of just Claude. It allows developers to use Claude Code's full toolset (bash, file operations, agents, MCP) with models like GPT-4o, DeepSeek, Gemini, or local models through Ollama. The project originated from Claude Code source maps that were accidentally exposed via npm in March 2026."
     },
     "therealXiaomanChu/ex-skill": {
       "full_name": "therealXiaomanChu/ex-skill",
@@ -4926,7 +4933,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Ex-skill is a Python tool that creates AI personas based on your ex-partner's communication patterns using chat logs, social media, and photos. It analyzes relationship data to generate a conversational AI that mimics their speech patterns, personality traits, and shared memories for personal reflection or emotional processing. The system supports multiple Chinese messaging platforms (WeChat, QQ) and includes version management for iterating on the AI persona over time."
     }
   }
 }
