@@ -1822,7 +1822,8 @@
         "research-automation"
       ],
       "category": "Agentic",
-      "blurb": "ARIS is a collection of Markdown-based skills that enable LLM agents like Claude Code to conduct autonomous ML research workflows including paper review, idea generation, and experiment automation. It uses cross-model collaboration where one LLM executes research tasks while another provides critical review to avoid the blind spots of single-model self-play. The system is framework-agnostic and portable across different LLM agents since all skills are plain Markdown files with zero dependencies."
+      "blurb": "ARIS is a collection of Markdown-based skills that enable LLM agents like Claude Code to conduct autonomous ML research workflows including paper review, idea generation, and experiment automation. It uses cross-model collaboration where one LLM executes research tasks while another provides critical review to avoid the blind spots of single-model self-play. The system is framework-agnostic and portable across different LLM agents since all skills are plain Markdown files with zero dependencies.",
+      "version": "v0.1.0"
     },
     "aiming-lab/MetaClaw": {
       "full_name": "aiming-lab/MetaClaw",
@@ -2085,7 +2086,7 @@
     },
     "webadderall/Recordly": {
       "full_name": "webadderall/Recordly",
-      "description": "Recordly is an open‑source screen recorder for MacOS/Windows/Linux with auto-zoom, motion blur animated cursors, webcam overlays, auto-captions and more. Used to create product demos, guided walkthroughs and more.",
+      "description": "Create polished screen recordings for free. An open-source screen recorder for Mac/Windows/Linux that adds auto-zooms, animated cursors, auto-captions and more to your videos.",
       "language": "TypeScript",
       "url": "https://github.com/webadderall/Recordly",
       "first_seen": "2026-03-22",
@@ -4625,7 +4626,7 @@
     },
     "claude-code-best/claude-code": {
       "full_name": "claude-code-best/claude-code",
-      "description": "原汁原昧 Claude Code 可运行版; Bun 可编译执行版; Typescript 类型全修复; 企业级可靠性; 安全无毒, lock 文件保真, 可直接 bun i; bun run dev 启动",
+      "description": "原汁原昧 Claude Code 可运行,可构建版; Typescript 类型全修复; 企业级可靠性; 安全无毒, lock 文件保真, 可直接 bun i; bun run dev 启动",
       "language": "TypeScript",
       "url": "https://github.com/claude-code-best/claude-code",
       "first_seen": "2026-03-31",
@@ -5013,6 +5014,49 @@
       "category": "Agentic",
       "version": "v1.0.3",
       "blurb": "OpenYak is an open-source desktop AI agent that processes documents and files entirely on your local machine without uploading data to external services. It provides access to 100+ AI models from 20+ providers (cloud or local via Ollama) and includes 20+ built-in tools for file management, document creation, data analysis, and workflow automation. The platform offers free usage with 1M tokens per week on free models and connects to 46+ services through built-in connectors or MCP integration."
+    },
+    "ultraworkers/claw-code": {
+      "full_name": "ultraworkers/claw-code",
+      "description": "The fastest repo in history to surpass 100K stars ⭐. Better Harness Tools that make real things done. Built in Rust using oh-my-codex.",
+      "language": "Rust",
+      "url": "https://github.com/ultraworkers/claw-code",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "lintsinghua/claude-code-book": {
+      "full_name": "lintsinghua/claude-code-book",
+      "description": "42万字拆解 AI Agent 的Harness骨架与神经 —— Claude Code 架构深度剖析，15 章从对话循环到构建你自己的 Agent Harness。在线阅读网站：",
+      "language": "Unknown",
+      "url": "https://github.com/lintsinghua/claude-code-book",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "agent-architecture",
+        "ai-agent",
+        "anthropic",
+        "book",
+        "chinese",
+        "claude-code",
+        "llm",
+        "mcp"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "ericosiu/ai-marketing-skills": {
+      "full_name": "ericosiu/ai-marketing-skills",
+      "description": "Open-source AI marketing skills for Claude Code — growth experiments, sales pipeline, content ops, outbound, SEO, and finance automation",
+      "language": "Python",
+      "url": "https://github.com/ericosiu/ai-marketing-skills",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
