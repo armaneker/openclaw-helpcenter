@@ -1,0 +1,69 @@
+<GuideHeader tool="type4me" difficulty="Beginner" lastTested="2026-01" readTime="5 min" />
+
+# Type4Me
+
+Type4Me is a macOS voice input method with real-time speech recognition, LLM text optimization, and local storage. It combines local and cloud ASR engines with customizable text processing workflows.
+
+## Key Features
+
+- **Speech Recognition**: Local SenseVoice + Qwen3-ASR engines or cloud providers (Volcano, Soniox, etc.) with streaming recognition
+- **Text Processing**: Built-in polishing, translation, and prompt optimization with customizable LLM templates
+- **Model Integration**: Support for mainstream API providers plus Ollama for local LLM processing
+- **Vocabulary Management**: Hot words for ASR correction and mapping words for personalized replacements
+- **History Tracking**: Complete recognition history with CSV export capability
+- **Agent Integration**: Companion skill for automated vocabulary management
+
+## Installation
+
+<Callout type="info">
+Requires macOS 14+ (Sonoma). Two versions available: cloud-only (~4MB) and local ASR (~725MB, Apple Silicon only).
+</Callout>
+
+**Option 1: Download DMG (Recommended)**
+
+```bash
+# Cloud version (Intel + Apple Silicon)
+curl -L -o Type4Me-cloud.dmg https://github.com/joewongjc/type4me/releases/download/v1.6.2/Type4Me-v1.6.2-cloud.dmg
+
+# Local version (Apple Silicon only, 32GB+ RAM recommended)
+curl -L -o Type4Me-local.dmg https://github.com/joewongjc/type4me/releases/download/v1.6.2/Type4Me-v1.6.2-local-apple-silicon.dmg
+```
+
+If macOS blocks the app:
+
+```bash
+xattr -d com.apple.quarantine /Applications/Type4Me.app
+spctl --master-disable
+```
+
+**Option 2: Build from Source**
+
+```bash
+git clone https://github.com/joewongjc/type4me.git && cd type4me
+bash scripts/deploy.sh
+```
+
+## Basic Usage
+
+1. **Configure ASR**: Set up cloud API keys (Volcano/Soniox recommended) or use local engines
+2. **Set Global Shortcuts**: Assign hotkeys for different modes (Quick, Polish, Translate, etc.)
+3. **Add Vocabulary**: Configure hot words for better recognition of technical terms
+4. **Customize Prompts**: Create text processing templates using `{text}`, `{selected}`, `{clipboard}` variables
+
+```swift
+// Example custom prompt for code documentation
+"Convert this technical explanation to clear documentation: {text}"
+```
+
+<Callout type="tip">
+Install the companion [vocabulary skill](https://github.com/joewongjc/type4me-vocab-skill) to achieve near 100% recognition accuracy for domain-specific terms.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Swift with Python ASR servers
+- **Community**: 840+ GitHub stars
+- **Architecture**: Pluggable ASR/LLM provider system with 13 supported LLM providers
+- **Memory Usage**: Local ASR requires ~8GB RAM; cloud version is lightweight
+- **Cost**: Cloud ASR is extremely cheap (~$1 for 5 hours of usage with Volcano)

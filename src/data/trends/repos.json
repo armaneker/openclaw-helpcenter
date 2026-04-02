@@ -3569,7 +3569,7 @@
       "language": "Swift",
       "url": "https://github.com/joewongjc/type4me",
       "first_seen": "2026-03-27",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v1.2.3",
@@ -3581,7 +3581,7 @@
       "language": "Swift",
       "url": "https://github.com/ryanstephen/lil-agents",
       "first_seen": "2026-03-27",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Agentic",
       "version": "v1.0",
@@ -3593,7 +3593,7 @@
       "language": "TypeScript",
       "url": "https://github.com/jonwiggins/optio",
       "first_seen": "2026-03-27",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -5024,7 +5024,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Claw Code is a Rust-based development harness and tooling framework that claims to be a clean-room rewrite of leaked proprietary code. It provides an agent runtime with API client abstraction, tool execution framework, plugin system, and CLI for development workflow automation. The project gained notable attention by reaching 50K GitHub stars within 2 hours of publication."
     },
     "lintsinghua/claude-code-book": {
       "full_name": "lintsinghua/claude-code-book",
@@ -5045,7 +5046,8 @@
         "mcp"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "This is a comprehensive Chinese-language technical book that reverse-engineers the architecture of Anthropic's Claude Code AI agent system through 420,000 words across 15 chapters. It provides deep architectural analysis of core subsystems like tool execution, permission pipelines, context management, and multi-agent coordination patterns to help engineers understand how production-grade AI agent frameworks are designed. The book includes 139 architecture diagrams and focuses on transferable design principles rather than usage tutorials."
     },
     "ericosiu/ai-marketing-skills": {
       "full_name": "ericosiu/ai-marketing-skills",
@@ -5056,7 +5058,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is a collection of Python-based automation workflows designed to integrate with Claude Code for marketing and sales operations, covering everything from A/B testing and lead generation to content creation and pipeline management. Marketing teams use it to automate complex workflows like visitor-to-lead conversion, content quality scoring, and revenue attribution that would otherwise require manual work or expensive SaaS tools. The workflows implement production-grade algorithms like bootstrap confidence intervals and multi-layer scoring systems rather than simple prompt-based solutions."
     }
   }
 }

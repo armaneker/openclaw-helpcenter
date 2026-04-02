@@ -1,0 +1,48 @@
+<GuideHeader tool="lil-agents" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# lil-agents
+
+lil-agents puts tiny AI companions on your macOS dock that walk around and let you chat with AI through a themed terminal interface. It's a playful wrapper around popular AI CLIs like Claude, Copilot, and Gemini.
+
+## Key Features
+
+- Animated characters (Bruce and Jazz) that walk on your dock using HEVC video
+- Chat interface supporting Claude Code, OpenAI Codex, GitHub Copilot, and Google Gemini CLIs
+- Four visual themes: Peach, Midnight, Cloud, Moss
+- Slash commands (`/clear`, `/copy`, `/help`) and thinking bubbles during AI processing
+- Universal binary for Apple Silicon and Intel Macs
+
+## Installation
+
+Download directly from the [official website](https://lilagents.xyz). 
+
+You'll also need at least one supported AI CLI:
+
+```bash
+# Claude Code
+curl -fsSL https://claude.ai/install.sh | sh
+
+# GitHub Copilot
+brew install copilot-cli
+
+# OpenAI Codex
+npm install -g @openai/codex
+
+# Google Gemini CLI  
+npm install -g @google/gemini-cli
+```
+
+<Callout type="info">
+Requires macOS Sonoma (14.0+) or newer, including Sequoia (15.x).
+</Callout>
+
+## Basic Usage
+
+Launch the app and animated characters appear above your dock. Click a character to open the AI chat terminal. Switch between different AI providers from the menubar. Use slash commands like `/clear` to manage conversations or `/copy` to grab the last response.
+
+## Notable Details
+
+**License:** MIT  
+**Language:** Swift  
+**Community:** 823+ GitHub stars  
+**Privacy:** Fully local—no data collection, accounts, or analytics. AI conversations are handled directly by your chosen CLI without interception.

@@ -1,0 +1,64 @@
+<GuideHeader tool="optio" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Optio
+
+Optio orchestrates complete AI coding workflows from task description to merged pull request. It handles provisioning isolated environments, running AI agents, managing PR lifecycles, and automatically responding to CI failures and code review feedback.
+
+## Key Features
+
+- **Autonomous feedback loop** — auto-resumes agents on CI failures, merge conflicts, and review feedback
+- **Pod-per-repo architecture** — long-lived Kubernetes pods with git worktree isolation for concurrent tasks
+- **Multiple AI models** — supports Claude, OpenAI Codex, and GitHub Copilot
+- **Integrated issue tracking** — syncs with GitHub Issues, Linear, Jira, and Notion
+- **Automated code review** — launches separate review agents with dedicated prompts
+- **Real-time monitoring** — live log streaming, cost analytics, and cluster health dashboard
+
+## Installation
+
+<Callout type="info">
+Requires Kubernetes cluster and PostgreSQL/Redis for orchestration.
+</Callout>
+
+```bash
+# Clone the repository
+git clone https://github.com/jonwiggins/optio.git
+cd optio
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your AI model keys, GitHub tokens, and database connections
+
+# Deploy to Kubernetes
+kubectl apply -f k8s/
+```
+
+## Basic Usage
+
+```typescript
+// Create a task programmatically
+const task = await optio.createTask({
+  title: "Add user authentication endpoints",
+  description: "Implement JWT-based login/logout with password hashing",
+  repo: "myorg/api-server",
+  model: "claude-3.5-sonnet"
+});
+
+// Or assign from GitHub Issue
+// Just comment "@optio" on any issue
+```
+
+The agent provisions a pod, creates an isolated worktree, writes code, opens a PR, and handles the complete merge cycle including CI fixes and review responses.
+
+<Callout type="tip">
+Configure per-repo settings like model choice, prompt templates, and container images through the web dashboard.
+</Callout>
+
+## Notable Details
+
+**License:** MIT  
+**Language:** TypeScript  
+**Community:** 719 GitHub stars  
+**Architecture:** Kubernetes-native with pod pooling and horizontal scaling
