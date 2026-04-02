@@ -4708,7 +4708,7 @@
     },
     "tvytlx/ai-agent-deep-dive": {
       "full_name": "tvytlx/ai-agent-deep-dive",
-      "description": "Claude Code 源码深度研究报告",
+      "description": "AI Agent 源码深度研究报告",
       "language": "Unknown",
       "url": "https://github.com/tvytlx/ai-agent-deep-dive",
       "first_seen": "2026-04-01",
@@ -4947,6 +4947,68 @@
       "category": "Other",
       "version": null,
       "blurb": "Claw Dev is a local multi-provider coding assistant launcher that provides a unified interface for various AI providers including Anthropic, OpenAI, Google Gemini, Groq, OpenRouter, Ollama, and others through a bundled terminal client. It allows developers to switch between different AI model providers at startup while maintaining a consistent tool experience, routing non-Anthropic providers through a local compatibility proxy. The tool is designed to avoid provider-specific wrappers and auth conflicts by presenting itself as a single unified interface regardless of the underlying model provider."
+    },
+    "emdash-cms/emdash": {
+      "full_name": "emdash-cms/emdash",
+      "description": "",
+      "language": "TypeScript",
+      "url": "https://github.com/emdash-cms/emdash",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "@emdash-cms/auth@0.1.0"
+    },
+    "VoltAgent/awesome-design-md": {
+      "full_name": "VoltAgent/awesome-design-md",
+      "description": "Collection of DESIGN.md files that capture design systems from popular websites. Drop one into your project and let coding agents build matching UI.",
+      "language": "HTML",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [
+        "awesome-list",
+        "design-md",
+        "design-system",
+        "design-tokens",
+        "figma",
+        "google-stitch",
+        "landing-page"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "DenisSergeevitch/repo-task-proof-loop": {
+      "full_name": "DenisSergeevitch/repo-task-proof-loop",
+      "description": "Spec driven skill with subagents spawning",
+      "language": "Python",
+      "url": "https://github.com/DenisSergeevitch/repo-task-proof-loop",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "openyak/openyak": {
+      "full_name": "openyak/openyak",
+      "description": "An open-source desktop AI agent that handles your documents, files, and daily workflows — locally, with any model.",
+      "language": "Python",
+      "url": "https://github.com/openyak/openyak",
+      "first_seen": "2026-04-02",
+      "has_summary": false,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "desktop-application",
+        "llm",
+        "local",
+        "mcp",
+        "open-source",
+        "skills",
+        "tools"
+      ],
+      "category": "Agentic",
+      "version": "v1.0.3"
     }
   }
 }
