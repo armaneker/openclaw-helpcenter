@@ -1,0 +1,66 @@
+<GuideHeader tool="cli" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Lark/Feishu CLI
+
+The official Lark/Feishu CLI tool with agent-native design and 200+ commands. Built by the larksuite team to enable both humans and AI agents to interact with Lark's ecosystem programmatically.
+
+## Key Features
+
+- **20 AI Agent Skills** covering 12 business domains (Calendar, Messenger, Docs, Base, Sheets, Tasks, Mail, etc.)
+- **Agent-optimized design** with structured output, smart defaults, and injection protection
+- **Three-layer command system** — shortcuts, API commands, and raw API access
+- **Zero-setup integration** with popular AI frameworks via structured skills
+- **Secure credential management** using OS-native keychain storage
+- **Real-time event subscriptions** with WebSocket support and regex routing
+
+## Installation
+
+<Callout type="info">
+Requires Node.js with npm/npx. Go 1.23+ and Python 3 only needed for building from source.
+</Callout>
+
+```bash
+# Install CLI
+npm install -g @larksuite/cli
+
+# Install CLI skills (required)
+npx skills add larksuite/cli -y -g
+```
+
+## Basic Usage
+
+```bash
+# Configure app credentials (interactive setup)
+lark-cli config init
+
+# Login with recommended scopes
+lark-cli auth login --recommend
+
+# View today's calendar
+lark-cli calendar +agenda
+
+# Send a message
+lark-cli im send --text "Hello team" --chat-id "chat_123"
+
+# Create a document
+lark-cli doc create --title "Meeting Notes" --content "# Agenda"
+```
+
+## AI Agent Integration
+
+For AI agents, use the structured skills that provide optimized parameter handling:
+
+```bash
+# Agent-specific installation flow
+lark-cli config init --new  # Extract auth URL for user
+lark-cli auth login --recommend  # Extract auth URL for user
+lark-cli auth status  # Verify setup
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Go
+- **Community**: 6,370 GitHub stars
+- **Skills Available**: 20 specialized skills for different Lark domains
+- **Commands**: 200+ curated commands with AI-friendly interfaces

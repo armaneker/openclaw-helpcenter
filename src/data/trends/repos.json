@@ -3764,7 +3764,7 @@
       "language": "Python",
       "url": "https://github.com/elder-plinius/OBLITERATUS",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -3776,7 +3776,7 @@
       "language": "Go",
       "url": "https://github.com/larksuite/cli",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "DevTools",
       "version": "v1.0.0",
@@ -3788,7 +3788,7 @@
       "language": "Jupyter Notebook",
       "url": "https://github.com/facebookresearch/tribev2",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -5182,7 +5182,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "cc-haha is a locally runnable version of Claude Code based on leaked source code that has been fixed and patched. It provides a complete Ink TUI interface and supports integration with any Anthropic-compatible API (like MiniMax, OpenRouter) for AI-assisted coding tasks. The project fixes multiple blocking issues from the original leaked source to make the full interactive terminal interface functional locally."
     },
     "k2-fsa/OmniVoice": {
       "full_name": "k2-fsa/OmniVoice",
@@ -5193,7 +5194,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "OmniVoice is a zero-shot multilingual text-to-speech model that supports voice synthesis in over 600 languages. It enables voice cloning from short reference audio samples and voice design through controllable attributes like gender, age, and accent, with fast inference speeds up to 40x real-time. The model is built on a novel diffusion language model architecture that aims to balance both quality and speed."
     }
   }
 }

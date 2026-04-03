@@ -1079,7 +1079,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "cc-haha is a locally runnable version of Claude Code based on leaked source code that has been fixed and patched. It provides a complete Ink TUI interface and supports integration with any Anthropic-compatible API (like MiniMax, OpenRouter) for AI-assisted coding tasks. The project fixes multiple blocking issues from the original leaked source to make the full interactive terminal interface functional locally."
     },
     {
       "full_name": "VoltAgent/awesome-design-md",
@@ -1391,7 +1391,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "DevTools",
       "version": "v1.0.0",
       "blurb": "The `larksuite/cli` is a command-line tool for interacting with the Lark/Feishu Open Platform APIs. It provides over 200 commands covering business domains like messaging, documents, calendars, and spreadsheets, designed specifically for both human users and AI agents to automate workplace tasks. The tool features 19 structured AI Agent Skills and a three-layer command architecture that ranges from simple shortcuts to full API coverage."
@@ -1574,7 +1574,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "OmniVoice is a zero-shot multilingual text-to-speech model that supports voice synthesis in over 600 languages. It enables voice cloning from short reference audio samples and voice design through controllable attributes like gender, age, and accent, with fast inference speeds up to 40x real-time. The model is built on a novel diffusion language model architecture that aims to balance both quality and speed."
     },
     {
       "full_name": "chauncygu/collection-claude-code-source-code",

@@ -1,0 +1,60 @@
+<GuideHeader tool="tribev2" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# TRIBE v2
+
+TRIBE v2 is a multimodal brain encoding model that predicts fMRI responses to naturalistic stimuli. It combines vision, audio, and language models into a unified Transformer architecture that maps multimodal representations onto the cortical surface.
+
+## Key Features
+
+- **Multimodal brain prediction** - Generate fMRI responses from video, audio, or text inputs
+- **Pre-trained models** - Ready-to-use models available on HuggingFace
+- **Cortical surface mapping** - Predictions on fsaverage5 mesh (~20k vertices)
+- **Hemodynamic compensation** - Built-in 5-second offset for realistic brain response timing
+- **Training pipeline** - Full framework for training custom models with PyTorch Lightning
+- **Brain visualization** - Integrated plotting tools for cortical surface visualization
+
+## Installation
+
+Basic inference-only installation:
+
+```bash
+pip install -e .
+```
+
+With brain visualization capabilities:
+
+```bash
+pip install -e ".[plotting]"
+```
+
+Full installation with training dependencies:
+
+```bash
+pip install -e ".[training]"
+```
+
+## Basic Usage
+
+```python
+from tribev2 import TribeModel
+
+# Load pretrained model
+model = TribeModel.from_pretrained("facebook/tribev2", cache_folder="./cache")
+
+# Predict brain responses from video
+df = model.get_events_dataframe(video_path="path/to/video.mp4")
+preds, segments = model.predict(events=df)
+print(preds.shape)  # (n_timesteps, n_vertices)
+```
+
+<Callout type="info">
+Predictions represent the "average" subject and include automatic hemodynamic lag compensation. You can also use `text_path` or `audio_path` parameters.
+</Callout>
+
+## Notable Details
+
+- **License**: CC BY-NC 4.0 (non-commercial use)
+- **Language**: Jupyter Notebook with Python 3.11+ support
+- **Community**: 1,344 GitHub stars
+- **Origin**: Facebook Research project with full training pipeline
+- **Demo**: Available as [Colab notebook](https://colab.research.google.com/github/facebookresearch/tribev2/blob/main/tribe_demo.ipynb)

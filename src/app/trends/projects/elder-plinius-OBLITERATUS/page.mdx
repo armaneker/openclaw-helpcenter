@@ -1,0 +1,62 @@
+<GuideHeader tool="OBLITERATUS" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# OBLITERATUS
+
+OBLITERATUS is an advanced toolkit for understanding and surgically removing refusal behaviors from large language models. It implements abliteration techniques that identify and eliminate internal representations responsible for content refusal without retraining or fine-tuning.
+
+## Key Features
+
+- **Refusal mapping** — Ablation studies reveal where refusal mechanisms are anchored in transformer architectures
+- **Surgical obliteration** — SVD-based extraction and projection removes guardrails while preserving capabilities
+- **15 analysis modules** — Deep geometric analysis of refusal subspaces, alignment imprints, and universality patterns
+- **Analysis-informed pipeline** — Automated configuration based on real-time model analysis during obliteration
+- **Distributed research platform** — Every run with telemetry contributes to crowd-sourced abliteration research
+- **Complete UI** — Gradio interface on HuggingFace Spaces with side-by-side chat comparison
+- **Advanced techniques** — Whitened SVD, bias term projection, iterative refinement, Ouroboros effect detection
+
+<Callout type="info">
+OBLITERATUS includes a distributed research component where anonymous benchmark data from user runs contributes to advancing abliteration science across the community.
+</Callout>
+
+## Installation
+
+```bash
+pip install obliteratus
+```
+
+Or use the [HuggingFace Space](https://huggingface.co/spaces/pliny-the-prompter/obliteratus) for zero-setup access, or the [Colab notebook](https://colab.research.google.com/github/elder-plinius/OBLITERATUS/blob/main/notebooks/abliterate.ipynb).
+
+## Basic Usage
+
+```python
+from obliteratus import obliterate_model
+
+# Single command obliteration
+model, tokenizer = obliterate_model(
+    "meta-llama/Llama-3.1-8B-Instruct",
+    method="advanced"
+)
+
+# Analysis-informed pipeline
+model, tokenizer = obliterate_model(
+    "meta-llama/Llama-3.1-8B-Instruct", 
+    method="informed"  # Auto-configures based on analysis
+)
+```
+
+CLI usage:
+```bash
+obliteratus obliterate meta-llama/Llama-3.1-8B-Instruct --method advanced
+```
+
+<Callout type="warning">
+Obliterated models remove safety guardrails. Use responsibly and in compliance with applicable laws and platform policies.
+</Callout>
+
+## Notable Details
+
+**License:** AGPL-3.0  
+**Language:** Python  
+**Community:** 3.5k GitHub stars  
+**Research base:** Built on published work from Arditi et al., Turner et al., Rimsky et al., and others  
+**Deployment:** Available as Python package, HuggingFace Space, and Colab notebook
