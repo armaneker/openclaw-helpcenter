@@ -1604,7 +1604,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Claude Code is a leaked TypeScript CLI tool from Anthropic that provides an AI coding assistant with terminal UI, featuring 40+ development tools and agentic workflows. Developers would use it for AI-powered code assistance, debugging, and automated development tasks through a React-based terminal interface. The source was accidentally exposed via npm sourcemaps and includes internal features like \"Undercover Mode\" to prevent Anthropic employees from revealing internal information when contributing to public repositories."
     },
     {
       "full_name": "tanbiralam/claude-code",

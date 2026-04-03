@@ -1,0 +1,70 @@
+<GuideHeader tool="TREK" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# TREK
+
+TREK is a self-hosted travel planner built for real-time collaboration. It provides interactive maps, budget tracking, packing lists, and PWA support for mobile-native experiences.
+
+## Key Features
+
+- **Real-time collaboration** — Multiple users can plan trips simultaneously with WebSocket sync
+- **Interactive maps** — Leaflet integration with place search, route optimization, and photo markers
+- **Budget tracking** — Multi-currency expense tracking with per-person splitting and visual breakdowns
+- **PWA support** — Install directly from browser on iOS/Android without app stores
+- **Offline capability** — Service worker caches maps and data for offline access
+- **Document management** — Attach files up to 50MB to trips, places, or reservations
+- **Single Sign-On** — OIDC support for Google, Apple, Keycloak, and other providers
+- **Modular addons** — Optional features like vacation planning, world map tracking, and group chat
+
+## Installation
+
+<Callout type="info">
+The first user to register automatically becomes the admin.
+</Callout>
+
+### Quick Start with Docker
+
+```bash
+ENCRYPTION_KEY=$(openssl rand -hex 32) docker run -d -p 3000:3000 \
+  -e ENCRYPTION_KEY=$ENCRYPTION_KEY \
+  -v ./data:/app/data -v ./uploads:/app/uploads mauriceboe/trek
+```
+
+### Docker Compose (Recommended)
+
+```yaml
+services:
+  app:
+    image: mauriceboe/trek:latest
+    container_name: trek
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - TZ=UTC
+      - FORCE_HTTPS=true
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+```
+
+## Basic Usage
+
+1. Access TREK at `http://localhost:3000`
+2. Register the first admin account
+3. Create a new trip and add destinations
+4. Use drag-and-drop to organize places into daily plans
+5. Invite collaborators via the admin panel or invite links
+6. Track expenses in the budget section and manage packing lists
+
+<Callout type="tip">
+For mobile use, install as a PWA: tap Share → "Add to Home Screen" on iOS or Menu → "Install app" on Android.
+</Callout>
+
+## Notable Details
+
+**License:** AGPL-3.0  
+**Language:** TypeScript  
+**Community:** 3,354 GitHub stars  
+**Tech Stack:** Node.js, React 18, SQLite, WebSocket  
+**Live Demo:** Available at demo-nomad.pakulat.org (resets hourly)

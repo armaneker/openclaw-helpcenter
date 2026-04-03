@@ -3801,7 +3801,7 @@
       "language": "TypeScript",
       "url": "https://github.com/open-pencil/open-pencil",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v0.10.0",
@@ -3813,7 +3813,7 @@
       "language": "TypeScript",
       "url": "https://github.com/mauriceboe/TREK",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "budget-tracker",
         "collaborative",
@@ -3844,7 +3844,7 @@
       "language": "HTML",
       "url": "https://github.com/ripienaar/free-for-dev",
       "first_seen": "2026-03-29",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "awesome-list",
         "free-for-developers"
@@ -5217,7 +5217,8 @@
         "leaked-code"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Claude Code is a leaked TypeScript CLI tool from Anthropic that provides an AI coding assistant with terminal UI, featuring 40+ development tools and agentic workflows. Developers would use it for AI-powered code assistance, debugging, and automated development tasks through a React-based terminal interface. The source was accidentally exposed via npm sourcemaps and includes internal features like \"Undercover Mode\" to prevent Anthropic employees from revealing internal information when contributing to public repositories."
     }
   }
 }

@@ -1,0 +1,63 @@
+<GuideHeader tool="open-pencil" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# OpenPencil
+
+OpenPencil is an open-source design editor that opens `.fig` and `.pen` files with built-in AI capabilities. It functions as both a Figma alternative and a programmable toolkit with a headless Vue SDK for building custom editors.
+
+<Callout type="warning">
+Active development project - not ready for production use yet.
+</Callout>
+
+## Key Features
+
+- **File compatibility** — Opens and writes native Figma `.fig` files and Pencil `.pen` documents
+- **AI-powered design** — 90+ tools for creating and modifying designs via chat interface
+- **Programmable interface** — Headless CLI, XPath queries, Figma Plugin API via `eval`, MCP server
+- **Design analysis** — Lint documents, extract design tokens, analyze colors/typography/spacing
+- **Code export** — Generate JSX/Tailwind from selections with component-oriented workflows  
+- **Real-time collaboration** — P2P via WebRTC without servers or accounts
+- **Auto layout** — Flex and grid layout via Yoga WASM
+- **Lightweight** — 7MB desktop app built with Tauri v2
+
+## Installation
+
+**macOS (Homebrew):**
+```bash
+brew install open-pencil/tap/open-pencil
+```
+
+**CLI tools:**
+```bash
+bun add -g @open-pencil/cli
+```
+
+Alternatively, use the [web app](https://app.openpencil.dev) or download from [releases](https://github.com/open-pencil/open-pencil/releases/latest).
+
+## Basic Usage
+
+**Inspect design files:**
+```bash
+open-pencil tree design.fig
+open-pencil query design.fig "//FRAME[@width &lt; 300]"
+```
+
+**Export to different formats:**
+```bash
+open-pencil export design.fig -f jsx --style tailwind
+open-pencil export design.fig -f png -s 2
+```
+
+**AI chat integration:**
+Press `⌘J` in the desktop app to access the AI assistant with design tools.
+
+<Callout type="info">
+The CLI can control the running desktop app via RPC when you omit the file argument.
+</Callout>
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** TypeScript  
+- **Community:** 3,933 GitHub stars
+- **MCP support** for Claude Code, Cursor, and Windsurf
+- **Repository:** [open-pencil/open-pencil](https://github.com/open-pencil/open-pencil)
