@@ -1,0 +1,78 @@
+<GuideHeader tool="TREK" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# TREK
+
+TREK is a self-hosted, real-time collaborative travel planner built with TypeScript. It combines trip planning, budget tracking, packing lists, and interactive maps in a Progressive Web App.
+
+## Key Features
+
+- **Real-time collaboration** — Multiple users can edit trips simultaneously via WebSocket sync
+- **Interactive maps** — Leaflet-based maps with place search, route optimization, and photo markers
+- **Budget tracking** — Multi-currency expense tracking with category breakdown and per-person splitting
+- **Packing lists** — Reusable templates with weight tracking and bag assignment
+- **PWA support** — Install directly from browser on iOS/Android with offline functionality
+- **Document management** — File attachments for trips, reservations, and places (up to 50MB)
+- **Single Sign-On** — OIDC authentication with Google, Apple, or custom providers
+- **Weather forecasts** — 16-day forecasts via Open-Meteo API
+- **PDF export** — Generate complete trip plans as PDFs
+
+<Callout type="info">
+TREK uses SQLite with better-sqlite3 for data storage, making it lightweight and easy to backup.
+</Callout>
+
+## Installation
+
+### Docker (Quick Start)
+
+```bash
+ENCRYPTION_KEY=$(openssl rand -hex 32) docker run -d -p 3000:3000 \
+  -e ENCRYPTION_KEY=$ENCRYPTION_KEY \
+  -v ./data:/app/data -v ./uploads:/app/uploads mauriceboe/trek
+```
+
+### Docker Compose
+
+```yaml
+services:
+  app:
+    image: mauriceboe/trek:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - TZ=UTC
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+```
+
+## Basic Usage
+
+After installation, navigate to `http://localhost:3000`. The first registered user becomes the admin.
+
+```javascript
+// Example API call to create a trip
+const response = await fetch('/api/trips', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    name: 'Tokyo Adventure',
+    startDate: '2024-05-01',
+    endDate: '2024-05-10'
+  })
+});
+```
+
+<Callout type="tip">
+Install as a PWA by opening TREK in your browser and selecting "Add to Home Screen" on mobile or "Install app" in Chrome.
+</Callout>
+
+## Notable Details
+
+**License:** AGPL-3.0  
+**Language:** TypeScript (Node.js + React)  
+**Community:** 3,080 GitHub stars, active Discord community  
+**Tech Stack:** Express, SQLite, React 18, Leaflet, WebSocket
+
+The project includes modular addons (Vacay for vacation tracking, Atlas for world map visualization) that can be toggled by administrators.

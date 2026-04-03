@@ -1,0 +1,61 @@
+<GuideHeader tool="diffity" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# diffity
+
+A GitHub-style diff viewer and code review tool designed for AI coding agents. Works with Claude Code, Cursor, and other AI tools to provide visual code review with inline commenting.
+
+## Key Features
+
+- **GitHub-style diff viewing** — Syntax-highlighted diffs for working tree changes, commits, branches, and tags
+- **AI code review** — Let your agent review code and leave severity-tagged comments (`[must-fix]`, `[suggestion]`, `[nit]`)
+- **Inline commenting** — Comment on any line, then auto-resolve with `/diffity-resolve` command
+- **File tree browser** — Browse project files with syntax highlighting and commenting support
+- **Guided code tours** — Step-by-step codebase walkthroughs with highlighted regions
+- **Project-driven learning** — Agent-tutored learning for programming languages and frameworks
+- **GitHub PR integration** — Pull down PRs for local review and push comments back
+- **Multi-project support** — Run in multiple repos simultaneously on different ports
+
+## Installation
+
+```bash
+npm install -g diffity
+```
+
+Install skills for your AI agent:
+
+```bash
+npx skills add kamranahmedse/diffity
+```
+
+## Basic Usage
+
+**CLI diff viewing:**
+```bash
+# Review uncommitted changes
+diffity
+
+# Compare branches
+diffity main..feature
+
+# Review last 3 commits
+diffity HEAD~3
+```
+
+**AI agent commands:**
+```
+/diffity-review                    # AI reviews current changes
+/diffity-diff main..feature        # Opens branch diff in browser
+/diffity-resolve                   # Applies all inline comment fixes
+/diffity-tour how does auth work?   # Creates guided codebase tour
+```
+
+<Callout type="tip">
+Use `/diffity-review` followed by `/diffity-resolve` for a complete AI code review workflow.
+</Callout>
+
+## Notable Details
+
+- **Language:** TypeScript
+- **License:** No assertion
+- **Community:** 479 GitHub stars
+- **Agent-agnostic:** Works with any AI coding tool that supports slash commands

@@ -1334,7 +1334,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "This is a documentation project that analyzes the source code architecture of Claude Code (Anthropic's AI coding agent). It provides 12 in-depth technical articles covering Claude Code's internal systems including the agent loop, context management, tool coordination, and security mechanisms. The analysis is based on actual source code examination rather than speculation, revealing production-level engineering decisions like 4-tier progressive context compression and 5-layer security defense systems."
     },
     {
       "full_name": "walkinglabs/awesome-harness-engineering",
@@ -1466,7 +1466,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": "v1.1.0",
       "blurb": "WeWrite is a comprehensive AI workflow system designed specifically for Chinese WeChat public account article creation, built as a skill for Claude Code. It automates the entire content pipeline from trending topic extraction (Weibo, Toutiao, Baidu) through SEO optimization, AI writing, visual generation, to final publishing in WeChat's draft system. The system includes client-specific style configuration, multiple layout themes, and analytics feedback loops for continuous improvement."
@@ -1544,7 +1544,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is a repository containing two books about Harness Engineering for AI coding agents, specifically focusing on Claude Code and how to maintain system boundaries when AI models operate within development environments. The books address how to structure constraints, control planes, permissions, and recovery mechanisms to ensure stable operation when AI agents have access to terminals, repositories, and team workflows. Both books are written in Chinese and explore the fundamental engineering challenge of controlling AI behavior consequences rather than just optimizing response quality."
     },
     {
       "full_name": "0xSero/turboquant",
@@ -1634,7 +1634,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": null,
-      "blurb": null
+      "blurb": "Claude Code is a terminal-based CLI tool that integrates Claude AI into development workflows for tasks like file editing, codebase analysis, and git management through natural language commands. It allows developers to interact with their code using conversational prompts rather than traditional command-line syntax, automating routine coding tasks and providing code explanations. This appears to be leaked source code from Anthropic's official tool, containing over 500K lines of TypeScript across ~1,900 files."
     },
     {
       "full_name": "tanbiralam/claude-code",
@@ -1649,7 +1649,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Claude Code is a terminal-based AI coding assistant that integrates with codebases to perform software engineering tasks through natural language commands. It handles routine development work like file editing, git workflows, code search, and command execution while understanding project context. This repository contains leaked Anthropic source code from 2026, revealing a ~500k line TypeScript codebase built on React/Ink with extensive tooling for agent-based development workflows."
     },
     {
       "full_name": "twbs/bootstrap",

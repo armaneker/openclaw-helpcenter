@@ -3709,7 +3709,7 @@
       "language": "Python",
       "url": "https://github.com/oaker-io/wewrite",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": "v1.1.0",
@@ -3721,7 +3721,7 @@
       "language": "TypeScript",
       "url": "https://github.com/mauriceboe/NOMAD",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "budget-tracker",
         "collaborative",
@@ -3752,7 +3752,7 @@
       "language": "TypeScript",
       "url": "https://github.com/kamranahmedse/diffity",
       "first_seen": "2026-03-28",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -5122,7 +5122,8 @@
         "source-code-analysis"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "This is a documentation project that analyzes the source code architecture of Claude Code (Anthropic's AI coding agent). It provides 12 in-depth technical articles covering Claude Code's internal systems including the agent loop, context management, tool coordination, and security mechanisms. The analysis is based on actual source code examination rather than speculation, revealing production-level engineering decisions like 4-tier progressive context compression and 5-layer security defense systems."
     },
     "wquguru/harness-books": {
       "full_name": "wquguru/harness-books",
@@ -5133,7 +5134,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is a repository containing two books about Harness Engineering for AI coding agents, specifically focusing on Claude Code and how to maintain system boundaries when AI models operate within development environments. The books address how to structure constraints, control planes, permissions, and recovery mechanisms to ensure stable operation when AI agents have access to terminals, repositories, and team workflows. Both books are written in Chinese and explore the fundamental engineering challenge of controlling AI behavior consequences rather than just optimizing response quality."
     },
     "codeaashu/claude-code": {
       "full_name": "codeaashu/claude-code",
@@ -5153,7 +5155,8 @@
         "claude-skills"
       ],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "Claude Code is a terminal-based CLI tool that integrates Claude AI into development workflows for tasks like file editing, codebase analysis, and git management through natural language commands. It allows developers to interact with their code using conversational prompts rather than traditional command-line syntax, automating routine coding tasks and providing code explanations. This appears to be leaked source code from Anthropic's official tool, containing over 500K lines of TypeScript across ~1,900 files."
     },
     "tanbiralam/claude-code": {
       "full_name": "tanbiralam/claude-code",
@@ -5167,7 +5170,8 @@
         "claude-code-source-code"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Claude Code is a terminal-based AI coding assistant that integrates with codebases to perform software engineering tasks through natural language commands. It handles routine development work like file editing, git workflows, code search, and command execution while understanding project context. This repository contains leaked Anthropic source code from 2026, revealing a ~500k line TypeScript codebase built on React/Ink with extensive tooling for agent-based development workflows."
     }
   }
 }

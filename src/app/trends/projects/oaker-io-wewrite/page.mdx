@@ -1,0 +1,77 @@
+<GuideHeader tool="wewrite" difficulty="Beginner" lastTested="2026-01" readTime="5 min" />
+
+# WeWrite
+
+WeWrite is an AI workflow system that automates the entire WeChat article publishing pipeline from trend detection to draft submission. It integrates with Claude Code and OpenClaw to handle everything from topic selection to SEO optimization with a single command.
+
+## Key Features
+
+- **Full workflow automation**: Trend scraping → topic selection → writing → SEO → visual AI → formatting → WeChat drafts
+- **Writing personas**: 5 distinct styles from casual personal to analytical journalist
+- **16 formatting themes**: Professional, tech, literary, and business layouts with dark mode support
+- **WeChat compatibility**: Automatic fixes for external links, CJK spacing, and dark mode rendering
+- **Style learning**: Extracts writing patterns from your existing articles for consistent voice
+- **Real-time data**: Integrates live search data and trending topics into content
+- **Quality control**: 11-point article assessment with editing anchor points
+
+## Installation
+
+For Claude Code:
+```bash
+git clone --depth 1 https://github.com/oaker-io/wewrite.git ~/.claude/skills/wewrite
+cd ~/.claude/skills/wewrite && pip install -r requirements.txt
+```
+
+For OpenClaw:
+```bash
+git clone --depth 1 https://github.com/oaker-io/wewrite.git ~/.openclaw/skills/wewrite
+cd ~/.openclaw/skills/wewrite && pip install -r requirements.txt
+```
+
+<Callout type="info">
+Configuration is optional. Without WeChat API credentials, the system outputs local HTML and image prompts instead of publishing directly.
+</Callout>
+
+## Basic Usage
+
+```bash
+# Generate complete article workflow
+"写一篇公众号文章"
+
+# Topic-specific generation  
+"写一篇关于 AI Agent 的公众号文章"
+
+# Interactive mode with manual confirmations
+"交互模式，写一篇关于效率工具的推文"
+
+# Style learning and management
+"导入范文"           # Import style examples
+"学习我的修改"       # Learn from edits
+"换成 sspai 主题"    # Switch themes
+```
+
+The system automatically handles the 8-step pipeline: environment setup → trend analysis → framework selection → content enhancement → writing → SEO → visual generation → publishing.
+
+## Standalone Tools
+
+```bash
+# Preview with themes
+python3 toolkit/cli.py preview article.md --theme sspai
+
+# Publish to WeChat drafts
+python3 toolkit/cli.py publish article.md --title "标题"
+
+# Extract writing style from articles
+python3 scripts/extract_exemplar.py article.md
+
+# Quality assessment
+python3 scripts/humanness_score.py article.md --verbose
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 1,244 stars
+- **Integration**: Works with Claude Code and OpenClaw skill systems
+- **Output**: Generates WeChat-optimized HTML with inline CSS and compatibility fixes
