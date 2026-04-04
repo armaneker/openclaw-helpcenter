@@ -1,0 +1,65 @@
+<GuideHeader tool="turboquant_plus" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# TurboQuant+
+
+TurboQuant+ is an experimental implementation of TurboQuant for llama.cpp that compresses transformer KV cache using PolarQuant + Walsh-Hadamard rotation. It achieves 3.8-6.4x compression with minimal quality degradation for local LLM inference.
+
+## Key Features
+
+- **Multiple compression formats**: turbo2 (2-bit, 6.4x), turbo3 (3-bit, 4.6-5.1x), turbo4 (4-bit, 3.8x)
+- **Asymmetric K/V compression**: Independent compression for keys and values
+- **Sparse V decoding**: Attention-gated cache decoding for +22.8% decode speed
+- **Layer-adaptive modes**: Protect boundary layers for quality recovery
+- **Metal GPU acceleration**: Optimized kernels for Apple Silicon
+- **Validated at scale**: Tested from 1.5B to 104B parameters
+
+<Callout type="info">
+Three key findings: V compression is essentially free, all quality degradation comes from K compression, and boundary layers are disproportionately sensitive to quantization.
+</Callout>
+
+## Installation
+
+Clone the repository and use the included llama.cpp fork:
+
+```bash
+git clone https://github.com/TheTom/turboquant_plus.git
+cd turboquant_plus
+
+# Build the llama.cpp fork with TurboQuant support
+git clone https://github.com/TheTom/llama-cpp-turboquant.git
+cd llama-cpp-turboquant
+make
+```
+
+## Basic Usage
+
+Enable TurboQuant compression with cache type flags:
+
+```bash
+# Symmetric turbo3 compression (3-bit, 4.6x compression)
+./llama-server -m model.gguf --cache-type-k turbo3 --cache-type-v turbo3 -fa 1
+
+# Asymmetric compression for low-bit models
+./llama-server -m model-Q4_K_M.gguf --cache-type-k q8_0 --cache-type-v turbo4 -fa 1
+
+# Extreme compression with turbo2
+./llama-server -m model.gguf --cache-type-k turbo2 --cache-type-v turbo2 -fa 1
+```
+
+<Callout type="warning">
+For Q4_K_M and other low-bit models, use asymmetric compression (q8_0 keys + turbo values) to avoid quality degradation. Symmetric turbo can cause catastrophic failure on heavily quantized weights.
+</Callout>
+
+## Performance Results
+
+On Apple Silicon M5 Max, turbo4 delivers 3.8x compression with only +0.23% perplexity increase versus q8_0, outperforming standard q4_0 compression. The implementation achieves q8_0 prefill speed parity and ~0.9x decode throughput at long context.
+
+## Notable Details
+
+- **License**: Apache-2.0
+- **Language**: Python (with C integration)
+- **Community**: 5,500 GitHub stars, 30+ testers across hardware platforms
+- **Testing**: 511+ Python tests with 100% diagnostic coverage
+- **Hardware support**: Metal (Apple Silicon), CUDA (RTX series), AMD
+
+The project serves as a research workspace for upstreaming stable improvements to llama.cpp incrementally.

@@ -1,0 +1,66 @@
+<GuideHeader tool="mac-code" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# mac-code
+
+mac-code runs large language models that don't fit in your Mac's RAM using flash-paging techniques. It enables running 35B parameter models at 30 tok/s on Apple Silicon with zero monthly costs.
+
+## Key Features
+
+- **Flash streaming**: Run models larger than available RAM by streaming FFN weights from SSD
+- **Built-in agent**: Interactive agent with web search, shell commands, and chain-of-thought reasoning  
+- **Multiple backends**: Both llama.cpp and MLX support with optimized configurations
+- **MoE optimization**: Expert-level streaming for Mixture of Experts models (10x faster than dense)
+- **Memory efficiency**: 35B models run in 1.4GB RAM, 27B models in 5.5GB RAM
+- **No quality loss**: Full 4-bit quantization quality without 2-bit compression
+
+## Installation
+
+```bash
+# Install dependencies
+brew install llama.cpp
+pip3 install rich ddgs huggingface_hub --break-system-packages
+
+# Clone repository
+git clone https://github.com/walter-grace/mac-code.git
+cd mac-code
+```
+
+## Basic Usage
+
+Download and run the recommended 35B model:
+
+```bash
+# Download model (10.6 GB)
+python3 -c "
+from huggingface_hub import hf_hub_download
+hf_hub_download('unsloth/Qwen3.5-35B-A3B-GGUF',
+    'Qwen3.5-35B-A3B-UD-IQ2_M.gguf', local_dir='$HOME/models/')
+"
+
+# Start server
+llama-server \
+    --model ~/models/Qwen3.5-35B-A3B-UD-IQ2_M.gguf \
+    --port 8000 --host 127.0.0.1 \
+    --flash-attn on --ctx-size 12288 \
+    --cache-type-k q4_0 --cache-type-v q4_0 \
+    --n-gpu-layers 99 --reasoning off -np 1 -t 4
+
+# Run agent
+python3 agent.py
+```
+
+<Callout type="info">
+The 35B model achieves 30 tok/s on Mac mini M4 with 16GB RAM. For 8GB Macs, use the 9B model instead.
+</Callout>
+
+<Callout type="tip">
+Use `/search &lt;query>` for web searches, `/raw` for direct chat, and `/stats` to monitor performance.
+</Callout>
+
+## Notable Details
+
+- **Language**: Python
+- **License**: Unknown
+- **Community**: 552 GitHub stars
+- **Requirements**: 8GB+ RAM, Apple Silicon recommended
+- **Storage**: 10-25GB free disk space depending on model size

@@ -1361,7 +1361,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "TurboQuant+ is a Python implementation of KV cache compression for transformer models that achieves 4.6x compression using PolarQuant with Walsh-Hadamard rotation. It enables memory-efficient local LLM inference with ~1% perplexity increase while maintaining near-baseline prefill speeds and introducing \"Sparse V\" attention-gated decoding that skips low-contribution computations for up to 22.8% decode speedup at long contexts. The implementation includes a C port integrated into llama.cpp with Metal GPU kernels and has been validated across multiple hardware configurations including Apple Silicon and NVIDIA GPUs."

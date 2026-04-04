@@ -1,0 +1,82 @@
+<GuideHeader tool="cc-connect" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# CC-Connect
+
+CC-Connect bridges local AI coding agents to messaging platforms without requiring public IP addresses. It connects agents like Claude Code, Cursor, and Gemini CLI to platforms like Slack, Telegram, Discord, and others.
+
+## Key Features
+
+- **Universal agent support** — Works with 7+ AI agents including Claude Code, Codex, Cursor Agent, Qoder CLI, Gemini CLI
+- **Multi-platform integration** — Supports 10+ messaging platforms (Feishu, DingTalk, Slack, Telegram, Discord, WeChat Work, LINE, QQ)
+- **Multi-agent orchestration** — Run multiple bots in one conversation for cross-model insights
+- **Chat-based control** — Switch models, change directories, manage sessions via slash commands
+- **Scheduled automation** — Set up cron jobs using natural language
+- **Multimodal support** — Handle voice messages, images, and file uploads
+- **Zero public IP** — Most platforms work without exposing your machine to the internet
+
+<Callout type="info">
+Personal WeChat (Weixin) support is available in beta builds only. Install `cc-connect@beta` for this feature.
+</Callout>
+
+## Installation
+
+Install via npm (requires Node.js):
+
+```bash
+npm install -g cc-connect
+```
+
+Or download pre-built binaries from the [GitHub releases page](https://github.com/chenhg5/cc-connect/releases).
+
+For beta features like personal WeChat:
+
+```bash
+npm install -g cc-connect@beta
+```
+
+## Basic Usage
+
+Initialize configuration:
+
+```bash
+cc-connect init
+```
+
+This creates a `config.toml` file. Edit it to configure your preferred agent and messaging platform:
+
+```toml
+[[project]]
+name = "my-bot"
+agent = "claude"
+platform = "telegram"
+
+[project.platform_config]
+token = "your-telegram-bot-token"
+
+[project.agent_config]
+model = "claude-3-5-sonnet"
+```
+
+Start the bridge:
+
+```bash
+cc-connect start
+```
+
+Send messages to your configured bot on the messaging platform. Use slash commands like `/model`, `/dir`, and `/memory` to control the agent remotely.
+
+<Callout type="tip">
+Use `/dir &lt;path>` to change the working directory for your AI agent sessions directly from chat.
+</Callout>
+
+## Notable Details
+
+- **Language:** Go
+- **License:** MIT
+- **Community:** 4,136 GitHub stars with active Discord and Telegram communities
+- **Multilingual:** Native support for English, Chinese, Japanese, and Spanish
+- **Architecture:** Single process can handle multiple projects with different agent/platform combinations
+
+<Callout type="warning">
+Some platforms require additional setup for features like voice processing or file uploads. Check the platform-specific documentation for complete configuration.
+</Callout>
