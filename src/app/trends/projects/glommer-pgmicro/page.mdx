@@ -1,0 +1,78 @@
+<GuideHeader tool="pgmicro" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# pgmicro
+
+pgmicro is an in-process reimplementation of PostgreSQL backed by a SQLite-compatible storage engine. It parses PostgreSQL syntax with full fidelity and compiles it directly to SQLite bytecode, giving you embeddable databases that speak PostgreSQL.
+
+## Key Features
+
+- **True PostgreSQL parsing** — Uses libpg_query (PostgreSQL's actual parser) for 100% syntax compatibility
+- **SQLite storage** — Data stored in standard SQLite files, accessible by SQLite tools
+- **Embeddable** — Single file or in-memory databases with no server required
+- **Dual dialect support** — Same database accessible via PostgreSQL and SQLite syntax
+- **PostgreSQL catalog** — Virtual `pg_*` tables for compatibility with psql and other tools
+- **Wire protocol server** — Optional PostgreSQL server mode for existing client tools
+
+<Callout type="info">
+pgmicro doesn't embed or compile PostgreSQL. Instead, it translates PostgreSQL parse trees to SQLite bytecode through the Turso engine.
+</Callout>
+
+## Installation
+
+### CLI Tool
+
+```bash
+# Run directly
+npx pg-micro
+
+# Or install globally
+npm install -g pg-micro
+```
+
+### JavaScript/TypeScript SDK
+
+```bash
+npm install pg-micro
+```
+
+## Basic Usage
+
+### CLI Database
+
+```bash
+# In-memory database
+pgmicro
+
+# File-backed database
+pgmicro myapp.db
+
+# Server mode for psql clients
+pgmicro :memory: --server 127.0.0.1:5432
+```
+
+### JavaScript SDK
+
+```javascript
+import { connect } from "pg-micro";
+
+const db = await connect(":memory:");
+await db.exec("CREATE TABLE users (id SERIAL PRIMARY KEY, name TEXT)");
+await db.exec("INSERT INTO users (name) VALUES ('Alice')");
+
+const rows = await db.prepare("SELECT * FROM users").all();
+console.log(rows); // [{ id: 1, name: 'Alice' }]
+
+await db.close();
+```
+
+<Callout type="tip">
+The SDK API is compatible with `@tursodatabase/database`, making migration straightforward.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Rust
+- **Community**: 765 GitHub stars
+- **Storage**: Creates standard SQLite `.db` files readable by any SQLite tool
+- **Architecture**: Built on Turso, a from-scratch SQLite reimplementation in Rust

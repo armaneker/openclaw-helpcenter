@@ -1,0 +1,69 @@
+<GuideHeader tool="turboquant-pytorch" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# TurboQuant PyTorch
+
+A from-scratch PyTorch implementation of Google's TurboQuant algorithm for compressing LLM key-value caches. Achieves 5x compression at 3-bit with 99.5% attention fidelity using vector quantization.
+
+## Key Features
+
+- **KV cache compression** — 2-5x compression ratios for transformer attention caches
+- **Asymmetric quantization** — Different bit allocations for keys vs values (K4/V2 configuration)
+- **MSE-optimized** — Removes QJL residual correction that hurts softmax-based attention
+- **Lloyd-Max quantization** — Optimal scalar quantization after random rotation
+- **Bit-packed storage** — Real compression ratios, not just theoretical
+- **Layer-adaptive precision** — Protects sensitive first/last layers with higher bit counts
+
+<Callout type="warning">
+The paper's QJL stage actually degrades performance for attention mechanisms due to softmax amplifying variance. This implementation removes QJL for better results.
+</Callout>
+
+## Installation
+
+```bash
+git clone https://github.com/tonbistudio/turboquant-pytorch
+cd turboquant-pytorch
+pip install -r requirements.txt
+
+# For CUDA support
+pip install torch --index-url https://download.pytorch.org/whl/cu128
+```
+
+Requires Python 3.10+ and CUDA-capable NVIDIA GPU.
+
+## Basic Usage
+
+```python
+from turboquant.compressors_v3 import TurboQuantV3
+
+# Initialize with asymmetric quantization
+compressor = TurboQuantV3(
+    key_bits=4,      # 4 bits for keys (need precision for attention)
+    value_bits=2,    # 2 bits for values (errors cancel out)
+    protected_layers=4  # Keep first/last layers at higher precision
+)
+
+# Compress key-value cache
+compressed_kv = compressor.compress(keys, values, layer_idx)
+
+# Decompress for attention computation
+restored_keys, restored_values = compressor.decompress(compressed_kv)
+```
+
+Run the generation test to verify compression quality:
+
+```bash
+python -m turboquant.generation_test
+```
+
+<Callout type="tip">
+The K6/V4 configuration with 128-token residual window provides ~2x compression with perfect text generation quality.
+</Callout>
+
+## Notable Details
+
+**License:** MIT  
+**Language:** Python  
+**Community:** 809 GitHub stars  
+**Performance:** K6/V4 achieves exact text generation at 2x compression, while K4/V2 reaches 5x compression with 0.9996 cosine similarity on attention scores but degraded generation quality.
+
+The implementation includes extensive validation against the original paper's theoretical bounds and real-world generation tests that exposed issues with the paper's QJL approach.

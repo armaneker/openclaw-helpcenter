@@ -3932,7 +3932,7 @@
       "language": "Python",
       "url": "https://github.com/tonbistudio/turboquant-pytorch",
       "first_seen": "2026-03-29",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -3944,7 +3944,7 @@
       "language": "Python",
       "url": "https://github.com/zc-zhangchen/any-auto-register",
       "first_seen": "2026-03-29",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -3956,7 +3956,7 @@
       "language": "Rust",
       "url": "https://github.com/glommer/pgmicro",
       "first_seen": "2026-03-29",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -5244,7 +5244,8 @@
         "gitignore"
       ],
       "category": "DevTools",
-      "version": null
+      "version": null,
+      "blurb": "GitHub's official collection of .gitignore file templates for various programming languages, frameworks, tools, and environments. Developers use these templates to quickly set up proper file exclusion rules when creating new repositories, preventing unimportant files from being committed to version control. The templates are organized into three tiers: common use cases in the root, global editor/OS templates, and specialized community templates."
     },
     "0xGF/boneyard": {
       "full_name": "0xGF/boneyard",
@@ -5255,7 +5256,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Boneyard is a TypeScript framework that automatically generates pixel-perfect skeleton loading screens by extracting DOM element positions from your actual components. It eliminates the need to manually create placeholder layouts by using `getBoundingClientRect()` to capture real element dimensions and positions, then rendering matching gray rectangles during loading states. The framework includes responsive breakpoint support and generates skeletons via a CLI build step that snapshots your running application."
     }
   }
 }

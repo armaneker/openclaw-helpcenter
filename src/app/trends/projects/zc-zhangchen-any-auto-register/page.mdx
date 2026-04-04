@@ -1,0 +1,74 @@
+<GuideHeader tool="any-auto-register" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Any Auto Register
+
+Any Auto Register is a multi-platform account registration and management system that automates account creation with plugin architecture support. It provides automated registration for ChatGPT, Grok, AWS Builder ID, and other services through browser automation and API integration.
+
+## Key Features
+
+- **Multi-platform registration** - Supports ChatGPT, Grok, Kiro (AWS Builder ID), OpenBlockLabs, and Trae.ai
+- **Multiple execution modes** - Pure protocol, headless browser, and headed browser automation
+- **Email service integration** - Built-in temporary email providers, custom Worker email, and third-party services
+- **CAPTCHA solving** - YesCaptcha integration and local Turnstile Solver with Camoufox
+- **Proxy support** - Proxy pool rotation with status monitoring
+- **Batch operations** - Bulk registration with concurrency and delay controls
+- **Real-time logging** - Live registration process monitoring through web UI
+- **Plugin architecture** - Extensible system for external service integration
+
+## Installation
+
+<Callout type="warning">
+This project is intended for educational and research purposes only. Commercial use is prohibited.
+</Callout>
+
+Create and activate a Conda environment:
+
+```bash
+conda create -n any-auto-register python=3.12 -y
+conda activate any-auto-register
+```
+
+Install dependencies and build frontend:
+
+```bash
+pip install -r requirements.txt
+python -m playwright install chromium
+python -m camoufox fetch
+cd frontend && npm install && npm run build && cd ..
+```
+
+## Basic Usage
+
+Start the application:
+
+```bash
+# Windows (recommended)
+.\start_backend.ps1
+
+# Manual start
+conda activate any-auto-register
+python main.py
+```
+
+Access the web interface at `http://localhost:8000`. Configure email services and proxy settings through the global configuration menu, then create registration tasks from the platform management interface.
+
+## Docker Deployment
+
+```bash
+docker compose up -d --build
+```
+
+The container includes FastAPI backend, built frontend assets, and automatic Turnstile Solver startup. Database persists to `./data` directory.
+
+## Notable Details
+
+- **Language**: Python with React frontend
+- **License**: Unknown
+- **Community**: 2,314 GitHub stars
+- **Architecture**: FastAPI + SQLite backend, React + TypeScript frontend
+- **Browser engines**: Playwright (Chromium) and Camoufox for automation
+- **Email providers**: 12+ supported services including LuckMail, MoeMail, and custom Cloudflare Workers
+
+<Callout type="tip">
+ChatGPT registration includes advanced token lifecycle management with Access Token + Refresh Token support for enhanced reliability.
+</Callout>

@@ -839,7 +839,7 @@
       "has_summary": false,
       "category": "DevTools",
       "version": null,
-      "blurb": null
+      "blurb": "GitHub's official collection of .gitignore file templates for various programming languages, frameworks, tools, and environments. Developers use these templates to quickly set up proper file exclusion rules when creating new repositories, preventing unimportant files from being committed to version control. The templates are organized into three tiers: common use cases in the root, global editor/OS templates, and specialized community templates."
     },
     {
       "full_name": "affaan-m/everything-claude-code",
@@ -1304,7 +1304,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Boneyard is a TypeScript framework that automatically generates pixel-perfect skeleton loading screens by extracting DOM element positions from your actual components. It eliminates the need to manually create placeholder layouts by using `getBoundingClientRect()` to capture real element dimensions and positions, then rendering matching gray rectangles during loading states. The framework includes responsive breakpoint support and generates skeletons via a CLI build step that snapshots your running application."
     },
     {
       "full_name": "Windy3f3f3f3f/how-claude-code-works",
@@ -1421,7 +1421,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "Any Auto Register is a multi-platform account registration automation system with a plugin architecture, web UI, and support for various email services and CAPTCHA solvers. It enables automated account creation across platforms like Trae.ai, Cursor, Kiro, and Grok with configurable concurrency, proxy management, and real-time logging. The project includes integrated plugins for proxy pool management, Grok token handling, and local Turnstile solving capabilities."
@@ -1541,7 +1541,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "TurboQuant is a PyTorch implementation of Google's two-stage vector quantization algorithm for compressing LLM key-value caches. It achieves 5x compression at 3-bit quantization while maintaining 99.5% attention fidelity by using random rotation with Lloyd-Max quantization followed by QJL residual correction. The algorithm preserves attention accuracy despite high per-vector reconstruction error by ensuring inner products remain mathematically unbiased."
