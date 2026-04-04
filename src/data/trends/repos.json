@@ -5181,7 +5181,7 @@
     },
     "NanmiCoder/cc-haha": {
       "full_name": "NanmiCoder/cc-haha",
-      "description": "Claude Code 泄露源码 - 本地可运行版本",
+      "description": "Claude Code 泄露源码 - 本地可运行版本（附带核心模块解析）",
       "language": "TypeScript",
       "url": "https://github.com/NanmiCoder/cc-haha",
       "first_seen": "2026-04-03",
