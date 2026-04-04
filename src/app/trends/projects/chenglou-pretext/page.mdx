@@ -1,0 +1,66 @@
+<GuideHeader tool="pretext" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Pretext
+
+A TypeScript library for measuring and laying out multiline text without triggering DOM reflows. Pretext implements its own text measurement logic using the browser's font engine as ground truth.
+
+## Key Features
+
+- Measure paragraph height without DOM access
+- Avoid expensive layout reflows from `getBoundingClientRect` calls  
+- Support for all languages including emojis and mixed bidirectional text
+- Manual line layout for custom rendering (Canvas, SVG, WebGL)
+- Handles browser-specific text rendering quirks
+- Fast performance: ~19ms for prepare(), ~0.09ms for layout()
+
+## Installation
+
+```bash
+npm install @chenglou/pretext
+```
+
+## Basic Usage
+
+### Text Height Measurement
+
+```typescript
+import { prepare, layout } from '@chenglou/pretext'
+
+const prepared = prepare('AGI 春天到了. بدأت الرحلة 🚀‎', '16px Inter')
+const { height, lineCount } = layout(prepared, textWidth, 20)
+```
+
+<Callout type="tip">
+Call `prepare()` once per text+font combination, then reuse it with different widths in `layout()`. Only re-run `layout()` on resize.
+</Callout>
+
+### Manual Line Layout
+
+```typescript
+import { prepareWithSegments, layoutWithLines } from '@chenglou/pretext'
+
+const prepared = prepareWithSegments('AGI 春天到了. بدأت الرحلة 🚀', '18px "Helvetica Neue"')
+const { lines } = layoutWithLines(prepared, 320, 26)
+
+for (let i = 0; i &lt; lines.length; i++) {
+  ctx.fillText(lines[i].text, 0, i * 26)
+}
+```
+
+### Textarea-Style Text
+
+```typescript
+const prepared = prepare(textareaValue, '16px Inter', { whiteSpace: 'pre-wrap' })
+const { height } = layout(prepared, textareaWidth, 20)
+```
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: TypeScript  
+- **Community**: 38K+ GitHub stars
+- **Use Cases**: Virtualization, masonry layouts, preventing layout shift, server-side rendering
+
+<Callout type="info">
+Pretext enables proper text virtualization without height estimates and allows shrink-wrap multiline text layouts that have been missing from the web platform.
+</Callout>

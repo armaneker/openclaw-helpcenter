@@ -1,0 +1,66 @@
+<GuideHeader tool="ascii-studio" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# ASCII Studio
+
+ASCII Studio converts video files into character-based ASCII animations that maintain smooth playback. The tool processes video frames and maps pixel brightness to ASCII characters, creating terminal-compatible animations.
+
+## Features
+
+- Video to ASCII frame conversion with brightness mapping
+- Smooth animation playback in terminal environments
+- High-performance frame processing
+- Character-based output that preserves visual detail
+- Support for various video formats
+
+## Installation
+
+```bash
+npm install ascii-studio
+```
+
+Or clone and build from source:
+
+```bash
+git clone https://github.com/vansh-nagar/ascii-studio
+cd ascii-studio
+npm install
+npm run build
+```
+
+## Basic Usage
+
+```typescript
+import { convertVideo } from 'ascii-studio';
+
+// Convert video to ASCII frames
+const asciiFrames = await convertVideo('./input-video.mp4', {
+  width: 80,
+  height: 24,
+  frameRate: 10
+});
+
+// Play ASCII animation
+asciiFrames.forEach((frame, index) => {
+  setTimeout(() => {
+    console.clear();
+    console.log(frame);
+  }, index * 100);
+});
+```
+
+<Callout type="tip">
+Adjust width and height parameters based on your terminal size for optimal viewing. Standard terminal dimensions are typically 80x24 characters.
+</Callout>
+
+<Callout type="info">
+Frame rate controls playback speed - lower values create smoother animations but larger output files.
+</Callout>
+
+## Project Details
+
+- **Language**: TypeScript
+- **License**: Not specified
+- **Community**: 457 GitHub stars
+- **Repository**: [vansh-nagar/ascii-studio](https://github.com/vansh-nagar/ascii-studio)
+
+The project focuses specifically on video-to-ASCII conversion with emphasis on maintaining smooth animation quality in character-based output.

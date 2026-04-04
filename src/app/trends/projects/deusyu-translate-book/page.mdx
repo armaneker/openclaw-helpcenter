@@ -1,0 +1,64 @@
+<GuideHeader tool="translate-book" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# translate-book
+
+A Claude Code skill that translates entire books (PDF/DOCX/EPUB) into any language using parallel subagents. It handles document conversion, chunking, parallel translation, and multi-format output generation in a single pipeline.
+
+## Key Features
+
+- **Parallel translation** — 8 concurrent subagents with isolated contexts to prevent truncation
+- **Resumable runs** — chunk-level recovery skips already-translated sections
+- **Multi-format support** — PDF/DOCX/EPUB input, HTML/DOCX/EPUB/PDF output
+- **Integrity validation** — SHA-256 manifest tracking prevents corrupt outputs
+- **Multiple languages** — supports zh, en, ja, ko, fr, de, es with extensible language system
+
+## Installation
+
+**Prerequisites:** Install [Calibre](https://calibre-ebook.com/) and [Pandoc](https://pandoc.org/), then install Python dependencies:
+
+```bash
+pip install pypandoc beautifulsoup4
+```
+
+**Install the skill:**
+
+```bash
+npx skills add deusyu/translate-book -a claude-code -g
+```
+
+<Callout type="info">
+Alternative installation methods include ClawHub (`clawhub install translate-book`) or direct git clone to `~/.claude/skills/translate-book`.
+</Callout>
+
+## Basic Usage
+
+In Claude Code:
+
+```
+translate /path/to/book.pdf to Chinese
+```
+
+Or use the slash command:
+
+```
+/translate-book translate /path/to/book.epub to Japanese
+```
+
+The pipeline automatically converts the input, splits into ~6000 character chunks, translates using parallel subagents (8 concurrent by default), validates integrity, and generates all output formats.
+
+**Outputs are saved to `{book_name}_temp/`:**
+- `output.md` — merged translated markdown
+- `book.html` — web version with floating TOC
+- `book.docx` / `book.epub` / `book.pdf` — formatted documents
+
+<Callout type="tip">
+If a run is interrupted, simply re-run the same command. Already-translated chunks are automatically skipped.
+</Callout>
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** Python
+- **Community:** 588 GitHub stars
+- **Architecture:** Uses Calibre for conversion, Pandoc for markdown processing, and manifest-driven validation
+- Inspired by claude_translater but completely restructured as a Claude Code skill

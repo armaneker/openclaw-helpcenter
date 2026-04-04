@@ -1316,7 +1316,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "Other",
       "version": null,
       "blurb": "Pretext is a pure JavaScript/TypeScript library for multiline text measurement and layout without DOM interaction. It eliminates expensive browser layout reflows by implementing its own text measurement logic while using the browser's font engine for accuracy, enabling proper UI virtualization, layout calculations, and manual text rendering to Canvas/SVG. The library supports complex text including mixed bidirectional text, emojis, and international languages with microsecond-level layout performance after initial preparation."
