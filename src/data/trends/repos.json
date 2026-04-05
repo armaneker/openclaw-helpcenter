@@ -4919,7 +4919,7 @@
         "typescript"
       ],
       "category": "Agentic",
-      "version": null,
+      "version": "v1.0.0",
       "blurb": "Open Multi-Agent is a TypeScript framework for orchestrating teams of AI agents that collaborate on complex tasks through automatic task scheduling and inter-agent communication. It enables building specialized agent teams where different agents handle planning, implementation, and review while the framework manages dependencies and parallel execution automatically. The framework is model-agnostic, allowing mixed teams of Claude and GPT agents running in a single Node.js process without subprocess overhead."
     },
     "Gitlawb/openclaude": {
