@@ -4081,7 +4081,7 @@
       "language": "Unknown",
       "url": "https://github.com/realkimbarrett/advertising-skills",
       "first_seen": "2026-03-30",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "advertising",
         "claude-code",
@@ -4099,7 +4099,7 @@
       "language": "Swift",
       "url": "https://github.com/adamlyttleapps/notchy",
       "first_seen": "2026-03-30",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -4111,7 +4111,7 @@
       "language": "Python",
       "url": "https://github.com/AAAAAAAJ/slides",
       "first_seen": "2026-03-30",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -5300,7 +5300,8 @@
         "rust"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Claude Code Rust is a high-performance Rust rewrite of the original Claude Code CLI tool for interacting with Claude AI. It delivers 2.5x faster startup times and 97% smaller deployment size while maintaining all core functionality including CLI, REPL, GUI, and plugin support. Despite being listed as TypeScript, this is actually a Rust implementation that eliminates Node.js runtime dependencies and provides memory safety guarantees."
     }
   }
 }

@@ -1,0 +1,48 @@
+<GuideHeader tool="notchy" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Notchy
+
+Notchy is a macOS menu bar app that integrates Claude Code into your MacBook's notch area. It provides quick access to AI coding assistance directly from your notch or menu bar.
+
+## Key Features
+
+- **Notch integration** — hover over the MacBook notch to reveal the terminal panel
+- **Xcode project detection** — automatically discovers open Xcode projects and changes directory into them
+- **Multi-session tabs** — run multiple Claude Code sessions side by side
+- **Live status indicator** — animated pill in the notch shows Claude's current state (working, waiting, or done)
+- **Git checkpoints** — Cmd+S to snapshot your project before Claude makes changes
+
+## Installation
+
+Clone the repository and build with Xcode:
+
+```bash
+git clone https://github.com/adamlyttleapps/notchy.git
+cd notchy
+open Notchy.xcodeproj
+```
+
+Build from Xcode (Cmd+B) or command line:
+
+```bash
+xcodebuild -project Notchy.xcodeproj -scheme Notchy -configuration Debug build
+```
+
+<Callout type="info">
+Requires macOS 26.0+ and a MacBook with a notch for full functionality. The menu bar features work on any Mac.
+</Callout>
+
+## Basic Usage
+
+Launch the app and either:
+- Hover over your MacBook's notch to reveal the terminal panel
+- Click the menu bar icon to open the interface
+- Open Xcode projects — Notchy automatically detects them and sets the working directory
+- Use Cmd+S to create Git checkpoints before letting Claude modify your code
+
+## Project Details
+
+- **Language**: Swift
+- **License**: MIT
+- **Stars**: 622
+- **Dependencies**: SwiftTerm (terminal emulator via Swift Package Manager)

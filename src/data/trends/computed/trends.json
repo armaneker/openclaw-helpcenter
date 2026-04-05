@@ -1604,7 +1604,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "Claude Code Rust is a high-performance Rust rewrite of the original Claude Code CLI tool for interacting with Claude AI. It delivers 2.5x faster startup times and 97% smaller deployment size while maintaining all core functionality including CLI, REPL, GUI, and plugin support. Despite being listed as TypeScript, this is actually a Rust implementation that eliminates Node.js runtime dependencies and provides memory safety guarantees."
     },
     {
       "full_name": "twbs/bootstrap",

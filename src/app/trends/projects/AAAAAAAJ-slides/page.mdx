@@ -1,0 +1,59 @@
+<GuideHeader tool="slides" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# slides
+
+**slides** is a Python-based prompt generation tool that creates styled prompts for AI-powered presentation slides. It provides 11 distinct visual styles optimized for nanobanana2 image generation.
+
+## Key Features
+
+- **11 visual styles** - From retro pop art to cyberpunk neon to Swiss minimalism
+- **AI-optimized prompts** - Pre-formatted for gemini-3.1-flash-image-preview model
+- **PPT-ready output** - 16:9 aspect ratio with proper text hierarchy
+- **No-code workflow** - Copy prompts directly from documentation
+- **Visual examples** - Each style includes generated sample images
+
+## Installation
+
+No installation required. Clone the repository to access prompt templates:
+
+```bash
+git clone https://github.com/AAAAAAAJ/slides.git
+cd slides
+```
+
+All prompts are available in `PROMPTS.md` for direct copy-paste usage.
+
+## Basic Usage
+
+1. **Select a style** from the 11 available options (retro pop, minimalist, cyberpunk, etc.)
+2. **Copy the prompt** from `PROMPTS.md`
+3. **Customize content** by replacing placeholder text with your slide content
+4. **Generate** using nanobanana2 with recommended settings:
+   - Model: `gemini-3.1-flash-image-preview`
+   - Resolution: `2048*1152`
+   - Aspect ratio: `16:9`
+
+```
+Example prompt (Minimalist Clean style):
+Minimalist clean design PPT slide, White background, generous whitespace, 
+centered title text "Your Title Here", subtitle below "Your subtitle", 
+key stats in simple cards, Subtle gray and blue accents, 16:9
+```
+
+<Callout type="tip">
+Keep slide text under 8 words for titles and 12 words for subtitles. AI handles shorter text much better than long paragraphs.
+</Callout>
+
+<Callout type="info">
+Each style is optimized for specific use cases: minimalist for corporate presentations, cyberpunk for tech themes, retro pop for creative content.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python
+- **Community**: 499 GitHub stars
+- **Cost**: ~$0.03 per 2K image via APImart
+- **Dependencies**: None (prompt templates only)
+
+The project includes 22 generated examples across all styles, demonstrating consistent visual quality and proper PPT formatting.

@@ -1,0 +1,55 @@
+<GuideHeader tool="advertising-skills" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Advertising Skills
+
+A skill library for AI agents focused on direct-response advertising, copywriting, and funnel optimization. Built around Eugene Schwartz's copywriting principles combined with modern paid media strategies.
+
+## What It Does
+
+* **Copy Chief skills** - Eugene Schwartz awareness levels, market sophistication analysis, mechanism building
+* **Operator skills** - Ad creative generation, funnel architecture, conversion path optimization  
+* **Foundation skills** - Avatar extraction, voice-of-customer mining, offer positioning
+* **QA skills** - Generic language elimination, claim verification, consistency auditing
+* **Orchestrators** - Pre-built multi-skill flows for complete campaign development
+
+<Callout type="info">
+Skills are designed to chain together, not work in isolation. A typical flow might be: avatar-extraction → schwartz-awareness-mapper → mechanism-builder → ad-angle-multiplier.
+</Callout>
+
+## Installation
+
+Compatible with any agent using the Agent Skills pattern:
+
+```bash
+# Install into your agent's skills directory
+.agents/skills/
+```
+
+Works with Claude Code, Cursor, Windsurf, Codex, Open Claw, and custom agent frameworks.
+
+## Basic Usage
+
+Each skill lives in `skills/&lt;category>/&lt;skill-name>/SKILL.md` and defines when to use it, required inputs, thinking process, and expected outputs.
+
+Example campaign flow:
+
+```
+avatar-extraction
+→ offer-extraction  
+→ schwartz-awareness-mapper
+→ mechanism-builder
+→ ad-angle-multiplier
+→ conversion-path-builder
+→ objection-crusher
+```
+
+<Callout type="tip">
+Check `/examples/booked-call-campaign-ai-ads.md` for complete campaign examples showing skill orchestration.
+</Callout>
+
+## Notable Details
+
+**License:** MIT  
+**Community:** 532 GitHub stars  
+**Target users:** Media buyers, founders running paid ads, agencies, operators building AI marketing systems  
+**Focus:** Direct response, paid traffic campaigns with real budgets and consequences
