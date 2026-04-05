@@ -1436,7 +1436,7 @@
       "delta_week": 0,
       "delta_month": 0,
       "delta_year": 0,
-      "has_summary": false,
+      "has_summary": true,
       "category": "DevTools",
       "version": "v1.1.1",
       "blurb": "MiniStack is an open-source local AWS emulator that serves as a drop-in replacement for LocalStack's now-paid services. It emulates 26 AWS services on a single port and works with existing AWS tooling like boto3, AWS CLI, and Terraform for local development and testing. The project offers a significantly smaller footprint (~150MB vs LocalStack's ~1GB) while spinning up real infrastructure components like actual Postgres containers for RDS emulation."

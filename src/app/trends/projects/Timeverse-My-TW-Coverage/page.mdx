@@ -1,0 +1,58 @@
+<GuideHeader tool="My-TW-Coverage" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# My-TW-Coverage
+
+A structured equity research database covering 1,735 Taiwan-listed companies (TWSE + OTC) with business overviews, supply chain mapping, and financial data. Uses 4,900+ wikilinks to create a searchable knowledge graph of Taiwan's market ecosystem.
+
+## Key Features
+
+- **Complete Taiwan market coverage** - 1,735 companies across 99 industry sectors
+- **Supply chain mapping** - Track relationships between companies, suppliers, and customers
+- **Wikilink knowledge graph** - Search `[[Apple]]` to find 207 Taiwanese suppliers
+- **Financial data integration** - Valuation metrics and financial statements via yfinance
+- **Thematic investment screens** - Pre-built supply chain maps for key themes
+- **Interactive network visualization** - D3.js force-directed graph of company relationships
+- **Buzzword discovery** - Find Taiwan companies exposed to any technology or trend
+
+## Installation
+
+```bash
+git clone https://github.com/Timeverse/My-TW-Coverage.git
+cd My-TW-Coverage
+pip install yfinance pandas tabulate
+```
+
+## Basic Usage
+
+Browse reports organized by industry in the `Pilot_Reports/` directory:
+
+```bash
+# View TSMC's report
+cat "Pilot_Reports/Semiconductors/2330_台積電.md"
+
+# Update financial data for a single company
+python scripts/update_financials.py 2330
+
+# Find companies related to a technology
+python scripts/discover.py "CoWoS"
+
+# Generate interactive network graph
+python scripts/build_network.py
+# Open network/index.html in browser
+```
+
+<Callout type="info">
+Reports use Traditional Chinese with English financial data. Each company report includes business description, supply chain position, major customers/suppliers, and current financials.
+</Callout>
+
+<Callout type="tip">
+Use the wikilink system to navigate relationships. Searching for technologies like `[[光阻液]]` (photoresist) or companies like `[[NVIDIA]]` reveals all connected Taiwanese firms.
+</Callout>
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** Python with Traditional Chinese content
+- **Community:** 437 GitHub stars
+- **Data sources:** yfinance for financials, manual research for business intelligence
+- **Update frequency:** Financial data refreshable on-demand, business content requires manual enrichment

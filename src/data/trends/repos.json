@@ -4123,7 +4123,7 @@
       "language": "Python",
       "url": "https://github.com/Timeverse/My-TW-Coverage",
       "first_seen": "2026-03-30",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -4135,7 +4135,7 @@
       "language": "Unknown",
       "url": "https://github.com/0xNyk/awesome-hermes-agent",
       "first_seen": "2026-03-30",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "ai-agents",
         "awesome",
@@ -4154,7 +4154,7 @@
       "language": "Python",
       "url": "https://github.com/Nahuel990/ministack",
       "first_seen": "2026-03-30",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "aws",
         "aws-emulator",

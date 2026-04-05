@@ -1,0 +1,74 @@
+<GuideHeader tool="ministack" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Ministack
+
+Ministack is a free, open-source local AWS emulator that runs 35+ AWS services on a single port. It's a drop-in replacement for LocalStack Community with real database backends and Terraform compatibility.
+
+## Key Features
+
+- **35+ AWS services** emulated locally (S3, DynamoDB, Lambda, SQS, RDS, etc.)
+- **Single port deployment** - everything runs on port 4566
+- **Real infrastructure** - RDS spins up actual Postgres/MySQL containers, ElastiCache uses real Redis
+- **Drop-in compatible** with boto3, AWS CLI, Terraform, CDK, and Pulumi
+- **Lightweight** - ~200MB image, ~30MB RAM at idle
+- **Fast startup** - under 2 seconds
+- **Internal APIs** for health checks and state reset
+
+<Callout type="info">
+Ministack was created as a free alternative after LocalStack moved core services behind a paid plan. It's MIT licensed and completely free.
+</Callout>
+
+## Installation
+
+```bash
+# Option 1: PyPI
+pip install ministack
+ministack
+
+# Option 2: Docker
+docker run -p 4566:4566 nahuelnucera/ministack
+
+# Option 3: Docker Compose
+git clone https://github.com/Nahuel990/ministack
+cd ministack
+docker compose up -d
+```
+
+The service runs on `http://localhost:4566` by default. Use `GATEWAY_PORT=XXXX` to change the port.
+
+## Basic Usage
+
+```python
+import boto3
+
+def client(service):
+    return boto3.client(
+        service,
+        endpoint_url="http://localhost:4566",
+        aws_access_key_id="test",
+        aws_secret_access_key="test",
+        region_name="us-east-1",
+    )
+
+# Create S3 bucket and upload file
+s3 = client("s3")
+s3.create_bucket(Bucket="my-bucket")
+s3.put_object(Bucket="my-bucket", Key="hello.txt", Body=b"Hello, MiniStack!")
+
+# Create SQS queue and send message
+sqs = client("sqs")
+queue = sqs.create_queue(QueueName="my-queue")
+sqs.send_message(QueueUrl=queue["QueueUrl"], MessageBody="hello")
+```
+
+<Callout type="tip">
+Use the reset endpoint `curl -X POST http://localhost:4566/_ministack/reset` to wipe all state between test runs without restarting the container.
+</Callout>
+
+## Notable Details
+
+- **License**: MIT
+- **Language**: Python 3.12
+- **Community**: 1,572 GitHub stars
+- **Compatibility**: Works with existing LocalStack health endpoints
+- **Docker Hub**: Available as `nahuelnucera/ministack`
