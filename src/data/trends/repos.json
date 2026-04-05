@@ -4150,28 +4150,31 @@
     },
     "Nahuel990/ministack": {
       "full_name": "Nahuel990/ministack",
-      "description": "Ministack: the free LocalStack replacement",
+      "description": "Ministack: Free, open-source local AWS emulator - 35+ services, Terraform compatible, real databases. Free forever. MIT   licensed.",
       "language": "Python",
       "url": "https://github.com/Nahuel990/ministack",
       "first_seen": "2026-03-30",
       "has_summary": false,
       "topics": [
         "aws",
-        "aws-emulation",
         "aws-emulator",
         "aws-local",
-        "cloud-native",
+        "aws-sdk",
+        "devtools",
         "docker",
         "dynamodb",
+        "ec2",
         "emulator",
         "lambda",
         "localstack",
         "localstack-alternative",
         "ministack",
+        "mock-aws",
+        "open-source",
         "python",
         "s3",
-        "testing",
-        "testing-tools"
+        "sqs",
+        "terraform"
       ],
       "category": "DevTools",
       "version": "v1.1.1",
@@ -5062,7 +5065,7 @@
     },
     "ericosiu/ai-marketing-skills": {
       "full_name": "ericosiu/ai-marketing-skills",
-      "description": "Open-source AI marketing skills for Claude Code — growth experiments, sales pipeline, content ops, outbound, SEO, and finance automation",
+      "description": "Open-source AI marketing skills — growth experiments, sales pipeline, content ops, outbound, SEO, and finance automation",
       "language": "Python",
       "url": "https://github.com/ericosiu/ai-marketing-skills",
       "first_seen": "2026-04-02",
@@ -5279,6 +5282,25 @@
       "category": "AI / ML",
       "version": null,
       "blurb": "This is a machine learning primer that builds understanding from first principles using engineering analogies rather than mathematical theory. It teaches engineers when and why to use different ML tools by explaining concepts like neurons as polarizing filters, depth as paper folding, and gradient flow as pipeline valves. The content is organized as a single comprehensive markdown file covering fundamentals, architectures, and control systems with a focus on practical decision-making."
+    },
+    "lorryjovens-hub/claude-code-rust": {
+      "full_name": "lorryjovens-hub/claude-code-rust",
+      "description": "🚀 Rust 全量重构的 Claude Code - 性能提升 2.5x，体积减少 97% | High-performance Rust implementation of Claude Code with 2.5x faster startup and 97% smaller binary",
+      "language": "TypeScript",
+      "url": "https://github.com/lorryjovens-hub/claude-code-rust",
+      "first_seen": "2026-04-05",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "claude",
+        "cli",
+        "mcp",
+        "performance",
+        "repl",
+        "rust"
+      ],
+      "category": "Agentic",
+      "version": null
     }
   }
 }
