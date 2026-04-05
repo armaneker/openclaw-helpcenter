@@ -4000,7 +4000,7 @@
     },
     "chenglou/pretext": {
       "full_name": "chenglou/pretext",
-      "description": "",
+      "description": "Fast, accurate & comprehensive text measurement & layout",
       "language": "TypeScript",
       "url": "https://github.com/chenglou/pretext",
       "first_seen": "2026-03-29",
@@ -5302,6 +5302,52 @@
       "category": "Agentic",
       "version": null,
       "blurb": "Claude Code Rust is a high-performance Rust rewrite of the original Claude Code CLI tool for interacting with Claude AI. It delivers 2.5x faster startup times and 97% smaller deployment size while maintaining all core functionality including CLI, REPL, GUI, and plugin support. Despite being listed as TypeScript, this is actually a Rust implementation that eliminates Node.js runtime dependencies and provides memory safety guarantees."
+    },
+    "alvinreal/awesome-opensource-ai": {
+      "full_name": "alvinreal/awesome-opensource-ai",
+      "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure.",
+      "language": "Python",
+      "url": "https://github.com/alvinreal/awesome-opensource-ai",
+      "first_seen": "2026-04-05",
+      "has_summary": false,
+      "topics": [
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "awesome",
+        "awesome-list",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "open-source",
+        "open-source-ai",
+        "rag"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "JuliusBrussee/caveman": {
+      "full_name": "JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 75% of tokens by talking like caveman",
+      "language": "Python",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "first_seen": "2026-04-05",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "anthropic",
+        "caveman",
+        "claude",
+        "claude-code",
+        "llm",
+        "meme",
+        "prompt-engineering",
+        "skill",
+        "tokens"
+      ],
+      "category": "AI / ML",
+      "version": "v1.1.0"
     }
   }
 }
