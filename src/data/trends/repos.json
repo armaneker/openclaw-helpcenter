@@ -4908,6 +4908,7 @@
         "ai-agents",
         "anthropic",
         "claude",
+        "gemma4",
         "llm",
         "model-agnostic",
         "multi-agent",
@@ -4933,7 +4934,7 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null,
+      "version": "v0.1.8",
       "blurb": "OpenClaude is a fork of the leaked Claude Code source that adds support for any OpenAI-compatible LLM instead of just Claude. It allows developers to use Claude Code's full toolset (bash, file operations, agents, MCP) with models like GPT-4o, DeepSeek, Gemini, or local models through Ollama. The project originated from Claude Code source maps that were accidentally exposed via npm in March 2026."
     },
     "therealXiaomanChu/ex-skill": {
