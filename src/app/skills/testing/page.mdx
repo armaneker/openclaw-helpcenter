@@ -1,0 +1,370 @@
+<GuideHeader tool="Skills" difficulty="Intermediate" lastTested="2026-03" readTime="15 min" />
+
+# Testing and Iterating Skills
+
+How to know if your skill actually works, and how to make it better when it doesn't.
+
+Design principles get you to a good first draft. What gets you to a reliable skill is a disciplined cycle of testing, measuring, reviewing, and revising.
+
+---
+
+## The Eval-Driven Development Loop
+
+Building a skill is not a write-once activity. It's an iterative loop:
+
+```
+Draft → Test → Review → Measure → Revise → Repeat
+```
+
+Each pass produces a versioned **iteration** — a snapshot of the skill at that point, along with its test results, scores, and human feedback. You keep iterating until the skill is stable: the user is happy, the metrics are clean, and you're not making meaningful progress anymore.
+
+Every change should be motivated by either quantitative evidence (a benchmark score) or qualitative evidence (human feedback on a specific output). This prevents two common failure modes: changing things that were already working, and assuming a fix worked without verifying it.
+
+### Workspace Structure
+
+Organize each iteration as a sibling to the skill directory:
+
+```
+my-skill/
+├── SKILL.md
+├── references/
+├── scripts/
+└── evals/
+    └── evals.json
+
+my-skill-workspace/
+├── iteration-1/
+│   ├── descriptive-test-name/
+│   │   ├── with_skill/
+│   │   │   ├── outputs/
+│   │   │   ├── timing.json
+│   │   │   └── grading.json
+│   │   └── without_skill/
+│   │       ├── outputs/
+│   │       ├── timing.json
+│   │       └── grading.json
+│   ├── eval_metadata.json
+│   ├── benchmark.json
+│   └── benchmark.md
+├── iteration-2/
+│   └── ...
+└── feedback.json
+```
+
+This gives you a full audit trail. You can always go back and see what changed between iterations, what the user said, and whether the metrics moved.
+
+---
+
+## Test Cases
+
+A test case is a realistic user prompt paired with an expected outcome. The goal is to simulate what actual users will say — not to write clean, abstract examples.
+
+### What Makes a Good Test Case
+
+Good test cases are **specific and messy**, like real user input:
+
+```
+Bad:  "Generate a sales report"
+Good: "ok can you pull the numbers for subscription revenue
+       this month vs last month? the CEO is asking and I
+       need it in like 10 minutes"
+```
+
+Good test cases also cover **edge cases and ambiguity**:
+
+- What happens when the user doesn't specify a time range?
+- What if the API returns empty data?
+- What if the user asks for something adjacent but not quite in scope?
+
+### How Many Test Cases
+
+Start with 2-3 for your first iteration. This keeps the feedback loop fast. Expand to 5-8 once the skill is stable and you want to stress-test edge cases.
+
+### Test Case Schema
+
+Store test cases in `evals/evals.json`:
+
+```json
+{
+  "skill_name": "sales-report",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "pull this month's subscription numbers vs last month",
+      "expected_output": "Table comparing MRR, churn, net new for current vs previous month",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}
+```
+
+The `assertions` field starts empty. Fill it in after seeing the first round of outputs, when you know what's worth checking programmatically.
+
+---
+
+## Baseline Comparison
+
+The most important question about any skill isn't "does it produce good output?" — it's "does it produce **better** output than not having the skill at all?"
+
+For every test case, run two versions:
+
+- **With-skill**: The agent has access to the skill and follows its instructions.
+- **Without-skill** (baseline): The same prompt, same agent, no skill.
+
+If you're improving an existing skill, the baseline is the old version — snapshot it before editing.
+
+<Callout type="tip" title="Run in parallel">
+Don't run all with-skill tests first, then all baselines. Launch them simultaneously. This eliminates ordering effects and gets you results faster.
+</Callout>
+
+Each run should capture:
+
+- The output files (whatever the skill produces)
+- Timing data: `total_tokens` and `duration_ms`
+- A metadata file linking the run to its test case and assertions
+
+---
+
+## Quantitative Benchmarking
+
+Not everything about a skill's output can be measured objectively. But the things that can be should be. Assertions are specific, verifiable claims about what the output should contain or how it should behave.
+
+### Writing Assertions
+
+Assertions work best for **objectively verifiable** properties:
+
+```json
+{
+  "assertions": [
+    {
+      "text": "Output contains a comparison table with at least 3 metrics",
+      "type": "content_check"
+    },
+    {
+      "text": "All monetary values use localized formatting with thousands separator",
+      "type": "format_check"
+    },
+    {
+      "text": "Response includes the data source and timestamp",
+      "type": "completeness_check"
+    },
+    {
+      "text": "No fabricated data — all numbers come from the API response",
+      "type": "accuracy_check"
+    }
+  ]
+}
+```
+
+Give each assertion a **descriptive name** — it should read clearly in a benchmark report so someone glancing at the results immediately understands what's being checked.
+
+<Callout type="info" title="Subjective qualities belong to humans">
+Tone, style, visual design, "does this feel right" — leave these to human review. Forcing assertions onto subjective outputs creates brittle tests that pass or fail for the wrong reasons.
+</Callout>
+
+### Grading
+
+After the runs complete, each assertion is evaluated against the actual output:
+
+```json
+{
+  "eval_id": 1,
+  "expectations": [
+    {
+      "text": "Output contains a comparison table with at least 3 metrics",
+      "passed": true,
+      "evidence": "Found table with columns: MRR, Churn Rate, Net New Revenue, Customer Count"
+    },
+    {
+      "text": "All monetary values use localized formatting",
+      "passed": false,
+      "evidence": "Found '$1234567' without thousands separator in row 3"
+    }
+  ]
+}
+```
+
+For assertions that can be checked programmatically (regex matches, file existence, JSON schema validation), write a script rather than relying on manual inspection.
+
+### Aggregation
+
+After grading individual runs, aggregate into a benchmark summary:
+
+| Metric | With Skill | Without Skill | Delta |
+|---|---|---|---|
+| Assertion pass rate | 87% | 62% | +25% |
+| Avg. tokens | 12,400 | 8,200 | +4,200 |
+| Avg. duration (s) | 18.3 | 11.7 | +6.6s |
+
+This tells you three things: does the skill improve quality (pass rate), at what cost (tokens), and how much slower (duration).
+
+### Patterns to Watch For
+
+- **Non-discriminating assertions** — If an assertion passes 100% of the time in both with-skill and without-skill runs, it's not testing anything the skill contributes. Drop it or make it harder.
+- **High-variance results** — If the same test case passes sometimes and fails other times, the skill's instructions are probably ambiguous.
+- **Cost/quality tradeoffs** — A skill that's 10% more accurate but uses 3x the tokens might need its instructions trimmed.
+
+---
+
+## Human Review
+
+Metrics tell you what's broken. Humans tell you what's *wrong*.
+
+Present each test case side-by-side with its outputs. The reviewer sees:
+
+- The original prompt
+- The skill's output (rendered inline where possible)
+- Previous iteration's output (for comparison on iteration 2+)
+- Assertion grades (pass/fail with evidence)
+- A feedback textbox
+
+The output is a `feedback.json`:
+
+```json
+{
+  "reviews": [
+    {
+      "run_id": "subscription-comparison-with_skill",
+      "feedback": "month-over-month delta shows absolute values, should be percentages",
+      "timestamp": "2026-03-31T14:22:00Z"
+    },
+    {
+      "run_id": "churn-analysis-with_skill",
+      "feedback": "",
+      "timestamp": "2026-03-31T14:25:00Z"
+    }
+  ]
+}
+```
+
+Empty feedback means the reviewer thought it was fine. Focus improvement efforts on the test cases with specific complaints.
+
+---
+
+## Revising the Skill
+
+This is where most people go wrong. The temptation is to add more rules, more MUSTs, more guardrails. Resist it. The goal is a skill that works across thousands of diverse prompts — not one that perfectly handles your 3 test cases.
+
+### Four Principles
+
+**Generalize from the feedback.** If the reviewer says "the table is missing the churn column," don't add a rule that says "always include a churn column." Ask: why did the agent skip it? Was the step ambiguous? Was the metric list incomplete? Fix the root cause.
+
+**Keep the prompt lean.** Read the agent's transcript — not just the final output. If the agent is spending tokens on unproductive steps (loading files it doesn't need, asking unnecessary clarifying questions), the skill's instructions are too verbose or poorly ordered. Cut what isn't pulling its weight.
+
+**Explain the why.** When you write "ALWAYS format currencies with thousands separators," add the reason: "Executives scan tables quickly. Unformatted numbers like 1234567 are hard to parse at a glance." The agent has good theory of mind. When it understands *why* a rule exists, it can apply the principle correctly in edge cases the rule doesn't explicitly cover.
+
+**Spot repeated work across test cases.** Read the transcripts from all your runs. If every run independently writes the same helper script, that's a signal the skill should bundle it in `scripts/`. Write it once, include it in the skill, and save every future invocation from reinventing the wheel.
+
+### Overfitting
+
+<Callout type="warning" title="Don't overfit to your test set">
+You're iterating on 3 test cases because it's fast. But the skill will be used on thousands of prompts you haven't seen. Every change should be defensible as "this makes the skill better in general," not just "this makes test case #2 pass."
+</Callout>
+
+Signs of overfitting:
+
+- Rules that reference specific values from your test data ("always include the churn column")
+- Instructions that only make sense in the context of one test case
+- A skill that keeps getting longer without getting better
+- Assertion pass rates that improve on your test set but degrade when you add new test cases
+
+When in doubt, add more test cases before adding more rules.
+
+---
+
+## Description Optimization
+
+The best-written skill is useless if it doesn't trigger when it should. Description optimization is an automated process for testing and improving the `description` field in your skill's frontmatter.
+
+### The Trigger Eval Set
+
+Create 16-20 eval queries — a mix of should-trigger (8-10) and should-not-trigger (8-10).
+
+**Should-trigger queries** test coverage — different phrasings of the same intent:
+
+```json
+{
+  "query": "ok so my boss just sent me this xlsx file and she wants me to add a profit margin column",
+  "should_trigger": true
+}
+```
+
+**Should-not-trigger queries** test precision — near-misses that share keywords but need a different skill:
+
+```json
+{
+  "query": "can you read the sales numbers from this PDF and put them in a spreadsheet",
+  "should_trigger": false
+}
+```
+
+<Callout type="tip" title="Near-misses are the best negative tests">
+"Write a fibonacci function" is a useless negative test for a sales reporting skill. "Export this dashboard as a CSV" is much better — it's in the same domain, uses related terms, but needs a different skill.
+</Callout>
+
+### The Optimization Loop
+
+The automated optimizer:
+
+1. Splits the eval set into 60% train / 40% held-out test
+2. Evaluates the current description (running each query 3x for reliability)
+3. Proposes improved descriptions based on what failed
+4. Re-evaluates on both train and test sets
+5. Iterates up to 5 times
+6. Selects the best description by **test score** (not train score) to avoid overfitting
+
+---
+
+## Blind A/B Comparison
+
+For situations where you need a rigorous quality judgment between two skill versions, use blind comparison.
+
+Give two outputs to an independent evaluator without revealing which version produced which. The evaluator judges on quality dimensions you define (accuracy, completeness, formatting, usefulness). Then a separate analysis step examines *why* the winner won.
+
+This eliminates confirmation bias. When you've spent hours tweaking a skill, you naturally expect the new version to be better. Blind comparison forces an honest assessment.
+
+---
+
+## Cost Awareness
+
+Every skill has a cost. More instructions mean more tokens consumed per invocation. More reference files mean more context loaded. More steps mean more time.
+
+Track these metrics across iterations:
+
+| Metric | What It Tells You |
+|---|---|
+| Total tokens | How much context the skill consumes per run |
+| Duration (seconds) | How long the user waits for a response |
+| Assertions passed | How reliable the output is |
+
+The ideal trajectory: assertion pass rate goes up, token usage stays flat or decreases. If tokens are climbing with each iteration, you're probably adding instructions instead of replacing or sharpening existing ones.
+
+A useful heuristic: if a skill revision improves pass rate by less than 5% but increases token usage by more than 20%, reconsider whether the added instructions are worth it.
+
+---
+
+## Expanding the Test Set
+
+Once you're happy with the skill on your initial 2-3 test cases, expand. Add 3-5 more covering:
+
+- Edge cases (empty data, missing credentials, ambiguous requests)
+- Different user personas (an executive asking for a summary vs. an analyst asking for detail)
+- Adjacent domains (queries close to your skill's scope but should be handled differently)
+
+Run a full benchmark pass with the expanded set. This is where overfitting reveals itself — if your skill passes the original tests but fails the new ones, the instructions are too narrowly tailored.
+
+---
+
+## The Complete Workflow
+
+1. **Draft** the skill using design principles (folder structure, progressive loading, good descriptions, action-verb steps).
+2. **Write 2-3 test cases** — realistic, messy, specific.
+3. **Run with-skill and baseline** in parallel. Capture outputs and timing.
+4. **Draft assertions** while runs are in progress. Grade when complete.
+5. **Present outputs to a human reviewer**. Collect feedback.
+6. **Aggregate benchmarks**. Look for non-discriminating assertions, high variance, and cost/quality tradeoffs.
+7. **Revise the skill** — generalize, trim, explain the why, bundle repeated scripts.
+8. **Repeat** from step 3 until stable.
+9. **Optimize the description** for triggering accuracy.
+10. **Expand the test set** and run a final validation pass.

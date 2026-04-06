@@ -11,6 +11,7 @@ export const navigation: NavItem[] = [
     children: [
       { title: 'What is Agentic Playbook?', href: '/getting-started' },
       { title: 'Your First Agent in 15 Minutes', href: '/getting-started/first-agent' },
+      { title: 'AI Agents & Memory', href: '/getting-started/agent-memory' },
     ],
   },
   {
@@ -24,6 +25,7 @@ export const navigation: NavItem[] = [
       { title: 'References', href: '/skills/references' },
       { title: 'Scripts', href: '/skills/scripts' },
       { title: 'Progressive Loading', href: '/skills/progressive-loading' },
+      { title: 'Testing & Iteration', href: '/skills/testing' },
     ],
   },
   {

@@ -1,0 +1,155 @@
+<GuideHeader tool="Concepts" difficulty="Beginner" lastTested="2026-04" readTime="10 min" />
+
+# AI Agents and Memory
+
+What an AI agent is, why memory is the difference between a toy and a tool, and the architectural components that make agent memory work.
+
+---
+
+## What Is an AI Agent?
+
+An AI agent is a system that can:
+
+- **Perceive** its environment through inputs (messages, API data, files)
+- **Reason** over those inputs using an LLM
+- **Act** on the environment through tool use (run commands, call APIs, send messages)
+- **Remember** across sessions by storing and retrieving knowledge from external memory
+
+The fourth capability — memory — is what separates an agent from a chatbot. Without it, the agent forgets everything the moment a session ends.
+
+---
+
+## Stateless vs. Memory-Augmented Agents
+
+### Stateless Agent
+
+A stateless agent has perception, reasoning, and action — but no persistent memory. It processes each request in isolation.
+
+```
+User (Turn 1): "Find restaurants near me"
+Agent: [searches location, returns 5 options]
+
+User (Turn 3): "Book the first one"
+Agent: "I don't have context about previous recommendations.
+        Could you specify which restaurant?"
+```
+
+Problems with stateless agents:
+
+- **No long-horizon tasks** — Can't reference previous steps in a multi-step workflow
+- **No cross-session context** — Every new session starts blank
+- **No adaptation** — Corrections and preferences are lost
+- **High cost** — You have to stuff the full context into every request to maintain any continuity
+
+### Memory-Augmented Agent
+
+A memory-augmented agent stores interactions and knowledge in an external database. It retrieves relevant context before responding.
+
+```
+User (Turn 3): "Book the first one"
+Agent: [retrieves Turn 1-2 from memory]
+       "I'll book Ristorante Milano. What date and time?"
+```
+
+The agent's memory gives it:
+
+- **Long-horizon task completion** — References previous steps and outcomes
+- **Sustained context** — Feels like a continuous conversation, even across sessions
+- **Lower cost** — Only retrieves relevant context instead of stuffing everything into the prompt
+- **Reliable multi-step workflows** — Each step builds on verified previous context
+
+---
+
+## Beyond Conversational Memory
+
+The simplest form of agent memory is **conversational memory** — storing the interaction history (timestamped user and assistant messages) in a database and replaying it into the LLM's context window.
+
+```
+Context Window:
+┌─────────────────────────────────┐
+│ System prompt + instructions    │
+│ ────────────────────────────    │
+│ Conversational memory           │
+│ (multi-turn interaction history │
+│  from external store)           │
+│ ────────────────────────────    │
+│ Current user prompt             │
+└─────────────────────────────────┘
+```
+
+Conversational memory works for basic continuity, but it has limits:
+
+- **Context windows are finite, but user relationships aren't.** Entities, preferences, and relationships between people and concepts span far more data than a single conversation window holds.
+- **Not all useful information lives in chat logs.** Workflow steps, tool outputs, and outcomes are valuable memory that doesn't come from conversation.
+- **Agents need structured, queryable knowledge.** A flat chronological log of messages isn't efficient for retrieval. Agents operate better with memory organized by type and purpose.
+
+---
+
+## Types of Agent Memory
+
+Agent memory divides into **short-term** and **long-term**, each with distinct subtypes.
+
+### Short-Term Memory
+
+- **Working Memory** — The LLM's context window and any session-based scratchpad. Lost when the session ends.
+- **Semantic Cache** — Stores previous LLM responses indexed by vector similarity. When a new query is semantically close to a cached one, the cached response is returned instead of making a new inference call. Saves cost and latency.
+
+### Long-Term Memory
+
+- **Episodic Memory** — Timestamped records of past interactions. Conversational memory is the most common example. You query it by time: "What did we discuss last Tuesday?"
+- **Semantic Memory** — Domain knowledge the agent needs to do its job. Knowledge bases, reference docs, product catalogs. Not tied to a specific interaction — it's the agent's understanding of its domain.
+- **Procedural Memory** — Records of *how* the agent completed tasks. Workflow steps, tool call sequences, and their outcomes. When the agent encounters a similar task, it can reference what worked before instead of reasoning from scratch.
+
+<Callout type="tip" title="Practical mapping">
+In OpenClaw, these map to workspace files: `MEMORY.md` is episodic, `SOUL.md` and `TOOLS.md` provide semantic knowledge, and `HEARTBEAT.md` encodes procedural patterns.
+</Callout>
+
+---
+
+## The Agent Memory Core
+
+In any agentic system, memory lives in three places:
+
+- **LLM** — Parametric memory from training data. Broad but static — can't be updated without retraining.
+- **Embedding Model** — Captures semantic relationships when generating vector representations of text. Used during both storage and retrieval.
+- **Database** — Where the most data traffic flows. This is the **agent memory core** — the primary infrastructure for storing, retrieving, and optimizing agent knowledge.
+
+The database handles:
+
+- Storage of all memory types (episodic, semantic, procedural)
+- Vector search for semantically relevant retrieval
+- Metadata filtering (time ranges, memory types, agent IDs)
+- CRUD operations exposed to the agent through a **memory manager** (typically implemented as tools)
+
+### Connection to RAG
+
+If you're familiar with retrieval-augmented generation (RAG), agent memory extends the same pattern:
+
+1. **Ingestion** — Data (conversations, workflow logs, knowledge) is chunked, embedded, and stored with metadata
+2. **Retrieval** — When the agent needs context, the user's query is embedded and matched against stored vectors
+3. **Grounding** — Retrieved context is concatenated with the prompt to ground the LLM's response in real data
+
+The difference from standard RAG: in an agent system, the memory types (episodic, semantic, procedural) are stored as separate collections or tables, and a **memory manager** abstracts the read/write/update/delete operations. The agent accesses memory through tools rather than through a fixed retrieval pipeline.
+
+```
+Agent
+├── Tools
+│   └── Memory Manager
+│       ├── read_memory(type, query)
+│       ├── write_memory(type, content)
+│       ├── update_memory(id, content)
+│       └── delete_memory(id)
+└── Database (Agent Memory Core)
+    ├── episodic_memory    (conversations, events)
+    ├── semantic_memory    (knowledge base, domain docs)
+    └── procedural_memory  (workflow logs, tool sequences)
+```
+
+---
+
+## Key Takeaways
+
+- An agent without memory is a stateless chatbot. Memory is what enables multi-step workflows, cross-session context, and adaptation.
+- Conversational memory (replaying chat history) is the starting point, but agents need structured long-term memory to operate reliably.
+- The three memory types — episodic, semantic, procedural — serve different purposes. Use all three for a capable agent.
+- The database is the agent memory core. It sees the most data traffic and determines how well the agent can store, retrieve, and apply knowledge.

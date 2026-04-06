@@ -1,4 +1,7 @@
+'use client';
+
 import { Clock, BarChart3, Wrench, Calendar } from 'lucide-react';
+import ReadAloud from './ReadAloud';
 
 const difficultyColors: Record<string, string> = {
   Beginner: 'text-green-400',
@@ -35,6 +38,7 @@ export default function GuideHeader({ tool, difficulty, lastTested, readTime }: 
         <Clock size={14} />
         ~{readTime} read
       </span>
+      <ReadAloud />
     </div>
   );
 }
