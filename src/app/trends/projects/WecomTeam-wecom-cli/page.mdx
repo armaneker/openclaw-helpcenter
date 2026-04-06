@@ -1,0 +1,56 @@
+<GuideHeader tool="wecom-cli" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# wecom-cli
+
+WecomTeam CLI is a command-line interface for WeCom (Enterprise WeChat) that enables both humans and AI agents to interact with enterprise communication features from the terminal. Built in Rust, it provides programmatic access to WeCom's core business capabilities.
+
+## Key Features
+
+- **Contact management** — Retrieve member lists and search by name/alias within visible scope
+- **Task management** — Create, read, update, and delete todos with user status tracking
+- **Meeting orchestration** — Schedule meetings, manage invitees, cancel, and query details
+- **Message operations** — Access conversation lists, pull message history (text/images/files/voice/video), and send messages
+- **Calendar integration** — Full CRUD operations for schedules, participant management, and availability queries
+- **Document handling** — Create, read, and edit documents
+- **Smart tables** — Create tables, manage sub-tables and fields, perform record operations
+
+## Installation
+
+<Callout type="warning">
+Currently limited to enterprises with ≤ 10 members. Requires Node.js >= 18.
+</Callout>
+
+```bash
+# Install CLI globally
+npm install -g @wecom/cli
+
+# Install required CLI skills
+npx skills add WeComTeam/wecom-cli -y -g
+
+# Configure credentials (interactive, one-time setup)
+wecom-cli init
+```
+
+## Basic Usage
+
+```bash
+# Get member list from contacts
+wecom-cli contact get_userlist '{}'
+
+# Create a todo item
+wecom-cli todo create '{"title": "Review code", "assignee": "user123"}'
+
+# Schedule a meeting
+wecom-cli meeting create '{"title": "Team sync", "start_time": "2024-04-15T10:00:00"}'
+```
+
+## Notable Details
+
+**License:** MIT  
+**Language:** Rust (≥ 1.75)  
+**Community:** 1,511 GitHub stars  
+**Platform support:** macOS, Linux, Windows (x64/arm64)
+
+<Callout type="info">
+Optional intelligent robot Bot ID and Secret can be configured for enhanced automation capabilities.
+</Callout>

@@ -959,7 +959,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.14.0",
-      "blurb": null
+      "blurb": "Axios is a Promise-based HTTP client library that works in both browser and Node.js environments. It provides a simple, consistent API for making HTTP requests with features like request/response interceptors, automatic JSON handling, and request/response timeouts. With over 109k GitHub stars, it's become the de facto standard HTTP client in the JavaScript ecosystem."
     },
     {
       "full_name": "Gitlawb/openclaude",
@@ -1259,7 +1259,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "Career-Ops is an AI-powered job search automation system built on Claude Code that provides structured evaluation, tracking, and application generation for software engineering roles. It automatically scores job opportunities using a weighted A-F system across 10 dimensions, generates ATS-optimized PDFs tailored to specific job descriptions, and scrapes job portals in batch to maintain a centralized pipeline dashboard. The system is designed to be customized by Claude itself, allowing users to modify scoring criteria, company lists, and evaluation frameworks through natural language requests."
     },
     {
       "full_name": "motiful/cc-gateway",
@@ -1544,7 +1544,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "METATRON is a CLI-based AI penetration testing assistant that runs entirely locally on Parrot OS without requiring cloud services or API keys. It automates reconnaissance using tools like nmap, whois, and nikto, then feeds results to a local LLM (metatron-qwen) for vulnerability analysis, exploit suggestions, and remediation recommendations, with all data stored in MariaDB. The system uses a fine-tuned Qwen model that requires at least 8.4GB of RAM and can export scan results to PDF or HTML formats."
     },
     {
       "full_name": "chauncygu/collection-claude-code-source-code",

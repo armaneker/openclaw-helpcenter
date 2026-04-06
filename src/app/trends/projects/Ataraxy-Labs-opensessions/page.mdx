@@ -1,0 +1,64 @@
+<GuideHeader tool="opensessions" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# opensessions
+
+opensessions is a terminal session manager that adds a sidebar to tmux for managing sessions, agent status, and git branches. It integrates with your existing tmux workflow rather than replacing it, providing instant switching between sessions and real-time agent state monitoring.
+
+## Key Features
+
+- **Session management** — Switch between tmux sessions with keyboard shortcuts and visual context
+- **Agent integration** — Monitor status of Amp, Claude Code, Codex, and OpenCode agents across sessions
+- **Git context** — Display current branch and working directory for each session
+- **Programmatic API** — Push custom status, progress, and logs to the sidebar via HTTP
+- **Port detection** — Automatically detect and link to localhost development servers
+- **Persistent ordering** — Maintain custom session ordering across restarts
+
+## Installation
+
+<Callout type="info">
+Requires tmux, bun, and TPM (tmux plugin manager) installed.
+</Callout>
+
+Add to your `~/.tmux.conf`:
+
+```tmux
+set -g @plugin 'Ataraxy-Labs/opensessions'
+```
+
+Then reload and install:
+
+```bash
+tmux source-file ~/.tmux.conf
+~/.tmux/plugins/tpm/bin/install_plugins
+```
+
+Open the sidebar with `prefix o → s`.
+
+## Basic Usage
+
+Navigate sessions with `j`/`k` or arrow keys, switch with `Tab` or number keys `1-9`. Toggle the sidebar with `prefix o → t`.
+
+Push custom status from scripts:
+
+```bash
+# Set status indicator
+curl -X POST http://127.0.0.1:7391/set-status \
+  -H 'content-type: application/json' \
+  -d '{"session":"my-app","text":"Deploying","tone":"warn"}'
+
+# Update progress
+curl -X POST http://127.0.0.1:7391/set-progress \
+  -H 'content-type: application/json' \
+  -d '{"session":"my-app","current":3,"total":10,"label":"services"}'
+```
+
+## Notable Details
+
+- **Language**: TypeScript with Bun runtime
+- **License**: MIT
+- **Community**: 519 GitHub stars
+- **Integration**: Works with existing tmux setups, stores config in `~/.config/opensessions/`
+
+<Callout type="warning">
+Run the uninstall script before removing plugin files to clean up tmux hooks and avoid glitching.
+</Callout>
