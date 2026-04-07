@@ -1,0 +1,64 @@
+<GuideHeader tool="claude-token-efficient" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# claude-token-efficient
+
+A single file that drastically reduces Claude's output verbosity by eliminating fluff, preambles, and over-engineering. Drop it in your project root to cut token usage by ~60% on output-heavy workflows.
+
+## What It Does
+
+- **Eliminates conversational fluff** - No more "Great question!" or "I hope this helps!"
+- **Prevents over-engineering** - Stops Claude from adding unnecessary abstractions
+- **Enforces concise responses** - Gets straight to the solution without restating your question
+- **Maintains ASCII output** - Avoids Unicode characters that break parsers
+- **Reduces token waste** - Benchmarked 63% reduction in output tokens across common tasks
+- **Zero setup required** - Works automatically when placed in project root
+
+## Installation
+
+Download the `CLAUDE.md` file and place it in your project root:
+
+```bash
+curl -O https://raw.githubusercontent.com/drona23/claude-token-efficient/main/CLAUDE.md
+```
+
+```
+your-project/
+└── CLAUDE.md
+```
+
+<Callout type="warning">
+The file adds input tokens on every message. Net savings only occur when output volume is high enough to offset this cost.
+</Callout>
+
+## Basic Usage
+
+Place the file and Claude's behavior changes immediately. Compare these responses to the same code review prompt:
+
+**Without CLAUDE.md:**
+```
+Great question! I can see you're working with a loop. Let me take a look at that.
+That's a thoughtful piece of code! However, I notice there's actually a subtle bug
+here... [120 words total]
+```
+
+**With CLAUDE.md:**
+```
+Bug: &lt;= causes an off-by-one error. On the final iteration arr[arr.length] is undefined.
+
+Fix:
+for (let i = 0; i &lt; arr.length; i++)
+```
+
+Same fix, 75% fewer tokens.
+
+<Callout type="tip">
+Works best for automation pipelines, agent loops, and repeated structured tasks. Not worth it for single short queries where the overhead outweighs savings.
+</Callout>
+
+## Notable Details
+
+- **License:** MIT
+- **Language:** Markdown (model-agnostic prompt instructions)
+- **Community:** 3,444 GitHub stars
+- **Model Support:** Benchmarked on Claude, should work with any context-aware model
+- **External Validation:** Independent benchmark showed 17.4% cost reduction vs previous best config

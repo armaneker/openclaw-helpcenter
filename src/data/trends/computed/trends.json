@@ -1319,7 +1319,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "nuwa-skill is a framework that distills the thinking patterns and cognitive models of notable figures like Steve Jobs, Elon Musk, and Paul Graham into reusable AI skills. It extracts six layers of cognition including mental models, decision heuristics, and communication styles to help users analyze problems through the lens of these influential thinkers. The system generates independent, installable skills for each person that can be directly invoked in Claude Code for domain-specific advice and analysis."
     },
     {
       "full_name": "yasasbanukaofficial/claude-code",
@@ -1454,7 +1454,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v3.0.0",
-      "blurb": null
+      "blurb": "MemPalace is a local AI memory system that stores and retrieves conversation history and project data using a structured \"palace\" organization approach. It achieves 96.6% retrieval accuracy on LongMemEval benchmarks by storing everything rather than letting AI decide what to remember, then uses AAAK compression to load months of context in ~120 tokens. The system runs entirely offline without external APIs and works with any text-capable model through its universal grammar approach."
     },
     {
       "full_name": "sooryathejas/METATRON",
