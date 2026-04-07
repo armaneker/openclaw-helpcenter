@@ -5439,6 +5439,35 @@
       "category": "Other",
       "version": "v0.3.1",
       "blurb": "Graphify is an AI coding assistant skill that converts folders of code, documentation, papers, or images into queryable knowledge graphs. It helps developers understand codebases faster by extracting and visualizing relationships between components, architectural decisions, and design rationale across multiple file types. The tool uses a two-pass approach combining deterministic AST parsing with Claude-powered concept extraction, requiring 71.5x fewer tokens per query compared to reading raw files."
+    },
+    "alchaincyf/nuwa-skill": {
+      "full_name": "alchaincyf/nuwa-skill",
+      "description": "你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks.",
+      "language": "Unknown",
+      "url": "https://github.com/alchaincyf/nuwa-skill",
+      "first_seen": "2026-04-07",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "milla-jovovich/mempalace": {
+      "full_name": "milla-jovovich/mempalace",
+      "description": "The highest-scoring AI memory system ever benchmarked. And it's free.",
+      "language": "Python",
+      "url": "https://github.com/milla-jovovich/mempalace",
+      "first_seen": "2026-04-07",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "category": "Agentic",
+      "version": "v3.0.0"
     }
   }
 }
