@@ -4851,7 +4851,7 @@
     },
     "Kuberwastaken/claurst": {
       "full_name": "Kuberwastaken/claurst",
-      "description": "Your favorite Terminal Coding Agent, now in Rust & a Breakdown of the Claude Code leak & discoveries",
+      "description": "Your favorite Terminal Coding Agent, now in Rust",
       "language": "Rust",
       "url": "https://github.com/Kuberwastaken/claurst",
       "first_seen": "2026-04-01",
@@ -5375,7 +5375,7 @@
     "santifer/career-ops": {
       "full_name": "santifer/career-ops",
       "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
-      "language": "Go",
+      "language": "JavaScript",
       "url": "https://github.com/santifer/career-ops",
       "first_seen": "2026-04-06",
       "has_summary": false,
@@ -5470,6 +5470,17 @@
       "category": "Agentic",
       "version": "v3.0.0",
       "blurb": "MemPalace is a local AI memory system that stores and retrieves conversation history and project data using a structured \"palace\" organization approach. It achieves 96.6% retrieval accuracy on LongMemEval benchmarks by storing everything rather than letting AI decide what to remember, then uses AAAK compression to load months of context in ~120 tokens. The system runs entirely offline without external APIs and works with any text-capable model through its universal grammar approach."
+    },
+    "paoloanzn/free-code": {
+      "full_name": "paoloanzn/free-code",
+      "description": "[NOTE] Parent repo is migrating ownership, until the operation is done this repo is blocked. The free build of Claude Code. All telemetry removed, security-prompt guardrails stripped, all experimental features enabled.",
+      "language": "TypeScript",
+      "url": "https://github.com/paoloanzn/free-code",
+      "first_seen": "2026-04-07",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
