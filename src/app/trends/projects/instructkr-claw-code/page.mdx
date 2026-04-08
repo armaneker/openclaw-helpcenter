@@ -1,0 +1,70 @@
+<GuideHeader tool="claw-code" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Claw Code
+
+Claw Code is a Rust implementation of a CLI agent harness that interfaces with AI models for code generation and repository management. It provides a command-line interface for interacting with language models to analyze, summarize, and work with codebases.
+
+## Key Features
+
+- CLI agent harness for AI-powered code operations
+- Built-in OAuth flow and API key authentication
+- Session management for persistent workflows
+- Mock service harness for deterministic testing
+- Container-first workflow support
+- Integration with Anthropic's Claude models
+
+## Installation
+
+<Callout type="info">
+Requires Rust toolchain. Build from source as no pre-built binaries are currently distributed.
+</Callout>
+
+```bash
+git clone https://github.com/ultraworkers/claw-code.git
+cd claw-code/rust
+cargo build --workspace
+```
+
+## Basic Usage
+
+Authenticate with an API key or OAuth:
+
+```bash
+# API key method
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+# OAuth method
+./target/debug/claw login
+```
+
+Run basic commands:
+
+```bash
+# Health check
+./target/debug/claw doctor
+
+# Prompt the AI
+./target/debug/claw prompt "summarize this repository"
+
+# View help
+./target/debug/claw --help
+```
+
+Run tests:
+
+```bash
+cd rust
+cargo test --workspace
+```
+
+## Notable Details
+
+- **Language**: Rust
+- **License**: Unknown
+- **Community**: 176K+ GitHub stars, active Discord community
+- **Status**: Rapidly growing open-source project
+- **Disclaimer**: Not affiliated with or endorsed by Anthropic
+
+<Callout type="warning">
+This is an independent implementation and is not officially supported by Anthropic.
+</Callout>
