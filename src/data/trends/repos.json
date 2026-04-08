@@ -5789,7 +5789,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This is a comprehensive Chinese-language Python tutorial structured as a 100-day curriculum covering everything from basic syntax to advanced topics like web development, data science, and machine learning. It provides a structured learning path for beginners to become proficient Python developers, with hands-on examples and practical projects throughout the course. The project has gained significant traction with over 180k stars and includes supplementary content on platforms like Bilibili for video learning."
     }
   }
 }
