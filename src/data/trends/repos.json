@@ -5755,6 +5755,28 @@
       "category": "Other",
       "version": null,
       "blurb": "VOID is a video inpainting model that removes objects from videos while simulating the physical interactions their removal would cause. It enables realistic object deletion scenarios like removing a person holding a guitar and making the guitar fall naturally, rather than just masking out the person. The model uses a two-pass transformer architecture built on CogVideoX, requiring 40GB+ VRAM for inference."
+    },
+    "farzaa/clicky": {
+      "full_name": "farzaa/clicky",
+      "description": "",
+      "language": "Swift",
+      "url": "https://github.com/farzaa/clicky",
+      "first_seen": "2026-04-08",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v3"
+    },
+    "LaurieWired/tailslayer": {
+      "full_name": "LaurieWired/tailslayer",
+      "description": "Library for reducing tail latency in RAM reads",
+      "language": "C++",
+      "url": "https://github.com/LaurieWired/tailslayer",
+      "first_seen": "2026-04-08",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
