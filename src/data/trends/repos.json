@@ -729,7 +729,7 @@
     },
     "Lum1104/Understand-Anything": {
       "full_name": "Lum1104/Understand-Anything",
-      "description": "Claude Code skills that turn any codebase into an interactive knowledge graph you can explore, search, and ask questions about (Multi-platform e.g., Codex are supported).",
+      "description": "Skill that turn any codebase, Dockerfile, or docs into an interactive knowledge graph you can explore, search, and ask questions about. Multi-platform: Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
       "language": "TypeScript",
       "url": "https://github.com/Lum1104/Understand-Anything",
       "first_seen": "2026-03-22",
@@ -742,7 +742,9 @@
         "codex",
         "codex-skills",
         "gemini-cli-skills",
+        "knowledge-base",
         "knowledge-graph",
+        "memory",
         "opencode-skills",
         "pi-agent",
         "understandcode"
@@ -5443,7 +5445,7 @@
     "alchaincyf/nuwa-skill": {
       "full_name": "alchaincyf/nuwa-skill",
       "description": "你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks.",
-      "language": "Unknown",
+      "language": "Python",
       "url": "https://github.com/alchaincyf/nuwa-skill",
       "first_seen": "2026-04-07",
       "has_summary": false,
@@ -5791,6 +5793,22 @@
       "category": "Other",
       "version": null,
       "blurb": "This is a comprehensive Chinese-language Python tutorial structured as a 100-day curriculum covering everything from basic syntax to advanced topics like web development, data science, and machine learning. It provides a structured learning path for beginners to become proficient Python developers, with hands-on examples and practical projects throughout the course. The project has gained significant traction with over 180k stars and includes supplementary content on platforms like Bilibili for video learning."
+    },
+    "jackwener/OpenCLI": {
+      "full_name": "jackwener/OpenCLI",
+      "description": "Make Any Website & Tool Your CLI. A universal CLI Hub and AI-native runtime. Transform any website, Electron app, or local binary into a standardized command-line interface. Built for AI Agents to discover, learn, and execute tools seamlessly via a unified AGENT.md integration.",
+      "language": "TypeScript",
+      "url": "https://github.com/jackwener/OpenCLI",
+      "first_seen": "2026-04-08",
+      "has_summary": false,
+      "topics": [
+        "ai-agent",
+        "ai-agents",
+        "ai-tools",
+        "cli"
+      ],
+      "category": "Agentic",
+      "version": "v1.6.9"
     }
   }
 }
