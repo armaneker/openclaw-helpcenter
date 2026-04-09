@@ -5944,6 +5944,48 @@
       "category": "Other",
       "version": null,
       "blurb": "AlayaRenderer is an AI-native rendering system for games and virtual worlds that uses fine-tuned video diffusion models for inverse and forward rendering tasks. It enables decomposing RGB videos into G-buffer maps (albedo, normal, depth, etc.) and synthesizing stylized RGB videos from G-buffers with text-controllable lighting and style. The project includes a large-scale dataset with 4M+ frames from AAA games like Cyberpunk 2077 and Black Myth: Wukong, featuring synchronized RGB and G-buffer channels."
+    },
+    "xixu-me/awesome-persona-distill-skills": {
+      "full_name": "xixu-me/awesome-persona-distill-skills",
+      "description": "同事.skill、前任.skill、女娲.skill、自己.skill、乔布斯.skill……",
+      "language": "JavaScript",
+      "url": "https://github.com/xixu-me/awesome-persona-distill-skills",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [
+        "agent-skills",
+        "awesome",
+        "awesome-list",
+        "persona-distill"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "Houseofmvps/codesight": {
+      "full_name": "Houseofmvps/codesight",
+      "description": "Universal AI context generator. Saves thousands of tokens per conversation in Claude Code, Cursor, Copilot, Codex, and more.",
+      "language": "TypeScript",
+      "url": "https://github.com/Houseofmvps/codesight",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "claude",
+        "cli",
+        "code-analysis",
+        "codebase",
+        "codex",
+        "context-engineering",
+        "copilot",
+        "cursor",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "repo-map",
+        "token-savings"
+      ],
+      "category": "Agentic",
+      "version": null
     }
   }
 }
