@@ -1,91 +1,152 @@
-<GuideHeader tool="General" difficulty="Beginner" lastTested="2026-04" readTime="10 min" />
+<GuideHeader tool="General" difficulty="Beginner" lastTested="2026-04" readTime="15 min" />
 
 # The Research-Plan-Implement Loop
 
 A structured workflow for using AI agents as engineering collaborators instead of autocomplete tools.
 
-## Why a Loop?
+## The Mental Model
 
-AI agents lack business judgment. They'll write hundreds of lines of code based on wrong assumptions if you let them. The RPI loop prevents this by separating discovery, design, and execution into distinct phases — each with its own constraints.
+Think of your AI agent as an energetic, well-read, often confidently wrong junior developer.
 
-The core idea: a bad line of research leads to a bad plan, which leads to hundreds of lines of bad code. Catch mistakes early.
+This junior developer is fast. They don't get tired. They have no ego about their code — they'll rewrite something six times without complaint. They've seen thousands of codebases across every language and framework.
+
+But they don't have judgment. They don't know your business context. They don't understand why you made that specific architectural decision three months ago. They'll write code that is technically correct and contextually wrong.
+
+The difference between *using* AI and *working with* AI is knowing what to hand off and what to keep for yourself. The RPI loop gives you that structure.
+
+## Context Engineering
+
+Before the loop itself, understand the core skill: managing what the agent sees.
+
+Every token in the context window costs money (input tokens are sent back with every message). More importantly, quality degrades once the context fills past roughly 50% — the "dumb zone." And bad context is worse than no context — it actively corrupts output.
+
+**Four strategies for managing context:**
+
+- **Persist outside the window** — store information in files (`CLAUDE.md`, scratch pads, plan documents) so agents can pull it in when needed rather than carrying everything in the chat
+- **Be selective** — only bring in what's relevant for this step. Don't attach every file that might be useful. Disable MCP servers you're not actively using for this task.
+- **Summarize and compress** — after a long debugging session, ask the agent to summarize where you are, then start a new session with just that summary
+- **Isolate** — split work across separate sessions or parallel agents so context doesn't accumulate across unrelated tasks
+
+<Callout type="warning" title="Context Poisoning">
+  If you go down the wrong path with an agent and try to steer it back, the old wrong decisions stay in context. The agent may keep referencing those patterns even after you've corrected course. When things are off the rails, start a fresh session — don't try to fix a poisoned context.
+</Callout>
 
 ## Phase 1: Research
 
-Goal: achieve complete system discovery without writing a single line of code.
+Goal: complete system discovery without writing a single line of code.
 
-Use a restricted mode where the agent can read files and search the codebase but cannot edit anything. This prevents premature assumptions that cascade into broken implementations.
+Use a restricted mode (read-only / "ask" mode) where the agent can read files and search the codebase but cannot edit anything. This prevents premature assumptions that cascade into broken implementations.
 
 **What to do in this phase:**
 
 - **System mapping** — identify exactly which files, APIs, and data structures are involved in the task
-- **Pattern discovery** — ask the agent to find existing conventions in the codebase (e.g., "How are error states handled in our existing controllers?")
+- **Pattern discovery** — ask the agent to find existing conventions in the codebase ("How are error states handled in our existing controllers?")
 - **Edge case brainstorming** — use the agent's breadth of knowledge to surface unknowns you haven't considered
+- **Data flow tracing** — understand how data moves through the system and how your change will affect that flow
 
-**Output:** a research document (Markdown) that summarizes the current state and the proposed technical path. Commit it to the repo.
-
-<Callout type="tip" title="Restricted Mode">
-  Most AI coding tools support a read-only or "ask" mode. Use it. The agent should explore and report, not execute.
-</Callout>
+**Output:** a research document (Markdown) that summarizes the current state and the proposed technical path. Commit it to the repo. Read it yourself before moving on — make sure it matches your understanding of the problem.
 
 ## Phase 2: Planning
 
-Planning is the highest-leverage use of your engineering time. Transform the research document into a rigorous execution spec.
+Planning is the highest-leverage use of your engineering time. The agent handles execution — your job is to exercise judgment here.
 
 **A good plan includes:**
 
 - **Scope boundaries** — explicitly define what the agent should *not* touch to prevent regressions
 - **Step-by-step filesystem changes** — list the specific files to create or modify
 - **Verification commands** — define the exact test commands (`npm test`, `pytest`, etc.) that confirm success at each step
+- **Out-of-scope markers** — things that are related but deliberately excluded from this change
 
 **Store the plan in the repo** (e.g., in a `/plans` directory). This creates an audit trail and gives the agent a concrete reference during implementation.
 
-<Callout type="warning" title="Don't Skip Planning">
-  Engineers who jump from research to implementation consistently produce more rework. The plan is where you exercise judgment — the agent handles execution.
+A clear enough plan means you can use a smaller, faster, or cheaper model for implementation — the hard thinking is already done.
+
+<Callout type="tip" title="The Planning Test">
+  If your plan is vague enough that the agent needs to make architectural decisions during implementation, it's not done yet. Go back to research or add more detail.
 </Callout>
 
 ## Phase 3: Implementation
 
-Start a fresh session for implementation. Do not carry over the entire research transcript.
+Start a fresh session. Do not carry over the research transcript.
 
-### The Context Window Problem
+Give the agent only two things: the plan file and the specific files it needs to touch. This keeps context low and focused.
 
-LLM performance degrades once the context window fills past ~50%. Two strategies to manage this:
+### Review with Git
 
-- **Context isolation** — start a new session. Only provide the plan file and the specific files identified during research.
-- **Summary and reset** — if a debugging session gets long, ask the agent to summarize progress, then start a new session with that summary as the starting point.
+Use your local git diff as a first-pass review before creating a pull request. After each step in the plan:
 
-### Verification at Each Step
+- Run the verification command
+- Check the diff — read it as you would a junior engineer's PR
+- Commit if it looks good, fix before continuing if it doesn't
 
-After each step in the plan, run the verification command before moving on. If a step fails, fix it before the agent continues — errors compound fast.
+Errors compound fast. A wrong assumption in step 2 will cascade through steps 3 through 10.
 
-## Standardizing Agent Behavior
+### When to Reset
 
-Use metadata files in the repo root so every agent session starts with the same context.
+If a debugging session gets long and circular, don't keep pushing. Ask the agent to summarize its current understanding and progress, then start a new session with that summary. AI is good at writing prompts for AI — the summary will carry the essential context without the accumulated noise.
 
-### CLAUDE.md (or agents.md)
+**Rule of thumb:** if it feels like things are off the rails, you're probably right. Start a new session.
 
-This is the "README" for your AI collaborator. Include:
+## Configuring Agent Behavior
+
+Three layers of configuration, from always-on to on-demand:
+
+### 1. Modes
+
+Role-based constraints on what the agent can do:
+
+- **Ask/Research mode** — read-only, no file edits
+- **Architect/Plan mode** — can outline changes, not implement them
+- **Code/Implement mode** — full access to edit, run tests, commit
+
+Use the right mode for the right phase. Don't give the agent write access during research.
+
+### 2. Rules (CLAUDE.md / agents.md)
+
+Always-on context that loads every session. Keep it minimal:
 
 - **Conventions** — linting rules, naming patterns, architectural preferences
-- **Environment context** — build commands, test suites, deployment triggers
-- **Approval gates** — tools the agent can use autonomously vs. those requiring human confirmation
+- **Environment** — build commands, test suites, deployment triggers
+- **Approval gates** — what the agent can do autonomously vs. what requires human confirmation
 
-### Skills
+See our [CLAUDE.md guide](/about/contributing) for structure recommendations.
 
-Reusable playbooks for recurring workflows (e.g., "updating the changelog," "generating API docs," "optimizing database queries"). Skills load on demand to keep the primary context window clean. See the [Skills section](/skills) for how to structure them.
+### 3. Skills
 
-## The Model Context Protocol (MCP)
+On-demand playbooks for recurring workflows. Only loaded when triggered, so they don't bloat the context window. Good candidates: changelog updates, API doc generation, database migrations, release processes.
 
-MCP lets agents interact with tools beyond the IDE:
+See the [Skills section](/skills) for how to build and structure them.
 
-- **GitHub MCP** — look up pull requests, issues, and historical comments for architectural context
+### Auto-Approval Levels
+
+Decide what the agent can do without asking:
+
+- **Usually safe to auto-approve** — reading files, running tests, searching the codebase
+- **Approve case-by-case** — writing files, running build commands, installing packages
+- **Always require approval** — committing code, pushing to remote, running destructive commands
+
+Start conservative and loosen as you build trust with a specific workflow.
+
+## MCP: Extending the Agent's Reach
+
+The Model Context Protocol lets agents interact with tools beyond the IDE:
+
+- **GitHub MCP** — pull requests, issues, historical comments for architectural context
 - **Documentation MCP** — fetch up-to-date framework docs, bypassing the LLM's training cutoff
 - **Database MCP** — query schema definitions directly
 
 <Callout type="info" title="Token Budget">
-  Every enabled MCP server adds system prompt weight. Disable MCPs you don't need for the current task — token bloat degrades agent focus.
+  Every enabled MCP server adds system prompt weight. If you have a Postgres MCP enabled but you're doing pure frontend work, that's wasted tokens actively confusing the agent. Disable what you're not using.
 </Callout>
+
+### Internal API Integration
+
+When working with internal platforms, four approaches in order of preference:
+
+- **OpenAPI/Swagger spec exists** — point the agent at it directly
+- **No spec** — convert API docs to Markdown and store in the repo where the agent can reference it
+- **Docs change frequently** — use a reference URL the agent can fetch on demand
+- **Complex multi-system workflows** — build a custom MCP server
 
 ## Checklist
 
@@ -94,6 +155,8 @@ Before starting any agentic engineering task:
 - **Isolate** — one task per session
 - **Research first** — read-only mode, no edits until you have a plan
 - **Plan in the repo** — commit the plan file before implementation starts
-- **Monitor context** — watch the context window; reset if performance degrades
+- **Monitor context** — watch the context window; reset if quality degrades
+- **Git review** — check diffs locally before creating a PR
 - **Persist rules** — keep conventions in `CLAUDE.md`, not in chat history
+- **Trim MCPs** — disable servers you're not using for this task
 - **Review everything** — treat every agent output as you would a junior engineer's work
