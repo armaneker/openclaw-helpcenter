@@ -6015,7 +6015,8 @@
         "zmk-firmware"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This repository contains production-grade CAD files and industrial design specifications for over 100 Keychron keyboard and mouse models across their Q, K, V, and P series. Engineers and enthusiasts use it to study real hardware designs, create custom plates and accessories, or modify existing keyboard cases for personal projects. The files are source-available with a restriction that prohibits commercial reproduction of complete keyboards while allowing compatible accessory development."
     },
     "alchaincyf/hermes-agent-orange-book": {
       "full_name": "alchaincyf/hermes-agent-orange-book",
@@ -6026,7 +6027,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "This is a comprehensive guide book for Hermes Agent, an open-source AI Agent framework by Nous Research. It provides practical tutorials covering the framework's core mechanisms (learning loops, memory systems, skill creation) and real-world implementation scenarios for developers wanting to build AI agents. The guide is available as a free PDF download in both Chinese and English, structured as 17 chapters across 5 parts from basic concepts to advanced multi-agent scenarios."
     }
   }
 }
