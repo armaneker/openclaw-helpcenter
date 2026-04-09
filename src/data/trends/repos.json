@@ -5425,7 +5425,7 @@
     },
     "safishamsi/graphify": {
       "full_name": "safishamsi/graphify",
-      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, OpenClaw, Factory Droid). Turn any folder of code, docs, papers, or images into a queryable knowledge graph",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, OpenClaw, Factory Droid, Trae). Turn any folder of code, docs, papers, or images into a queryable knowledge graph",
       "language": "Python",
       "url": "https://github.com/safishamsi/graphify",
       "first_seen": "2026-04-07",
@@ -5810,6 +5810,129 @@
       "category": "Agentic",
       "version": "v1.6.9",
       "blurb": "OpenCLI is a universal CLI hub that converts websites, Electron apps, and local binaries into standardized command-line interfaces. It enables both humans and AI agents to interact with web services through deterministic CLI commands instead of browser automation, while reusing existing logged-in browser sessions. The tool includes 70+ pre-built adapters for popular sites and can generate new adapters by recording browser interactions."
+    },
+    "mattmireles/gemma-tuner-multimodal": {
+      "full_name": "mattmireles/gemma-tuner-multimodal",
+      "description": "Fine-tune Gemma 4 and 3n with audio, images and text on Apple Silicon, using PyTorch and Metal Performance Shaders.",
+      "language": "Python",
+      "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v1.1"
+    },
+    "Nightmare-Eclipse/BlueHammer": {
+      "full_name": "Nightmare-Eclipse/BlueHammer",
+      "description": "Repository hosting the bluehammer vulnerability",
+      "language": "C",
+      "url": "https://github.com/Nightmare-Eclipse/BlueHammer",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "snarktank/clawchief": {
+      "full_name": "snarktank/clawchief",
+      "description": "Turn your OpenClaw into a Chief of Staff",
+      "language": "Python",
+      "url": "https://github.com/snarktank/clawchief",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v3.0.0"
+    },
+    "LarsenCundric/port-whisperer": {
+      "full_name": "LarsenCundric/port-whisperer",
+      "description": "A beautiful CLI tool to see what's running on your ports",
+      "language": "JavaScript",
+      "url": "https://github.com/LarsenCundric/port-whisperer",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "jinchenma94/bazi-skill": {
+      "full_name": "jinchenma94/bazi-skill",
+      "description": "四柱八字命理分析",
+      "language": "Unknown",
+      "url": "https://github.com/jinchenma94/bazi-skill",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "phuryn/claude-usage": {
+      "full_name": "phuryn/claude-usage",
+      "description": "A local dashboard for tracking your Claude Code token usage, costs, and session history. Pro and Max subscribers get a progress bar. This gives you the full picture.",
+      "language": "Python",
+      "url": "https://github.com/phuryn/claude-usage",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [
+        "claude-code"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "wxtsky/CodeIsland": {
+      "full_name": "wxtsky/CodeIsland",
+      "description": "",
+      "language": "Swift",
+      "url": "https://github.com/wxtsky/CodeIsland",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v1.0.16"
+    },
+    "alchaincyf/steve-jobs-skill": {
+      "full_name": "alchaincyf/steve-jobs-skill",
+      "description": "乔布斯.skill — Steve Jobs的认知操作系统。6个心智模型 + 8条决策启发式 + 完整表达DNA。由女娲.skill生成。",
+      "language": "Unknown",
+      "url": "https://github.com/alchaincyf/steve-jobs-skill",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "adamlyttleapps/claude-skill-app-onboarding-questionnaire": {
+      "full_name": "adamlyttleapps/claude-skill-app-onboarding-questionnaire",
+      "description": " A Claude Code skill that designs and builds high-converting questionnaire-style app onboarding flows — modelled    on proven conversion patterns from top subscription apps like Mob, Headspace and Noom",
+      "language": "Unknown",
+      "url": "https://github.com/adamlyttleapps/claude-skill-app-onboarding-questionnaire",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "alchaincyf/zhangxuefeng-skill": {
+      "full_name": "alchaincyf/zhangxuefeng-skill",
+      "description": "张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
+      "language": "Unknown",
+      "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "ShandaAI/AlayaRenderer": {
+      "full_name": "ShandaAI/AlayaRenderer",
+      "description": "AI-native Renderer for Games and Virtual Worlds, with Data and Tools",
+      "language": "Python",
+      "url": "https://github.com/ShandaAI/AlayaRenderer",
+      "first_seen": "2026-04-09",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
