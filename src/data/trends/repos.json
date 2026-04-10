@@ -6140,7 +6140,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "GBrain is a personal knowledge management system that stores structured information about people, companies, and ideas as searchable markdown files backed by Postgres with vector search. It's designed to make AI agents progressively smarter by maintaining detailed dossiers and relationship histories that compound over time, enabling queries like \"prep me for my meeting with Jordan\" or \"who should I invite to dinner who knows both Pedro and Diana.\" The system runs a \"dream cycle\" that automatically processes daily conversations overnight to enrich entities and consolidate memory while you sleep."
     },
     "nesquena/hermes-webui": {
       "full_name": "nesquena/hermes-webui",
@@ -6151,7 +6152,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.43.1"
+      "version": "v0.43.1",
+      "blurb": "Hermes WebUI is a web-based interface for Hermes Agent, an autonomous AI agent that maintains persistent memory and context across sessions. It provides full feature parity with the CLI version through a three-panel browser interface, allowing users to interact with their self-hosted agent that learns from their environment and runs scheduled tasks offline. Built with vanilla JavaScript and Python without frameworks or build steps."
     }
   }
 }
