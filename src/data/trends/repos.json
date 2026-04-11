@@ -6164,7 +6164,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.2.0"
+      "version": "v0.2.0",
+      "blurb": "LLM Wiki is a cross-platform desktop application that automatically converts documents into an organized, interlinked knowledge base using LLM processing. Unlike traditional RAG systems that retrieve and process information for each query, it incrementally builds and maintains a persistent wiki structure that compiles knowledge once and keeps it current. The implementation is based on Andrej Karpathy's LLM Wiki methodology but extends it into a full desktop application with features like knowledge graphs, community detection, and web clipping."
     },
     "kellyvv/PhoneClaw": {
       "full_name": "kellyvv/PhoneClaw",
@@ -6175,7 +6176,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "PhoneClaw is an on-device AI agent for iPhone that runs Gemma 4 locally for natural language processing and tool calling. It provides offline privacy-preserving capabilities like calendar management, contacts, reminders, and health data queries without internet connectivity. The project uses a file-based skill system where each capability is defined in Markdown files for easy customization."
     },
     "brooks376/Happy-Horse-1.0": {
       "full_name": "brooks376/Happy-Horse-1.0",
@@ -6186,7 +6188,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Happy Horse 1.0 is an AI video generator that uses a 15-billion-parameter unified Transformer architecture to generate video and audio simultaneously in a single forward pass. It aims to produce native joint audio-video output rather than generating silent video and adding audio separately, with a distilled variant reportedly generating 1080p video in 38 seconds on H100 hardware. The project has not been officially open-sourced yet and this repository only contains community-compiled information from various public sources."
     },
     "R6410418/Jackrong-llm-finetuning-guide": {
       "full_name": "R6410418/Jackrong-llm-finetuning-guide",
@@ -6210,7 +6213,8 @@
         "unsloth"
       ],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "This is an educational repository providing end-to-end guides for fine-tuning large language models like Llama3, Qwen, and DeepSeek using PyTorch and Unsloth. It targets beginners and developers who want to learn LLM fine-tuning from scratch, offering reproducible workflows for supervised fine-tuning, data processing, and model deployment within resource constraints like Google Colab. The project emphasizes accessibility by requiring only a browser and free cloud environment to get started."
     }
   }
 }
