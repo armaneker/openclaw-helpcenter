@@ -6237,7 +6237,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v4.0.0"
+      "version": "v4.0.0",
+      "blurb": "This is a Chrome extension that automates OpenAI OAuth registration and login flows for bulk account creation. It handles email verification, captcha retrieval, CPA callback verification, and automatic recovery through integration with various email providers (QQ, 163, Inbucket) and DuckDuckGo's email protection service. The extension supports both manual step-by-step execution and fully automated multi-round batch processing with retry capabilities."
     }
   }
 }
