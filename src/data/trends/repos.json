@@ -6225,7 +6225,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "A Claude Code skill that generates production-quality technical diagrams from natural language descriptions, outputting both SVG and high-resolution PNG formats. It specializes in AI/Agent system architectures with built-in knowledge of patterns like RAG, multi-agent flows, and memory architectures, supporting 8 diagram types across 5 visual styles. The tool uses semantic shape vocabulary (hexagons for agents, cylinders for databases) and color-coded arrows to automatically convey technical relationships."
     }
   }
 }
