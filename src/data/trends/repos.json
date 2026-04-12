@@ -6259,7 +6259,8 @@
         "python"
       ],
       "category": "Agentic",
-      "version": "v3.1.0"
+      "version": "v3.1.0",
+      "blurb": "MemPalace is a Python-based AI memory system that stores complete conversation history locally using ChromaDB for semantic search and retrieval. It achieved a 96.6% score on the LongMemEval benchmark by storing raw verbatim exchanges without summarization, allowing users to preserve and search through all AI interactions rather than losing context between sessions. The system includes an experimental compression dialect called AAAK, though it currently performs worse than the raw storage mode."
     },
     "joeynyc/hermes-hudui": {
       "full_name": "joeynyc/hermes-hudui",
@@ -6270,7 +6271,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.1.0"
+      "version": "v0.1.0",
+      "blurb": "Hermes HUD is a web-based dashboard that monitors the consciousness and memory state of Hermes AI agents. It provides real-time visibility into the agent's identity, memory usage, learned skills, active projects, and operational metrics through a browser interface that updates automatically via WebSocket connections. The system reads directly from the agent's data directory without requiring additional integrations and includes intelligent caching to minimize performance impact."
     },
     "coleam00/claude-memory-compiler": {
       "full_name": "coleam00/claude-memory-compiler",
@@ -6281,7 +6283,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Language",
-      "version": null
+      "version": null,
+      "blurb": "This is a Python tool that automatically captures conversations with Claude Code and compiles them into a structured, searchable knowledge base using the Claude Agent SDK. It extracts key decisions, lessons, and patterns from your coding sessions and organizes them into cross-referenced markdown articles that get injected back into future sessions. Uses simple index-based retrieval instead of RAG/vector databases, following Karpathy's architecture principle that structured indexes outperform similarity search at personal scale."
     },
     "obdev/littlesnitch-linux": {
       "full_name": "obdev/littlesnitch-linux",
@@ -6292,7 +6295,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Little Snitch for Linux is an open-source network monitoring and filtering tool that uses eBPF programs to intercept network traffic at the kernel level. It allows users to block network connections based on configurable host and domain blocklists, with a web-based UI for management. The repository contains only the GPL-licensed components of the full Little Snitch product, which also includes proprietary code."
     },
     "whwangovo/pyre-code": {
       "full_name": "whwangovo/pyre-code",
@@ -6303,7 +6307,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Pyre Code is a self-hosted platform for practicing machine learning implementation skills through 68 coding problems covering modern AI systems like Transformers, vLLM, and diffusion models. It provides instant feedback on submissions via a local grading service and runs entirely in the browser without requiring GPUs, making it ideal for interview preparation and deepening understanding of ML internals. The platform uses torch_judge for code execution and validation, ensuring submissions are tested against real PyTorch implementations."
     },
     "sdyckjq-lab/llm-wiki-skill": {
       "full_name": "sdyckjq-lab/llm-wiki-skill",
@@ -6314,7 +6319,8 @@
       "has_summary": false,
       "topics": [],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "This is a multi-platform knowledge management system that implements Karpathy's llm-wiki methodology to help AI agents build structured personal knowledge bases from various sources. It automatically processes content from URLs, PDFs, text files, and social media platforms into interconnected wiki pages with confidence ratings and bidirectional links, avoiding the need to re-process raw documents on every query. The system supports Claude Code, Codex, and OpenClaw agents with platform-specific installation scripts and auto-detection of content sources."
     },
     "HKUDS/Vibe-Trading": {
       "full_name": "HKUDS/Vibe-Trading",
@@ -6331,7 +6337,8 @@
         "trading"
       ],
       "category": "Other",
-      "version": "v0.1.4"
+      "version": "v0.1.4",
+      "blurb": "Vibe-Trading is a Python-based multi-agent trading system that provides comprehensive quantitative trading capabilities through a command-line interface and API. It enables users to deploy AI trading agents with backtesting, swarm intelligence, and integration across multiple markets including stocks, futures, forex, and options. The system supports 68 trading skills, 29 swarm presets, and can export strategies to Pine Script for TradingView."
     }
   }
 }
