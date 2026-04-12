@@ -1769,7 +1769,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "JoyAI-Image is a unified multimodal foundation model that combines an 8B Multimodal Large Language Model with a 16B Multimodal Diffusion Transformer for image understanding, text-to-image generation, and instruction-guided image editing. The model enables closed-loop collaboration between understanding, generation, and editing tasks, with particular strength in spatial reasoning and controllable image editing. It features support for long-text typography, layout fidelity, and spatial editing through custom datasets and multi-stage training optimization."
     },
     {
       "full_name": "liuup/claude-code-analysis",
