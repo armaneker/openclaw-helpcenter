@@ -6145,13 +6145,16 @@
     },
     "nesquena/hermes-webui": {
       "full_name": "nesquena/hermes-webui",
-      "description": "Hermes WebUI",
+      "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
       "language": "Python",
       "url": "https://github.com/nesquena/hermes-webui",
       "first_seen": "2026-04-10",
       "has_summary": false,
-      "topics": [],
-      "category": "Other",
+      "topics": [
+        "agent",
+        "hermes"
+      ],
+      "category": "Agentic",
       "version": "v0.43.1",
       "blurb": "Hermes WebUI is a web-based interface for Hermes Agent, an autonomous AI agent that maintains persistent memory and context across sessions. It provides full feature parity with the CLI version through a three-panel browser interface, allowing users to interact with their self-hosted agent that learns from their environment and runs scheduled tasks offline. Built with vanilla JavaScript and Python without frameworks or build steps."
     },
@@ -6239,6 +6242,96 @@
       "category": "Other",
       "version": "v4.0.0",
       "blurb": "This is a Chrome extension that automates OpenAI OAuth registration and login flows for bulk account creation. It handles email verification, captcha retrieval, CPA callback verification, and automatic recovery through integration with various email providers (QQ, 163, Inbucket) and DuckDuckGo's email protection service. The extension supports both manual step-by-step execution and fully automated multi-round batch processing with retry capabilities."
+    },
+    "MemPalace/mempalace": {
+      "full_name": "MemPalace/mempalace",
+      "description": "The highest-scoring AI memory system ever benchmarked. And it's free.",
+      "language": "Python",
+      "url": "https://github.com/MemPalace/mempalace",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "category": "Agentic",
+      "version": "v3.1.0"
+    },
+    "joeynyc/hermes-hudui": {
+      "full_name": "joeynyc/hermes-hudui",
+      "description": "Web UI consciousness monitor for Hermes — the AI agent with persistent memory",
+      "language": "Python",
+      "url": "https://github.com/joeynyc/hermes-hudui",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v0.1.0"
+    },
+    "coleam00/claude-memory-compiler": {
+      "full_name": "coleam00/claude-memory-compiler",
+      "description": "Give Claude Code a memory that evolves with your codebase. Hooks automatically capture sessions, the Claude Agent SDK extracts key decisions and lessons, and an LLM compiler organizes everything into structured, cross-referenced knowledge articles - inspired by Karpathy's LLM Knowledge Base architecture.",
+      "language": "Python",
+      "url": "https://github.com/coleam00/claude-memory-compiler",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [],
+      "category": "Language",
+      "version": null
+    },
+    "obdev/littlesnitch-linux": {
+      "full_name": "obdev/littlesnitch-linux",
+      "description": "Open Source components of Little Snitch for Linux",
+      "language": "Rust",
+      "url": "https://github.com/obdev/littlesnitch-linux",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "whwangovo/pyre-code": {
+      "full_name": "whwangovo/pyre-code",
+      "description": "A self-hosted ML coding practice platform. 68 problems from ReLU to flow matching — attention, training, RLHF, diffusion, and more. Instant feedback in the browser.",
+      "language": "Python",
+      "url": "https://github.com/whwangovo/pyre-code",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "sdyckjq-lab/llm-wiki-skill": {
+      "full_name": "sdyckjq-lab/llm-wiki-skill",
+      "description": "基于 Karpathy llm-wiki 方法论的个人知识库构建 Skill，支持多平台！",
+      "language": "Shell",
+      "url": "https://github.com/sdyckjq-lab/llm-wiki-skill",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [],
+      "category": "AI / ML",
+      "version": null
+    },
+    "HKUDS/Vibe-Trading": {
+      "full_name": "HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [
+        "backtesting",
+        "multi-agent",
+        "quantitative-finance",
+        "swarm",
+        "trading"
+      ],
+      "category": "Other",
+      "version": "v0.1.4"
     }
   }
 }
