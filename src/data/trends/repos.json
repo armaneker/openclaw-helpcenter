@@ -6340,6 +6340,25 @@
       "category": "Other",
       "version": "v0.1.4",
       "blurb": "Vibe-Trading is a Python-based multi-agent trading system that provides comprehensive quantitative trading capabilities through a command-line interface and API. It enables users to deploy AI trading agents with backtesting, swarm intelligence, and integration across multiple markets including stocks, futures, forex, and options. The system supports 68 trading skills, 29 swarm presets, and can export strategies to Pine Script for TradingView."
+    },
+    "AgriciDaniel/claude-obsidian": {
+      "full_name": "AgriciDaniel/claude-obsidian",
+      "description": "Claude + Obsidian knowledge companion. Persistent, compounding wiki vault based on Karpathy's LLM Wiki pattern. /wiki /save /autoresearch",
+      "language": "Shell",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian",
+      "first_seen": "2026-04-12",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "claude-code",
+        "claude-code-skill",
+        "knowledge-management",
+        "obsidian",
+        "open-source",
+        "second-brain"
+      ],
+      "category": "AI / ML",
+      "version": "v1.4.3"
     }
   }
 }
