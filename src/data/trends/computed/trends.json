@@ -1619,7 +1619,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": "v1.4.3",
-      "blurb": null
+      "blurb": "This is a Claude-powered plugin that automatically builds and maintains an Obsidian knowledge vault by ingesting sources, extracting entities and concepts, and creating cross-references without manual organization. It enables persistent knowledge accumulation where every added source gets integrated and every question pulls from the entire accumulated knowledge base with specific page citations. The system implements Andrej Karpathy's LLM Wiki pattern with autonomous features like contradiction detection, vault maintenance, and multi-round web research."
     },
     {
       "full_name": "sdyckjq-lab/llm-wiki-skill",
