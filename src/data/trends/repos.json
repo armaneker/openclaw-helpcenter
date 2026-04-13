@@ -6622,6 +6622,28 @@
       "category": "Other",
       "version": null,
       "blurb": "ex-skill is a Python tool that generates AI skills mimicking an ex-partner's communication patterns from chat histories, photos, and social media data. It creates personalized AI personas that respond using the ex's language style, emotional patterns, and behavioral quirks extracted from WeChat, iMessage, SMS, and other digital footprints. The generated skills support incremental updates, conversation corrections, and version rollbacks for evolving accuracy."
+    },
+    "anthropics/claude-code": {
+      "full_name": "anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "Shell",
+      "url": "https://github.com/anthropics/claude-code",
+      "first_seen": "2026-04-13",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v2.1.104"
+    },
+    "hexiecs/talk-normal": {
+      "full_name": "hexiecs/talk-normal",
+      "description": "Make any LLM talk like a normal person. A system prompt that removes AI slop.",
+      "language": "Shell",
+      "url": "https://github.com/hexiecs/talk-normal",
+      "first_seen": "2026-04-13",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
