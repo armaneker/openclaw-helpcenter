@@ -6663,6 +6663,159 @@
       "category": "Other",
       "version": null,
       "blurb": "This is a Claude Code skill that provides comprehensive guidance for implementing Google's Material Design 3 (Material You) UI system across multiple platforms. It enables developers to generate MD3-compliant components, themes, and layouts with proper design tokens and accessibility patterns, primarily focused on Jetpack Compose with secondary support for Flutter and limited web support. The skill includes 30+ component references and an MD3 compliance audit feature that scores applications across 10 categories."
+    },
+    "sterlingcrispin/nothing-ever-happens": {
+      "full_name": "sterlingcrispin/nothing-ever-happens",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/sterlingcrispin/nothing-ever-happens",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "Xiangyue-Zhang/auto-deep-researcher-24x7": {
+      "full_name": "Xiangyue-Zhang/auto-deep-researcher-24x7",
+      "description": "🔥 An autonomous AI agent that runs your deep learning experiments 24/7 while you sleep. Zero-cost monitoring, Leader-Worker architecture, constant-size memory.",
+      "language": "Python",
+      "url": "https://github.com/Xiangyue-Zhang/auto-deep-researcher-24x7",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [
+        "ai-agent",
+        "autonomous-agent",
+        "claude-code",
+        "deep-learning",
+        "experiment-automation",
+        "gpu",
+        "hyperparameter-tuning",
+        "llm-agent",
+        "machine-learning",
+        "mlops",
+        "pytorch",
+        "research-automation"
+      ],
+      "category": "Agentic",
+      "version": null
+    },
+    "dominikmartn/ProgressiveBlurHeader": {
+      "full_name": "dominikmartn/ProgressiveBlurHeader",
+      "description": "Drop-in SwiftUI component for sticky headers with progressive blur — like Apple Music, Photos, and App Store. Content scrolls underneath with increasing blur, never clipped.",
+      "language": "Swift",
+      "url": "https://github.com/dominikmartn/ProgressiveBlurHeader",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [
+        "blur",
+        "ios",
+        "progressive-blur",
+        "sticky-header",
+        "swift",
+        "swift-package",
+        "swiftui",
+        "uikit"
+      ],
+      "category": "Mobile",
+      "version": null
+    },
+    "loop-uh/yourvpndead": {
+      "full_name": "loop-uh/yourvpndead",
+      "description": "Детекция и обнаружение айпи у ВПН серверов VLESS/xray/sing-box через локальный SOCKS5 уязвимость",
+      "language": "Kotlin",
+      "url": "https://github.com/loop-uh/yourvpndead",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v21"
+    },
+    "UnluckyNinja/SBTI-test": {
+      "full_name": "UnluckyNinja/SBTI-test",
+      "description": "注意建立这个repo只是因为网页自身就是全部源码，原作者并未声明license所以本repo也不包含license，一切行为请自行斟酌，不要给原作者添麻烦。 原作者：B站@蛆肉儿串儿",
+      "language": "HTML",
+      "url": "https://github.com/UnluckyNinja/SBTI-test",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "NyxTides/SimpleAuthFlow": {
+      "full_name": "NyxTides/SimpleAuthFlow",
+      "description": "A streamlined Chrome extension for the ChatGPT OAuth flow",
+      "language": "JavaScript",
+      "url": "https://github.com/NyxTides/SimpleAuthFlow",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "OpenMOSS/MOSS-TTS-Nano": {
+      "full_name": "OpenMOSS/MOSS-TTS-Nano",
+      "description": "MOSS-TTS-Nano is an open-source multilingual tiny speech generation model from MOSI.AI and the OpenMOSS team. With only 0.1B parameters, it is designed for realtime speech generation, can run directly on CPU without a GPU, and keeps the deployment stack simple enough for local demos, web serving, and lightweight product integration.",
+      "language": "Python",
+      "url": "https://github.com/OpenMOSS/MOSS-TTS-Nano",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [
+        "audio-tokenizer",
+        "chinese",
+        "english",
+        "multi-modality",
+        "multilingual",
+        "realtime",
+        "streaming-audio",
+        "tts",
+        "voice-clone"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "renatoworks/3dsvg": {
+      "full_name": "renatoworks/3dsvg",
+      "description": "The easiest way to turn SVGs into interactive React 3D components",
+      "language": "TypeScript",
+      "url": "https://github.com/renatoworks/3dsvg",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "cnitlrt/AutoTeam": {
+      "full_name": "cnitlrt/AutoTeam",
+      "description": "ChatGPT Team 账号自动轮转管理 - Codex 额度监控、自动换号、CPA 认证同步",
+      "language": "Python",
+      "url": "https://github.com/cnitlrt/AutoTeam",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "Mouseww/anything-analyzer": {
+      "full_name": "Mouseww/anything-analyzer",
+      "description": "利用 browser + CDP capture + AI analysis  傻瓜式生成 注册机 | 2API | 其他浏览器行为 的协议分析文档",
+      "language": "TypeScript",
+      "url": "https://github.com/Mouseww/anything-analyzer",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v2.3.0"
+    },
+    "jure/webphysics": {
+      "full_name": "jure/webphysics",
+      "description": "WebGPU physics engine based on the AVBD solver",
+      "language": "TypeScript",
+      "url": "https://github.com/jure/webphysics",
+      "first_seen": "2026-04-14",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
