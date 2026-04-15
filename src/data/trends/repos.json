@@ -6945,6 +6945,121 @@
       "category": "Other",
       "version": null,
       "blurb": "This repository contains a reverse-engineered analysis of Anthropic's Claude Code AI agent, documented as an 18-chapter technical book based on TypeScript source maps that were accidentally shipped with the npm package. Engineers can use it to understand production AI agent architecture patterns, multi-agent orchestration, and implementation trade-offs for building their own agentic systems. The content is purely educational pseudocode with no actual Claude source code included."
+    },
+    "tianxingleo/ACGTI": {
+      "full_name": "tianxingleo/ACGTI",
+      "description": "ACG Type Indicator - MBTI inspired anime persona quiz",
+      "language": "TypeScript",
+      "url": "https://github.com/tianxingleo/ACGTI",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [
+        "acg",
+        "acgti",
+        "mbti",
+        "sbti"
+      ],
+      "category": "Other",
+      "version": "v0.2.0"
+    },
+    "andrewjiang/palantir-for-family-trips": {
+      "full_name": "andrewjiang/palantir-for-family-trips",
+      "description": "A Palantir-ish dashboard for family trip planning.",
+      "language": "JavaScript",
+      "url": "https://github.com/andrewjiang/palantir-for-family-trips",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "wesbos/JSON-Alexander": {
+      "full_name": "wesbos/JSON-Alexander",
+      "description": "A really good JSON viewer browser Extension",
+      "language": "TypeScript",
+      "url": "https://github.com/wesbos/JSON-Alexander",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "zmeyer44/Locker": {
+      "full_name": "zmeyer44/Locker",
+      "description": "",
+      "language": "TypeScript",
+      "url": "https://github.com/zmeyer44/Locker",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "cpaczek/any-buddy": {
+      "full_name": "cpaczek/any-buddy",
+      "description": "Hack Claude Code to get any buddy you want",
+      "language": "TypeScript",
+      "url": "https://github.com/cpaczek/any-buddy",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v2.2.0"
+    },
+    "mrdoob/three.wasm": {
+      "full_name": "mrdoob/three.wasm",
+      "description": "8x Faster JavaScript 3D Library.",
+      "language": "TypeScript",
+      "url": "https://github.com/mrdoob/three.wasm",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Language",
+      "version": null
+    },
+    "AICoderTudou/claude-code-tudou": {
+      "full_name": "AICoderTudou/claude-code-tudou",
+      "description": "",
+      "language": "TypeScript",
+      "url": "https://github.com/AICoderTudou/claude-code-tudou",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "atomicmemory/llm-wiki-compiler": {
+      "full_name": "atomicmemory/llm-wiki-compiler",
+      "description": "The knowledge compiler. Raw sources in, interlinked wiki out. Inspired by Karpathy's LLM Wiki pattern.",
+      "language": "TypeScript",
+      "url": "https://github.com/atomicmemory/llm-wiki-compiler",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [
+        "cli",
+        "compiler",
+        "context-engineering",
+        "karpathy",
+        "knowledge-base",
+        "knowledge-compilation",
+        "llm",
+        "markdown",
+        "obsidian",
+        "wiki"
+      ],
+      "category": "AI / ML",
+      "version": "v0.1.0"
+    },
+    "code-yeongyu/not-claude-code-emulator": {
+      "full_name": "code-yeongyu/not-claude-code-emulator",
+      "description": "ULTRA DANGEROUS CLAUDE CODE EMULATOR; MAKING THE API REQUEST IDENTICAL TO CLAUDE CODE",
+      "language": "TypeScript",
+      "url": "https://github.com/code-yeongyu/not-claude-code-emulator",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
