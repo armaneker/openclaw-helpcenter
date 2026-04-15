@@ -6869,7 +6869,7 @@
     },
     "AgentSeal/codeburn": {
       "full_name": "AgentSeal/codeburn",
-      "description": "See where your AI coding tokens go. Interactive TUI dashboard for Claude Code and Codex cost observability.",
+      "description": "See where your AI coding tokens go. Interactive TUI dashboard for Claude Code, Codex, and Cursor cost observability.",
       "language": "TypeScript",
       "url": "https://github.com/AgentSeal/codeburn",
       "first_seen": "2026-04-14",
@@ -6880,6 +6880,7 @@
         "cli",
         "codex",
         "cost-tracking",
+        "cursor-ide",
         "developer-tools",
         "observability",
         "terminal-ui",
@@ -7093,6 +7094,17 @@
       "category": "Other",
       "version": null,
       "blurb": "Game Map Real-time Tracker is a computer vision tool that automatically identifies the mini-map in games and displays the player's real-time position on a high-resolution overlay map. It enables players to track their exact location without alt-tabbing to external maps, using either traditional SIFT feature matching or deep learning-based LoFTR for robust tracking even with UI occlusion. The AI mode has been optimized to run on less than 1GB of VRAM, making it accessible for lower-end hardware."
+    },
+    "sogonov/anubis": {
+      "full_name": "sogonov/anubis",
+      "description": "Android app manager with VPN integration. Manages groups of apps by freezing/unfreezing them based on VPN connection state.",
+      "language": "Kotlin",
+      "url": "https://github.com/sogonov/anubis",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "0.1.1"
     }
   }
 }
