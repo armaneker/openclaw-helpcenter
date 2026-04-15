@@ -6251,7 +6251,7 @@
     },
     "MemPalace/mempalace": {
       "full_name": "MemPalace/mempalace",
-      "description": "The highest-scoring AI memory system ever benchmarked. And it's free.",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
       "language": "Python",
       "url": "https://github.com/MemPalace/mempalace",
       "first_seen": "2026-04-12",
@@ -7069,6 +7069,17 @@
       "category": "Other",
       "version": null,
       "blurb": "A proxy server that emulates Claude's API by handling OAuth authentication and providing an OpenAPI-compatible Messages API with token management. It allows developers to integrate with Claude's services through a standardized REST interface with built-in streaming support and automatic token handling. The project has been archived in favor of CLIProxyAPI, which supports multiple AI providers including Claude, Gemini, and ChatGPT."
+    },
+    "bstnxbt/dflash-mlx": {
+      "full_name": "bstnxbt/dflash-mlx",
+      "description": "Lossless DFlash speculative decoding for MLX on Apple Silicon",
+      "language": "Python",
+      "url": "https://github.com/bstnxbt/dflash-mlx",
+      "first_seen": "2026-04-15",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
