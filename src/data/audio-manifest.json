@@ -1,139 +1,139 @@
 {
   "getting-started/first-agent": {
-    "hash": "fd964dcd28b3d313084b58b6653a3441",
+    "hash": "1dde577c2fdd07452300379615fab4c1",
     "file": "getting-started-first-agent-en.mp3",
     "language": "en",
-    "size": 2161440,
-    "generatedAt": "2026-04-06T19:37:32.132Z",
-    "charCount": 1694
+    "size": 3736800,
+    "generatedAt": "2026-04-15T10:23:01.991Z",
+    "charCount": 3023
   },
   "getting-started/agent-memory": {
-    "hash": "e9b11399c337981cdb95ebd788a5073a",
+    "hash": "7f43903bea03aa2991a0a3268cc46784",
     "file": "getting-started-agent-memory-en.mp3",
     "language": "en",
-    "size": 7076160,
-    "generatedAt": "2026-04-06T19:38:47.871Z",
-    "charCount": 5741
+    "size": 6199680,
+    "generatedAt": "2026-04-15T10:24:05.431Z",
+    "charCount": 4996
   },
   "openclaw/architecture": {
-    "hash": "80ffc3257b43d52d1ddda597c909514b",
+    "hash": "fcc8f52811cbacff67c3e8c0876485c0",
     "file": "openclaw-architecture-en.mp3",
     "language": "en",
-    "size": 7940160,
-    "generatedAt": "2026-04-06T19:39:59.555Z",
-    "charCount": 6477
+    "size": 6149760,
+    "generatedAt": "2026-04-15T10:25:02.404Z",
+    "charCount": 4953
   },
   "openclaw/agent-roles": {
-    "hash": "69444dd906124c7a851cb969078eaec6",
+    "hash": "2e2ea8431c51170d7d57f401d3b8c874",
     "file": "openclaw-agent-roles-en.mp3",
     "language": "en",
-    "size": 8436000,
-    "generatedAt": "2026-04-06T19:41:57.744Z",
-    "charCount": 6961
+    "size": 6249120,
+    "generatedAt": "2026-04-15T10:25:43.794Z",
+    "charCount": 5047
   },
   "openclaw/create-slack-agent": {
-    "hash": "dbeda4b4695ae368d096ab4a671df36f",
+    "hash": "6ae07993e18efc54323a76845ce4b2a0",
     "file": "openclaw-create-slack-agent-en.mp3",
     "language": "en",
-    "size": 7401600,
-    "generatedAt": "2026-04-06T19:43:03.405Z",
-    "charCount": 5949
+    "size": 6132000,
+    "generatedAt": "2026-04-15T10:26:43.478Z",
+    "charCount": 4956
   },
   "openclaw/cli-reference": {
-    "hash": "f4ca26df5d161e4315c650b12261d179",
+    "hash": "b4428f0a05a64d4f7775d0b826cfc0b6",
     "file": "openclaw-cli-reference-en.mp3",
     "language": "en",
-    "size": 1620000,
-    "generatedAt": "2026-04-06T19:43:22.076Z",
-    "charCount": 1308
+    "size": 3028320,
+    "generatedAt": "2026-04-15T10:27:13.586Z",
+    "charCount": 2461
   },
   "openclaw/deployment": {
-    "hash": "a0e30e0318294f81a4f6cb6bb0bed352",
+    "hash": "ee9e6d69f3b878787d859186e07c8f9c",
     "file": "openclaw-deployment-en.mp3",
     "language": "en",
-    "size": 6540960,
-    "generatedAt": "2026-04-06T19:44:29.468Z",
-    "charCount": 5141
+    "size": 6339360,
+    "generatedAt": "2026-04-15T10:28:32.235Z",
+    "charCount": 5098
   },
   "openclaw/security": {
-    "hash": "964080354d57e022c4def0d0cde3e722",
+    "hash": "1922fb76daafdf478f246afdf2e6dab6",
     "file": "openclaw-security-en.mp3",
     "language": "en",
-    "size": 5408640,
-    "generatedAt": "2026-04-06T19:45:25.057Z",
-    "charCount": 4399
+    "size": 6264480,
+    "generatedAt": "2026-04-15T10:30:04.138Z",
+    "charCount": 5058
   },
   "openclaw/mission-control": {
-    "hash": "075d4808630e32d9b0e5e608cd7d25c3",
+    "hash": "415ebfc6d7cf6b9f4fa422970bbd9c75",
     "file": "openclaw-mission-control-en.mp3",
     "language": "en",
-    "size": 3998880,
-    "generatedAt": "2026-04-06T19:46:04.481Z",
-    "charCount": 3108
+    "size": 5181600,
+    "generatedAt": "2026-04-15T10:31:18.094Z",
+    "charCount": 4171
   },
   "skills/anatomy": {
-    "hash": "df5c9975b18eba9a00e2fbf79192f10b",
+    "hash": "897696f3c5d37baa7c3f31292f59f119",
     "file": "skills-anatomy-en.mp3",
     "language": "en",
-    "size": 4133280,
-    "generatedAt": "2026-04-06T19:46:35.069Z",
-    "charCount": 3244
+    "size": 4062720,
+    "generatedAt": "2026-04-15T10:31:55.371Z",
+    "charCount": 3236
   },
   "skills/frontmatter": {
-    "hash": "8e08a5ed466da8c9598d001fc944f64f",
+    "hash": "7ec29bbd002b10e46cc29b1f5ca81105",
     "file": "skills-frontmatter-en.mp3",
     "language": "en",
-    "size": 1648800,
-    "generatedAt": "2026-04-06T19:46:53.491Z",
-    "charCount": 1327
+    "size": 3770880,
+    "generatedAt": "2026-04-15T10:32:32.700Z",
+    "charCount": 3021
   },
   "skills/steps": {
-    "hash": "48fe0eacb661d780be8958972c4cc93e",
+    "hash": "52b430740bf7fda96b8dc029d5a7c65e",
     "file": "skills-steps-en.mp3",
     "language": "en",
-    "size": 1961760,
-    "generatedAt": "2026-04-06T19:47:21.738Z",
-    "charCount": 1587
+    "size": 4338720,
+    "generatedAt": "2026-04-15T10:33:21.655Z",
+    "charCount": 3545
   },
   "skills/references": {
-    "hash": "282c75552f8be70b0204efdfb6c5cc71",
+    "hash": "e1038978c75d81b4bf8380ae5efd469e",
     "file": "skills-references-en.mp3",
     "language": "en",
-    "size": 1804320,
-    "generatedAt": "2026-04-06T19:47:46.995Z",
-    "charCount": 1458
+    "size": 3872160,
+    "generatedAt": "2026-04-15T10:34:00.827Z",
+    "charCount": 3123
   },
   "skills/scripts": {
-    "hash": "e9a70292fc44ad78b970e3e23010d8f6",
+    "hash": "a791ab9b0bb973787c9f27c66c70b3b6",
     "file": "skills-scripts-en.mp3",
     "language": "en",
-    "size": 2269920,
-    "generatedAt": "2026-04-06T19:48:22.188Z",
-    "charCount": 1870
+    "size": 3781440,
+    "generatedAt": "2026-04-15T10:34:41.314Z",
+    "charCount": 3054
   },
   "skills/progressive-loading": {
-    "hash": "43aa81036db5eb4dd9913900d2414d60",
+    "hash": "2ab3892f31563b550a113c591806eb3c",
     "file": "skills-progressive-loading-en.mp3",
     "language": "en",
-    "size": 4439040,
-    "generatedAt": "2026-04-06T19:49:09.390Z",
-    "charCount": 3417
+    "size": 5489760,
+    "generatedAt": "2026-04-15T10:36:00.455Z",
+    "charCount": 4271
   },
   "skills/testing": {
-    "hash": "749ee4d728e4657c7520825e5da64723",
+    "hash": "d03abc53f7643546a86b99a278aa56d3",
     "file": "skills-testing-en.mp3",
     "language": "en",
-    "size": 13800480,
-    "generatedAt": "2026-04-06T19:51:22.245Z",
-    "charCount": 11035
+    "size": 7724640,
+    "generatedAt": "2026-04-15T10:37:21.765Z",
+    "charCount": 6240
   },
   "about/contributing": {
-    "hash": "6d2a82a819ab9c535851101504719e9a",
+    "hash": "fa164e4668dfe8ed677963a8837cd156",
     "file": "about-contributing-en.mp3",
     "language": "en",
-    "size": 1922880,
-    "generatedAt": "2026-04-06T19:51:42.675Z",
-    "charCount": 1551
+    "size": 2943360,
+    "generatedAt": "2026-04-15T10:37:50.279Z",
+    "charCount": 2379
   },
   "getting-started/rpi-loop": {
     "hash": "bb38a39d04324dc352af7e8aae2a4e39",
