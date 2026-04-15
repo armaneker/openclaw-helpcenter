@@ -75,7 +75,17 @@ jobs:
           git add public/transcripts/ public/audio/ src/data/transcript-manifest.json src/data/audio-manifest.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: regenerate transcripts and audio for guide pages"
-            git push
+            exit 0
           fi
+          git commit -m "chore: regenerate transcripts and audio for guide pages"
+          # Retry push with rebase to handle races with concurrent trend-update workflow
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt, rebasing against origin/main..."
+            git pull --rebase origin main
+          done
+          echo "Failed to push after 5 attempts" >&2
+          exit 1
