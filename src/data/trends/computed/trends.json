@@ -1499,7 +1499,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "DFlash-mlx implements the DFlash speculative decoding algorithm optimized for Apple Silicon using MLX, where a small draft model generates 16 tokens in parallel that are then verified by a larger target model. It accelerates language model inference by 1.35x to 4.13x while maintaining lossless output quality, making it useful for faster text generation on Apple hardware. The implementation includes custom Metal kernels for tape-replay rollback and numerical stability to handle the complexities of speculative decoding with recurrent model states."
     },
     {
       "full_name": "MemPalace/mempalace",
