@@ -1,0 +1,62 @@
+<GuideHeader tool="learn-coding-agent" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Learn Coding Agent
+
+This is a research repository that reverse-engineers the Claude Code CLI agent architecture through analysis of publicly available information. It provides detailed documentation of agent patterns, tool systems, and production-grade harness mechanisms.
+
+## Key Features
+
+- **Architecture Analysis** — Deep dive into CLI agent patterns with entry → query engine → tools/services/state flow
+- **Tool System Documentation** — Analysis of 40+ built-in tools with permission flows and sub-agent patterns
+- **Production Harness Study** — 12 progressive mechanisms for streaming, concurrency, persistence, and MCP integration
+- **Multilingual Reports** — Comprehensive analysis in English, Japanese, Korean, and Chinese
+- **Hidden Features Research** — Documentation of internal codenames, feature flags, and undercover modes
+- **Privacy Analysis** — Telemetry collection patterns and remote control mechanisms
+
+## Installation
+
+```bash
+git clone https://github.com/sanbuphy/learn-coding-agent.git
+cd learn-coding-agent
+```
+
+<Callout type="info">
+This is a documentation and research repository. There's no installation process — browse the `docs/` directory for analysis reports.
+</Callout>
+
+## Basic Usage
+
+Navigate to the language-specific documentation:
+
+```bash
+# English reports
+docs/en/01-telemetry-and-privacy.md
+docs/en/02-hidden-features-and-codenames.md
+
+# Other languages available
+docs/ja/  # Japanese
+docs/ko/  # Korean  
+docs/zh/  # Chinese
+```
+
+The core agent pattern follows this loop:
+
+```typescript
+// Minimal agent pattern
+User -> messages[] -> Claude API -> response
+                                   |
+                            tool_use? -> execute tools -> loop back
+                                   |
+                                  no -> return text
+```
+
+<Callout type="warning">
+All content is strictly for research and educational purposes. Commercial use is prohibited according to the repository disclaimer.
+</Callout>
+
+## Notable Details
+
+**Repository Stats**: 11,652 stars • Unknown license • Research/educational use only  
+**Scope**: ~1,884 TypeScript files, ~512K lines of analysis  
+**Community**: Active research community studying agent architectures  
+**Languages**: Multilingual documentation (EN/JA/KO/ZH)

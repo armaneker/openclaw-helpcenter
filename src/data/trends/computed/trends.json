@@ -989,7 +989,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Airbnb's JavaScript Style Guide is a comprehensive set of coding conventions and best practices for writing JavaScript code. Teams and developers adopt it to maintain consistent code quality, readability, and to leverage modern ES6+ features across their JavaScript projects. With over 148k stars, it has become one of the most widely adopted JavaScript style guides in the industry, complete with accompanying ESLint configurations for automated enforcement."
     },
     {
       "full_name": "Genymobile/scrcpy",
@@ -1364,7 +1364,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Weft is a Rust-based programming language designed specifically for building AI systems that integrate LLMs, humans, APIs, and infrastructure as first-class primitives. It provides durable execution with automatic state management, type-safe orchestration of multi-step workflows that can pause for human input and resume days later, and generates visual program graphs automatically. The language is in early development with an intentionally small but opinionated node catalog, positioning itself as a foundation for AI system development rather than a production-ready tool."
     },
     {
       "full_name": "amitshekhariitbhu/llm-internals",
@@ -1394,7 +1394,7 @@
       "has_summary": false,
       "category": "AI / ML",
       "version": "v4.0.0",
-      "blurb": null
+      "blurb": "designlang is a CLI tool that reverse-engineers complete design systems from any website by extracting colors, typography, spacing, shadows, layout patterns, and responsive behavior. It generates 8 output files including Tailwind configs, design tokens, React themes, and an AI-optimized markdown summary that can be fed to LLMs to recreate the design. Unlike other design extraction tools, it captures layout architecture, responsive breakpoints, and interaction states rather than just basic colors and fonts."
     },
     {
       "full_name": "mohi-devhub/antivibe",
