@@ -6537,7 +6537,7 @@
     },
     "retlehs/quien": {
       "full_name": "retlehs/quien",
-      "description": "A better WHOIS lookup tool",
+      "description": "A better whois and domain intelligence toolkit",
       "language": "Go",
       "url": "https://github.com/retlehs/quien",
       "first_seen": "2026-04-13",
@@ -7306,6 +7306,70 @@
       "category": "Other",
       "version": null,
       "blurb": "This project reverse-engineers the complete source code of Anthropic's Claude Code from its npm package, restoring all native modules, internal dependencies, and type definitions that were stripped from the public release. It allows developers to run a fully-featured local instance of Claude Code with capabilities like Computer Use, voice input, MCP server integration, and all CLI tools intact. The restoration includes native binaries extracted from official releases across multiple platforms and preserves 90+ feature flags that control advanced functionality."
+    },
+    "airbnb/javascript": {
+      "full_name": "airbnb/javascript",
+      "description": "JavaScript Style Guide",
+      "language": "JavaScript",
+      "url": "https://github.com/airbnb/javascript",
+      "first_seen": "2026-04-16",
+      "has_summary": false,
+      "topics": [
+        "arrow-functions",
+        "es2015",
+        "es2016",
+        "es2017",
+        "es2018",
+        "es6",
+        "eslint",
+        "javascript",
+        "linting",
+        "naming-conventions",
+        "style-guide",
+        "style-linter",
+        "styleguide",
+        "tc39"
+      ],
+      "category": "Other",
+      "version": null
+    },
+    "WeaveMindAI/weft": {
+      "full_name": "WeaveMindAI/weft",
+      "description": "A programming language for AI systems",
+      "language": "Rust",
+      "url": "https://github.com/WeaveMindAI/weft",
+      "first_seen": "2026-04-16",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "Manavarya09/design-extract": {
+      "full_name": "Manavarya09/design-extract",
+      "description": "Extract the complete design language from any website — colors, typography, spacing, shadows, and more. npx CLI + Claude Code plugin.",
+      "language": "JavaScript",
+      "url": "https://github.com/Manavarya09/design-extract",
+      "first_seen": "2026-04-16",
+      "has_summary": false,
+      "topics": [
+        "agent-skill",
+        "agent-skills",
+        "ai",
+        "claude-code-plugin",
+        "cli",
+        "colors",
+        "css",
+        "design-system",
+        "design-tokens",
+        "npx",
+        "playwright",
+        "skills-sh",
+        "tailwind",
+        "typography",
+        "web-scraping"
+      ],
+      "category": "AI / ML",
+      "version": "v4.0.0"
     }
   }
 }
