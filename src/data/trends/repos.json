@@ -4556,7 +4556,7 @@
       "language": "TypeScript",
       "url": "https://github.com/nirholas/claude-code",
       "first_seen": "2026-03-31",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [
         "claude",
         "claude-api",
@@ -7131,7 +7131,8 @@
         "llm-internals"
       ],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "This is an educational repository that explains the internal workings of Large Language Models through step-by-step tutorials covering tokenization, attention mechanisms, and inference optimization. It provides detailed mathematical explanations with numeric examples to help engineers understand core LLM concepts like Byte Pair Encoding, Q/K/V attention matrices, scaling factors, and causal masking. The content is delivered through both written blogs and video tutorials, making complex LLM internals accessible to practitioners."
     },
     "vercel-labs/wterm": {
       "full_name": "vercel-labs/wterm",
@@ -7142,7 +7143,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": "v0.1.7"
+      "version": "v0.1.7",
+      "blurb": "wterm is a web-based terminal emulator with a Zig core compiled to WebAssembly and DOM rendering. It provides native browser features like text selection, clipboard support, and accessibility while maintaining near-native performance through a lightweight WASM binary. The core terminal logic compiles to just ~12KB and includes full VT100/VT220/xterm escape sequence support with features like alternate screen buffers and 24-bit color."
     },
     "mohi-devhub/antivibe": {
       "full_name": "mohi-devhub/antivibe",
@@ -7161,7 +7163,8 @@
         "vibecoding"
       ],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "AntiVibe is a Claude Code skill that generates detailed educational explanations of AI-generated code instead of letting developers blindly copy-paste. It transforms code into learning guides that explain the what, why, when, and alternatives behind implementation decisions, helping developers actually understand what AI writes. The framework automatically triggers after task completion and outputs structured markdown files with concept explanations and curated learning resources."
     },
     "CITGuru/openduck": {
       "full_name": "CITGuru/openduck",
@@ -7172,7 +7175,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "OpenDuck is an open-source implementation of MotherDuck's distributed DuckDB architecture, providing differential storage, hybrid execution, and transparent remote database access through a DuckDB extension. It allows queries to seamlessly span local and remote data sources, with the system automatically splitting execution plans between your machine and cloud workers while maintaining DuckDB's native catalog interface. The project uses a minimal gRPC protocol with Arrow IPC for data transfer, making it backend-agnostic and extensible."
     },
     "rasbt/mini-coding-agent": {
       "full_name": "rasbt/mini-coding-agent",
@@ -7189,7 +7193,8 @@
         "python"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Mini-Coding-Agent is a minimal Python implementation that demonstrates the core components of a coding agent harness for educational purposes. It provides a local agent loop with workspace context collection, structured tools with approval gates, transcript persistence, and bounded delegation to help developers understand how coding agents work. The implementation has no external Python dependencies beyond the standard library and uses Ollama as the model backend."
     },
     "SAGAR-TAMANG/friday-tony-stark-demo": {
       "full_name": "SAGAR-TAMANG/friday-tony-stark-demo",
@@ -7200,7 +7205,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "F.R.I.D.A.Y. is a Tony Stark-inspired AI voice assistant built with Python that combines a FastMCP server backend with a LiveKit voice agent frontend. It allows users to interact via voice with an LLM (Gemini 2.5 Flash) that can call various tools like web search, news retrieval, and system information through real-time communication between the voice pipeline and MCP server. The system uses a two-component architecture where the MCP server exposes tools over Server-Sent Events and the voice agent handles speech-to-text, LLM reasoning, and text-to-speech in a LiveKit room."
     },
     "kargnas/damn-my-slow-kt": {
       "full_name": "kargnas/damn-my-slow-kt",
@@ -7216,7 +7222,8 @@
         "legal"
       ],
       "category": "DevTools",
-      "version": "v0.5.21"
+      "version": "v0.5.21",
+      "blurb": "This is a TypeScript CLI tool that automates KT (Korean ISP) internet speed testing and billing compensation claims. It continuously monitors internet speeds against SLA requirements and automatically submits compensation requests when speeds fall below contractual minimums, potentially reducing monthly internet bills to zero. The tool requires KT's official speed testing program and only works on macOS/Windows since KT doesn't support Linux."
     },
     "lucasastorian/llmwiki": {
       "full_name": "lucasastorian/llmwiki",
@@ -7239,7 +7246,8 @@
         "supabase"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "LLMWiki is an open-source implementation of Karpathy's LLM Wiki concept that creates AI-maintained knowledge bases from uploaded documents. Users upload PDFs and documents, connect their Claude account via MCP (Model Context Protocol), and Claude automatically generates interconnected wiki pages with citations, cross-references, and summaries that compound over time rather than re-deriving answers from raw chunks. The system uses a three-layer architecture separating immutable source documents, LLM-generated wiki content, and tools that allow Claude to search, read, and write across the entire knowledge vault."
     },
     "bddicken/tuitter": {
       "full_name": "bddicken/tuitter",
@@ -7250,7 +7258,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "Tuitter is a terminal-based Twitter/X client built with TypeScript and OpenTUI. It allows users to authenticate with their X developer credentials and browse or interact with Twitter content directly from the command line. The project includes optional daily usage limits that can be configured to restrict screen time."
     },
     "IyadhKhalfallah/clauditor": {
       "full_name": "IyadhKhalfallah/clauditor",
@@ -7266,7 +7275,8 @@
         "token-optimization"
       ],
       "category": "DevTools",
-      "version": "v1.30.0"
+      "version": "v1.30.0",
+      "blurb": "clauditor is a CLI tool that prevents Claude Code sessions from burning through API quota by monitoring token usage and blocking oversized sessions. It automatically saves session context and rotates to fresh sessions when token waste becomes excessive (e.g., 200k tokens/turn vs 20k for fresh sessions). The tool works by registering hooks into Claude Code that intercept prompts and detect when sessions have grown inefficiently large."
     },
     "millionco/cli-to-js": {
       "full_name": "millionco/cli-to-js",
@@ -7282,7 +7292,8 @@
         "node"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "cli-to-js is a TypeScript library that automatically converts command-line tools into typed JavaScript APIs by parsing their `--help` output. It enables programmatic interaction with any CLI tool through a structured interface where subcommands become methods and flags become typed options, eliminating the need to construct shell command strings manually. The library includes validation that catches invalid flag names and provides correction suggestions, making it particularly useful for AI agents that need to interact with system tools."
     },
     "JrCx7scC/claude-code-source": {
       "full_name": "JrCx7scC/claude-code-source",
@@ -7293,7 +7304,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "This project reverse-engineers the complete source code of Anthropic's Claude Code from its npm package, restoring all native modules, internal dependencies, and type definitions that were stripped from the public release. It allows developers to run a fully-featured local instance of Claude Code with capabilities like Computer Use, voice input, MCP server integration, and all CLI tools intact. The restoration includes native binaries extracted from official releases across multiple platforms and preserves 90+ feature flags that control advanced functionality."
     }
   }
 }

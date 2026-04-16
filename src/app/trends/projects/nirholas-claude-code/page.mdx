@@ -1,0 +1,62 @@
+<GuideHeader tool="claude-code" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Claude Code
+
+Claude Code is Anthropic's official CLI tool that brings Claude directly into your terminal for coding tasks. It understands your codebase and executes development workflows through natural language commands.
+
+## Key Features
+
+- **File operations** — Edit, create, search, and manage files through conversation
+- **Git workflows** — Handle commits, branches, merges, and code reviews via natural language
+- **Command execution** — Run terminal commands with context awareness
+- **Codebase understanding** — Analyze and explain complex code structures
+- **IDE integration** — Bridge connections to VS Code and JetBrains IDEs
+- **MCP protocol** — Extensible tool system via Model Context Protocol
+- **Multi-agent coordination** — Orchestrate multiple Claude instances for complex tasks
+
+## Installation
+
+<Callout type="info">
+This repository contains the leaked source code from March 2026. The actual Claude Code CLI is distributed separately by Anthropic.
+</Callout>
+
+```bash
+# Install via npm (official package)
+npm install -g claude-code
+
+# Or explore the source with MCP server
+git clone https://github.com/nirholas/claude-code.git
+cd claude-code/mcp-server
+npm install && npm run build
+claude mcp add claude-code-explorer -- node dist/index.js
+```
+
+## Basic Usage
+
+```bash
+# Start interactive session
+claude
+
+# Execute specific tasks
+claude "refactor this function to use async/await"
+claude "create a new React component for user profiles" 
+claude "review my latest commit for potential issues"
+
+# File operations
+claude "explain what this file does" src/main.tsx
+claude "add error handling to the API calls"
+```
+
+The tool maintains conversation context and can execute multi-step workflows across your entire codebase.
+
+## Notable Details
+
+- **Language**: TypeScript (512K+ lines across ~1,900 files)
+- **Runtime**: Bun with React + Ink for terminal UI
+- **Community**: 6.4K GitHub stars
+- **License**: No assertion (public domain release)
+- **Architecture**: Built on a sophisticated tool system with ~40 agent tools and ~50 slash commands
+
+<Callout type="warning">
+This source code was accidentally leaked via npm sourcemaps and later released publicly. Use for educational purposes and understanding Claude Code's architecture.
+</Callout>
