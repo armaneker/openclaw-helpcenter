@@ -1304,7 +1304,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "x64Release",
-      "blurb": null
+      "blurb": "RedSun is a proof-of-concept exploit that abuses Windows Defender's cloud tag handling behavior. It leverages Defender's file rewriting mechanism to overwrite system files and escalate privileges when the antivirus detects a malicious file with a cloud tag. The vulnerability exploits the counterintuitive behavior where Windows Defender rewrites detected malicious files back to their original location instead of removing them."
     },
     {
       "full_name": "retlehs/quien",
@@ -1334,7 +1334,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "HTML PPT Studio is an AgentSkill for generating professional HTML presentations with 36 themes, 31 layouts, and 47 animations using pure static HTML/CSS/JS. It enables AI agents to create presentation decks from natural language prompts like \"make a 8-page tech presentation with cyberpunk theme\" without requiring any build tools or compilation steps. The project includes 14 full-deck templates extracted from real-world presentations and supports both CSS animations and canvas-based effects."
     },
     {
       "full_name": "andrewjiang/palantir-for-family-trips",
@@ -1409,7 +1409,7 @@
       "has_summary": false,
       "category": "Infra",
       "version": null,
-      "blurb": null
+      "blurb": "Xata is an open-source, cloud-native platform for self-hosting multiple Postgres instances on Kubernetes with copy-on-write branching and scale-to-zero capabilities. It's designed for organizations that need internal Postgres-as-a-Service or efficient dev/testing environments where you can clone terabytes of data in seconds and automatically scale down idle instances. The platform runs on CloudNativePG and OpenEBS, providing production-grade features like high availability, automatic failover, and PITR backups out of the box."
     },
     {
       "full_name": "cnitlrt/AutoTeam",
@@ -1469,7 +1469,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Fresh Start is a GitHub repository with 6,370 stars but lacks a description or README content to indicate its purpose. Without documentation or visible code, it's impossible to determine what functionality this project provides or why developers would use it. The high star count suggests it may have had significant content that has since been removed or the repository may be archived."
     },
     {
       "full_name": "TheTom/turboquant_plus",
@@ -1739,7 +1739,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": null,
-      "blurb": null
+      "blurb": "DocsAgent is a local-first AI document assistant that provides secure indexing and search across thousands of desktop files without cloud dependencies. It integrates with AI agents through the Model Context Protocol (MCP) to give them access to your private documents while maintaining complete data privacy. The system uses a native C++ engine for millisecond-level retrieval performance and supports PDF, Word, and PowerPoint formats."
     }
   ]
 }

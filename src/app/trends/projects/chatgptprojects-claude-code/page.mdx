@@ -1,0 +1,50 @@
+<GuideHeader tool="clear-code" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Clear-Code
+
+Clear-Code provides visibility into your Claude Code interactions by intercepting and logging API requests. It's essentially a monitoring proxy that shows you exactly what Claude Code sends and receives during coding sessions.
+
+## Key Features
+
+- **Complete request visibility** — See every file Claude Code reads and every API call it makes
+- **Token usage tracking** — Monitor token consumption across all requests
+- **Zero-code setup** — Works by changing environment variables only
+- **Real-time dashboard** — View logs through a web interface at app.leanmcp.com
+- **Model-agnostic monitoring** — Works with any Anthropic API-compatible requests
+
+## Installation
+
+Set two environment variables to route Claude Code requests through the monitoring proxy:
+
+```bash
+export ANTHROPIC_BASE_URL=https://aigateway.leanmcp.com/v1/anthropic
+export ANTHROPIC_API_KEY=your_leanmcp_key
+```
+
+Get your monitoring key from [app.leanmcp.com/billing](https://app.leanmcp.com/billing).
+
+## Basic Usage
+
+After setting the environment variables, run Claude Code normally:
+
+```bash
+# Your existing Claude Code workflow
+claude-code --task "refactor this function"
+```
+
+All requests automatically appear in your dashboard at [app.leanmcp.com](https://app.leanmcp.com). No code changes required.
+
+<Callout type="info">
+The proxy intercepts requests without modifying Claude Code's behavior. Your coding workflow remains unchanged.
+</Callout>
+
+## Notable Details
+
+**Language:** Shell scripts for setup  
+**License:** MIT  
+**Community:** 2,052 GitHub stars with active Discord community  
+**Provider:** Built by the LeanMCP team as part of their AI gateway infrastructure
+
+<Callout type="tip">
+This tool is particularly useful for teams wanting to audit AI assistant usage or optimize token consumption across projects.
+</Callout>
