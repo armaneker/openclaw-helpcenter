@@ -6279,7 +6279,7 @@
     "joeynyc/hermes-hudui": {
       "full_name": "joeynyc/hermes-hudui",
       "description": "Web UI consciousness monitor for Hermes — the AI agent with persistent memory",
-      "language": "TypeScript",
+      "language": "Python",
       "url": "https://github.com/joeynyc/hermes-hudui",
       "first_seen": "2026-04-12",
       "has_summary": false,
@@ -7373,6 +7373,51 @@
       "category": "AI / ML",
       "version": "v4.0.0",
       "blurb": "designlang is a CLI tool that reverse-engineers complete design systems from any website by extracting colors, typography, spacing, shadows, layout patterns, and responsive behavior. It generates 8 output files including Tailwind configs, design tokens, React themes, and an AI-optimized markdown summary that can be fed to LLMs to recreate the design. Unlike other design extraction tools, it captures layout architecture, responsive breakpoints, and interaction states rather than just basic colors and fonts."
+    },
+    "BuilderPulse/BuilderPulse": {
+      "full_name": "BuilderPulse/BuilderPulse",
+      "description": "AI-powered daily intelligence for indie hackers and builders. 20 questions, 10+ sources, every morning.",
+      "language": "Unknown",
+      "url": "https://github.com/BuilderPulse/BuilderPulse",
+      "first_seen": "2026-04-16",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "builders",
+        "indiehackers"
+      ],
+      "category": "AI / ML",
+      "version": null
+    },
+    "Tencent-Hunyuan/HY-World-2.0": {
+      "full_name": "Tencent-Hunyuan/HY-World-2.0",
+      "description": "HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
+      "language": "Python",
+      "url": "https://github.com/Tencent-Hunyuan/HY-World-2.0",
+      "first_seen": "2026-04-16",
+      "has_summary": false,
+      "topics": [
+        "3d",
+        "ai",
+        "worldmodel"
+      ],
+      "category": "AI / ML",
+      "version": null
+    },
+    "millionco/isolet": {
+      "full_name": "millionco/isolet",
+      "description": "Package any component into a self-contained, isolated widget",
+      "language": "TypeScript",
+      "url": "https://github.com/millionco/isolet",
+      "first_seen": "2026-04-16",
+      "has_summary": false,
+      "topics": [
+        "iife",
+        "isolet",
+        "widget"
+      ],
+      "category": "Other",
+      "version": null
     }
   }
 }
