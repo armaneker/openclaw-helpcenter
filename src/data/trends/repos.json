@@ -6837,12 +6837,23 @@
     },
     "Mouseww/anything-analyzer": {
       "full_name": "Mouseww/anything-analyzer",
-      "description": "利用 browser + CDP capture + AI analysis  傻瓜式生成 注册机 | 2API | 其他浏览器或应用行为 的协议分析文档",
+      "description": "基于 Browser + CDP + AI 的通用行为分析工具 自动捕获真实行为，生成可读、可复用的协议与 API 分析文档 。Browser + CDP + AI driven behavior analysis tool Automatically capture real application behavior and generate readable protocol & API documentation.",
       "language": "TypeScript",
       "url": "https://github.com/Mouseww/anything-analyzer",
       "first_seen": "2026-04-14",
       "has_summary": false,
-      "topics": [],
+      "topics": [
+        "2api",
+        "ai-tools",
+        "analysis-cli",
+        "api-analysis",
+        "automation-tools",
+        "blackbox-testing",
+        "network-analysis",
+        "protocol-analysis",
+        "reverse-engineering",
+        "traffic-analysis"
+      ],
       "category": "Other",
       "version": "v2.3.0",
       "blurb": "Anything Analyzer is an Electron desktop application that captures web traffic and browser behavior using Chrome DevTools Protocol, then uses AI to analyze the captured data for protocol reverse engineering. It provides comprehensive network interception (HTTP, WebSocket, SSE), JavaScript hooking (fetch, XHR, crypto APIs), and storage monitoring to generate detailed protocol analysis reports. The tool includes an embedded multi-tab browser with automatic popup capture, making it particularly useful for analyzing complex authentication flows like OAuth."
@@ -7518,7 +7529,7 @@
     "EKKOLearnAI/hermes-web-ui": {
       "full_name": "EKKOLearnAI/hermes-web-ui",
       "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
-      "language": "Vue",
+      "language": "TypeScript",
       "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
       "first_seen": "2026-04-17",
       "has_summary": false,
@@ -7605,6 +7616,50 @@
       "category": "AI / ML",
       "version": null,
       "blurb": "Claude Doctor is a TypeScript CLI tool that analyzes Claude AI conversation transcripts stored in `~/.claude/` to identify behavioral anti-patterns and problematic usage signals. It detects issues like edit thrashing, error loops, correction-heavy sessions, and sentiment drift to help developers understand when their Claude interactions are ineffective. The tool can automatically generate ready-to-paste rules for CLAUDE.md files based on your actual conversation history patterns."
+    },
+    "browser-use/video-use": {
+      "full_name": "browser-use/video-use",
+      "description": "",
+      "language": "Python",
+      "url": "https://github.com/browser-use/video-use",
+      "first_seen": "2026-04-17",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "Robbyant/lingbot-map": {
+      "full_name": "Robbyant/lingbot-map",
+      "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+      "language": "Python",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "first_seen": "2026-04-17",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "wbh604/UZI-Skill": {
+      "full_name": "wbh604/UZI-Skill",
+      "description": "冰冷的钱就这样流进我温暖的口袋-游资（UZI）Skills — 51位投资大佬帮你看盘 · 22维数据 × 180条量化规则 × 17种机构分析方法 · A股/港股/美股 ",
+      "language": "Python",
+      "url": "https://github.com/wbh604/UZI-Skill",
+      "first_seen": "2026-04-17",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": "v2.7.1"
+    },
+    "op7418/logo-generator-skill": {
+      "full_name": "op7418/logo-generator-skill",
+      "description": "logo-generator-skill",
+      "language": "HTML",
+      "url": "https://github.com/op7418/logo-generator-skill",
+      "first_seen": "2026-04-17",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
