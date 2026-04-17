@@ -1,0 +1,67 @@
+<GuideHeader tool="claude-code-rev" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Claude Code Reverse Engineering Project
+
+This repository contains a reconstructed Claude Code source tree, primarily restored from source maps and supplemented with compatibility shims. It's a community effort to make Claude Code runnable again in local development environments.
+
+## Key Features
+
+- **Restored CLI functionality** with full command tree and interactive prompts
+- **Multi-provider support** for GitHub Models and GitHub Copilot endpoints
+- **Working skill content** for `claude-api` and `verify` modules
+- **MCP compatibility layers** for Chrome and Computer Use integrations
+- **Interactive provider switching** with `/provider` commands
+- **Validated Claude model support** through Copilot hosting
+
+<Callout type="warning">
+This is not the original upstream repository. Some modules use fallback implementations where source maps couldn't provide complete recovery.
+</Callout>
+
+## Installation
+
+Requires Bun 1.3.5+ and Node.js 24+:
+
+```bash
+git clone https://github.com/oboard/claude-code-rev
+cd claude-code-rev
+bun install
+```
+
+## Basic Usage
+
+Start the CLI:
+
+```bash
+bun run dev
+```
+
+Use with GitHub Models:
+
+```bash
+bun run dev --settings '{"provider":"github-models"}'
+```
+
+Use with GitHub Copilot (supports Claude models):
+
+```bash
+bun run dev --settings '{"provider":"github-copilot"}' --model "claude-sonnet-4.6"
+```
+
+Switch providers interactively:
+```bash
+/provider
+/model
+```
+
+<Callout type="tip">
+Authenticate with GitHub CLI first: `gh auth login` for seamless token management across both providers.
+</Callout>
+
+## Notable Details
+
+**Language:** TypeScript  
+**License:** Unknown  
+**GitHub Stars:** 2,985  
+**Authentication:** Supports GH_TOKEN, GITHUB_TOKEN, or GitHub CLI tokens
+
+The project includes both English and Chinese documentation, indicating strong international community engagement.

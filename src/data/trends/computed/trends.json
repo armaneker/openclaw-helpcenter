@@ -1289,7 +1289,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "video-use is an open-source Python tool that enables AI-powered video editing through Claude Code conversations. It automatically cuts filler words, applies color grading, burns subtitles, and generates animations by feeding the LLM text transcripts with word-level timestamps instead of raw video frames. The system uses a self-evaluation loop that checks rendered output quality at every cut boundary before presenting the final result."
     },
     {
       "full_name": "EKKOLearnAI/hermes-web-ui",
@@ -1349,7 +1349,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "LingBot-Map is a feed-forward 3D foundation model that reconstructs scenes from streaming image/video data using a Geometric Context Transformer architecture. It enables real-time 3D reconstruction at ~20 FPS with superior accuracy compared to existing streaming and optimization-based methods, making it suitable for applications requiring live scene understanding. The model uses paged KV cache attention for efficient processing of long sequences exceeding 10,000 frames without drift accumulation."
     },
     {
       "full_name": "tianxingleo/ACGTI",
@@ -1394,7 +1394,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v2.7.1",
-      "blurb": null
+      "blurb": "UZI-Skill is a Chinese stock analysis engine that uses AI to generate comprehensive investment reports for A-shares, Hong Kong stocks, and US stocks. It processes 22 data dimensions through 180 quantitative rules and 17 institutional analysis methods, with 51 different investment personalities (from Buffett to Chinese day traders) providing scored evaluations. The tool outputs Bloomberg-style HTML reports, social media graphics, and uses only free data sources with zero API keys required."
     },
     {
       "full_name": "xataio/xata",
@@ -1439,7 +1439,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is an SVG logo generator that creates professional logos with multiple design variants and high-end showcase presentations. It's designed for startups, developers, and product teams who need quality logos quickly without the traditional back-and-forth with designers. The tool generates 6+ logo variants per request and creates professional showcase images using 12 different background styles through Gemini AI integration."
     },
     {
       "full_name": "ossu/computer-science",
