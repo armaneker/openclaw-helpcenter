@@ -1,0 +1,72 @@
+<GuideHeader tool="claude-code" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Claude Code Best (CCB)
+
+Claude Code Best is a reverse-engineered, enterprise-ready version of Anthropic's Claude Code CLI tool. It provides a fully functional, debuggable implementation with complete TypeScript type safety and enhanced features for multi-instance collaboration.
+
+## Key Features
+
+- **Multi-instance coordination** — Pipe IPC for same-machine orchestration and zero-config LAN discovery across machines
+- **ACP protocol support** — Seamless integration with Zed, Cursor, and other IDEs with session recovery
+- **Self-hosted remote control** — Docker deployment for mobile access to Claude Code sessions
+- **Enterprise monitoring** — Langfuse integration for detailed agent loop tracking and dataset generation
+- **Custom model providers** — Support for OpenAI, Anthropic, Gemini, and Grok-compatible APIs
+- **Voice mode** — Push-to-talk voice input functionality
+- **Computer use** — Screen capture and mouse/keyboard automation
+- **Chrome automation** — Browser control, form filling, and data scraping
+- **Memory management** — Automatic memory file organization with `/dream` command
+
+## Installation
+
+<Callout type="info">
+Requires Bun >= 1.3.11. Run `bun upgrade` before installing.
+</Callout>
+
+### From NPM (recommended)
+```bash
+bun i -g claude-code-best
+bun pm -g trust claude-code-best
+ccb # Start with Node.js
+ccb-bun # Start with Bun runtime
+```
+
+### From source
+```bash
+git clone https://github.com/claude-code-best/claude-code
+cd claude-code
+bun install
+bun run dev
+```
+
+## Basic Usage
+
+1. **Initial setup**: Run `/login` and select **Anthropic Compatible**
+2. **Configure provider**: Enter your API base URL, key, and model IDs
+3. **Start chatting**: Use the REPL interface for AI interactions
+
+```bash
+# Enable specific features
+FEATURE_BUDDY=1 FEATURE_FORK_SUBAGENT=1 ccb
+
+# Poor mode (reduced API calls)
+/poor
+
+# Voice input
+# Enable push-to-talk in interface
+
+# Memory organization
+/dream
+```
+
+<Callout type="tip">
+Use Tab/Shift+Tab to navigate configuration fields, Enter to confirm and save.
+</Callout>
+
+## Notable Details
+
+- **Language**: TypeScript
+- **Runtime**: Bun (Node.js compatible)
+- **Community**: 16.1k+ GitHub stars
+- **License**: Unknown (educational/research use)
+- **Debugging**: VS Code attach mode supported via `bun run dev:inspect`
+- **Documentation**: [ccb.agent-aura.top](https://ccb.agent-aura.top/)

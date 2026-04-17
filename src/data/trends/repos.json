@@ -4639,7 +4639,7 @@
       "language": "TypeScript",
       "url": "https://github.com/claude-code-best/claude-code",
       "first_seen": "2026-03-31",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -7674,7 +7674,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Agentic Inbox is a self-hosted email client that runs entirely on Cloudflare Workers infrastructure, using Email Routing for message delivery, Durable Objects for per-mailbox SQLite storage, and R2 for attachments. It provides a full-featured web email interface with an integrated AI agent that can read messages, search conversations, and automatically draft replies using Cloudflare's Workers AI platform. The AI agent automatically generates draft replies for incoming emails but requires explicit user confirmation before sending."
     }
   }
 }
