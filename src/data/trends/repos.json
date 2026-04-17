@@ -4613,7 +4613,7 @@
       "language": "TypeScript",
       "url": "https://github.com/tvytlx/claude-code-deep-dive",
       "first_seen": "2026-03-31",
-      "has_summary": false,
+      "has_summary": true,
       "topics": [],
       "category": "Other",
       "version": null,
@@ -7544,7 +7544,8 @@
         "whatsapp"
       ],
       "category": "Agentic",
-      "version": null
+      "version": null,
+      "blurb": "Hermes Web UI is a Vue-based web dashboard that provides centralized management for Hermes Agent, a multi-platform AI chatbot system. It enables configuration and monitoring of AI chat sessions across 8 platforms (Telegram, Discord, Slack, WhatsApp, etc.), usage analytics, scheduled jobs, and system settings through a single interface. The dashboard includes an integrated web terminal and automatically discovers available AI models from configured provider credentials."
     },
     "WeianMao/triattention": {
       "full_name": "WeianMao/triattention",
@@ -7555,7 +7556,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "TriAttention is a KV cache compression technique for transformer models that uses trigonometric frequency-domain compression to reduce memory usage during long sequence inference. It achieves 10.7x KV memory reduction and 2.5x throughput improvement on long reasoning tasks while maintaining accuracy, enabling deployment of large language models on memory-constrained GPUs like the RTX 4090. The method works by leveraging the observation that pre-RoPE Q/K vectors concentrate around fixed centers that can be exploited for efficient compression without requiring representative query selection."
     },
     "Tencent-Hunyuan/HY-Embodied": {
       "full_name": "Tencent-Hunyuan/HY-Embodied",
@@ -7566,7 +7568,8 @@
       "has_summary": false,
       "topics": [],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "HY-Embodied is a family of foundation models specifically designed for embodied AI and real-world robotic agents, featuring 2B and 32B parameter variants with a novel Mixture-of-Transformers (MoT) architecture. It enables robots to perform spatial-temporal visual perception and complex reasoning tasks like planning and interaction, serving as the \"brain\" for Vision-Language-Action pipelines in physical robot control. The 2B model uses only 2.2B activated parameters during inference while maintaining the performance of larger dense models through large-to-small distillation from the 32B variant."
     },
     "Jakubantalik/border-beam": {
       "full_name": "Jakubantalik/border-beam",
@@ -7584,7 +7587,8 @@
         "product"
       ],
       "category": "Other",
-      "version": null
+      "version": null,
+      "blurb": "BorderBeam is a React component that creates an animated traveling glow effect around the border of any wrapped element. It provides configurable color schemes, sizes, and animation controls for adding visual polish to cards, buttons, and other UI components. The component automatically detects border radius and uses GPU-accelerated CSS animations with pointer-events disabled to avoid interfering with wrapped content."
     },
     "millionco/claude-doctor": {
       "full_name": "millionco/claude-doctor",
@@ -7599,7 +7603,8 @@
         "doctor"
       ],
       "category": "AI / ML",
-      "version": null
+      "version": null,
+      "blurb": "Claude Doctor is a TypeScript CLI tool that analyzes Claude AI conversation transcripts stored in `~/.claude/` to identify behavioral anti-patterns and problematic usage signals. It detects issues like edit thrashing, error loops, correction-heavy sessions, and sentiment drift to help developers understand when their Claude interactions are ineffective. The tool can automatically generate ready-to-paste rules for CLAUDE.md files based on your actual conversation history patterns."
     }
   }
 }

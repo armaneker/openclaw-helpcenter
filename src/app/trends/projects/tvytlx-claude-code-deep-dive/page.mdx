@@ -1,0 +1,48 @@
+<GuideHeader tool="ai-agent-deep-dive" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# AI Agent Deep Dive
+
+AI Agent Deep Dive is a research repository that provides in-depth analysis of AI agent architectures and implementations. It includes detailed PDF reports analyzing popular AI agent frameworks and a minimal teaching implementation to demonstrate core agent concepts.
+
+## Key Features
+
+- Detailed source code analysis reports of major AI agent frameworks
+- PDF documentation covering agent architecture patterns and memory systems
+- Minimal Python agent implementation for educational purposes
+- Clear separation between analysis materials and working code examples
+- Modular skill discovery system and CLI interface
+
+## Installation
+
+This project uses Poetry for dependency management:
+
+```bash
+git clone https://github.com/tvytlx/ai-agent-deep-dive
+cd ai-agent-deep-dive
+poetry install
+```
+
+## Basic Usage
+
+Run the minimal teaching agent:
+
+```bash
+# Basic agent interaction
+poetry run agt "你好"
+
+# List available skills
+poetry run agt --skills-dir ./skills --list-skills
+```
+
+<Callout type="info">
+The current implementation uses a fake LLM for teaching purposes. It returns test responses in streaming chunks, demonstrating the agent architecture without requiring API credentials.
+</Callout>
+
+The core agent code is located in `src/agt/agent.py` with the CLI entry point at `src/agt/cli.py`. The repository focuses on clean structure and minimal engineering complexity to facilitate learning.
+
+## Notable Details
+
+- **Language**: Python
+- **License**: Unknown
+- **Community**: 5,544 GitHub stars
+- **Repository**: [tvytlx/ai-agent-deep-dive](https://github.com/tvytlx/ai-agent-deep-dive)
