@@ -6837,7 +6837,7 @@
     },
     "Mouseww/anything-analyzer": {
       "full_name": "Mouseww/anything-analyzer",
-      "description": "基于 Browser + CDP + AI 的通用行为分析工具 自动捕获真实行为，生成可读、可复用的协议与 API 分析文档 。Browser + CDP + AI driven behavior analysis tool Automatically capture real application behavior and generate readable protocol & API documentation.",
+      "description": "全能协议分析工具：浏览器抓包 + MITM 代理 + 指纹伪装 + AI 分析 + MCP Server 无缝对接 AI Agent/IDE   |  All-in-one protocol analysis toolkit — built-in browser capture, MITM proxy, JS hooks, fingerprint spoofing, AI analysis & MCP server for agent integration",
       "language": "TypeScript",
       "url": "https://github.com/Mouseww/anything-analyzer",
       "first_seen": "2026-04-14",
@@ -7664,6 +7664,17 @@
       "category": "Other",
       "version": null,
       "blurb": "This is an SVG logo generator that creates professional logos with multiple design variants and high-end showcase presentations. It's designed for startups, developers, and product teams who need quality logos quickly without the traditional back-and-forth with designers. The tool generates 6+ logo variants per request and creates professional showcase images using 12 different background styles through Gemini AI integration."
+    },
+    "cloudflare/agentic-inbox": {
+      "full_name": "cloudflare/agentic-inbox",
+      "description": "A self-hosted email client with an AI agent, running entirely on Cloudflare Workers",
+      "language": "TypeScript",
+      "url": "https://github.com/cloudflare/agentic-inbox",
+      "first_seen": "2026-04-17",
+      "has_summary": false,
+      "topics": [],
+      "category": "Agentic",
+      "version": null
     }
   }
 }
