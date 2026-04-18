@@ -1,0 +1,62 @@
+<GuideHeader tool="agentic-ai-prompt-research" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# Agentic AI Prompt Research
+
+A research project that reverse-engineers how modern agentic AI coding assistants work by reconstructing their prompt patterns, agent coordination mechanisms, and security classification systems. The repository documents 30+ patterns observed from tools like Claude Code through behavioral analysis.
+
+## Key Features
+
+- **Dynamic prompt assembly** - Modular system prompts built at runtime with cacheable prefixes and dynamic suffixes
+- **Multi-agent coordination** - Orchestration patterns for specialized sub-agents (verification, exploration, creation)
+- **Security classification** - Multi-stage auto-approval systems with user-configurable overrides
+- **Context window management** - Conversation summarization and memory selection strategies
+- **Tool integration patterns** - Browser automation, terminal setup, and MCP server instructions
+- **Memory hierarchy** - Layered configuration loading from enterprise to local overrides
+
+## Installation
+
+This is a documentation repository. Clone it to explore the patterns:
+
+```bash
+git clone https://github.com/Leonxlnx/agentic-ai-prompt-research.git
+cd agentic-ai-prompt-research
+```
+
+## Basic Usage
+
+Browse the documented patterns in the `prompts/` directory. Each pattern includes:
+
+```bash
+# View the main system prompt architecture
+cat prompts/01_main_system_prompt.md
+
+# Explore multi-agent coordination
+cat prompts/05_coordinator_system_prompt.md
+
+# Study security classification
+cat prompts/12_yolo_auto_mode_classifier.md
+```
+
+The patterns are organized by category: core identity, orchestration, specialized agents, security, and utilities.
+
+<Callout type="warning">
+These are reconstructed approximations based on behavioral observation, not verbatim copies of proprietary systems.
+</Callout>
+
+## Architecture Overview
+
+The research reveals a pipeline-based prompt assembly system:
+
+```
+Cacheable Prefix → Cache Boundary → Dynamic Suffix
+(identity, safety) → (agents, memory, environment)
+```
+
+Security uses multi-stage classification with base rules, user overrides, and fallback reasoning for edge cases.
+
+## Notable Details
+
+- **Community**: 2.3k GitHub stars, focused on AI research and prompt engineering
+- **License**: Not specified
+- **Topics**: agentic-ai, ai-research, claude, prompt-engineering, system-prompts
+- **Use cases**: AI engineers building agentic tools, prompt engineers studying production patterns, security researchers analyzing autonomous AI systems

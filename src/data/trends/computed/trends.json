@@ -1004,7 +1004,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "3.10",
-      "blurb": null
+      "blurb": "Microsoft Activation Scripts (MAS) is an open-source tool that bypasses Windows and Office activation requirements using multiple methods including HWID, KMS, and Ohook techniques. It provides a way to activate Microsoft products without purchasing legitimate licenses, which violates Microsoft's terms of service but is widely used for testing or cost avoidance. The project has gained significant traction with over 172k GitHub stars and offers both PowerShell and traditional batch file execution methods."
     },
     {
       "full_name": "x1xhlol/system-prompts-and-models-of-ai-tools",
@@ -1409,7 +1409,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "A Cursor IDE plugin that adds a `/how` skill for generating architectural explanations of codebases at a senior engineer level. It automatically chooses between simple single-agent explanations or complex multi-agent exploration with parallel subagents that analyze different aspects before synthesizing findings into structured documentation. The plugin includes an optional critique mode that spawns independent critics across different models to identify architectural problems."
     },
     {
       "full_name": "bstnxbt/dflash-mlx",
@@ -1439,7 +1439,7 @@
       "has_summary": false,
       "category": "Other",
       "version": "v1.0.0",
-      "blurb": null
+      "blurb": "Clearwing is an autonomous vulnerability scanner and source-code hunter built on LangGraph that operates in two modes: network penetration testing with 63 tools and source code vulnerability analysis. It provides AI-driven security testing capabilities using publicly available models, offering an alternative to proprietary tools like Anthropic's Glasswing for automated vulnerability discovery and exploitation. The tool includes human approval guardrails for exploit attempts and generates comprehensive reports with explicit evidence levels from suspicion through patch validation."
     },
     {
       "full_name": "CITGuru/openduck",
@@ -1469,7 +1469,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "Meta-Harness is a framework for automated search and optimization of task-specific model harnesses—the code that manages what to store, retrieve, and present to a base model during execution. It enables automatic improvement of the scaffolding around LLM agents by iteratively evolving components like memory systems and execution frameworks rather than manually engineering them. The framework includes reference implementations for text classification memory optimization and Terminal-Bench 2.0 scaffold evolution."
     },
     {
       "full_name": "maeil-mail/maeil-mail-contents",
@@ -1484,7 +1484,7 @@
       "has_summary": false,
       "category": "Other",
       "version": null,
-      "blurb": null
+      "blurb": "This is an archive repository containing technical interview questions and content from the discontinued maeil-mail.kr service, organized for both frontend and backend roles. Developers can use it as a reference for technical interview preparation, with content categorized by question ID and topic areas. The repository preserves what appears to be a curated collection of Korean-language technical interview materials that would otherwise be lost after the service shutdown."
     },
     {
       "full_name": "millionco/claude-doctor",
@@ -1859,7 +1859,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v0.24.0",
-      "blurb": null
+      "blurb": "EvoNexus is a TypeScript-based multi-agent operating system that orchestrates 38 specialized AI agents for business operations and software development workflows. It provides automated daily routines including financial reporting, community monitoring, code reviews, and strategic planning while supporting multiple LLM providers (Anthropic, OpenAI, Google, etc.) through a unified interface. The system uses markdown-based agent definitions rather than code, making it extensible without requiring compilation or SDK knowledge."
     }
   ]
 }
