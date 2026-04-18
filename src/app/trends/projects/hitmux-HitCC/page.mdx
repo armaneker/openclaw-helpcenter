@@ -1,0 +1,62 @@
+<GuideHeader tool="HitCC" difficulty="Beginner" lastTested="2026-04" readTime="5 min" />
+
+# HitCC
+
+HitCC is a comprehensive reverse-engineering documentation project that analyzes the complete runtime logic of Claude Code CLI Node.js version v2.1.84. It provides structured documentation for understanding the system architecture, tool execution, and surrounding ecosystem without containing any original source code.
+
+## Key Features
+
+- Complete documentation of Claude Code CLI's execution chain from startup to agent loop
+- Analysis of core systems: MCP, Plugin, Skill, TUI, Remote Persistence, and Bridge components  
+- Topic-oriented breakdown covering tool use, prompt assembly, session persistence, and permission systems
+- Rewrite-oriented architectural guidance with candidate structures and open questions
+- 81 documentation files covering 27,170 lines of analysis across runtime, execution, and ecosystem topics
+
+## Installation
+
+The project provides documentation only. To analyze the original package:
+
+```sh
+npm pack @anthropic-ai/claude-code@2.1.84
+```
+
+Use the Python recovery tools for initial cleanup of obfuscated code:
+
+```python
+# Python scripts available under recovery_tools/
+python recovery_tools/cleanup.py
+```
+
+## Basic Usage
+
+<Callout type="info">
+This is documentation, not executable code. Use it as reference for understanding or rewriting similar systems.
+</Callout>
+
+Start with the overview to understand scope and evidence boundaries:
+
+```
+docs/00-overview/01-scope-and-evidence.md
+```
+
+Follow the runtime chain analysis:
+
+```
+docs/01-runtime/01-product-cli-and-modes.md
+docs/02-execution/  # Tool execution and prompt handling
+docs/03-ecosystem/  # MCP, plugins, and surrounding systems
+docs/04-rewrite/    # Practical engineering guidance
+```
+
+## Notable Details
+
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)  
+**Language:** Python (analysis tools)  
+**Community:** 670 GitHub stars  
+**Scope:** Static analysis only, no runtime dynamics or network services used
+
+<Callout type="warning">
+This project is not affiliated with Anthropic PBC and contains no original source code or cracking content.
+</Callout>
+
+The documentation is sufficient for building runnable alternatives or high-similarity rewrites, but cannot guarantee 1:1 behavioral reproduction of edge cases or private server-side logic.

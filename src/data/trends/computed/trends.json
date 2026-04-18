@@ -1484,7 +1484,7 @@
       "has_summary": false,
       "category": "Agentic",
       "version": "v0.6.0",
-      "blurb": null
+      "blurb": "Agentic-stack is a portable AI agent framework that packages memory, skills, and protocols into a standardized `.agent/` folder structure. It allows developers to maintain consistent AI agent state and knowledge across different coding environments like Claude Code, Cursor, Windsurf, and others without losing context when switching tools. The system includes an automated review protocol where the agent stages learning candidates nightly, but requires human approval before incorporating them into long-term semantic memory."
     },
     {
       "full_name": "ossu/computer-science",
