@@ -7886,6 +7886,28 @@
       "category": "Other",
       "version": null,
       "blurb": "Bouncer is a browser extension that uses AI to filter unwanted posts from Twitter/X feeds based on natural language filter definitions. It allows users to define filter topics in plain language (like \"crypto\" or \"engagement bait\") and automatically hides matching posts in real-time using various AI models. The extension supports both local on-device inference via WebGPU and cloud-based AI services, with multimodal capabilities to filter based on both text and images."
+    },
+    "browser-use/browser-harness": {
+      "full_name": "browser-use/browser-harness",
+      "description": "Self-healing browser harness that enables LLMs to complete any task.",
+      "language": "Python",
+      "url": "https://github.com/browser-use/browser-harness",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
+    },
+    "zhuyansen/wx-favorites-report": {
+      "full_name": "zhuyansen/wx-favorites-report",
+      "description": "微信收藏可视化 Claude Code Skill — 从加密 DB 到交互式 HTML 报告的端到端管线",
+      "language": "Python",
+      "url": "https://github.com/zhuyansen/wx-favorites-report",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
