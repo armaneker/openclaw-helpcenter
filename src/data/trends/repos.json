@@ -7377,26 +7377,31 @@
     },
     "Manavarya09/design-extract": {
       "full_name": "Manavarya09/design-extract",
-      "description": "Extract the complete design language from any website — colors, typography, spacing, shadows, and more. npx CLI + Claude Code plugin.",
+      "description": "Extract any website's complete design system with one command. DTCG tokens, semantic+primitive+composite, MCP server for Claude Code/Cursor/Windsurf, multi-platform emitters (iOS SwiftUI, Android Compose, Flutter, WordPress), Tailwind v4, Figma variables, shadcn/ui, CSS health audit, WCAG remediation, Chrome extension. MIT, Playwright, Node 20+.",
       "language": "JavaScript",
       "url": "https://github.com/Manavarya09/design-extract",
       "first_seen": "2026-04-16",
       "has_summary": false,
       "topics": [
+        "accessibility",
         "agent-skill",
-        "agent-skills",
         "ai",
+        "chrome-extension",
         "claude-code-plugin",
         "cli",
-        "colors",
         "css",
+        "cursor",
         "design-system",
+        "design-to-code",
         "design-tokens",
+        "dtcg",
+        "figma",
+        "mcp-server",
         "npx",
         "playwright",
+        "shadcn-ui",
         "skills-sh",
         "tailwind",
-        "typography",
         "web-scraping"
       ],
       "category": "AI / ML",
@@ -7792,6 +7797,90 @@
       "category": "Agentic",
       "version": "v0.6.0",
       "blurb": "Agentic-stack is a portable AI agent framework that packages memory, skills, and protocols into a standardized `.agent/` folder structure. It allows developers to maintain consistent AI agent state and knowledge across different coding environments like Claude Code, Cursor, Windsurf, and others without losing context when switching tools. The system includes an automated review protocol where the agent stages learning candidates nightly, but requires human approval before incorporating them into long-term semantic memory."
+    },
+    "getagentseal/codeburn": {
+      "full_name": "getagentseal/codeburn",
+      "description": "See where your AI coding tokens go. Interactive TUI dashboard for Claude Code, Codex, and Cursor cost observability.",
+      "language": "TypeScript",
+      "url": "https://github.com/getagentseal/codeburn",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [
+        "ai-coding",
+        "claude-code",
+        "cli",
+        "codex",
+        "cost-tracking",
+        "cursor-ide",
+        "developer-tools",
+        "observability",
+        "terminal-ui",
+        "token-usage"
+      ],
+      "category": "Agentic",
+      "version": "mac-v0.7.5"
+    },
+    "bwjoke/BTC-Trading-Since-2020": {
+      "full_name": "bwjoke/BTC-Trading-Since-2020",
+      "description": "Public BTC trading context since 2020.",
+      "language": "Unknown",
+      "url": "https://github.com/bwjoke/BTC-Trading-Since-2020",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [
+        "bitcoin",
+        "bitmex",
+        "crypto",
+        "dataset",
+        "open-intelligence",
+        "trading"
+      ],
+      "category": "Other",
+      "version": "data-2026-04-18-fix7"
+    },
+    "bergside/design-md-chrome": {
+      "full_name": "bergside/design-md-chrome",
+      "description": "Chrome extension to extract styles from any website and generate DESIGN.md files and design skills for AI based on TypeUI",
+      "language": "JavaScript",
+      "url": "https://github.com/bergside/design-md-chrome",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [
+        "ai",
+        "chrome",
+        "chrome-extension",
+        "design-md",
+        "design-skills",
+        "extension",
+        "open-source",
+        "skills",
+        "skills-ai",
+        "typeui"
+      ],
+      "category": "AI / ML",
+      "version": "v0.4.0"
+    },
+    "lewislulu/llm-wiki-skill": {
+      "full_name": "lewislulu/llm-wiki-skill",
+      "description": "Karpathy-style LLM knowledge base Agent Skill for OpenClaw/Codex. Experimental — will iterate over time.",
+      "language": "TypeScript",
+      "url": "https://github.com/lewislulu/llm-wiki-skill",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [],
+      "category": "AI / ML",
+      "version": null
+    },
+    "imbue-ai/bouncer": {
+      "full_name": "imbue-ai/bouncer",
+      "description": "Heal your social media feeds",
+      "language": "TypeScript",
+      "url": "https://github.com/imbue-ai/bouncer",
+      "first_seen": "2026-04-19",
+      "has_summary": false,
+      "topics": [],
+      "category": "Other",
+      "version": null
     }
   }
 }
